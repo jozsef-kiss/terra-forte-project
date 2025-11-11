@@ -1,0 +1,14 @@
+{
+  "Header": {
+    "products": "Termékek",
+    "references": "Referenciák",
+    "about": "Rólunk",
+    "contact": "Kapcsolat",
+    "lang_switcher": "Nyelvváltó"
+  },
+  "Footer": {
+    "copyright": "© {year} Terra Forte Bau Kft. Minden jog fenntartva.",
+    "privacy": "Adatvédelem",
+    "imprint": "Impresszum"
+  }
+}

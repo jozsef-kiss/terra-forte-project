@@ -1,0 +1,14 @@
+{
+  "Header": {
+    "products": "Products",
+    "references": "References",
+    "about": "About Us",
+    "contact": "Contact",
+    "lang_switcher": "Language"
+  },
+  "Footer": {
+    "copyright": "© {year} Terra Forte Bau Kft. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "imprint": "Imprint"
+  }
+}
