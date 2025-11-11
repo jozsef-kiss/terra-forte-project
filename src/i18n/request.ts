@@ -1,15 +1,22 @@
-import { notFound } from "next/navigation";
+// src/i18n/request.ts
+
 import { getRequestConfig } from "next-intl/server";
 
-// A Mester Tervben meghatározott nyelvek
-const locales = ["hu", "en", "de"];
+// Definiáljuk az alapértelmezett nyelvet, pont mint a middleware-ben
+const defaultLocale = "hu";
 
 export default getRequestConfig(async ({ locale }) => {
-  // Ellenőrzés, hogy a 'locale' érvényes-e
-  if (!locales.includes(locale as any)) notFound();
+  // JAVÍTÁS:
+  // Ha a 'locale' 'undefined',
+  // helyette a 'defaultLocale'-t ('hu') használjuk.
+  const finalLocale = locale ?? defaultLocale;
 
   return {
-    // A hivatalos doksi a 'messages' mappát a gyökérben javasolja
-    messages: (await import(`../../messages/${locale}.json`)).default,
+    messages: // A 'finalLocale' már garantáltan string
+    (await import(`../../messages/${finalLocale}.json`)).default,
+
+    // Most már a 'locale' tulajdonság (finalLocale)
+    // értéke 'string', ahogy a TypeScript elvárja.
+    locale: finalLocale,
   };
 });
