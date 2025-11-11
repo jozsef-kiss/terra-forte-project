@@ -1,7 +1,16 @@
-@import "tailwindcss";
-@import "tailwindcss/preflight";
-@tailwind utilities;
+/* 1. A Tailwind V4 Alapjai (JAVÍTVA) */
+@import "tailwindcss/preflight"; /* Ez a "base" vagy "CSS Reset" */
+@import "tailwindcss/utilities"; /* Ez a "components" és "utilities" egyben */
 
+/* EZZEL A KÉT SORRAL KIVÁLTOTTUK A HIBÁSAT:
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+*/
+
+/* 2. A Téma Alapvető Szín Változói (Dark/Light módhoz)
+  Ezeket a Catalyst vagy a te komponenseid használhatják.
+*/
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -14,29 +23,20 @@
   }
 }
 
+/* 3. Globális Törzs Stílusok
+  A betűtípust ('Inter') a layout.tsx kezeli, itt már nem kell!
+*/
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* 4. Egyéb Hasznos Globális Beállítások (Maradhat)
+*/
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
