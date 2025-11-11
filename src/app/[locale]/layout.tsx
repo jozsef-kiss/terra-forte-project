@@ -17,19 +17,22 @@ export const metadata: Metadata = {
   description: "Professzionális játszóterek tervezése és kivitelezése.",
 };
 
-// Definiáljuk a Prospokat
-interface RootLayoutProps {
+// 1. Definiáljuk a típusokat egyszerűen, itt helyben:
+type Props = {
   children: React.ReactNode;
-  params: {
-    locale: string;
-  };
-}
+  params: { locale: string };
+};
 
-export default async function RootLayout({
-  children,
-  params: { locale }, // Itt kapjuk meg a locale-t
-}: Readonly<RootLayoutProps>) {
-  const messages = await getMessages({ locale }); // Lekérjük az adott nyelv üzeneteit
+// 2. A 'RootLayoutProps' helyett használjuk a 'Props'-t
+//    és NE destrukturáljuk a 'locale'-t azonnal!
+export default async function RootLayout({ children, params }: Props) {
+  // 3. Itt már biztonságosan destrukturálhatjuk:
+  // 3. JAVÍTÁS: A hibaüzenet szerint
+  // ki kell csomagolni a Promise-t egy 'await'-tel.
+  const { locale } = await params; // <-- EZ A JAVÍTÁS
+  const messages = await getMessages({ locale });
+
+  // ... (a Metadata-t is itt kellene definiálni, ha dinamikus)
 
   return (
     // Használjuk a dinamikus 'locale'-t
