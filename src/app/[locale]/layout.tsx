@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 // 1. Definiáljuk a típusokat egyszerűen, itt helyben:
 type Props = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>; // <--- ITT A VÁLTOZÁS: Promise<{...}>
 };
 
 // 2. A 'RootLayoutProps' helyett használjuk a 'Props'-t
