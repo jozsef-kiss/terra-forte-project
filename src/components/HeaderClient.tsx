@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react"; // useRef kell a hoverhez
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation"; // Útvonal figyeléshez
 
 // --- Headless UI Importok ---
 import {
@@ -13,12 +14,17 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
+  Menu,
+  MenuButton,
+  MenuItems,
+  MenuItem,
 } from "@headlessui/react";
 
 import {
   Bars3Icon,
   XMarkIcon,
   ChevronDownIcon,
+  CheckIcon, // Pipa a nyelvválasztóhoz
 } from "@heroicons/react/24/outline";
 
 // Ikonok az új Mega-Menühöz
@@ -52,8 +58,18 @@ type Props = {
   dict: any;
 };
 
+// Nyelvek definíciója
+const languages = [
+  { code: "hu", name: "Magyar", flag: "🇭🇺" },
+  { code: "en", name: "English", flag: "🇬🇧" },
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },
+];
+
 export default function HeaderClient({ lang, dict }: Props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+  const buttonRef = useRef<HTMLButtonElement>(null); // Ref a hover nyitáshoz
 
   // --- Adatok a szótárból ---
   const nav = dict?.navbar || {};
@@ -61,7 +77,32 @@ export default function HeaderClient({ lang, dict }: Props) {
   const engagementLinks = megaMenu?.engagement?.links || [];
   const resourcesLinks = megaMenu?.resources?.links || [];
 
-  // Statikus "Recent Posts"
+  // --- Segédfüggvények ---
+
+  // 1. Aktív állapot ellenőrzése
+  const isActive = (path: string) => {
+    // Pontos egyezés vagy al-útvonal (pl. /termekek/maszoka)
+    return (
+      pathname === `/${lang}${path}` || pathname?.startsWith(`/${lang}${path}/`)
+    );
+  };
+
+  // 2. Nyelvváltás logikája
+  const switchLanguage = (newLang: string) => {
+    if (!pathname) return;
+    const segments = pathname.split("/");
+    segments[1] = newLang; // A [locale] mindig a második elem (az első üres a / miatt)
+    const newPath = segments.join("/");
+    router.push(newPath);
+  };
+
+  // 3. Hover Kezelő (Mouse Enter)
+  const onHover = (open: boolean) => {
+    if (!open) {
+      buttonRef.current?.click(); // Szimuláljuk a kattintást, ha zárva van
+    }
+  };
+
   const recentPosts = [
     {
       id: 1,
@@ -84,7 +125,6 @@ export default function HeaderClient({ lang, dict }: Props) {
   ];
 
   return (
-    // 1. A 'header' adja a pozicionálási alapot (static/sticky kontextus)
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50 isolate">
       <nav
         aria-label="Global"
@@ -116,158 +156,223 @@ export default function HeaderClient({ lang, dict }: Props) {
 
         {/* ASZTALI MENÜ */}
         <div className="hidden lg:flex lg:gap-x-12">
-          {/* JAVÍTÁS 1: KIVETTÜK A 'relative' CLASS-T! 
-             Így a PopoverPanel nem ehhez a gombhoz, hanem a headerhez igazodik.
-          */}
+          {/* HOVER FUNKCIÓ: A Popover render prop-ját használjuk az 'open' állapot eléréséhez */}
           <Popover className="flex">
-            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 outline-none hover:text-indigo-600 transition-colors data-[open]:text-indigo-600">
-              {nav?.products || "Termékek"}
-              <ChevronDownIcon
-                aria-hidden="true"
-                className="size-5 flex-none text-gray-400 transition-transform data-[open]:rotate-180"
-              />
-            </PopoverButton>
+            {({ open }) => (
+              <div
+                onMouseEnter={() => onHover(open)}
+                onMouseLeave={() => {
+                  // Opcionális: Ha azt akarod, hogy lejövetelkor bezáródjon,
+                  // itt is lehetne kattintani, de az néha idegesítő UX.
+                  // A legtöbb Mega Menu nyitva marad, amíg máshova nem kattintasz.
+                }}
+                className="flex"
+              >
+                <PopoverButton
+                  ref={buttonRef}
+                  className={`flex items-center gap-x-1 text-sm font-semibold leading-6 outline-none transition-colors ${
+                    open
+                      ? "text-indigo-600"
+                      : "text-gray-900 hover:text-indigo-600"
+                  }`}
+                >
+                  {nav?.products || "Termékek"}
+                  <ChevronDownIcon
+                    aria-hidden="true"
+                    className={`size-5 flex-none text-gray-400 transition-transform ${
+                      open ? "rotate-180" : ""
+                    }`}
+                  />
+                </PopoverButton>
 
-            {/* JAVÍTÁS 2: TISZTA POZICIONÁLÁS
-               - 'absolute inset-x-0 top-full': A header aljára tapad, teljes szélességben.
-               - Kivettük a 'w-screen'-t, a '-left-1/2'-t és a 'mt-5'-öt.
-               - 'z-20': Biztosítjuk, hogy minden más felett legyen.
-            */}
-            <PopoverPanel
-              transition
-              className="absolute inset-x-0 top-full z-20 bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:-translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-            >
-              {/* Ez a wrapper felel a tartalom középre igazításáért */}
-              <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
-                <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2">
-                  {/* Bal oszlop: Linkek */}
-                  <div className="grid grid-cols-2 gap-x-6 sm:gap-x-8">
-                    {/* Cégünkről szekció */}
-                    <div>
-                      <h3 className="text-sm font-medium leading-6 text-gray-500">
-                        {megaMenu?.engagement?.title || "Cégünkről"}
-                      </h3>
-                      <div className="mt-6 flow-root">
-                        <div className="-my-2">
-                          {engagementLinks.map((item: any) => {
-                            const Icon =
-                              iconMap[item.href] || InformationCircleIcon;
-                            return (
-                              <Link
-                                key={item.name}
-                                href={`/${lang}${item.href}`}
-                                className="flex gap-x-4 py-2 text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700"
-                              >
-                                <Icon
-                                  aria-hidden="true"
-                                  className="size-6 flex-none text-gray-400"
-                                />
-                                {item.name}
-                              </Link>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Tudástár szekció */}
-                    <div>
-                      <h3 className="text-sm font-medium leading-6 text-gray-500">
-                        {megaMenu?.resources?.title || "Tudástár"}
-                      </h3>
-                      <div className="mt-6 flow-root">
-                        <div className="-my-2">
-                          {resourcesLinks.map((item: any) => {
-                            const Icon = iconMap[item.href] || BookOpenIcon;
-                            return (
-                              <Link
-                                key={item.name}
-                                href={`/${lang}${item.href}`}
-                                className="flex gap-x-4 py-2 text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700"
-                              >
-                                <Icon
-                                  aria-hidden="true"
-                                  className="size-6 flex-none text-gray-400"
-                                />
-                                {item.name}
-                              </Link>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Jobb oszlop: Friss Hírek */}
-                  <div className="grid grid-cols-1 gap-10 sm:gap-8 lg:grid-cols-2">
-                    <h3 className="sr-only">
-                      {megaMenu?.recent_posts_title || "Friss Hírek"}
-                    </h3>
-                    {recentPosts.map((post) => (
-                      <article
-                        key={post.id}
-                        className="relative isolate flex max-w-2xl flex-col gap-x-8 gap-y-6 sm:flex-row sm:items-start lg:flex-col lg:items-stretch"
-                      >
-                        <div className="relative flex-none">
-                          <img
-                            alt=""
-                            src={post.imageUrl}
-                            className="aspect-[2/1] w-full rounded-lg bg-gray-100 object-cover sm:aspect-video sm:h-32 lg:h-auto"
-                            onError={(e) =>
-                              (e.currentTarget.src =
-                                "https://placehold.co/360x180?text=Hirkep")
-                            }
-                          />
-                          <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-900/10" />
+                <PopoverPanel
+                  transition
+                  className="absolute inset-x-0 top-full z-20 bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:-translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                >
+                  <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+                    <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2">
+                      <div className="grid grid-cols-2 gap-x-6 sm:gap-x-8">
+                        <div>
+                          <h3 className="text-sm font-medium leading-6 text-gray-500">
+                            {megaMenu?.engagement?.title || "Cégünkről"}
+                          </h3>
+                          <div className="mt-6 flow-root">
+                            <div className="-my-2">
+                              {engagementLinks.map((item: any) => {
+                                const Icon =
+                                  iconMap[item.href] || InformationCircleIcon;
+                                return (
+                                  <Link
+                                    key={item.name}
+                                    href={`/${lang}${item.href}`}
+                                    className="flex gap-x-4 py-2 text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700"
+                                  >
+                                    <Icon
+                                      aria-hidden="true"
+                                      className="size-6 flex-none text-gray-400"
+                                    />
+                                    {item.name}
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </div>
                         </div>
                         <div>
-                          <div className="flex items-center gap-x-4">
-                            <time
-                              dateTime={post.datetime}
-                              className="text-sm leading-6 text-gray-600"
-                            >
-                              {post.date}
-                            </time>
+                          <h3 className="text-sm font-medium leading-6 text-gray-500">
+                            {megaMenu?.resources?.title || "Tudástár"}
+                          </h3>
+                          <div className="mt-6 flow-root">
+                            <div className="-my-2">
+                              {resourcesLinks.map((item: any) => {
+                                const Icon = iconMap[item.href] || BookOpenIcon;
+                                return (
+                                  <Link
+                                    key={item.name}
+                                    href={`/${lang}${item.href}`}
+                                    className="flex gap-x-4 py-2 text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700"
+                                  >
+                                    <Icon
+                                      aria-hidden="true"
+                                      className="size-6 flex-none text-gray-400"
+                                    />
+                                    {item.name}
+                                  </Link>
+                                );
+                              })}
+                            </div>
                           </div>
-                          <h4 className="mt-2 text-sm font-semibold leading-6 text-gray-900">
-                            <a href={post.href}>
-                              <span className="absolute inset-0" />
-                              {post.title}
-                            </a>
-                          </h4>
                         </div>
-                      </article>
-                    ))}
+                      </div>
+                      <div className="grid grid-cols-1 gap-10 sm:gap-8 lg:grid-cols-2">
+                        <h3 className="sr-only">
+                          {megaMenu?.recent_posts_title || "Friss Hírek"}
+                        </h3>
+                        {recentPosts.map((post) => (
+                          <article
+                            key={post.id}
+                            className="relative isolate flex max-w-2xl flex-col gap-x-8 gap-y-6 sm:flex-row sm:items-start lg:flex-col lg:items-stretch"
+                          >
+                            <div className="relative flex-none">
+                              <img
+                                alt=""
+                                src={post.imageUrl}
+                                className="aspect-[2/1] w-full rounded-lg bg-gray-100 object-cover sm:aspect-video sm:h-32 lg:h-auto"
+                                onError={(e) =>
+                                  (e.currentTarget.src =
+                                    "https://placehold.co/360x180?text=Hirkep")
+                                }
+                              />
+                              <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-900/10" />
+                            </div>
+                            <div>
+                              <div className="flex items-center gap-x-4">
+                                <time
+                                  dateTime={post.datetime}
+                                  className="text-sm leading-6 text-gray-600"
+                                >
+                                  {post.date}
+                                </time>
+                              </div>
+                              <h4 className="mt-2 text-sm font-semibold leading-6 text-gray-900">
+                                <a href={post.href}>
+                                  <span className="absolute inset-0" />
+                                  {post.title}
+                                </a>
+                              </h4>
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </PopoverPanel>
               </div>
-            </PopoverPanel>
+            )}
           </Popover>
 
-          {/* SIMA MENÜPONTOK */}
+          {/* SIMA MENÜPONTOK + AKTÍV ÁLLAPOT (Active State) */}
           <Link
             href={`/${lang}/rolunk`}
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors"
+            className={`text-sm font-semibold leading-6 transition-colors ${
+              isActive("/rolunk")
+                ? "text-indigo-600"
+                : "text-gray-900 hover:text-indigo-600"
+            }`}
           >
             {nav?.about || "Rólunk"}
           </Link>
           <Link
             href={`/${lang}/referenciak`}
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors"
+            className={`text-sm font-semibold leading-6 transition-colors ${
+              isActive("/referenciak")
+                ? "text-indigo-600"
+                : "text-gray-900 hover:text-indigo-600"
+            }`}
           >
             {nav?.references || "Referenciák"}
           </Link>
           <Link
             href={`/${lang}/kapcsolat`}
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors"
+            className={`text-sm font-semibold leading-6 transition-colors ${
+              isActive("/kapcsolat")
+                ? "text-indigo-600"
+                : "text-gray-900 hover:text-indigo-600"
+            }`}
           >
             {nav?.contact || "Kapcsolat"}
           </Link>
         </div>
 
-        {/* GOMBOK */}
+        {/* JOBB OLDAL: NYELVVÁLTÓ + CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-4 items-center">
-          <div className="text-sm font-semibold text-gray-900">HU | EN</div>
+          {/* NYELVVÁLTÓ DROPDOWN (Menu) */}
+          <Menu as="div" className="relative inline-block text-left">
+            <MenuButton className="group inline-flex items-center justify-center text-sm font-semibold text-gray-900 hover:text-indigo-600">
+              <GlobeAltIcon
+                className="mr-1.5 h-5 w-5 text-gray-400 group-hover:text-indigo-500"
+                aria-hidden="true"
+              />
+              {/* Megjelenítjük az aktuális nyelvet nagybetűvel */}
+              {lang.toUpperCase()}
+              <ChevronDownIcon
+                className="-mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-indigo-500"
+                aria-hidden="true"
+              />
+            </MenuButton>
+
+            <MenuItems
+              transition
+              className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+            >
+              <div className="py-1">
+                {languages.map((l) => (
+                  <MenuItem key={l.code}>
+                    <button
+                      onClick={() => switchLanguage(l.code)}
+                      className={`group flex w-full items-center px-4 py-2 text-sm ${
+                        lang === l.code
+                          ? "bg-gray-100 text-gray-900"
+                          : "text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+                      }`}
+                    >
+                      <span className="mr-3 text-lg">{l.flag}</span>
+                      <span className="flex-1 text-left">{l.name}</span>
+                      {lang === l.code && (
+                        <CheckIcon
+                          className="h-4 w-4 text-indigo-600"
+                          aria-hidden="true"
+                        />
+                      )}
+                    </button>
+                  </MenuItem>
+                ))}
+              </div>
+            </MenuItems>
+          </Menu>
+
+          <div className="h-6 w-px bg-gray-200" aria-hidden="true" />
+
           <Link
             href={`/${lang}/ajanlatkeres`}
             className="text-sm font-semibold leading-6 text-white bg-indigo-600 px-4 py-2 rounded-md hover:bg-indigo-500 shadow-sm transition-all hover:shadow-md"
@@ -277,7 +382,7 @@ export default function HeaderClient({ lang, dict }: Props) {
         </div>
       </nav>
 
-      {/* MOBIL MENÜ - Változatlan, mert azzal nem volt gond */}
+      {/* MOBIL MENÜ */}
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
@@ -339,29 +444,58 @@ export default function HeaderClient({ lang, dict }: Props) {
 
                 <Link
                   href={`/${lang}/rolunk`}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${
+                    isActive("/rolunk")
+                      ? "text-indigo-600 bg-gray-50"
+                      : "text-gray-900"
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {nav?.about || "Rólunk"}
                 </Link>
                 <Link
                   href={`/${lang}/referenciak`}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${
+                    isActive("/referenciak")
+                      ? "text-indigo-600 bg-gray-50"
+                      : "text-gray-900"
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {nav?.references || "Referenciák"}
                 </Link>
                 <Link
                   href={`/${lang}/kapcsolat`}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${
+                    isActive("/kapcsolat")
+                      ? "text-indigo-600 bg-gray-50"
+                      : "text-gray-900"
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {nav?.contact || "Kapcsolat"}
                 </Link>
               </div>
+
+              {/* MOBIL NYELVVÁLTÓ (Egyszerűsítve) */}
               <div className="py-6">
-                <div className="text-sm font-semibold text-gray-900 mb-4">
-                  HU | EN
+                <div className="mb-4 flex gap-4 justify-center">
+                  {languages.map((l) => (
+                    <button
+                      key={l.code}
+                      onClick={() => {
+                        switchLanguage(l.code);
+                        setMobileMenuOpen(false);
+                      }}
+                      className={`px-3 py-1 rounded-md text-sm font-semibold ${
+                        lang === l.code
+                          ? "bg-indigo-100 text-indigo-600"
+                          : "text-gray-500 hover:bg-gray-100"
+                      }`}
+                    >
+                      {l.flag} {l.code.toUpperCase()}
+                    </button>
+                  ))}
                 </div>
                 <Link
                   href={`/${lang}/ajanlatkeres`}
