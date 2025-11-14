@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useRef } from "react"; // useRef kell a hoverhez
+import { useState, useRef } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation"; // Útvonal figyeléshez
+import { usePathname, useRouter } from "next/navigation";
 
-// --- Headless UI Importok ---
 import {
   Popover,
   PopoverButton,
@@ -24,10 +23,9 @@ import {
   Bars3Icon,
   XMarkIcon,
   ChevronDownIcon,
-  CheckIcon, // Pipa a nyelvválasztóhoz
+  CheckIcon,
 } from "@heroicons/react/24/outline";
 
-// Ikonok az új Mega-Menühöz
 import {
   BookOpenIcon,
   BriefcaseIcon,
@@ -40,7 +38,6 @@ import {
   VideoCameraIcon,
 } from "@heroicons/react/24/outline";
 
-// --- Dinamikus Ikon Térkép ---
 const iconMap: { [key: string]: React.ComponentType<any> } = {
   "/rolunk": InformationCircleIcon,
   "/partnerek": UsersIcon,
@@ -58,7 +55,6 @@ type Props = {
   dict: any;
 };
 
-// Nyelvek definíciója
 const languages = [
   { code: "hu", name: "Magyar", flag: "🇭🇺" },
   { code: "en", name: "English", flag: "🇬🇧" },
@@ -69,37 +65,31 @@ export default function HeaderClient({ lang, dict }: Props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
-  const buttonRef = useRef<HTMLButtonElement>(null); // Ref a hover nyitáshoz
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
-  // --- Adatok a szótárból ---
   const nav = dict?.navbar || {};
   const megaMenu = nav?.mega_menu || {};
   const engagementLinks = megaMenu?.engagement?.links || [];
   const resourcesLinks = megaMenu?.resources?.links || [];
 
-  // --- Segédfüggvények ---
-
-  // 1. Aktív állapot ellenőrzése
   const isActive = (path: string) => {
-    // Pontos egyezés vagy al-útvonal (pl. /termekek/maszoka)
     return (
       pathname === `/${lang}${path}` || pathname?.startsWith(`/${lang}${path}/`)
     );
   };
 
-  // 2. Nyelvváltás logikája
   const switchLanguage = (newLang: string) => {
     if (!pathname) return;
     const segments = pathname.split("/");
-    segments[1] = newLang; // A [locale] mindig a második elem (az első üres a / miatt)
+    segments[1] = newLang;
     const newPath = segments.join("/");
     router.push(newPath);
   };
 
-  // 3. Hover Kezelő (Mouse Enter)
+  // Ez nyitja meg a menüt, ha az egér a gomb fölé ér
   const onHover = (open: boolean) => {
     if (!open) {
-      buttonRef.current?.click(); // Szimuláljuk a kattintást, ha zárva van
+      buttonRef.current?.click();
     }
   };
 
@@ -130,7 +120,6 @@ export default function HeaderClient({ lang, dict }: Props) {
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
       >
-        {/* LOGO */}
         <div className="flex lg:flex-1">
           <Link href={`/${lang}`} className="-m-1.5 p-1.5">
             <span className="sr-only">Terra Forte Bau</span>
@@ -142,7 +131,6 @@ export default function HeaderClient({ lang, dict }: Props) {
           </Link>
         </div>
 
-        {/* MOBIL MENÜ GOMB */}
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -154,19 +142,21 @@ export default function HeaderClient({ lang, dict }: Props) {
           </button>
         </div>
 
-        {/* ASZTALI MENÜ */}
         <div className="hidden lg:flex lg:gap-x-12">
-          {/* HOVER FUNKCIÓ: A Popover render prop-ját használjuk az 'open' állapot eléréséhez */}
           <Popover className="flex">
-            {({ open }) => (
+            {(
+              { open, close } // Itt kérjük el a 'close' függvényt
+            ) => (
               <div
-                onMouseEnter={() => onHover(open)}
-                onMouseLeave={() => {
-                  // Opcionális: Ha azt akarod, hogy lejövetelkor bezáródjon,
-                  // itt is lehetne kattintani, de az néha idegesítő UX.
-                  // A legtöbb Mega Menu nyitva marad, amíg máshova nem kattintasz.
-                }}
                 className="flex"
+                // 1. Ha az egér belép ebbe a közös térbe (gomb + panel), kinyitjuk
+                onMouseEnter={() => onHover(open)}
+                // 2. Ha az egér ELHAGYJA ezt a közös teret, bezárjuk
+                onMouseLeave={() => {
+                  if (open) {
+                    close(); // Ez a Headless UI hivatalos bezáró függvénye
+                  }
+                }}
               >
                 <PopoverButton
                   ref={buttonRef}
@@ -189,6 +179,8 @@ export default function HeaderClient({ lang, dict }: Props) {
                   transition
                   className="absolute inset-x-0 top-full z-20 bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:-translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                 >
+                  {/* Mivel ez a Panel a fenti 'div' gyereke, amíg itt van az egér,
+                      az onMouseLeave NEM fut le. Ez a titok! */}
                   <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
                     <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2">
                       <div className="grid grid-cols-2 gap-x-6 sm:gap-x-8">
@@ -291,7 +283,6 @@ export default function HeaderClient({ lang, dict }: Props) {
             )}
           </Popover>
 
-          {/* SIMA MENÜPONTOK + AKTÍV ÁLLAPOT (Active State) */}
           <Link
             href={`/${lang}/rolunk`}
             className={`text-sm font-semibold leading-6 transition-colors ${
@@ -324,16 +315,13 @@ export default function HeaderClient({ lang, dict }: Props) {
           </Link>
         </div>
 
-        {/* JOBB OLDAL: NYELVVÁLTÓ + CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-4 items-center">
-          {/* NYELVVÁLTÓ DROPDOWN (Menu) */}
           <Menu as="div" className="relative inline-block text-left">
             <MenuButton className="group inline-flex items-center justify-center text-sm font-semibold text-gray-900 hover:text-indigo-600">
               <GlobeAltIcon
                 className="mr-1.5 h-5 w-5 text-gray-400 group-hover:text-indigo-500"
                 aria-hidden="true"
               />
-              {/* Megjelenítjük az aktuális nyelvet nagybetűvel */}
               {lang.toUpperCase()}
               <ChevronDownIcon
                 className="-mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-indigo-500"
@@ -382,7 +370,6 @@ export default function HeaderClient({ lang, dict }: Props) {
         </div>
       </nav>
 
-      {/* MOBIL MENÜ */}
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
@@ -477,7 +464,6 @@ export default function HeaderClient({ lang, dict }: Props) {
                 </Link>
               </div>
 
-              {/* MOBIL NYELVVÁLTÓ (Egyszerűsítve) */}
               <div className="py-6">
                 <div className="mb-4 flex gap-4 justify-center">
                   {languages.map((l) => (
