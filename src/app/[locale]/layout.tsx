@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+//import Hero from "@/components/Hero";
 import { Locale } from "./dictionaries";
 import "../globals.css";
 
@@ -8,20 +8,22 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  // JAVÍTVA: A mappa neve [locale], ezért itt is 'locale' a kulcs!
-  params: Promise<{ locale: Locale }>;
+  // JAVÍTÁS 1: A Next.js felé 'string'-et kommunikálunk, hogy megfeleljen a szabványnak
+  params: Promise<{ locale: string }>;
 }) {
-  // JAVÍTVA: Itt is 'locale'-t bontunk ki, nem 'lang'-ot
   const { locale } = await params;
-  console.log("🚀 Layout: Nyelv megérkezett:", locale); // <--- DEBUG 1
+
+  // JAVÍTÁS 2: Itt mondjuk meg a TypeScript-nek: "Bízz bennem, ez egy valid Locale!"
+  // Mivel a middleware.ts már szűrte, ez biztonságos.
+  const lang = locale as Locale;
+
+  console.log("🚀 Layout: Nyelv megérkezett:", lang);
+
   return (
-    // A HTML nyelvnek a locale-t adjuk
-    <html lang={locale}>
+    <html lang={lang}>
       <body>
-        {/* A Header komponensünk 'lang' néven várja a props-ot (így írtuk meg a Header.tsx-ben),
-          ezért a mi 'locale' változónkat átadjuk neki.
-        */}
-        <Header lang={locale} />
+        {/* Itt már a 'lang' változót adjuk át, ami a castolás miatt 'Locale' típusú */}
+        <Header lang={lang} />
         <main>{children}</main>
       </body>
     </html>
