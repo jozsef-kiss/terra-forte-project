@@ -1,0 +1,20 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "references": "References",
+    "contact": "Contact",
+    "quote_btn": "Get a Quote",
+    "menu": {
+      "climbing_frames": "Climbing Frames",
+      "swings": "Swings",
+      "slides": "Slides",
+      "sets": "Playground Sets",
+      "springers": "Spring Rockers",
+      "accessories": "Accessories",
+      "furniture": "Benches & Tables",
+      "special": "Special Equipment"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "navbar": {
+    "products": "Termékek",
+    "references": "Referenciák",
+    "about": "Rólunk",
+    "contact": "Kapcsolat",
+    "quote_btn": "Ajánlatot kérek",
+    "menu": {
+      "climbing_frames": "Mászókák",
+      "swings": "Hinták",
+      "slides": "Csúszdák",
+      "sets": "Komplett szettek",
+      "springers": "Rugós játékok",
+      "accessories": "Kiegészítők"
+    },
+    "mega_menu": {
+      "engagement": {
+        "title": "Cégünkről",
+        "links": [
+          { "name": "Rólunk", "href": "/rolunk" },
+          { "name": "Partnerek", "href": "/partnerek" },
+          { "name": "Hírek", "href": "/hirek" },
+          { "name": "Karrier", "href": "/karrier" },
+          { "name": "Tanúsítványok", "href": "/tanusitvanyok" }
+        ]
+      },
+      "resources": {
+        "title": "Tudástár",
+        "links": [
+          { "name": "Közösség", "href": "/kozosseg" },
+          { "name": "Telepítési útmutatók", "href": "/telepites" },
+          { "name": "Biztonsági előírások", "href": "/biztonsag" },
+          { "name": "GYIK", "href": "/gyik" }
+        ]
+      },
+      "recent_posts_title": "Friss Hírek"
+    }
+  },
+  "Footer": {
+    "copyright": "© {year} Terra Forte Bau Kft. Minden jog fenntartva.",
+    "privacy": "Adatvédelem",
+    "imprint": "Impresszum"
+  }
+}

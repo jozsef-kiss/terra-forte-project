@@ -1,0 +1,20 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "about": "Über Uns",
+    "products": "Produkte",
+    "references": "Referenzen",
+    "contact": "Kontakt",
+    "quote_btn": "Angebot anfordern",
+    "menu": {
+      "climbing_frames": "Klettergerüste",
+      "swings": "Schaukeln",
+      "slides": "Rutschen",
+      "sets": "Spielplatz-Sets",
+      "springers": "Federtiere",
+      "accessories": "Zubehör",
+      "furniture": "Bänke & Tische",
+      "special": "Spezialgeräte"
+    }
+  }
+}

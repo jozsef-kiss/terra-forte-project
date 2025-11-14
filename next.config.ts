@@ -1,12 +1,9 @@
 // next.config.ts
-import createNextIntlPlugin from "next-intl/plugin";
 
-const withNextIntl = createNextIntlPlugin();
+import type { NextConfig } from "next";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Ez a sor a Turbopack javítás
-  turbopack: {},
+const nextConfig: NextConfig = {
+  // Ide jöhetnek majd egyéb beállítások, ha kellenek (pl. images remote patterns)
 };
 
-export default withNextIntl(nextConfig);
+export default nextConfig;
