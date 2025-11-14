@@ -3,8 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-// --- JAVÍTVA: HIÁNYZÓ IMPORTOK PÓTOLVA ---
-// Ezek kellenek a mobil menühöz és a lenyíláshoz
+// --- Headless UI Importok ---
 import {
   Popover,
   PopoverButton,
@@ -22,7 +21,7 @@ import {
   ChevronDownIcon,
 } from "@heroicons/react/24/outline";
 
-// Ikonok az új Mega-Menühöz (ahogy kérted)
+// Ikonok az új Mega-Menühöz
 import {
   BookOpenIcon,
   BriefcaseIcon,
@@ -35,8 +34,7 @@ import {
   VideoCameraIcon,
 } from "@heroicons/react/24/outline";
 
-// --- Dinamikus Ikon Térkép (Változatlan) ---
-// Ez köti össze a JSON-t és az importált ikonokat
+// --- Dinamikus Ikon Térkép ---
 const iconMap: { [key: string]: React.ComponentType<any> } = {
   "/rolunk": InformationCircleIcon,
   "/partnerek": UsersIcon,
@@ -49,7 +47,6 @@ const iconMap: { [key: string]: React.ComponentType<any> } = {
   "/gyik": VideoCameraIcon,
 };
 
-// --- Props (Változatlan) ---
 type Props = {
   lang: string;
   dict: any;
@@ -57,15 +54,14 @@ type Props = {
 
 export default function HeaderClient({ lang, dict }: Props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  // TÖRÖLVE: const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
 
-  // --- Adatok a szótárból (Változatlan) ---
+  // --- Adatok a szótárból ---
   const nav = dict?.navbar || {};
   const megaMenu = nav?.mega_menu || {};
   const engagementLinks = megaMenu?.engagement?.links || [];
   const resourcesLinks = megaMenu?.resources?.links || [];
 
-  // Statikus "Recent Posts" (Változatlan)
+  // Statikus "Recent Posts"
   const recentPosts = [
     {
       id: 1,
@@ -88,15 +84,13 @@ export default function HeaderClient({ lang, dict }: Props) {
   ];
 
   return (
-    // JAVÍTVA: Hozzáadtam az 'isolate' osztályt.
-    // Ez egy új stacking context-et hoz létre, ami garantálja,
-    // hogy a 'z-50' header és a 'z-10' panelje MINDIG a <main> tartalom FELETT legyen.
+    // 1. A 'header' adja a pozicionálási alapot (static/sticky kontextus)
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50 isolate">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
       >
-        {/* LOGO (Változatlan) */}
+        {/* LOGO */}
         <div className="flex lg:flex-1">
           <Link href={`/${lang}`} className="-m-1.5 p-1.5">
             <span className="sr-only">Terra Forte Bau</span>
@@ -108,7 +102,7 @@ export default function HeaderClient({ lang, dict }: Props) {
           </Link>
         </div>
 
-        {/* MOBIL MENÜ GOMB (Változatlan) */}
+        {/* MOBIL MENÜ GOMB */}
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -122,9 +116,10 @@ export default function HeaderClient({ lang, dict }: Props) {
 
         {/* ASZTALI MENÜ */}
         <div className="hidden lg:flex lg:gap-x-12">
-          {/* --- CSERE KEZDETE: A "Mankó" helyett a Headless UI Mega-Menü --- */}
-          {/* A 'z-50' itt már nem kell, mert a szülő <header> kezeli */}
-          <Popover className="relative">
+          {/* JAVÍTÁS 1: KIVETTÜK A 'relative' CLASS-T! 
+             Így a PopoverPanel nem ehhez a gombhoz, hanem a headerhez igazodik.
+          */}
+          <Popover className="flex">
             <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 outline-none hover:text-indigo-600 transition-colors data-[open]:text-indigo-600">
               {nav?.products || "Termékek"}
               <ChevronDownIcon
@@ -133,18 +128,18 @@ export default function HeaderClient({ lang, dict }: Props) {
               />
             </PopoverButton>
 
+            {/* JAVÍTÁS 2: TISZTA POZICIONÁLÁS
+               - 'absolute inset-x-0 top-full': A header aljára tapad, teljes szélességben.
+               - Kivettük a 'w-screen'-t, a '-left-1/2'-t és a 'mt-5'-öt.
+               - 'z-20': Biztosítjuk, hogy minden más felett legyen.
+            */}
             <PopoverPanel
               transition
-              // JAVÍTVA: 'z-10' hozzáadva, hogy a headeren belül is felül legyen
-              className="absolute inset-x-0 -left-1/2 top-full z-10 mt-5 w-screen max-w-7xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:-translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+              className="absolute inset-x-0 top-full z-20 bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:-translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
-              {/* Ez a rész 1:1-ben az új Catalyst kód, amit küldtél, csak magyarítva */}
-              <div className="relative">
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 top-1/2 bg-white shadow-lg ring-1 ring-gray-900/5"
-                />
-                <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-6 py-10 lg:grid-cols-2 lg:px-8">
+              {/* Ez a wrapper felel a tartalom középre igazításáért */}
+              <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+                <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2">
                   {/* Bal oszlop: Linkek */}
                   <div className="grid grid-cols-2 gap-x-6 sm:gap-x-8">
                     {/* Cégünkről szekció */}
@@ -174,6 +169,7 @@ export default function HeaderClient({ lang, dict }: Props) {
                         </div>
                       </div>
                     </div>
+
                     {/* Tudástár szekció */}
                     <div>
                       <h3 className="text-sm font-medium leading-6 text-gray-500">
@@ -202,7 +198,7 @@ export default function HeaderClient({ lang, dict }: Props) {
                     </div>
                   </div>
 
-                  {/* Jobb oszlop: Friss Hírek (Statikus) */}
+                  {/* Jobb oszlop: Friss Hírek */}
                   <div className="grid grid-cols-1 gap-10 sm:gap-8 lg:grid-cols-2">
                     <h3 className="sr-only">
                       {megaMenu?.recent_posts_title || "Friss Hírek"}
@@ -247,9 +243,8 @@ export default function HeaderClient({ lang, dict }: Props) {
               </div>
             </PopoverPanel>
           </Popover>
-          {/* --- CSERE VÉGE --- */}
 
-          {/* SIMA MENÜPONTOK (Változatlan) */}
+          {/* SIMA MENÜPONTOK */}
           <Link
             href={`/${lang}/rolunk`}
             className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors"
@@ -270,7 +265,7 @@ export default function HeaderClient({ lang, dict }: Props) {
           </Link>
         </div>
 
-        {/* GOMBOK (Változatlan) */}
+        {/* GOMBOK */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-4 items-center">
           <div className="text-sm font-semibold text-gray-900">HU | EN</div>
           <Link
@@ -282,13 +277,12 @@ export default function HeaderClient({ lang, dict }: Props) {
         </div>
       </nav>
 
-      {/* MOBIL MENÜ (JAVÍTVA: Headless UI-t használ) */}
+      {/* MOBIL MENÜ - Változatlan, mert azzal nem volt gond */}
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
         className="lg:hidden"
       >
-        {/* Most már a Dialog is a 'z-50'-es header kontextusban van */}
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 slide-in-from-right duration-300">
           <div className="flex items-center justify-between">
@@ -311,7 +305,6 @@ export default function HeaderClient({ lang, dict }: Props) {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {/* Mobil Termékek (JAVÍTVA: Disclosure-t használ) */}
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                     {nav?.products || "Termékek"}
@@ -367,7 +360,6 @@ export default function HeaderClient({ lang, dict }: Props) {
                 </Link>
               </div>
               <div className="py-6">
-                {/* <LanguageSwitcher /> */}
                 <div className="text-sm font-semibold text-gray-900 mb-4">
                   HU | EN
                 </div>
