@@ -4,6 +4,7 @@ import USP from "@/components/USP";
 import CategoryPreview from "@/components/CategoryPreview";
 import Newsletter from "@/components/Newsletter";
 import FeaturedReferences from "@/components/FeaturedReferences";
+import Partners from "@/components/Partners";
 
 export default async function Home({
   params,
@@ -23,6 +24,7 @@ export default async function Home({
         <CategoryPreview lang={lang} />
         <Newsletter lang={lang} />
         <FeaturedReferences lang={lang} />
+        <Partners lang={lang} />
       </main>
     </div>
   );

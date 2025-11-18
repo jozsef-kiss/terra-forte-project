@@ -3,7 +3,22 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Ide jöhetnek majd egyéb beállítások, ha kellenek (pl. images remote patterns)
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "tailwindcss.com",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
