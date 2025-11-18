@@ -17,8 +17,6 @@ export default async function RootLayout({
   // Mivel a middleware.ts már szűrte, ez biztonságos.
   const lang = locale as Locale;
 
-  console.log("🚀 Layout: Nyelv megérkezett:", lang);
-
   return (
     <html lang={lang}>
       <body>

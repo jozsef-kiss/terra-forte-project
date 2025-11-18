@@ -1,39 +1,39 @@
 {
   "navbar": {
-    "products": "Termékek",
+    "products": "Termékeink",
+    "services": "Szolgáltatások",
     "references": "Referenciák",
     "about": "Rólunk",
-    "contact": "Kapcsolat",
-    "quote_btn": "Ajánlatot kérek",
-    "menu": {
-      "climbing_frames": "Mászókák",
-      "swings": "Hinták",
-      "slides": "Csúszdák",
-      "sets": "Komplett szettek",
-      "springers": "Rugós játékok",
-      "accessories": "Kiegészítők"
-    },
+    "blog": "Blog",
+    "contact_btn": "Kapcsolat",
+    "quote_btn": "Árajánlatkérés",
     "mega_menu": {
-      "engagement": {
-        "title": "Cégünkről",
+      "categories": {
+        "title": "Kategóriák",
         "links": [
-          { "name": "Rólunk", "href": "/rolunk" },
-          { "name": "Partnerek", "href": "/partnerek" },
-          { "name": "Hírek", "href": "/hirek" },
-          { "name": "Karrier", "href": "/karrier" },
-          { "name": "Tanúsítványok", "href": "/tanusitvanyok" }
+          { "name": "Fa Játszóterek", "href": "/termekek/fa-jatszoterek" },
+          { "name": "Fém Játszóterek", "href": "/termekek/fem-jatszoterek" },
+          { "name": "Hinták", "href": "/termekek/hintak" },
+          { "name": "Kültéri Fitnesz", "href": "/termekek/kulteri-fitnesz" },
+          { "name": "Rugós Játékok", "href": "/termekek/rugos-jatekok" },
+          { "name": "Utcabútorok", "href": "/termekek/utcabutorok" }
         ]
       },
-      "resources": {
-        "title": "Tudástár",
+      "featured": {
+        "title": "Kiemelt Ajánlatok",
         "links": [
-          { "name": "Közösség", "href": "/kozosseg" },
-          { "name": "Telepítési útmutatók", "href": "/telepites" },
-          { "name": "Biztonsági előírások", "href": "/biztonsag" },
-          { "name": "GYIK", "href": "/gyik" }
+          { "name": "Akciós termékek", "href": "/termekek/akcio" },
+          { "name": "Újdonságok", "href": "/termekek/ujdonsagok" }
         ]
       },
-      "recent_posts_title": "Friss Hírek"
+      "recent_posts_title": "Friss a Blogról"
+    },
+    "top_bar": {
+      "phone": "+36 70 410 8284",
+      "address": "3662, Ózd-Somsályfő Telep 1.",
+      "marketing_text": "Ingyenes Felmérés • Prémium Minőség • 5 Év Garancia",
+      "social_aria": "Kövessen minket",
+      "call_us": "Hívjon minket:"
     }
   },
   "Footer": {

@@ -1,20 +1,39 @@
 {
   "navbar": {
-    "home": "Startseite",
-    "about": "Über Uns",
     "products": "Produkte",
+    "services": "Dienstleistungen",
     "references": "Referenzen",
-    "contact": "Kontakt",
-    "quote_btn": "Angebot anfordern",
-    "menu": {
-      "climbing_frames": "Klettergerüste",
-      "swings": "Schaukeln",
-      "slides": "Rutschen",
-      "sets": "Spielplatz-Sets",
-      "springers": "Federtiere",
-      "accessories": "Zubehör",
-      "furniture": "Bänke & Tische",
-      "special": "Spezialgeräte"
+    "about": "Über uns",
+    "blog": "Blog",
+    "contact_btn": "Kontakt",
+    "quote_btn": "Angebotsanfrage",
+    "mega_menu": {
+      "categories": {
+        "title": "Kategorien",
+        "links": [
+          { "name": "Holzspielplätze", "href": "/termekek/fa-jatszoterek" },
+          { "name": "Metalspielplätze", "href": "/termekek/fem-jatszoterek" },
+          { "name": "Schaukeln", "href": "/termekek/hintak" },
+          { "name": "Outdoor Fitness", "href": "/termekek/kulteri-fitnesz" },
+          { "name": "Federwippen", "href": "/termekek/rugos-jatekok" },
+          { "name": "Stadtmöbel", "href": "/termekek/utcabutorok" }
+        ]
+      },
+      "featured": {
+        "title": "Empfohlene Angebote",
+        "links": [
+          { "name": "Aktionsprodukte", "href": "/termekek/akcio" },
+          { "name": "Neuheiten", "href": "/termekek/ujdonsagok" }
+        ]
+      },
+      "recent_posts_title": "Frisch aus dem Blog"
+    },
+    "top_bar": {
+      "phone": "+36 70 410 8284",
+      "address": "Ungarn, 3662 Ózd-Somsályfő Telep 1.",
+      "marketing_text": "Kostenlose Begutachtung • Premiumqualität • 5 Jahre Garantie",
+      "social_aria": "Folgen Sie uns",
+      "call_us": "Rufen Sie uns an:"
     }
   }
 }

@@ -1,20 +1,39 @@
 {
   "navbar": {
-    "home": "Home",
-    "about": "About Us",
     "products": "Products",
+    "services": "Services",
     "references": "References",
-    "contact": "Contact",
-    "quote_btn": "Get a Quote",
-    "menu": {
-      "climbing_frames": "Climbing Frames",
-      "swings": "Swings",
-      "slides": "Slides",
-      "sets": "Playground Sets",
-      "springers": "Spring Rockers",
-      "accessories": "Accessories",
-      "furniture": "Benches & Tables",
-      "special": "Special Equipment"
+    "about": "About Us",
+    "blog": "Blog",
+    "contact_btn": "Contact",
+    "quote_btn": "Request a Quote",
+    "mega_menu": {
+      "categories": {
+        "title": "Categories",
+        "links": [
+          { "name": "Wooden Playgrounds", "href": "/termekek/fa-jatszoterek" },
+          { "name": "Metal Playgrounds", "href": "/termekek/fem-jatszoterek" },
+          { "name": "Swings", "href": "/termekek/hintak" },
+          { "name": "Outdoor Fitness", "href": "/termekek/kulteri-fitnesz" },
+          { "name": "Spring Riders", "href": "/termekek/rugos-jatekok" },
+          { "name": "Street Furniture", "href": "/termekek/utcabutorok" }
+        ]
+      },
+      "featured": {
+        "title": "Featured Offers",
+        "links": [
+          { "name": "Discounted Products", "href": "/termekek/akcio" },
+          { "name": "New Arrivals", "href": "/termekek/ujdonsagok" }
+        ]
+      },
+      "recent_posts_title": "Fresh From the Blog"
+    },
+    "top_bar": {
+      "phone": "+36 70 410 8284",
+      "address": "Hungary, 3662 Ózd-Somsályfő Telep 1.",
+      "marketing_text": "Free Assessment • Premium Quality • 5-Year Warranty",
+      "social_aria": "Follow us",
+      "call_us": "Call us:"
     }
   }
 }

@@ -14,7 +14,6 @@ const dictionaries = {
 export type Locale = keyof typeof dictionaries;
 
 export const getDictionary = async (locale: Locale) => {
-  console.log("📚 Szótár betöltése ehhez a nyelvhez:", locale); // <--- EZT ADD HOZZÁ!
   // Ha véletlenül olyan nyelvkód jönne, ami nincs, alapértelmezetten magyarra esünk vissza (biztonsági háló)
   return dictionaries[locale] ? dictionaries[locale]() : dictionaries["hu"]();
 };
