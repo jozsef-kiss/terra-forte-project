@@ -5,6 +5,9 @@ import CategoryPreview from "@/components/CategoryPreview";
 import Newsletter from "@/components/Newsletter";
 import FeaturedReferences from "@/components/FeaturedReferences";
 import Partners from "@/components/Partners";
+import ServicesSection from "@/components/ServicesSection";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import CtaSection from "@/components/CtaSection";
 
 export default async function Home({
   params,
@@ -25,6 +28,9 @@ export default async function Home({
         <Newsletter lang={lang} />
         <FeaturedReferences lang={lang} />
         <Partners lang={lang} />
+        <ServicesSection lang={lang} />
+        <WhyChooseUs lang={lang} />
+        <CtaSection lang={lang} />
       </main>
     </div>
   );

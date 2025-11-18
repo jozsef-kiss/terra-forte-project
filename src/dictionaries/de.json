@@ -136,6 +136,75 @@
     },
     "Partners": {
       "title": "Vertraut von innovativen Organisationen"
+    },
+    "ServicesSection": {
+      "badge": "Komplettausführung",
+      "title": "Vom Entwurf bis zur schlüsselfertigen Übergabe",
+      "description": "Wir stellen nicht nur Geräte her, sondern nehmen Ihnen die Last ab. Unser Expertenteam koordiniert jeden Schritt des Prozesses, sodass Sie nur bei der Übergabe anwesend sein müssen.",
+      "features": [
+        {
+          "name": "Individuelles Design.",
+          "description": "Wir erstellen visuelle Pläne auf der Grundlage von Vor-Ort-Besichtigungen unter Berücksichtigung von Sicherheitszonen und Budget."
+        },
+        {
+          "name": "Premium-Fertigung.",
+          "description": "Wir fertigen zertifizierte Geräte in unserem eigenen Werk aus ausgewählten Holz- und Metallmaterialien mit CNC-Technologie."
+        },
+        {
+          "name": "Fachgerechte Installation.",
+          "description": "Unser eigenes Installationsteam kümmert sich um Betonieren, Fallschutzböden und die Befestigung der Geräte."
+        }
+      ]
+    },
+    "WhyChooseUs": {
+      "title": "Why Choose Terra Forte?",
+      "description": "We are dedicated to creating playgrounds that stand out for their quality, safety, and custom solutions. Here is why our partners choose us:",
+      "features": [
+        {
+          "title": "Local Expertise and Reliability",
+          "description": "As a Hungarian-owned business with over 10 years of experience, we understand local needs and standards. Personal connection and trust come first for us."
+        },
+        {
+          "title": "Strict Safety Compliance",
+          "description": "All equipment manufactured and installed by us possesses the necessary MSZ EN 1176 certification. Child safety is not an option for us, but a fundamental requirement."
+        },
+        {
+          "title": "Full Customisation",
+          "description": "We offer more than just catalogue products. Our flexible manufacturing technology allows us to tailor the playground to the specific location and budget."
+        },
+        {
+          "title": "Durability and Quality",
+          "description": "We work with selected, UV-resistant, and weather-proof materials to ensure our playgrounds serve the community for generations with minimal maintenance."
+        }
+      ]
+    },
+    "WhyChooseUs": {
+      "title": "Warum Terra Forte?",
+      "description": "Wir widmen uns der Schaffung von Spielplätzen, die sich durch Qualität, Sicherheit und individuelle Lösungen auszeichnen. Darum wählen uns unsere Partner:",
+      "features": [
+        {
+          "title": "Lokale Kompetenz und Zuverlässigkeit",
+          "description": "Als Unternehmen in ungarischem Besitz mit über 10 Jahren Erfahrung kennen wir die lokalen Bedürfnisse und Standards. Persönlicher Kontakt und Vertrauen stehen bei uns an erster Stelle."
+        },
+        {
+          "title": "Strenge Sicherheitskonformität",
+          "description": "Alle von uns hergestellten und installierten Geräte verfügen über die erforderliche MSZ EN 1176 Zertifizierung. Kindersicherheit ist für uns keine Option, sondern eine Grundvoraussetzung."
+        },
+        {
+          "title": "Volle Anpassungsfähigkeit",
+          "description": "Wir bieten mehr als nur Katalogprodukte. Unsere flexible Fertigungstechnologie ermöglicht es uns, den Spielplatz an den spezifischen Standort und das Budget anzupassen."
+        },
+        {
+          "title": "Langlebigkeit und Qualität",
+          "description": "Wir arbeiten mit ausgewählten, UV-beständigen und wetterfesten Materialien, damit unsere Spielplätze der Gemeinschaft über Generationen hinweg mit minimalem Wartungsaufwand dienen."
+        }
+      ]
+    },
+    "CtaSection": {
+      "title": "Bereit, den perfekten Spielplatz zu planen?",
+      "subtitle": "Fordern Sie eine kostenlose Vor-Ort-Bewertung und ein individuelles Angebot von unseren Experten an!",
+      "primary_btn": "Kostenloses Angebot anfordern",
+      "secondary_btn": "Referenzen ansehen"
     }
   }
 }

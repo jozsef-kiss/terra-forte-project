@@ -136,6 +136,53 @@
     },
     "Partners": {
       "title": "Akik már minket választottak"
+    },
+    "ServicesSection": {
+      "badge": "Teljeskörű Megvalósítás",
+      "title": "A tervezéstől a kulcsrakész átadásig",
+      "description": "Nem csupán eszközöket gyártunk, hanem levesszük a terhet a válláról. Szakértő csapatunk a folyamat minden lépését koordinálja, hogy Önnek csak az átadáson kelljen részt vennie.",
+      "features": [
+        {
+          "name": "Egyedi Tervezés.",
+          "description": "Helyszíni felmérés alapján készítünk látványterveket, figyelembe véve a biztonsági zónákat és a költségkeretet."
+        },
+        {
+          "name": "Prémium Gyártás.",
+          "description": "Saját üzemünkben, válogatott fa és fém alapanyagokból, CNC technológiával gyártjuk a szabványos eszközöket."
+        },
+        {
+          "name": "Szakszerű Telepítés.",
+          "description": "Saját telepítő csapatunk végzi a betonozást, az ütéscsillapító felületek kialakítását és az eszközök rögzítését."
+        }
+      ]
+    },
+    "WhyChooseUs": {
+      "title": "Miért a Terra Forte?",
+      "description": "Elkötelezettek vagyunk amellett, hogy olyan játszótereket alkossunk, amelyek kiemelkednek minőségükkel, biztonságukkal és egyedi megoldásaikkal. Ezért választanak minket partnereink:",
+      "features": [
+        {
+          "title": "Hazai Szakértelem és Megbízhatóság",
+          "description": "Több mint 10 éves tapasztalattal rendelkező, magyar tulajdonú vállalkozásként ismerjük a hazai igényeket és szabványokat. Számunkra a személyes kapcsolat és a bizalom az első."
+        },
+        {
+          "title": "Szigorú Biztonsági Megfelelés",
+          "description": "Minden általunk gyártott és telepített eszköz rendelkezik a szükséges MSZ EN 1176 tanúsítvánnyal. A gyermekek biztonsága nálunk nem opció, hanem alapkövetelmény."
+        },
+        {
+          "title": "Teljes Testreszabhatóság",
+          "description": "Nem csak katalógustermékeket kínálunk. Rugalmas gyártási technológiánk lehetővé teszi, hogy az adott helyszínre és költségkeretre szabjuk a játszóteret."
+        },
+        {
+          "title": "Tartósság és Minőség",
+          "description": "Válogatott, UV-álló és időjárásálló alapanyagokkal dolgozunk, hogy a játszóterek generációkon át szolgálják a közösséget minimális karbantartás mellett."
+        }
+      ]
+    },
+    "CtaSection": {
+      "title": "Készen áll a tökéletes játszótér megtervezésére?",
+      "subtitle": "Kérje szakértőink ingyenes helyszíni felmérését és személyre szabott árajánlatát!",
+      "primary_btn": "Ingyenes Árajánlatkérés",
+      "secondary_btn": "Referenciák megtekintése"
     }
   }
 }
