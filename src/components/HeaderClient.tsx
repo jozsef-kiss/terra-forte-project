@@ -29,6 +29,7 @@ import {
   CheckIcon,
   PhoneIcon,
   MapPinIcon,
+  EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 
 import {
@@ -103,6 +104,7 @@ export default function HeaderClient({ lang, dict }: Props) {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
           {/* Bal oldal: Kapcsolat */}
           <div className="flex items-center gap-x-4 sm:gap-x-6">
+            {/* Telefon */}
             <a
               href={`tel:${topBar.phone}`}
               className="flex items-center gap-x-2 hover:text-indigo-300 transition"
@@ -114,7 +116,18 @@ export default function HeaderClient({ lang, dict }: Props) {
               </span>
               <span className="font-semibold">{topBar.phone}</span>
             </a>
-            <div className="hidden sm:flex items-center gap-x-2 text-slate-300">
+
+            {/* ÚJ: Email cím (közvetlenül a telefon mellett) */}
+            <a
+              href={`mailto:${topBar.email}`}
+              className="hidden sm:flex items-center gap-x-2 hover:text-indigo-300 transition"
+            >
+              <EnvelopeIcon className="h-4 w-4" aria-hidden="true" />
+              <span>{topBar.email}</span>
+            </a>
+
+            {/* Cím */}
+            <div className="hidden xl:flex items-center gap-x-2 text-slate-300">
               <MapPinIcon className="h-4 w-4" aria-hidden="true" />
               <span>{topBar.address}</span>
             </div>
