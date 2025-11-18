@@ -121,12 +121,11 @@
         }
       }
     },
-    "Newsletter": {
-      "title": "Would you like to be notified about our latest products and promotions?",
-      "placeholder": "Enter your email address",
-      "button": "Subscribe",
-      "privacy_text": "We handle your data confidentially. Read our",
-      "privacy_link_text": "Privacy Policy."
+    "FeaturedReferences": {
+      "title": "Our Pride: Installed Playgrounds",
+      "subtitle": "Over 50 successful projects nationwide.",
+      "description": "Whether it's a municipal public space, a kindergarten yard, or a residential park, our references prove our expertise. View our past works and get inspired for your own project.",
+      "cta": "View All References"
     }
   }
 }

@@ -127,6 +127,12 @@
       "button": "Abonnieren",
       "privacy_text": "Wir behandeln Ihre Daten vertraulich. Lesen Sie unsere",
       "privacy_link_text": "Datenschutzerklärung."
+    },
+    "FeaturedReferences": {
+      "title": "Unser Stolz: Installierte Spielplätze",
+      "subtitle": "Über 50 erfolgreiche Projekte landesweit.",
+      "description": "Ob öffentlicher Platz, Kindergartenhof oder Wohnpark, unsere Referenzen beweisen unsere Kompetenz. Sehen Sie sich unsere bisherigen Arbeiten an und lassen Sie sich inspirieren.",
+      "cta": "Alle Referenzen ansehen"
     }
   }
 }
