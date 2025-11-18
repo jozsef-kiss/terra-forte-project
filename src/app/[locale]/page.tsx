@@ -1,6 +1,8 @@
 import { Locale } from "./dictionaries";
 import Hero from "@/components/Hero";
 import USP from "@/components/USP";
+import CategoryPreview from "@/components/CategoryPreview";
+import Newsletter from "@/components/Newsletter";
 
 export default async function Home({
   params,
@@ -17,6 +19,8 @@ export default async function Home({
         {/* Átadjuk a nyelvet a komponenseknek */}
         <Hero lang={lang} />
         <USP lang={lang} />
+        <CategoryPreview lang={lang} />
+        <Newsletter lang={lang} />
       </main>
     </div>
   );

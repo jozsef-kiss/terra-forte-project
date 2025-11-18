@@ -102,6 +102,31 @@
       "premium_desc": "Langlebig, UV-beständig und vandalismussicher.",
       "full_service": "Komplettausführung",
       "full_service_desc": "Von der Planung über die Installation bis zur Wartung."
+    },
+    "Categories": {
+      "section_title": "Kategorien entdecken",
+      "browse_all": "Alle Kategorien anzeigen",
+      "items": {
+        "wooden": {
+          "title": "Holzspielplätze",
+          "cta": "Ansehen"
+        },
+        "metal": {
+          "title": "Metalspielplätze",
+          "cta": "Ansehen"
+        },
+        "fitness": {
+          "title": "Outdoor Fitness",
+          "cta": "Ansehen"
+        }
+      }
+    },
+    "Newsletter": {
+      "title": "Möchten Sie über unsere neuesten Produkte und Aktionen informiert werden?",
+      "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+      "button": "Abonnieren",
+      "privacy_text": "Wir behandeln Ihre Daten vertraulich. Lesen Sie unsere",
+      "privacy_link_text": "Datenschutzerklärung."
     }
   }
 }

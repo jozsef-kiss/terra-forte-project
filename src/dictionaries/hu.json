@@ -102,6 +102,31 @@
       "premium_desc": "Időtálló, UV-stabil és vandálbiztos kivitel.",
       "full_service": "Teljeskörű Kivitelezés",
       "full_service_desc": "A tervezéstől a telepítésig és karbantartásig."
+    },
+    "Categories": {
+      "section_title": "Kategóriák felfedezése",
+      "browse_all": "Összes kategória",
+      "items": {
+        "wooden": {
+          "title": "Fa Játszóterek",
+          "cta": "Megnézem"
+        },
+        "metal": {
+          "title": "Fém Játszóterek",
+          "cta": "Megnézem"
+        },
+        "fitness": {
+          "title": "Kültéri Fitnesz",
+          "cta": "Megnézem"
+        }
+      }
+    },
+    "Newsletter": {
+      "title": "Szeretne értesülni a legújabb termékekről és akciókról?",
+      "placeholder": "Adja meg az e-mail címét",
+      "button": "Feliratkozás",
+      "privacy_text": "Az adatait bizalmasan kezeljük. Olvassa el az",
+      "privacy_link_text": "Adatvédelmi tájékoztatónkat."
     }
   }
 }

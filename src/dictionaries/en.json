@@ -102,6 +102,31 @@
       "premium_desc": "Durable, UV-stable, and vandal-resistant construction.",
       "full_service": "Full-Service Implementation",
       "full_service_desc": "From design to installation and maintenance."
+    },
+    "Categories": {
+      "section_title": "Explore Categories",
+      "browse_all": "View All Categories",
+      "items": {
+        "wooden": {
+          "title": "Wooden Playgrounds",
+          "cta": "View"
+        },
+        "metal": {
+          "title": "Metal Playgrounds",
+          "cta": "View"
+        },
+        "fitness": {
+          "title": "Outdoor Fitness",
+          "cta": "View"
+        }
+      }
+    },
+    "Newsletter": {
+      "title": "Would you like to be notified about our latest products and promotions?",
+      "placeholder": "Enter your email address",
+      "button": "Subscribe",
+      "privacy_text": "We handle your data confidentially. Read our",
+      "privacy_link_text": "Privacy Policy."
     }
   }
 }
