@@ -54,7 +54,8 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    // HÁTTÉR: #595a5c
+    <footer className="bg-[#595a5c]" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Lábléc
       </h2>
@@ -70,7 +71,8 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
                 className="h-9"
               />
             </Link>
-            <p className="text-sm leading-6 text-gray-600">
+            {/* Szöveg: text-gray-300 (világos szürke) */}
+            <p className="text-sm leading-6 text-gray-300">
               Professzionális játszóterek tervezése és kivitelezése.
             </p>
           </div>
@@ -80,7 +82,8 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               {/* Termékek */}
               <div>
-                <h3 className="text-sm/6 font-semibold text-gray-900">
+                {/* Fejléc: text-white */}
+                <h3 className="text-sm/6 font-semibold text-white">
                   {sections.products.title}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
@@ -88,7 +91,8 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
                     <li key={item.name}>
                       <Link
                         href={`/${lang}${item.href}`}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
+                        // Linkek: text-gray-300 hover:text-white
+                        className="text-sm/6 text-gray-300 hover:text-white"
                       >
                         {item.name}
                       </Link>
@@ -99,7 +103,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
 
               {/* Segítség */}
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm/6 font-semibold text-gray-900">
+                <h3 className="text-sm/6 font-semibold text-white">
                   {sections.support.title}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
@@ -107,7 +111,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
                     <li key={item.name}>
                       <Link
                         href={`/${lang}${item.href}`}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
+                        className="text-sm/6 text-gray-300 hover:text-white"
                       >
                         {item.name}
                       </Link>
@@ -120,7 +124,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               {/* Cégünk */}
               <div>
-                <h3 className="text-sm/6 font-semibold text-gray-900">
+                <h3 className="text-sm/6 font-semibold text-white">
                   {sections.company.title}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
@@ -128,7 +132,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
                     <li key={item.name}>
                       <Link
                         href={`/${lang}${item.href}`}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
+                        className="text-sm/6 text-gray-300 hover:text-white"
                       >
                         {item.name}
                       </Link>
@@ -139,7 +143,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
 
               {/* Jogi */}
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm/6 font-semibold text-gray-900">
+                <h3 className="text-sm/6 font-semibold text-white">
                   {sections.legal.title}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
@@ -147,7 +151,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
                     <li key={item.name}>
                       <Link
                         href={`/${lang}${item.href}`}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
+                        className="text-sm/6 text-gray-300 hover:text-white"
                       >
                         {item.name}
                       </Link>
@@ -160,12 +164,13 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
         </div>
 
         {/* HÍRLEVÉL SZEKCIÓ */}
-        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24 lg:flex lg:items-center lg:justify-between">
+        {/* Border: border-white/10 */}
+        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 lg:flex lg:items-center lg:justify-between">
           <div>
-            <h3 className="text-sm/6 font-semibold text-gray-900">
+            <h3 className="text-sm/6 font-semibold text-white">
               {f.newsletter.title}
             </h3>
-            <p className="mt-2 text-sm/6 text-gray-600">
+            <p className="mt-2 text-sm/6 text-gray-300">
               {f.newsletter.description}
             </p>
           </div>
@@ -180,12 +185,13 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
               required
               placeholder={f.newsletter.placeholder}
               autoComplete="email"
-              className="w-full min-w-0 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus-visible:outline-indigo-600 sm:w-56 sm:text-sm/6"
+              // Input maradt fehér, sötét szöveggel (kontrasztos)
+              className="w-full min-w-0 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus-visible:outline-indigo-500 sm:w-56 sm:text-sm/6"
             />
             <div className="mt-4 sm:mt-0 sm:ml-4 sm:shrink-0">
               <button
                 type="submit"
-                className="flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full items-center justify-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 {f.newsletter.button}
               </button>
@@ -194,20 +200,22 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
         </div>
 
         {/* ALSÓ SÁV (Copyright + Social) */}
-        <div className="mt-8 border-t border-gray-900/10 pt-8 md:flex md:items-center md:justify-between">
+        {/* Border: border-white/10 */}
+        <div className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex gap-x-6 md:order-2">
             {socialLinks.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-gray-800"
+                // Ikonok: text-gray-400 hover:text-gray-300
+                className="text-gray-400 hover:text-gray-300"
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon aria-hidden="true" className="size-6" />
               </a>
             ))}
           </div>
-          <p className="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0">
+          <p className="mt-8 text-sm/6 text-gray-400 md:order-1 md:mt-0">
             {f.copyright.replace("{year}", year.toString())}
           </p>
         </div>

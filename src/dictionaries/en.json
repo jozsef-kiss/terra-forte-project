@@ -121,6 +121,13 @@
         }
       }
     },
+    "Newsletter": {
+      "title": "Would you like to be notified about our latest products and promotions?",
+      "placeholder": "Enter your email address",
+      "button": "Subscribe",
+      "privacy_text": "We handle your data confidentially. Read our",
+      "privacy_link_text": "Privacy Policy."
+    },
     "FeaturedReferences": {
       "title": "Our Pride: Installed Playgrounds",
       "subtitle": "Over 50 successful projects nationwide.",
