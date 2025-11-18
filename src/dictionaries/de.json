@@ -94,12 +94,14 @@
       "cta_contact": "Angebot anfordern"
     },
     "USP": {
-      "standard": "EN 1176 Standard",
-      "standard_desc": "Alle Geräte verfügen über die erforderlichen Sicherheitszertifikate.",
-      "premium": "Premium Materialien",
-      "premium_desc": "Langlebiges, UV-stabiles und vandalismusgeschütztes Design.",
-      "full_service": "Komplettservice",
-      "full_service_desc": "Von der Planung bis zur Installation und Wartung."
+      "section_title": "Warum sollten Sie uns wählen?",
+      "section_subtitle": "Über 10 Jahre Erfahrung, Garantie und Zuverlässigkeit.",
+      "standard": "MSZ EN 1176 Standard",
+      "standard_desc": "Alle unsere Geräte verfügen über die erforderlichen Zertifizierungen.",
+      "premium": "Premium-Materialien",
+      "premium_desc": "Langlebig, UV-beständig und vandalismussicher.",
+      "full_service": "Komplettausführung",
+      "full_service_desc": "Von der Planung über die Installation bis zur Wartung."
     }
   }
 }

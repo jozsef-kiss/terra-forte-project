@@ -94,12 +94,14 @@
       "cta_contact": "Árajánlatkérés"
     },
     "USP": {
-      "standard": "EN 1176 szabvány",
-      "standard_desc": "Minden eszköz érvényes biztonsági tanúsítvánnyal rendelkezik.",
-      "premium": "Prémium alapanyagok",
-      "premium_desc": "Tartós, UV-álló és vandalizmusálló kialakítás.",
-      "full_service": "Teljeskörű szolgáltatás",
-      "full_service_desc": "A tervezéstől a kivitelezésig és a karbantartásig."
+      "section_title": "Miért válasszon minket?",
+      "section_subtitle": "Több mint 10 év tapasztalat, garancia és megbízhatóság.",
+      "standard": "MSZ EN 1176 Szabvány",
+      "standard_desc": "Minden eszközünk rendelkezik a szükséges tanúsítványokkal.",
+      "premium": "Prémium Anyagok",
+      "premium_desc": "Időtálló, UV-stabil és vandálbiztos kivitel.",
+      "full_service": "Teljeskörű Kivitelezés",
+      "full_service_desc": "A tervezéstől a telepítésig és karbantartásig."
     }
   }
 }

@@ -94,11 +94,13 @@
       "cta_contact": "Get a Quote"
     },
     "USP": {
-      "standard": "EN 1176 Standard",
-      "standard_desc": "All equipment comes with valid safety certifications.",
+      "section_title": "Why Choose Us?",
+      "section_subtitle": "Over 10 years of experience, warranty, and reliability.",
+      "standard": "MSZ EN 1176 Standard",
+      "standard_desc": "All our equipment comes with the required certifications.",
       "premium": "Premium Materials",
-      "premium_desc": "Durable, UV-stable, and vandal-resistant design.",
-      "full_service": "Full Service",
+      "premium_desc": "Durable, UV-stable, and vandal-resistant construction.",
+      "full_service": "Full-Service Implementation",
       "full_service_desc": "From design to installation and maintenance."
     }
   }
