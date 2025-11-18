@@ -1,10 +1,23 @@
-import Image from "next/image";
-import styles from "../page.module.css";
+import { Locale } from "./dictionaries";
+import Hero from "@/components/Hero";
+import USP from "@/components/USP";
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  // 1. Itt nyerjük ki a 'lang'-ot
+  const { locale } = await params;
+  const lang = locale as Locale;
+
   return (
-    <div>
-      <main></main>
+    <div className="flex flex-col min-h-screen bg-white">
+      <main>
+        {/* Átadjuk a nyelvet a komponenseknek */}
+        <Hero lang={lang} />
+        <USP lang={lang} />
+      </main>
     </div>
   );
 }

@@ -83,5 +83,23 @@
         ]
       }
     }
+  },
+  "HomePage": {
+    "Hero": {
+      "badge_text": "European Manufacturing & Warranty",
+      "badge_link": "Learn more about us",
+      "title": "Building Safe and Creative Playgrounds",
+      "subtitle": "We manufacture and install premium quality, MSZ EN 1176 certified playground equipment for municipalities and institutions.",
+      "cta_products": "Discover Products",
+      "cta_contact": "Get a Quote"
+    },
+    "USP": {
+      "standard": "EN 1176 Standard",
+      "standard_desc": "All equipment comes with valid safety certifications.",
+      "premium": "Premium Materials",
+      "premium_desc": "Durable, UV-stable, and vandal-resistant design.",
+      "full_service": "Full Service",
+      "full_service_desc": "From design to installation and maintenance."
+    }
   }
 }

@@ -83,5 +83,23 @@
         ]
       }
     }
+  },
+  "HomePage": {
+    "Hero": {
+      "badge_text": "Europäische Herstellung & Garantie",
+      "badge_link": "Mehr über uns",
+      "title": "Bau von sicheren und kreativen Spielplätzen",
+      "subtitle": "Herstellung und Installation von hochwertigen, nach MSZ EN 1176 zertifizierten Spielplatzgeräten für Kommunen und Institutionen.",
+      "cta_products": "Produkte entdecken",
+      "cta_contact": "Angebot anfordern"
+    },
+    "USP": {
+      "standard": "EN 1176 Standard",
+      "standard_desc": "Alle Geräte verfügen über die erforderlichen Sicherheitszertifikate.",
+      "premium": "Premium Materialien",
+      "premium_desc": "Langlebiges, UV-stabiles und vandalismusgeschütztes Design.",
+      "full_service": "Komplettservice",
+      "full_service_desc": "Von der Planung bis zur Installation und Wartung."
+    }
   }
 }

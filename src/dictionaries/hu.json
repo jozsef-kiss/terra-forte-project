@@ -83,5 +83,23 @@
         ]
       }
     }
+  },
+  "HomePage": {
+    "Hero": {
+      "badge_text": "Európai gyártás és garancia",
+      "badge_link": "Tudjon meg többet rólunk",
+      "title": "Biztonságos és kreatív játszóterek építése",
+      "subtitle": "Prémium minőségű, MSZ EN 1176 minősítéssel rendelkező játszótéri eszközöket gyártunk és telepítünk önkormányzatok és intézmények számára.",
+      "cta_products": "Termékek megtekintése",
+      "cta_contact": "Árajánlatkérés"
+    },
+    "USP": {
+      "standard": "EN 1176 szabvány",
+      "standard_desc": "Minden eszköz érvényes biztonsági tanúsítvánnyal rendelkezik.",
+      "premium": "Prémium alapanyagok",
+      "premium_desc": "Tartós, UV-álló és vandalizmusálló kialakítás.",
+      "full_service": "Teljeskörű szolgáltatás",
+      "full_service_desc": "A tervezéstől a kivitelezésig és a karbantartásig."
+    }
   }
 }
