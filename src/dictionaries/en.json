@@ -36,5 +36,52 @@
       "social_aria": "Follow us",
       "call_us": "Call us:"
     }
+  },
+  "Footer": {
+    "copyright": "© {year} Terra Forte Bau Kft. All rights reserved.",
+    "newsletter": {
+      "title": "Subscribe to our Newsletter",
+      "description": "Be the first to know about new products, promotions, and professional articles. Sent weekly.",
+      "placeholder": "Enter your email address",
+      "button": "Subscribe"
+    },
+    "sections": {
+      "products": {
+        "title": "Our Products",
+        "links": [
+          { "name": "Climbing Frames", "href": "/termekek/maszokak" },
+          { "name": "Swings", "href": "/termekek/hintak" },
+          { "name": "Slides", "href": "/termekek/csuszdak" },
+          { "name": "Complete Sets", "href": "/termekek/szettek" },
+          { "name": "Street Furniture", "href": "/termekek/utcabutorok" }
+        ]
+      },
+      "support": {
+        "title": "Support",
+        "links": [
+          { "name": "Contact", "href": "/kapcsolat" },
+          { "name": "FAQ", "href": "/gyik" },
+          { "name": "Installation Guides", "href": "/telepites" },
+          { "name": "Document Library", "href": "/letoltesek" }
+        ]
+      },
+      "company": {
+        "title": "Our Company",
+        "links": [
+          { "name": "About Us", "href": "/rolunk" },
+          { "name": "References", "href": "/referenciak" },
+          { "name": "Blog", "href": "/blog" },
+          { "name": "Career", "href": "/karrier" }
+        ]
+      },
+      "legal": {
+        "title": "Legal",
+        "links": [
+          { "name": "Privacy Policy", "href": "/adatvedelem" },
+          { "name": "Terms & Conditions", "href": "/aszf" },
+          { "name": "Imprint", "href": "/impresszum" }
+        ]
+      }
+    }
   }
 }

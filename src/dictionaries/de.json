@@ -36,5 +36,52 @@
       "social_aria": "Folgen Sie uns",
       "call_us": "Rufen Sie uns an:"
     }
+  },
+  "Footer": {
+    "copyright": "© {year} Terra Forte Bau Kft. Alle Rechte vorbehalten.",
+    "newsletter": {
+      "title": "Abonnieren Sie unseren Newsletter",
+      "description": "Erhalten Sie als Erster Informationen über neue Produkte, Aktionen und Fachartikel. Wöchentliche Zusendung.",
+      "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+      "button": "Abonnieren"
+    },
+    "sections": {
+      "products": {
+        "title": "Unsere Produkte",
+        "links": [
+          { "name": "Klettergerüste", "href": "/termekek/maszokak" },
+          { "name": "Schaukeln", "href": "/termekek/hintak" },
+          { "name": "Rutschen", "href": "/termekek/csuszdak" },
+          { "name": "Komplettsets", "href": "/termekek/szettek" },
+          { "name": "Stadtmöbel", "href": "/termekek/utcabutorok" }
+        ]
+      },
+      "support": {
+        "title": "Hilfe & Support",
+        "links": [
+          { "name": "Kontakt", "href": "/kapcsolat" },
+          { "name": "FAQ", "href": "/gyik" },
+          { "name": "Montageanleitungen", "href": "/telepites" },
+          { "name": "Dokumentenarchiv", "href": "/letoltesek" }
+        ]
+      },
+      "company": {
+        "title": "Unser Unternehmen",
+        "links": [
+          { "name": "Über uns", "href": "/rolunk" },
+          { "name": "Referenzen", "href": "/referenciak" },
+          { "name": "Blog", "href": "/blog" },
+          { "name": "Karriere", "href": "/karrier" }
+        ]
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "links": [
+          { "name": "Datenschutz", "href": "/adatvedelem" },
+          { "name": "AGB", "href": "/aszf" },
+          { "name": "Impressum", "href": "/impresszum" }
+        ]
+      }
+    }
   }
 }

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import { Footer } from "@/components/layout/Footer";
 //import Hero from "@/components/Hero";
 import { Locale } from "./dictionaries";
 import "../globals.css";
@@ -23,6 +24,7 @@ export default async function RootLayout({
         {/* Itt már a 'lang' változót adjuk át, ami a castolás miatt 'Locale' típusú */}
         <Header lang={lang} />
         <main>{children}</main>
+        <Footer lang={lang} />
       </body>
     </html>
   );

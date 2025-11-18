@@ -39,7 +39,49 @@
   },
   "Footer": {
     "copyright": "© {year} Terra Forte Bau Kft. Minden jog fenntartva.",
-    "privacy": "Adatvédelem",
-    "imprint": "Impresszum"
+    "newsletter": {
+      "title": "Iratkozzon fel hírlevelünkre",
+      "description": "Értesüljön elsőként az új termékekről, akciókról és szakmai cikkekről. Hetente küldjük.",
+      "placeholder": "Adja meg az e-mail címét",
+      "button": "Feliratkozás"
+    },
+    "sections": {
+      "products": {
+        "title": "Termékeink",
+        "links": [
+          { "name": "Mászókák", "href": "/termekek/maszokak" },
+          { "name": "Hinták", "href": "/termekek/hintak" },
+          { "name": "Csúszdák", "href": "/termekek/csuszdak" },
+          { "name": "Komplett szettek", "href": "/termekek/szettek" },
+          { "name": "Utcabútorok", "href": "/termekek/utcabutorok" }
+        ]
+      },
+      "support": {
+        "title": "Segítség",
+        "links": [
+          { "name": "Kapcsolat", "href": "/kapcsolat" },
+          { "name": "GYIK", "href": "/gyik" },
+          { "name": "Telepítési útmutatók", "href": "/telepites" },
+          { "name": "Dokumentumtár", "href": "/letoltesek" }
+        ]
+      },
+      "company": {
+        "title": "Cégünk",
+        "links": [
+          { "name": "Rólunk", "href": "/rolunk" },
+          { "name": "Referenciák", "href": "/referenciak" },
+          { "name": "Blog", "href": "/blog" },
+          { "name": "Karrier", "href": "/karrier" }
+        ]
+      },
+      "legal": {
+        "title": "Jogi",
+        "links": [
+          { "name": "Adatvédelem", "href": "/adatvedelem" },
+          { "name": "ÁSZF", "href": "/aszf" },
+          { "name": "Impresszum", "href": "/impresszum" }
+        ]
+      }
+    }
   }
 }
