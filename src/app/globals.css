@@ -93,3 +93,39 @@ footer a[class*="bg-indigo-"]:active {
   transform: translateY(0);
   box-shadow: none;
 }
+
+/* --- GLOBÁLIS INPUT HÁTTÉR MÓDOSÍTÁS (#fafafa) --- */
+/* Felülírjuk a komponensek (pl. Newsletter) alapértelmezett fehér hátterét */
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not(
+    [type="button"]
+  ):not([type="range"]),
+textarea,
+select {
+  background-color: #fafafa !important;
+}
+
+/* --- PLACEHOLDER SZÍN GLOBÁLISAN --- */
+/* Stone-500 (#78716c) - Olvasható, de nem tolakodó */
+input::placeholder,
+textarea::placeholder {
+  color: #78716c !important;
+  opacity: 1; /* Firefox miatt kell, hogy ne legyen áttetsző */
+}
+
+/* --- EGYEDI DROPDOWN ANIMÁCIÓ --- */
+@keyframes dropdownOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-dropdown-open {
+  /* Finom, rugalmas érkezés (cubic-bezier) */
+  animation: dropdownOpen 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top right; /* A jobb felső sarokból nyílik */
+}

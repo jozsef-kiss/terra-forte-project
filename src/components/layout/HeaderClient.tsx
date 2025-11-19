@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button"; // Catalyst gomb
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 // --- Headless UI Importok ---
 import {
@@ -232,7 +233,7 @@ export default function HeaderClient({ lang, dict }: Props) {
                   {nav?.products || "Termékeink"}
                   <ChevronDownIcon
                     aria-hidden="true"
-                    className={`size-5 flex-none text-gray-400 transition-transform ${
+                    className={`size-5 flex-none text-indigo-500 transition-transform ${
                       open ? "rotate-180" : ""
                     }`}
                   />
@@ -360,50 +361,9 @@ export default function HeaderClient({ lang, dict }: Props) {
         </div>
 
         {/* JOBB OLDAL: NYELVVÁLTÓ + CTA */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-4 items-center">
+        <div className="hidden lg:flex lg:flex-1 pl-6 lg:justify-end lg:gap-4 items-center">
           {/* Nyelvváltó */}
-          <Menu as="div" className="relative inline-block text-left">
-            <MenuButton className="group inline-flex items-center justify-center text-sm font-semibold text-gray-900 hover:text-indigo-600">
-              <GlobeAltIcon
-                className="mr-1.5 h-5 w-5 text-gray-400 group-hover:text-indigo-500"
-                aria-hidden="true"
-              />
-              {lang.toUpperCase()}
-              <ChevronDownIcon
-                className="-mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-indigo-500"
-                aria-hidden="true"
-              />
-            </MenuButton>
-
-            <MenuItems
-              transition
-              className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-            >
-              <div className="py-1">
-                {languages.map((l) => (
-                  <MenuItem key={l.code}>
-                    <button
-                      onClick={() => switchLanguage(l.code)}
-                      className={`group flex w-full items-center px-4 py-2 text-sm ${
-                        lang === l.code
-                          ? "bg-gray-100 text-gray-900"
-                          : "text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-                      }`}
-                    >
-                      <span className="mr-3 text-lg">{l.flag}</span>
-                      <span className="flex-1 text-left">{l.name}</span>
-                      {lang === l.code && (
-                        <CheckIcon
-                          className="h-4 w-4 text-indigo-600"
-                          aria-hidden="true"
-                        />
-                      )}
-                    </button>
-                  </MenuItem>
-                ))}
-              </div>
-            </MenuItems>
-          </Menu>
+          <LanguageSwitcher />
 
           <div className="h-6 w-px bg-gray-200" aria-hidden="true" />
 
