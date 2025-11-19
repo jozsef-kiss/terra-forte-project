@@ -2,15 +2,6 @@
 @config "../../tailwind.config.ts";
 @import "tailwindcss"; /* Ez t�'lti be a preflight + utilities r�tegeket */
 
-/* EZZEL A K�%T SORRAL KIV�?LTOTTUK A HIB�?SAT:
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-*/
-
-/* 2. A T�cma Alapvet�' Sz��n V��ltozƈi (Dark/Light mƈdhoz)
-  Ezeket a Catalyst vagy a te komponenseid haszn��lhatj��k.
-*/
 :root {
   /* Meleg, törtfehér háttér (Stone-50) */
   --background: #fafaf9;
@@ -59,4 +50,46 @@ h6 {
 }
 .btn-quote:hover {
   background-color: #22663f !important; /* Sötétebb zöld hoverkor */
+}
+
+/* --- GLOBÁLIS GOMB HOVER EFFEKT (Kivéve Header/Menü) --- */
+/* Cél: Minden gomb és gomb-szerű link a main tartalomban és a footerben 
+   kapjon egy finom emelkedést és árnyékot. A header/nav elemeket kizárjuk 
+   azzal, hogy csak a 'main' és 'footer' gyerekekre célzunk.
+*/
+
+main button,
+footer button,
+main a[class*="bg-indigo-"], /* Elsődleges gombok (solid) */
+main a[class*="ring-"],      /* Outline gombok (gyakran ring-el készülnek) */
+main a[class*="rounded-md"], /* Egyéb gomb-szerű linkek */
+footer a[class*="bg-indigo-"] {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Alapállapotban biztosítjuk, hogy a transform működjön */
+  will-change: transform;
+}
+
+/* Hover állapot */
+main button:hover,
+footer button:hover,
+main a[class*="bg-indigo-"]:hover,
+main a[class*="ring-"]:hover,
+main a[class*="rounded-md"]:hover:not(:has(img)), /* Képes kártyák kizárása, ha azok linkek */
+footer a[class*="bg-indigo-"]:hover {
+  /* Finom emelkedés */
+  transform: translateY(-2px);
+  /* Enyhe árnyék növelés a mélységért */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Active (kattintás) állapot - visszaugrik kicsit */
+main button:active,
+footer button:active,
+main a[class*="bg-indigo-"]:active,
+main a[class*="ring-"]:active,
+footer a[class*="bg-indigo-"]:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
