@@ -55,7 +55,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
 
   return (
     // HÁTTÉR: #595a5c
-    <footer className="bg-[#595a5c]" aria-labelledby="footer-heading">
+    <footer className="bg-indigo-950" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Lábléc
       </h2>
@@ -72,7 +72,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
               />
             </Link>
             {/* Szöveg: text-gray-300 (világos szürke) */}
-            <p className="text-sm leading-6 text-gray-300">
+            <p className="text-sm leading-6 text-white">
               Professzionális játszóterek tervezése és kivitelezése.
             </p>
           </div>
@@ -92,7 +92,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
                       <Link
                         href={`/${lang}${item.href}`}
                         // Linkek: text-gray-300 hover:text-white
-                        className="text-sm/6 text-gray-300 hover:text-white"
+                        className="text-sm/6 text-white hover:text-gray-300"
                       >
                         {item.name}
                       </Link>
@@ -111,7 +111,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
                     <li key={item.name}>
                       <Link
                         href={`/${lang}${item.href}`}
-                        className="text-sm/6 text-gray-300 hover:text-white"
+                        className="text-sm/6 text-white hover:text-gray-300"
                       >
                         {item.name}
                       </Link>
@@ -132,7 +132,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
                     <li key={item.name}>
                       <Link
                         href={`/${lang}${item.href}`}
-                        className="text-sm/6 text-gray-300 hover:text-white"
+                        className="text-sm/6 text-white hover:text-gray-300"
                       >
                         {item.name}
                       </Link>
@@ -151,7 +151,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
                     <li key={item.name}>
                       <Link
                         href={`/${lang}${item.href}`}
-                        className="text-sm/6 text-gray-300 hover:text-white"
+                        className="text-sm/6 text-white hover:text-gray-300"
                       >
                         {item.name}
                       </Link>
@@ -170,7 +170,7 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
             <h3 className="text-sm/6 font-semibold text-white">
               {f.newsletter.title}
             </h3>
-            <p className="mt-2 text-sm/6 text-gray-300">
+            <p className="mt-2 text-sm/6 text-white">
               {f.newsletter.description}
             </p>
           </div>
@@ -208,14 +208,14 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
                 key={item.name}
                 href={item.href}
                 // Ikonok: text-gray-400 hover:text-gray-300
-                className="text-gray-400 hover:text-gray-300"
+                className="text-white hover:text-gray-300"
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon aria-hidden="true" className="size-6" />
               </a>
             ))}
           </div>
-          <p className="mt-8 text-sm/6 text-gray-400 md:order-1 md:mt-0">
+          <p className="mt-8 text-sm/6 text-white md:order-1 md:mt-0">
             {f.copyright.replace("{year}", year.toString())}
           </p>
         </div>

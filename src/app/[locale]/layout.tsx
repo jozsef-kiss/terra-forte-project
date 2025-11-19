@@ -1,7 +1,21 @@
 import Header from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Locale } from "./dictionaries";
+import { Poppins, Open_Sans } from "next/font/google";
 import "../globals.css";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Szükséges súlyok
+  variable: "--font-poppins", // Ez lesz a CSS változó neve
+  display: "swap",
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+  display: "swap",
+});
 
 export default async function RootLayout({
   children,
@@ -18,8 +32,8 @@ export default async function RootLayout({
   const lang = locale as Locale;
 
   return (
-    <html lang={lang}>
-      <body>
+    <html lang={lang} className={`${poppins.variable} ${openSans.variable}`}>
+      <body className="font-sans antialiased bg-stone-50 text-stone-900">
         {/* Itt már a 'lang' változót adjuk át, ami a castolás miatt 'Locale' típusú */}
         <Header lang={lang} />
         <main>{children}</main>

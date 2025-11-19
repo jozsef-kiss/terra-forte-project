@@ -7,7 +7,8 @@ export default async function Hero({ lang }: { lang: Locale }) {
   const t = dict.HomePage.Hero;
 
   return (
-    <div className="bg-white relative">
+    // JAVÍTÁS: bg-white -> bg-stone-50
+    <div className="bg-stone-50 relative">
       {/* VÁLTOZÁS: lg: -> xl:
           A 'xl:flex' miatt csak 1280px felett lesz egymás mellett.
           Alatta (tehát 1200px-en is) marad a mobil nézet (egymás alatt).
@@ -19,7 +20,8 @@ export default async function Hero({ lang }: { lang: Locale }) {
             viewBox="0 0 100 100"
             preserveAspectRatio="none"
             aria-hidden="true"
-            className="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-white xl:block pointer-events-none"
+            // JAVÍTÁS: fill-white -> fill-stone-50 (hogy beleolvadjon a háttérbe)
+            className="absolute inset-y-0 right-1 hidden h-full w-80 translate-x-1/2 transform fill-stone-50 xl:block pointer-events-none"
           >
             <polygon points="0,0 90,0 50,100 0,100" />
           </svg>
@@ -69,7 +71,7 @@ export default async function Hero({ lang }: { lang: Locale }) {
       <div className="bg-gray-50 xl:absolute xl:inset-y-0 xl:right-0 xl:w-1/2 h-64 xl:h-auto w-full">
         <img
           alt="Modern játszótér mászóka gyerekekkel"
-          src="./Hero/hero.png"
+          src="/Hero/hero.png"
           className="aspect-[3/2] object-cover w-full h-full xl:aspect-auto"
         />
       </div>

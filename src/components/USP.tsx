@@ -12,7 +12,7 @@ export default async function USP({ lang }: { lang: Locale }) {
   return (
     // 1. HÁTTÉR: A kért #f0f0f0 szín (arbitrary value)
     // 2. MAGASSÁG: py-12 sm:py-16 (a korábbi 24/32 helyett), hogy keskenyebb legyen
-    <section className="bg-[#f0f0f0] py-12 sm:py-16">
+    <section className="bg-stone-100 py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Cím és Alcím (Visszaállítva sötétre a világos háttér miatt) */}
         <div className="mx-auto max-w-2xl text-center mb-10">

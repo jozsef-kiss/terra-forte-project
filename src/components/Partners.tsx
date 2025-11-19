@@ -6,7 +6,7 @@ export default async function Partners({ lang }: { lang: Locale }) {
   const t = dict.HomePage.Partners;
 
   return (
-    <section className="bg-[#f0f0f0] py-24 sm:py-32">
+    <section className="bg-stone-100 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <h2 className="text-lg/8 font-semibold text-gray-900 text-center lg:text-left">

@@ -100,7 +100,7 @@ export default function HeaderClient({ lang, dict }: Props) {
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50 isolate">
       {/* --- ÚJ: TOP BAR (BANNER) --- */}
       {/* Sötét háttér, fehér szöveg, mobilon elrejtjük a kevésbé fontos infókat */}
-      <div className="bg-slate-900 text-white text-xs sm:text-sm py-2">
+      <div className="bg-indigo-950 text-white text-xs sm:text-sm py-2">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
           {/* Bal oldal: Kapcsolat */}
           <div className="flex items-center gap-x-4 sm:gap-x-6">
@@ -410,13 +410,16 @@ export default function HeaderClient({ lang, dict }: Props) {
           {/* Másodlagos CTA: Kapcsolat */}
           <Button
             href={`/${lang}/kapcsolat`}
-            className="hidden lg:inline-flex text-gray-900 "
+            className="btn-contact hidden lg:inline-flex"
           >
             {nav?.contact_btn || "Kapcsolat"}
           </Button>
 
           {/* Elsődleges CTA: Árajánlat */}
-          <Button href={`/${lang}/ajanlatkeres`} color="indigo">
+          <Button
+            href={`/${lang}/ajanlatkeres`}
+            className="btn-quote hidden lg:inline-flex "
+          >
             {nav?.quote_btn || "Árajánlatkérés"}
           </Button>
         </div>
@@ -541,7 +544,7 @@ export default function HeaderClient({ lang, dict }: Props) {
 
                 <Link
                   href={`/${lang}/kapcsolat`}
-                  className="block w-full text-center rounded-md px-3.5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-50 mb-3 border border-gray-200"
+                  className="block w-full text-center rounded-md px-3.5 py-2.5 text-sm font-semibold bg-indigo-600 text-white hover:bg-indigo-500 mb-3 border border-gray-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {nav?.contact_btn || "Kapcsolat"}

@@ -38,7 +38,7 @@ export default async function CategoryPreview({ lang }: { lang: Locale }) {
   ];
 
   return (
-    <section className="bg-gray-50">
+    <section className="bg-stone-50">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         {/* Fejléc + Link */}
         <div className="sm:flex sm:items-baseline sm:justify-between">

@@ -7,7 +7,7 @@ export default async function Newsletter({ lang }: { lang: Locale }) {
 
   return (
     // HÁTTÉR: #f0f0f0 (világosszürke)
-    <div className="bg-[#f0f0f0] py-16 sm:py-24 lg:py-32">
+    <div className="bg-stone-100 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
         {/* Cím: Sötét marad a kontraszt miatt */}
         <h2 className="max-w-xl text-3xl font-semibold tracking-tight text-balance text-gray-900 sm:text-4xl lg:col-span-7">

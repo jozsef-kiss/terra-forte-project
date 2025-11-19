@@ -8,7 +8,7 @@ export default async function FeaturedReferences({ lang }: { lang: Locale }) {
   const t = dict.HomePage.FeaturedReferences;
 
   return (
-    <section className="overflow-hidden bg-white py-32">
+    <section className="overflow-hidden bg-stone-50 py-32">
       <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:min-w-full lg:flex-none lg:gap-y-8">
           {/* Szöveges tartalom */}
