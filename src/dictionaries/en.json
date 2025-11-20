@@ -482,5 +482,12 @@
         "web_value": "https://vercel.com"
       }
     }
+  },
+  "CookieBanner": {
+    "title": "Privacy Matters",
+    "description": "Our website uses cookies and Google Consent Mode v2 technology to improve user experience and analyze traffic. By clicking 'Accept All', you consent to the use of analytical cookies.",
+    "accept": "Accept All",
+    "decline": "Essential Only",
+    "privacy_link": "Privacy Policy"
   }
 }

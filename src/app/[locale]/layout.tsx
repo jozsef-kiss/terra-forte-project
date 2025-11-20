@@ -1,13 +1,15 @@
 import Header from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Locale } from "./dictionaries";
+import { getDictionary, Locale } from "./dictionaries";
 import { Poppins, Open_Sans } from "next/font/google";
 import "../globals.css";
+import { GoogleTagManager } from "@next/third-parties/google";
+import CookieBanner from "@/components/CookieBanner";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // Szükséges súlyok
-  variable: "--font-poppins", // Ez lesz a CSS változó neve
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -22,22 +24,47 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  // JAVÍTÁS 1: A Next.js felé 'string'-et kommunikálunk, hogy megfeleljen a szabványnak
   params: Promise<{ locale: string }>;
 }) {
+  // 1. Itt egyszer (és csak egyszer!) kinyerjük a nyelvet
   const { locale } = await params;
-
-  // JAVÍTÁS 2: Itt mondjuk meg a TypeScript-nek: "Bízz bennem, ez egy valid Locale!"
-  // Mivel a middleware.ts már szűrte, ez biztonságos.
   const lang = locale as Locale;
+
+  // 2. Betöltjük a szótárat
+  const dict = await getDictionary(lang);
+
+  // 3. GTM ID környezeti változó beolvasása
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "";
 
   return (
     <html lang={lang} className={`${poppins.variable} ${openSans.variable}`}>
+      <head>
+        <script
+          id="consent-mode"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'wait_for_update': 500
+              });
+            `,
+          }}
+        />
+      </head>
       <body className="font-sans antialiased bg-stone-50 text-stone-900">
-        {/* Itt már a 'lang' változót adjuk át, ami a castolás miatt 'Locale' típusú */}
-        <Header lang={lang} />
+        {/* Csak akkor rendereljük a GTM-et, ha van érvényes ID */}
+        {gtmId && <GoogleTagManager gtmId={gtmId} />}
+
+        <Header lang={lang} dict={dict} />
         <main>{children}</main>
         <Footer lang={lang} />
+
+        <CookieBanner t={dict.CookieBanner} lang={lang} />
       </body>
     </html>
   );

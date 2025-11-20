@@ -482,5 +482,12 @@
         "web_value": "https://vercel.com"
       }
     }
+  },
+  "CookieBanner": {
+    "title": "Datenschutz ist uns wichtig",
+    "description": "Unsere Website verwendet Cookies und die Google Consent Mode v2-Technologie, um die Benutzererfahrung zu verbessern und den Verkehr zu analysieren. Mit dem Klick auf 'Alle akzeptieren' stimmen Sie der Verwendung von Analyse-Cookies zu.",
+    "accept": "Alle akzeptieren",
+    "decline": "Nur Essenzielle",
+    "privacy_link": "Datenschutzerklärung"
   }
 }

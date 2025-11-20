@@ -482,5 +482,12 @@
         "web_value": "https://vercel.com"
       }
     }
+  },
+  "CookieBanner": {
+    "title": "Az adatvédelem fontos számunkra",
+    "description": "Weboldalunk sütiket (cookies) és a Google Consent Mode v2 technológiáját használja a felhasználói élmény javítása és a forgalom elemzése érdekében. Az 'Elfogadom' gombra kattintva hozzájárul az analitikai sütik használatához.",
+    "accept": "Minden süti elfogadása",
+    "decline": "Csak a szükségesek",
+    "privacy_link": "Adatvédelmi tájékoztató"
   }
 }
