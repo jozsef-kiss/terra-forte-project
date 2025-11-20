@@ -259,7 +259,8 @@ export default async function ServicesPage({
               {t.FAQ.items.map((faq: any) => (
                 <Disclosure as="div" key={faq.question} className="pt-6">
                   <dt>
-                    <DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-900">
+                    {/* A gomb változatlan marad a tiltásokkal */}
+                    <DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-900 hover:!transform-none hover:!shadow-none">
                       <span className="text-base font-semibold leading-7">
                         {faq.question}
                       </span>
@@ -271,10 +272,19 @@ export default async function ServicesPage({
                       </span>
                     </DisclosureButton>
                   </dt>
-                  <DisclosurePanel className="mt-2 pr-12">
-                    <p className="text-base leading-7 text-gray-600">
-                      {faq.answer}
-                    </p>
+
+                  {/* JAVÍTÁS: Grid trükk a magasság animálásához */}
+                  <DisclosurePanel
+                    transition
+                    className="grid grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out data-[closed]:grid-rows-[0fr]"
+                  >
+                    {/* Belső wrapper az overflow-hidden miatt (ez vágja le a tartalmat csukáskor) */}
+                    <div className="overflow-hidden">
+                      {/* A padding/margin ide került be, hogy az is animálódjon */}
+                      <p className="mt-2 pr-12 text-base leading-7 text-gray-600">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </DisclosurePanel>
                 </Disclosure>
               ))}
