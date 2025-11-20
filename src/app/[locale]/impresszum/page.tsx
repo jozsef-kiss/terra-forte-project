@@ -14,6 +14,7 @@ export default async function ImprintPage({
   return (
     <LegalLayout title={t.title} subtitle={t.subtitle}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* --- Szolgáltató Adatai --- */}
         <div>
           <h2 className="text-lg font-semibold text-gray-900 mb-2">
             Szolgáltató Adatai
@@ -26,24 +27,25 @@ export default async function ImprintPage({
               <strong>Székhely:</strong> 3662, Ózd-Somsályfő Telep 1.
             </li>
             <li>
-              <strong>Cégjegyzékszám:</strong> XX-XX-XXXXXX
+              <strong>Cégjegyzékszám:</strong> 05 09 024254
             </li>
             <li>
-              <strong>Adószám:</strong> XXXXXXXX-X-XX
+              <strong>Adószám:</strong> 23954780-2-05
             </li>
             <li>
-              <strong>Képviselő:</strong> Kiss József ügyvezető
+              <strong>Képviselő:</strong> Döbör Attila Ügyvezető
             </li>
           </ul>
         </div>
 
+        {/* --- Elérhetőségek --- */}
         <div>
           <h2 className="text-lg font-semibold text-gray-900 mb-2">
             Elérhetőségek
           </h2>
           <ul className="space-y-1">
             <li>
-              <strong>Telefon:</strong> +36 70 410 8284
+              <strong>Telefon:</strong> +36 70 369-8193
             </li>
             <li>
               <strong>E-mail:</strong> info@terrafortebau.hu
@@ -54,6 +56,7 @@ export default async function ImprintPage({
           </ul>
         </div>
 
+        {/* --- Tárhelyszolgáltató --- */}
         <div className="md:col-span-2 border-t border-gray-100 pt-6 mt-2">
           <h2 className="text-lg font-semibold text-gray-900 mb-2">
             Tárhelyszolgáltató
