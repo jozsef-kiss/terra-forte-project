@@ -391,7 +391,61 @@
   "LegalPages": {
     "Privacy": {
       "title": "Adatvédelmi Tájékoztató",
-      "lastUpdated": "Utolsó frissítés: 2025. február 20."
+      "lastUpdated": "Utolsó frissítés: 2025. február 20.",
+      "intro": {
+        "title": "1. Bevezetés",
+        "content": "A Terra Forte Bau Kft. (továbbiakban: Adatkezelő) elkötelezett ügyfelei és weboldalának látogatói személyes adatainak védelme iránt. Jelen tájékoztató célja, hogy átláthatóan ismertesse, milyen adatokat gyűjtünk, hogyan használjuk fel azokat, és milyen jogai vannak Önnek a GDPR (Európai Unió Általános Adatvédelmi Rendelete) értelmében."
+      },
+      "controller": {
+        "title": "2. Az Adatkezelő adatai",
+        "content": "A weboldalon megadott adatok kezelője:",
+        "items": [
+          "Cégnév: Terra Forte Bau Kft.",
+          "Székhely: 3662, Ózd-Somsályfő Telep 1.",
+          "Cégjegyzékszám: 05 09 024254",
+          "Adószám: 23954780-2-05",
+          "Képviselő: Döbör Attila Ügyvezető",
+          "E-mail: info@terrafortebau.hu",
+          "Telefon: +36 70 369-8193"
+        ]
+      },
+      "data_collection": {
+        "title": "3. A kezelt adatok köre és célja",
+        "sections": [
+          {
+            "subtitle": "Kapcsolatfelvétel és Ajánlatkérés",
+            "text": "Amikor Ön kitölti a weboldalon található űrlapokat, a következő adatokat kérjük el a válaszadás és az ajánlatadás érdekében:",
+            "list": [
+              "Név",
+              "E-mail cím",
+              "Telefonszám",
+              "Település (a kiszállás kalkulációjához)"
+            ]
+          },
+          {
+            "subtitle": "Automatikusan gyűjtött adatok (Sütik)",
+            "text": "Weboldalunk sütiket (cookies) használ a felhasználói élmény javítása és látogatottsági statisztikák készítése érdekében. Ezek nem azonosítják Önt név szerint."
+          }
+        ]
+      },
+      "cookies": {
+        "title": "4. Sütik (Cookies) használata",
+        "content": "A weboldal a működéshez elengedhetetlen és analitikai sütiket használ.",
+        "types": [
+          "Működéshez szükséges sütik: Ezek nélkül az oldal nem működne megfelelően (pl. nyelvválasztás).",
+          "Analitikai sütik (Google Analytics): Segítenek megérteni, hogyan használják látogatóink az oldalt. Az adatok anonimizáltak."
+        ],
+        "note": "A sütik beállításait bármikor módosíthatja böngészőjében."
+      },
+      "rights": {
+        "title": "5. Az Ön jogai",
+        "content": "Ön bármikor jogosult tájékoztatást kérni személyes adatai kezeléséről, kérheti azok helyesbítését, törlését vagy zárolását. Kérelmét a fenti elérhetőségeink bármelyikén jelezheti."
+      },
+      "hosting": {
+        "title": "6. Adatfeldolgozók és Tárhely",
+        "content": "Weboldalunkat a Vercel Inc. szolgálja ki. Az adatok biztonságos szervereken tárolódnak.",
+        "details": "Tárhelyszolgáltató: Vercel Inc. (340 S Lemon Ave #4133 Walnut, CA 91789, USA)"
+      }
     },
     "Imprint": {
       "title": "Impresszum",

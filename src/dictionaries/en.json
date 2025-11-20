@@ -391,7 +391,61 @@
   "LegalPages": {
     "Privacy": {
       "title": "Privacy Policy",
-      "lastUpdated": "Last updated: February 20, 2025"
+      "lastUpdated": "Last updated: February 20, 2025",
+      "intro": {
+        "title": "1. Introduction",
+        "content": "Terra Forte Bau Kft. (hereinafter: Data Controller) is committed to protecting the personal data of its customers and website visitors. The purpose of this policy is to transparently explain what data we collect, how we use it, and what rights you have under the GDPR (General Data Protection Regulation)."
+      },
+      "controller": {
+        "title": "2. Data Controller Details",
+        "content": "The controller of the data provided on the website:",
+        "items": [
+          "Company Name: Terra Forte Bau Kft.",
+          "Registered Office: 3662, Ózd-Somsályfő Telep 1., Hungary",
+          "Registration Number: 05 09 024254",
+          "Tax Number: 23954780-2-05",
+          "Representative: Attila Döbör, Managing Director",
+          "E-mail: info@terrafortebau.hu",
+          "Phone: +36 70 369-8193"
+        ]
+      },
+      "data_collection": {
+        "title": "3. Scope and Purpose of Data Processing",
+        "sections": [
+          {
+            "subtitle": "Contact and Quote Requests",
+            "text": "When you fill out forms on our website, we request the following data to respond and provide a quote:",
+            "list": [
+              "Name",
+              "E-mail address",
+              "Phone number",
+              "City/Location (for delivery calculation)"
+            ]
+          },
+          {
+            "subtitle": "Automatically Collected Data (Cookies)",
+            "text": "Our website uses cookies to improve user experience and create traffic statistics. These do not identify you personally."
+          }
+        ]
+      },
+      "cookies": {
+        "title": "4. Use of Cookies",
+        "content": "The website uses essential and analytical cookies.",
+        "types": [
+          "Essential cookies: The site cannot function properly without these (e.g., language selection).",
+          "Analytical cookies (Google Analytics): Help us understand how visitors use the site. Data is anonymized."
+        ],
+        "note": "You can modify cookie settings in your browser at any time."
+      },
+      "rights": {
+        "title": "5. Your Rights",
+        "content": "You have the right to request information about the processing of your personal data, and to request its correction, deletion, or blocking at any time. You can submit your request via any of our contact details."
+      },
+      "hosting": {
+        "title": "6. Data Processors and Hosting",
+        "content": "Our website is served by Vercel Inc. Data is stored on secure servers.",
+        "details": "Hosting Provider: Vercel Inc. (340 S Lemon Ave #4133 Walnut, CA 91789, USA)"
+      }
     },
     "Imprint": {
       "title": "Imprint",

@@ -13,60 +13,91 @@ export default async function PrivacyPage({
 
   return (
     <LegalLayout title={t.title} subtitle={t.lastUpdated}>
+      {/* 1. Bevezetés */}
       <section>
         <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
-          1. Bevezetés
+          {t.intro.title}
         </h2>
-        <p>
-          A Terra Forte Bau Kft. (a továbbiakban: Szolgáltató) elkötelezett a
-          felhasználók személyes adatainak védelme iránt. Jelen tájékoztató
-          célja, hogy rögzítse azokat az elveket és szabályokat, amelyek alapján
-          a weboldalunkon keresztül megadott adatokat kezeljük, összhangban a
-          GDPR (EU 2016/679) rendelettel.
-        </p>
+        <p>{t.intro.content}</p>
       </section>
 
+      {/* 2. Adatkezelő */}
       <section>
         <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
-          2. Az adatkezelő adatai
+          {t.controller.title}
         </h2>
-        <ul className="list-disc pl-5 space-y-2">
-          <li>
-            <strong>Cégnév:</strong> Terra Forte Bau Kft.
-          </li>
-          <li>
-            <strong>Székhely:</strong> 3662, Ózd-Somsályfő Telep 1.
-          </li>
-          <li>
-            <strong>E-mail:</strong> info@terrafortebau.hu
-          </li>
-          <li>
-            <strong>Adószám:</strong> 12345678-2-12 (Példa)
-          </li>
+        <p className="mb-2">{t.controller.content}</p>
+        <ul className="list-disc pl-5 space-y-1">
+          {t.controller.items.map((item: string, index: number) => (
+            <li key={index}>
+              <strong>{item.split(":")[0]}:</strong>
+              {item.split(":")[1]}
+            </li>
+          ))}
         </ul>
       </section>
 
+      {/* 3. Adatgyűjtés */}
       <section>
         <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
-          3. A kezelt adatok köre
+          {t.data_collection.title}
         </h2>
-        <p>
-          A weboldal használata során, különösen az ajánlatkérő és kapcsolati
-          űrlapok kitöltésekor a következő adatokat kezeljük:
-        </p>
-        <ul className="list-disc pl-5 space-y-2 mt-2">
-          <li>Név (Kapcsolattartó)</li>
-          <li>E-mail cím</li>
-          <li>Telefonszám</li>
-          <li>Település/Helyszín (az ajánlatadáshoz szükséges)</li>
-        </ul>
+        <div className="space-y-6">
+          {t.data_collection.sections.map((section: any, index: number) => (
+            <div key={index}>
+              <h3 className="text-lg font-medium text-gray-900 mb-2">
+                {section.subtitle}
+              </h3>
+              <p>{section.text}</p>
+              {section.list && (
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  {section.list.map((li: string, i: number) => (
+                    <li key={i}>{li}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
       </section>
 
-      {/* Ide jön a többi jogi szöveg... */}
-      <p className="italic text-sm mt-8">
-        (Ez egy minta szöveg. Kérjük, a véglegesítéshez konzultáljon jogi
-        szakértővel.)
-      </p>
+      {/* 4. Cookies */}
+      <section>
+        <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
+          {t.cookies.title}
+        </h2>
+        <p className="mb-2">{t.cookies.content}</p>
+        <ul className="list-disc pl-5 space-y-1 mb-2">
+          {t.cookies.types.map((type: string, index: number) => (
+            <li key={index}>{type}</li>
+          ))}
+        </ul>
+        <p className="italic text-sm">{t.cookies.note}</p>
+      </section>
+
+      {/* 5. Jogok */}
+      <section>
+        <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
+          {t.rights.title}
+        </h2>
+        <p>{t.rights.content}</p>
+      </section>
+
+      {/* 6. Hosting */}
+      <section>
+        <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
+          {t.hosting.title}
+        </h2>
+        <p>{t.hosting.content}</p>
+        <p className="mt-2 text-sm text-gray-500">{t.hosting.details}</p>
+      </section>
+
+      <div className="mt-12 pt-8 border-t border-gray-100 text-sm text-gray-500 text-center">
+        <p>
+          Ez a dokumentum tájékoztató jellegű. Hivatalos jogi állásfoglalásért
+          kérjük, konzultáljon jogi szakértővel.
+        </p>
+      </div>
     </LegalLayout>
   );
 }
