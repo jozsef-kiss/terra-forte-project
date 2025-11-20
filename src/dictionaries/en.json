@@ -329,5 +329,64 @@
       "subtitle": "Or are you still looking for a solution? Contact us, and we will help!",
       "btn": "Get a Quote Now"
     }
+  },
+  "FAQPage": {
+    "Hero": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about playground construction, standards, and maintenance."
+    },
+    "categories": {
+      "general": "General & Ordering",
+      "safety": "Safety & Standards",
+      "installation": "Construction & Installation",
+      "maintenance": "Warranty & Maintenance"
+    },
+    "items": {
+      "general": [
+        {
+          "question": "How can I request a quote?",
+          "answer": "The easiest way to request a quote is by filling out our online form under the 'Contact' menu, or by emailing us directly at info@terrafortebau.hu."
+        },
+        {
+          "question": "How long does manufacturing take?",
+          "answer": "Manufacturing time usually takes 4–8 weeks depending on project size and our production capacity, starting from order confirmation."
+        }
+      ],
+      "safety": [
+        {
+          "question": "Are the playground equipment compliant with the MSZ EN 1176 standard?",
+          "answer": "Yes, all equipment we manufacture and install is certified by TÜV according to the MSZ EN 1176 standard, making them suitable for public use."
+        },
+        {
+          "question": "Is a building permit required for a playground?",
+          "answer": "In most cases, installing playground equipment does not require a building permit, but we always recommend confirming with the local municipality."
+        }
+      ],
+      "installation": [
+        {
+          "question": "What kind of ground preparation is required?",
+          "answer": "The area must be level and load-bearing. A detailed foundation plan and required layer structure will be provided after signing the contract."
+        },
+        {
+          "question": "Do you also install impact-absorbing surfaces?",
+          "answer": "Yes, we provide full installation services, including rubber tiles, pea gravel, pine bark, or poured rubber surfaces."
+        }
+      ],
+      "maintenance": [
+        {
+          "question": "What warranty do you offer?",
+          "answer": "We provide a full 5-year warranty on all equipment when used as intended (excluding wear-and-tear parts)."
+        },
+        {
+          "question": "Do you offer annual inspections?",
+          "answer": "Yes, together with our accredited partners, we perform mandatory annual standard compliance inspections and documentation."
+        }
+      ]
+    },
+    "CTA": {
+      "title": "Didn't find the answer?",
+      "subtitle": "Do you have a specific question or need professional advice? Our experts are ready to help!",
+      "btn": "Contact Us"
+    }
   }
 }

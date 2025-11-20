@@ -329,5 +329,64 @@
       "subtitle": "Vagy még csak keresi a megoldást? Lépjen kapcsolatba velünk, és segítünk!",
       "btn": "Kérjen árajánlatot most"
     }
+  },
+  "FAQPage": {
+    "Hero": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit a játszótér építésről, szabványokról és karbantartásról tudni érdemes."
+    },
+    "categories": {
+      "general": "Általános & Megrendelés",
+      "safety": "Biztonság & Szabványok",
+      "installation": "Kivitelezés & Telepítés",
+      "maintenance": "Garancia & Karbantartás"
+    },
+    "items": {
+      "general": [
+        {
+          "question": "Hogyan kérhetek árajánlatot?",
+          "answer": "Árajánlatot legegyszerűbben az online űrlapunk kitöltésével kérhet a 'Kapcsolat' menüpont alatt, vagy írjon nekünk közvetlenül az info@terrafortebau.hu e-mail címre."
+        },
+        {
+          "question": "Mennyi időt vesz igénybe a gyártás?",
+          "answer": "A gyártási idő a projekt méretétől és a kapacitásunktól függően általában 4-8 hét a megrendelés visszaigazolásától számítva."
+        }
+      ],
+      "safety": [
+        {
+          "question": "Megfelelnek az eszközök az MSZ EN 1176 szabványnak?",
+          "answer": "Igen, minden általunk gyártott és telepített eszköz rendelkezik a TÜV által kiállított MSZ EN 1176 megfelelőségi tanúsítvánnyal, így közterületi használatra alkalmasak."
+        },
+        {
+          "question": "Szükséges-e építési engedély a játszótérhez?",
+          "answer": "A legtöbb esetben a játszótéri eszközök telepítése nem építési engedély köteles, de minden esetben javasoljuk az illetékes önkormányzattal való egyeztetést."
+        }
+      ],
+      "installation": [
+        {
+          "question": "Milyen talajelőkészítésre van szükség?",
+          "answer": "A területnek síknak és teherhordónak kell lennie. A részletes alapozási tervet és a szükséges rétegrendet a szerződéskötés után biztosítjuk."
+        },
+        {
+          "question": "Vállalják az ütéscsillapító felület kialakítását is?",
+          "answer": "Igen, teljeskörű kivitelezést vállalunk, beleértve a gumilap, gyöngykavics, fenyőkéreg vagy öntött gumi burkolat kialakítását is."
+        }
+      ],
+      "maintenance": [
+        {
+          "question": "Mennyi garanciát vállalnak?",
+          "answer": "Minden eszközünkre 5 év teljeskörű garanciát vállalunk rendeltetésszerű használat esetén (kivéve a kopóalkatrészeket)."
+        },
+        {
+          "question": "Vállalnak éves felülvizsgálatot?",
+          "answer": "Igen, akkreditált partnereinkkel vállaljuk a kötelező éves szabványossági felülvizsgálatok elvégzését és a jegyzőkönyvezést."
+        }
+      ]
+    },
+    "CTA": {
+      "title": "Nem találta meg a választ?",
+      "subtitle": "Egyedi kérdése van, vagy szakmai tanácsra lenne szüksége? Szakértőink készen állnak!",
+      "btn": "Vegye fel velünk a kapcsolatot"
+    }
   }
 }

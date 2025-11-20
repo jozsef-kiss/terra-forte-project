@@ -329,5 +329,64 @@
       "subtitle": "Oder suchen Sie noch nach einer Lösung? Kontaktieren Sie uns!",
       "btn": "Jetzt Angebot anfordern"
     }
+  },
+  "FAQPage": {
+    "Hero": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über den Bau, die Normen und die Wartung von Spielplätzen wissen sollten."
+    },
+    "categories": {
+      "general": "Allgemeines & Bestellung",
+      "safety": "Sicherheit & Normen",
+      "installation": "Bau & Installation",
+      "maintenance": "Garantie & Wartung"
+    },
+    "items": {
+      "general": [
+        {
+          "question": "Wie kann ich ein Angebot anfordern?",
+          "answer": "Am einfachsten können Sie ein Angebot anfordern, indem Sie unser Online-Formular im Menüpunkt 'Kontakt' ausfüllen oder uns direkt unter info@terrafortebau.hu schreiben."
+        },
+        {
+          "question": "Wie lange dauert die Herstellung?",
+          "answer": "Die Produktionszeit beträgt in der Regel 4–8 Wochen, abhängig von der Projektgröße und unserer Kapazität, gerechnet ab der Auftragsbestätigung."
+        }
+      ],
+      "safety": [
+        {
+          "question": "Entsprechen die Geräte der Norm MSZ EN 1176?",
+          "answer": "Ja, alle von uns hergestellten und installierten Geräte verfügen über ein TÜV-Zertifikat gemäß MSZ EN 1176 und sind somit für öffentliche Nutzung geeignet."
+        },
+        {
+          "question": "Ist für einen Spielplatz eine Baugenehmigung erforderlich?",
+          "answer": "In den meisten Fällen ist die Installation von Spielgeräten nicht genehmigungspflichtig. Dennoch empfehlen wir immer eine Rücksprache mit der zuständigen Gemeinde."
+        }
+      ],
+      "installation": [
+        {
+          "question": "Welche Boden­vorbereitung ist erforderlich?",
+          "answer": "Das Gelände muss eben und tragfähig sein. Den detaillierten Fundamentplan und den erforderlichen Schichtaufbau stellen wir nach Vertragsunterzeichnung bereit."
+        },
+        {
+          "question": "Übernehmen Sie auch die Installation von Fallschutzflächen?",
+          "answer": "Ja, wir bieten eine vollständige Ausführung an, einschließlich Gummiplatten, Kies, Rindenmulch oder gegossenem Gummi."
+        }
+      ],
+      "maintenance": [
+        {
+          "question": "Welche Garantie bieten Sie?",
+          "answer": "Wir gewähren 5 Jahre vollständige Garantie auf alle Geräte bei bestimmungsgemäßer Nutzung (ausgenommen Verschleißteile)."
+        },
+        {
+          "question": "Bieten Sie jährliche Überprüfungen an?",
+          "answer": "Ja, gemeinsam mit unseren akkreditierten Partnern führen wir die vorgeschriebenen jährlichen Normprüfungen und Protokolle durch."
+        }
+      ]
+    },
+    "CTA": {
+      "title": "Nicht fündig geworden?",
+      "subtitle": "Haben Sie eine spezielle Frage oder benötigen Sie fachkundige Beratung? Unsere Experten helfen Ihnen gerne!",
+      "btn": "Kontakt aufnehmen"
+    }
   }
 }
