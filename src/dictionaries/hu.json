@@ -184,5 +184,56 @@
       "primary_btn": "Ingyenes Árajánlatkérés",
       "secondary_btn": "Referenciák megtekintése"
     }
+  },
+  "AboutPage": {
+    "Hero": {
+      "title": "Több mint 10 éve építünk közösségi tereket.",
+      "subtitle": "A Terra Forte Bau Kft. története a szenvedélyről, a biztonságról és a hazai szakértelemről szól. Célunk, hogy olyan játszótereket alkossunk, amelyek generációkon át szolgálják a gyermekek örömét.",
+      "cta": "Vegye fel velünk a kapcsolatot"
+    },
+    "Stats": {
+      "title": "Számokban a megbízhatóság",
+      "subtitle": "Büszkék vagyunk az elért eredményeinkre és a partnereink bizalmára.",
+      "items": [
+        { "label": "Év szakmai tapasztalat", "value": "10+" },
+        { "label": "Sikeresen átadott játszótér", "value": "50+" },
+        { "label": "Magyar tulajdon", "value": "100%" },
+        { "label": "Garancia a termékekre", "value": "5 Év" }
+      ]
+    },
+    "Mission": {
+      "title_part1": "Nem csak építünk.",
+      "title_highlight": "Értéket teremtünk.",
+      "subtitle": "Saját gyártói kapacitásunkkal és telepítő csapatunkkal a folyamat minden lépését kézben tartjuk.",
+      "description_p1": "A Terra Forte Bau-nál hiszünk abban, hogy a játszótér több, mint egymás mellé helyezett eszközök halmaza. Ez a gyermekkor színtere, a mozgás örömének forrása és a közösség találkozási pontja.",
+      "description_p2_pre": "Mint",
+      "description_p2_bold": "magyar gyártó",
+      "description_p2_post": ", különös figyelmet fordítunk arra, hogy termékeink ne csak megfeleljenek az uniós szabványoknak, hanem esztétikailag is illeszkedjenek a környezetbe, legyen szó modern lakóparkról vagy erdei iskoláról."
+    },
+    "Values": {
+      "title": "Alapelveink",
+      "subtitle": "Ezek azok az oszlopok, amelyekre minden projektünket építjük.",
+      "items": [
+        {
+          "name": "Biztonság mindenek felett",
+          "description": "Nem ismerünk kompromisszumot, ha gyerekekről van szó. Minden eszközünk megfelel a legszigorúbb MSZ EN 1176 szabványoknak."
+        },
+        {
+          "name": "Innovatív anyaghasználat",
+          "description": "UV-stabil műanyagok, CNC-megmunkált elemek és időjárásálló kezelések biztosítják a hosszú élettartamot."
+        },
+        {
+          "name": "Közösségépítés",
+          "description": "Célunk nem csak eszközök telepítése, hanem olyan terek létrehozása, ahol a családok és közösségek találkozhatnak."
+        }
+      ]
+    },
+    "CTA": {
+      "title_part1": "Készen áll a tervezésre?",
+      "title_part2": "Valósítsuk meg elképzeléseit.",
+      "description": "Kérjen ingyenes helyszíni felmérést, és mi segítünk kiválasztani a területhez és költségkerethez legjobban illeszkedő eszközöket.",
+      "primary_btn": "Ingyenes Árajánlatkérés",
+      "secondary_btn": "Referenciák megtekintése"
+    }
   }
 }

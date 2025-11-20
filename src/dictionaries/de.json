@@ -184,5 +184,56 @@
       "primary_btn": "Kostenloses Angebot anfordern",
       "secondary_btn": "Referenzen ansehen"
     }
+  },
+  "AboutPage": {
+    "Hero": {
+      "title": "Wir bauen Gemeinschaftsräume seit über 10 Jahren.",
+      "subtitle": "Die Geschichte von Terra Forte Bau Kft. handelt von Leidenschaft, Sicherheit und lokaler Expertise. Unser Ziel ist es, Spielplätze zu schaffen, die Kindern über Generationen hinweg Freude bereiten.",
+      "cta": "Kontaktieren Sie uns"
+    },
+    "Stats": {
+      "title": "Zuverlässigkeit in Zahlen",
+      "subtitle": "Wir sind stolz auf unsere Ergebnisse und das Vertrauen unserer Partner.",
+      "items": [
+        { "label": "Jahre Berufserfahrung", "value": "10+" },
+        { "label": "Erfolgreich übergebene Spielplätze", "value": "50+" },
+        { "label": "Ungarisches Eigentum", "value": "100%" },
+        { "label": "Produktgarantie", "value": "5 Jahre" }
+      ]
+    },
+    "Mission": {
+      "title_part1": "Wir bauen nicht nur.",
+      "title_highlight": "Wir schaffen Werte.",
+      "subtitle": "Mit eigener Fertigungskapazität und eigenem Installationsteam haben wir jeden Schritt des Prozesses in der Hand.",
+      "description_p1": "Bei Terra Forte Bau glauben wir, dass ein Spielplatz mehr ist als nur eine Ansammlung von Geräten. Er ist Schauplatz der Kindheit, Quelle der Bewegungsfreude und Treffpunkt der Gemeinschaft.",
+      "description_p2_pre": "Als",
+      "description_p2_bold": "ungarischer Hersteller",
+      "description_p2_post": " achten wir besonders darauf, dass unsere Produkte nicht nur den EU-Normen entsprechen, sondern sich auch ästhetisch in die Umgebung einfügen, sei es ein moderner Wohnpark oder eine Waldschule."
+    },
+    "Values": {
+      "title": "Unsere Grundwerte",
+      "subtitle": "Dies sind die Säulen, auf denen wir jedes unserer Projekte aufbauen.",
+      "items": [
+        {
+          "name": "Sicherheit über alles",
+          "description": "Wir machen keine Kompromisse, wenn es um Kinder geht. Alle unsere Geräte entsprechen den strengsten Normen der MSZ EN 1176."
+        },
+        {
+          "name": "Innovative Materialien",
+          "description": "UV-stabile Kunststoffe, CNC-gefräste Elemente und wetterfeste Behandlungen sorgen für lange Lebensdauer."
+        },
+        {
+          "name": "Gemeinschaftsbildung",
+          "description": "Unser Ziel ist nicht nur die Installation von Geräten, sondern die Schaffung von Räumen, in denen sich Familien und Gemeinschaften treffen können."
+        }
+      ]
+    },
+    "CTA": {
+      "title_part1": "Bereit für die Planung?",
+      "title_part2": "Verwirklichen wir Ihre Vorstellungen.",
+      "description": "Fordern Sie eine kostenlose Vor-Ort-Bewertung an, und wir helfen Ihnen bei der Auswahl der Geräte, die am besten zu Gelände und Budget passen.",
+      "primary_btn": "Kostenloses Angebot anfordern",
+      "secondary_btn": "Referenzen ansehen"
+    }
   }
 }

@@ -3,32 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
-// Adatok
-const stats = [
-  { label: "Év szakmai tapasztalat", value: "10+" },
-  { label: "Sikeresen átadott játszótér", value: "50+" },
-  { label: "Magyar tulajdon", value: "100%" },
-  { label: "Garancia a termékekre", value: "5 Év" },
-];
-
-const values = [
-  {
-    name: "Biztonság mindenek felett",
-    description:
-      "Nem ismerünk kompromisszumot, ha gyerekekről van szó. Minden eszközünk megfelel a legszigorúbb MSZ EN 1176 szabványoknak.",
-  },
-  {
-    name: "Innovatív anyaghasználat",
-    description:
-      "UV-stabil műanyagok, CNC-megmunkált elemek és időjárásálló kezelések biztosítják a hosszú élettartamot.",
-  },
-  {
-    name: "Közösségépítés",
-    description:
-      "Célunk nem csak eszközök telepítése, hanem olyan terek létrehozása, ahol a családok és közösségek találkozhatnak.",
-  },
-];
-
 export default async function AboutPage({
   params,
 }: {
@@ -36,6 +10,10 @@ export default async function AboutPage({
 }) {
   const { locale } = await params;
   const lang = locale as Locale;
+  const dict = await getDictionary(lang);
+
+  // Rövidítés a könnyebb olvashatóságért
+  const t = dict.AboutPage;
 
   return (
     <div className="bg-white overflow-hidden">
@@ -50,21 +28,18 @@ export default async function AboutPage({
           <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
               <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto">
-                Több mint 10 éve építünk közösségi tereket.
+                {t.Hero.title}
               </h1>
               <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
                 <p className="text-lg leading-8 text-gray-600">
-                  A Terra Forte Bau Kft. története a szenvedélyről, a
-                  biztonságról és a hazai szakértelemről szól. Célunk, hogy
-                  olyan játszótereket alkossunk, amelyek generációkon át
-                  szolgálják a gyermekek örömét.
+                  {t.Hero.subtitle}
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <Link
                     href={`/${lang}/kapcsolat`}
                     className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
-                    Vegye fel velünk a kapcsolatot
+                    {t.Hero.cta}
                   </Link>
                 </div>
               </div>
@@ -87,15 +62,14 @@ export default async function AboutPage({
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="text-center">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Számokban a megbízhatóság
+                {t.Stats.title}
               </h2>
               <p className="mt-4 text-lg leading-8 text-gray-600">
-                Büszkék vagyunk az elért eredményeinkre és a partnereink
-                bizalmára.
+                {t.Stats.subtitle}
               </p>
             </div>
             <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-              {stats.map((stat) => (
+              {t.Stats.items.map((stat: any) => (
                 <div
                   key={stat.label}
                   className="flex flex-col bg-stone-50/50 p-8 hover:bg-stone-100 transition-colors"
@@ -117,26 +91,20 @@ export default async function AboutPage({
           <div className="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
             <div className="w-full lg:max-w-lg lg:flex-auto">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Nem csak építünk. <br />
-                <span className="text-indigo-600">Értéket teremtünk.</span>
+                {t.Mission.title_part1} <br />
+                <span className="text-indigo-600">
+                  {t.Mission.title_highlight}
+                </span>
               </h2>
               <p className="mt-6 text-xl leading-8 text-gray-600">
-                Saját gyártói kapacitásunkkal és telepítő csapatunkkal a
-                folyamat minden lépését kézben tartjuk.
+                {t.Mission.subtitle}
               </p>
               <div className="mt-10 text-base leading-7 text-gray-700 space-y-4">
+                <p>{t.Mission.description_p1}</p>
                 <p>
-                  A Terra Forte Bau-nál hiszünk abban, hogy a játszótér több,
-                  mint egymás mellé helyezett eszközök halmaza. Ez a gyermekkor
-                  színtere, a mozgás örömének forrása és a közösség találkozási
-                  pontja.
-                </p>
-                <p>
-                  Mint <strong>magyar gyártó</strong>, különös figyelmet
-                  fordítunk arra, hogy termékeink ne csak megfeleljenek az uniós
-                  szabványoknak, hanem esztétikailag is illeszkedjenek a
-                  környezetbe, legyen szó modern lakóparkról vagy erdei
-                  iskoláról.
+                  {t.Mission.description_p2_pre}{" "}
+                  <strong>{t.Mission.description_p2_bold}</strong>
+                  {t.Mission.description_p2_post}
                 </p>
               </div>
             </div>
@@ -153,22 +121,21 @@ export default async function AboutPage({
           </div>
         </div>
 
-        {/* --- 4. ÉRTÉKEINK (ITT A MÓDOSÍTÁS) --- */}
-        {/* Hozzáadva: border-t border-stone-200 pt-24 (Felső vonal + térköz) */}
+        {/* --- 4. ÉRTÉKEINK --- */}
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8 mb-24 border-t border-stone-100 pt-24 sm:pt-32">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Alapelveink
+              {t.Values.title}
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Ezek azok az oszlopok, amelyekre minden projektünket építjük.
+              {t.Values.subtitle}
             </p>
           </div>
           <ul
             role="list"
             className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8"
           >
-            {values.map((value) => (
+            {t.Values.items.map((value: any) => (
               <li
                 key={value.name}
                 className="rounded-2xl border border-stone-200 bg-white p-8 hover:border-indigo-600 transition-colors duration-300 shadow-sm"
@@ -193,26 +160,25 @@ export default async function AboutPage({
         <div className="relative isolate px-6 py-24 sm:py-32 lg:px-8 bg-stone-50 border-t border-stone-200">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Készen áll a tervezésre?
+              {t.CTA.title_part1}
               <br />
-              Valósítsuk meg elképzeléseit.
+              {t.CTA.title_part2}
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
-              Kérjen ingyenes helyszíni felmérést, és mi segítünk kiválasztani a
-              területhez és költségkerethez legjobban illeszkedő eszközöket.
+              {t.CTA.description}
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href={`/${lang}/ajanlatkeres`}
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Ingyenes Árajánlatkérés
+                {t.CTA.primary_btn}
               </Link>
               <Link
                 href={`/${lang}/referenciak`}
                 className="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500 flex items-center gap-1"
               >
-                Referenciák megtekintése <span aria-hidden="true">→</span>
+                {t.CTA.secondary_btn} <span aria-hidden="true">→</span>
               </Link>
             </div>
           </div>

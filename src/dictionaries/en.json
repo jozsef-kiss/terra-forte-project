@@ -184,5 +184,56 @@
       "primary_btn": "Get a Free Quote",
       "secondary_btn": "View References"
     }
+  },
+  "AboutPage": {
+    "Hero": {
+      "title": "Building Community Spaces for Over 10 Years.",
+      "subtitle": "The story of Terra Forte Bau Kft. is about passion, safety, and local expertise. Our goal is to create playgrounds that bring joy to children for generations.",
+      "cta": "Get in Touch With Us"
+    },
+    "Stats": {
+      "title": "Reliability in Numbers",
+      "subtitle": "We are proud of our achievements and the trust of our partners.",
+      "items": [
+        { "label": "Years of Experience", "value": "10+" },
+        { "label": "Successfully Delivered Playgrounds", "value": "50+" },
+        { "label": "Hungarian Ownership", "value": "100%" },
+        { "label": "Product Warranty", "value": "5 Years" }
+      ]
+    },
+    "Mission": {
+      "title_part1": "We Don't Just Build.",
+      "title_highlight": "We Create Value.",
+      "subtitle": "With our own manufacturing capacity and installation team, we control every step of the process.",
+      "description_p1": "At Terra Forte Bau, we believe a playground is more than just a collection of equipment. It is the scene of childhood, a source of joy in movement, and a meeting point for the community.",
+      "description_p2_pre": "As a",
+      "description_p2_bold": "Hungarian manufacturer",
+      "description_p2_post": ", we pay special attention to ensuring our products not only meet EU standards but also fit aesthetically into the environment, whether it's a modern residential park or a forest school."
+    },
+    "Values": {
+      "title": "Our Core Values",
+      "subtitle": "These are the pillars upon which we build every project.",
+      "items": [
+        {
+          "name": "Safety Above All",
+          "description": "We make no compromises when it comes to children. All our equipment meets the strictest MSZ EN 1176 standards."
+        },
+        {
+          "name": "Innovative Materials",
+          "description": "UV-stable plastics, CNC-machined elements, and weather-resistant treatments ensure long durability."
+        },
+        {
+          "name": "Community Building",
+          "description": "Our goal is not just to install equipment, but to create spaces where families and communities can meet."
+        }
+      ]
+    },
+    "CTA": {
+      "title_part1": "Ready to Plan?",
+      "title_part2": "Let's Realize Your Vision.",
+      "description": "Request a free on-site assessment, and we will help you select the equipment that best fits the area and budget.",
+      "primary_btn": "Get a Free Quote",
+      "secondary_btn": "View References"
+    }
   }
 }
