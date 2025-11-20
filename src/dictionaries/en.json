@@ -235,5 +235,99 @@
       "primary_btn": "Get a Free Quote",
       "secondary_btn": "View References"
     }
+  },
+  "ServicesPage": {
+    "Hero": {
+      "title": "From Design to Turnkey Delivery.",
+      "subtitle": "Comprehensive playground construction and maintenance in one hand. We take the burden off your shoulders so you can simply enjoy the result.",
+      "cta": "Request a Quote for Your Project"
+    },
+    "Workflow": {
+      "title": "How We Work?",
+      "subtitle": "Transparent process, predictable deadlines.",
+      "steps": [
+        {
+          "title": "1. Assessment",
+          "description": "We assess the site conditions and your needs during a personal visit."
+        },
+        {
+          "title": "2. Design",
+          "description": "We create visual plans considering safety zones and budget constraints."
+        },
+        {
+          "title": "3. Manufacturing",
+          "description": "We manufacture certified equipment in our own facility using premium materials."
+        },
+        {
+          "title": "4. Installation",
+          "description": "Professional installation, impact-absorbing surfacing, and technical handover."
+        }
+      ]
+    },
+    "Details": {
+      "Design": {
+        "title": "Design and Consultancy",
+        "description": "Every good playground starts with a good plan. Our experts focus not only on aesthetics but also on strict compliance with MSZ EN 1176 standards. We help with optimal spatial layout for a safe play experience.",
+        "features": [
+          "Custom visual designs",
+          "Safety zone calculations",
+          "Cost-effective solutions"
+        ]
+      },
+      "Manufacturing": {
+        "title": "Premium Manufacturing",
+        "description": "We are manufacturers, not just traders. This allows us to serve custom needs. Our CNC-controlled technology and selected UV-stable materials ensure durability and vandal-resistant construction.",
+        "features": [
+          "In-house CNC facility",
+          "UV-resistant HDPE plastics",
+          "Durable wood and metal structures"
+        ]
+      },
+      "Installation": {
+        "title": "On-site Installation",
+        "description": "Our own installation team handles concreting, equipment fixation, and impact-absorbing surfacing (rubber tiles, pea gravel, bark mulch). We hand over the site clean and tidy.",
+        "features": [
+          "Concreting works",
+          "Impact-absorbing surfaces",
+          "Official handover"
+        ]
+      },
+      "Maintenance": {
+        "title": "Maintenance and Inspection",
+        "description": "Maintaining safety is an ongoing task. We undertake ad-hoc repairs, mandatory annual safety inspections, and maintenance of playgrounds to ensure they serve the community for years.",
+        "badge": "Featured Service",
+        "features": [
+          "Annual safety inspection",
+          "Ad-hoc repairs",
+          "Renovation and painting"
+        ]
+      }
+    },
+    "FAQ": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "How much warranty do you offer?",
+          "answer": "We offer a 5-year full warranty on all equipment manufactured and installed by us, under normal use."
+        },
+        {
+          "question": "What certifications do the equipments have?",
+          "answer": "Our products possess the MSZ EN 1176 compliance certificate issued by TÜV, making them suitable for public use."
+        },
+        {
+          "question": "Do you maintain equipment from other manufacturers?",
+          "answer": "Yes, our expert team undertakes the renovation and standardization of existing playgrounds, regardless of the manufacturer."
+        },
+        {
+          "question": "How long does installation take?",
+          "answer": "Manufacturing and installation typically take 4-8 weeks from the order date, depending on the project size."
+        }
+      ]
+    },
+    "CTA": {
+      "title": "Do you have an idea?",
+      "subtitle": "Or are you still looking for a solution? Contact us, and we will help!",
+      "btn": "Get a Quote Now"
+    }
   }
 }

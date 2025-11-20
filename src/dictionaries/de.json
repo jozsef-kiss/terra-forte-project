@@ -235,5 +235,99 @@
       "primary_btn": "Kostenloses Angebot anfordern",
       "secondary_btn": "Referenzen ansehen"
     }
+  },
+  "ServicesPage": {
+    "Hero": {
+      "title": "Vom Entwurf bis zur schlüsselfertigen Übergabe.",
+      "subtitle": "Umfassender Spielplatzbau und Wartung aus einer Hand. Wir nehmen Ihnen die Last ab, damit Sie das Ergebnis genießen können.",
+      "cta": "Angebot für Ihr Projekt anfordern"
+    },
+    "Workflow": {
+      "title": "Wie wir arbeiten?",
+      "subtitle": "Transparenter Prozess, vorhersehbare Fristen.",
+      "steps": [
+        {
+          "title": "1. Bedarfsanalyse",
+          "description": "Wir beurteilen die Standortbedingungen und Ihre Bedürfnisse bei einem persönlichen Besuch."
+        },
+        {
+          "title": "2. Planung",
+          "description": "Wir erstellen visuelle Pläne unter Berücksichtigung von Sicherheitszonen und Budget."
+        },
+        {
+          "title": "3. Fertigung",
+          "description": "Wir fertigen zertifizierte Geräte in unserem eigenen Werk aus hochwertigen Materialien."
+        },
+        {
+          "title": "4. Installation",
+          "description": "Fachgerechte Installation, Fallschutzböden und technische Übergabe."
+        }
+      ]
+    },
+    "Details": {
+      "Design": {
+        "title": "Planung und Beratung",
+        "description": "Jeder gute Spielplatz beginnt mit einem guten Plan. Unsere Experten achten nicht nur auf Ästhetik, sondern auch auf die strikte Einhaltung der Norm MSZ EN 1176.",
+        "features": [
+          "Individuelle visuelle Pläne",
+          "Berechnung der Sicherheitszonen",
+          "Kostengünstige Lösungen"
+        ]
+      },
+      "Manufacturing": {
+        "title": "Premium-Fertigung",
+        "description": "Wir sind Hersteller, keine Händler. Unsere CNC-gesteuerte Technologie und ausgewählte UV-stabile Materialien garantieren Langlebigkeit und vandalismussichere Ausführung.",
+        "features": [
+          "Eigene CNC-Anlage",
+          "UV-beständige HDPE-Kunststoffe",
+          "Langlebige Holz- und Metallstrukturen"
+        ]
+      },
+      "Installation": {
+        "title": "Installation vor Ort",
+        "description": "Unser eigenes Installationsteam kümmert sich um Betonieren, Gerätebefestigung und Fallschutzböden. Wir übergeben die Baustelle sauber und ordentlich.",
+        "features": [
+          "Betonierarbeiten",
+          "Fallschutzbeläge",
+          "Offizielle Übergabe"
+        ]
+      },
+      "Maintenance": {
+        "title": "Wartung und Inspektion",
+        "description": "Sicherheit ist eine Daueraufgabe. Wir übernehmen Reparaturen, jährliche Sicherheitsinspektionen und die Wartung von Spielplätzen.",
+        "badge": "Hervorgehobener Service",
+        "features": [
+          "Jährliche Sicherheitsüberprüfung",
+          "Ad-hoc-Reparaturen",
+          "Renovierung und Anstrich"
+        ]
+      }
+    },
+    "FAQ": {
+      "title": "Häufig gestellte Fragen",
+      "items": [
+        {
+          "question": "Wie lange ist die Garantie?",
+          "answer": "Wir bieten 5 Jahre volle Garantie auf alle von uns hergestellten und installierten Geräte bei bestimmungsgemäßem Gebrauch."
+        },
+        {
+          "question": "Welche Zertifikate haben die Geräte?",
+          "answer": "Unsere Produkte verfügen über das TÜV-Zertifikat nach MSZ EN 1176 und sind für den öffentlichen Gebrauch geeignet."
+        },
+        {
+          "question": "Warten Sie auch Geräte anderer Hersteller?",
+          "answer": "Ja, unser Expertenteam übernimmt die Renovierung und Standardisierung bestehender Spielplätze, unabhängig vom Hersteller."
+        },
+        {
+          "question": "Wie lange dauert die Installation?",
+          "answer": "Fertigung und Installation dauern je nach Projektgröße in der Regel 4-8 Wochen ab Bestelldatum."
+        }
+      ]
+    },
+    "CTA": {
+      "title": "Haben Sie schon eine Idee?",
+      "subtitle": "Oder suchen Sie noch nach einer Lösung? Kontaktieren Sie uns!",
+      "btn": "Jetzt Angebot anfordern"
+    }
   }
 }

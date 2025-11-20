@@ -235,5 +235,99 @@
       "primary_btn": "Ingyenes Árajánlatkérés",
       "secondary_btn": "Referenciák megtekintése"
     }
+  },
+  "ServicesPage": {
+    "Hero": {
+      "title": "A tervezőasztaltól a kulcsrakész átadásig.",
+      "subtitle": "Teljeskörű játszótér-kivitelezés és karbantartás egy kézben. Levesszük a terhet a válláról, hogy Önnek csak az eredményt kelljen élveznie.",
+      "cta": "Kérjen ajánlatot projektjére"
+    },
+    "Workflow": {
+      "title": "Hogyan dolgozunk?",
+      "subtitle": "Átlátható folyamat, kiszámítható határidők.",
+      "steps": [
+        {
+          "title": "1. Igényfelmérés",
+          "description": "Személyes bejárás során felmérjük a helyszín adottságait és az Ön igényeit."
+        },
+        {
+          "title": "2. Tervezés",
+          "description": "Látványterveket készítünk, figyelembe véve a biztonsági zónákat és a költségkeretet."
+        },
+        {
+          "title": "3. Gyártás",
+          "description": "Saját üzemünkben, prémium alapanyagokból gyártjuk le a minősített eszközöket."
+        },
+        {
+          "title": "4. Kivitelezés",
+          "description": "Szakszerű telepítés, ütéscsillapító felületek kialakítása és műszaki átadás."
+        }
+      ]
+    },
+    "Details": {
+      "Design": {
+        "title": "Tervezés és Szaktanácsadás",
+        "description": "Minden jó játszótér egy jó tervvel kezdődik. Szakértőink nem csak az esztétikumra figyelnek, hanem a szigorú MSZ EN 1176 szabványok betartására is. Segítünk az optimális térelrendezésben, hogy a játék élménye biztonságos legyen.",
+        "features": [
+          "Egyedi látványtervek",
+          "Biztonsági zónák számítása",
+          "Költséghatékony megoldások"
+        ]
+      },
+      "Manufacturing": {
+        "title": "Prémium Eszközgyártás",
+        "description": "Nem kereskedők, hanem gyártók vagyunk. Ez lehetővé teszi, hogy egyedi igényeket is kiszolgáljunk. CNC-vezérelt technológiánk és a válogatott, UV-stabil anyagok garantálják a tartósságot és a vandálbiztos kivitelt.",
+        "features": [
+          "Saját CNC üzem",
+          "UV-álló HDPE műanyagok",
+          "Tartós fa- és fémszerkezetek"
+        ]
+      },
+      "Installation": {
+        "title": "Helyszíni Kivitelezés",
+        "description": "Saját telepítő csapatunk végzi a betonozást, az eszközök rögzítését és az ütéscsillapító felületek (gumilap, gyöngykavics, fenyőkéreg) kialakítását. A munkát tisztán, rendezetten adjuk át.",
+        "features": [
+          "Betonozási munkák",
+          "Ütéscsillapító burkolatok",
+          "Hivatalos átadás"
+        ]
+      },
+      "Maintenance": {
+        "title": "Karbantartás és Felülvizsgálat",
+        "description": "A biztonság fenntartása folyamatos feladat. Vállaljuk játszóterek eseti javítását, éves kötelező szabványossági felülvizsgálatát és karbantartását, hogy az eszközök hosszú évekig szolgálják a közösséget.",
+        "badge": "Kiemelt szolgáltatás",
+        "features": [
+          "Éves szabványossági vizsgálat",
+          "Eseti javítások",
+          "Felújítás és festés"
+        ]
+      }
+    },
+    "FAQ": {
+      "title": "Gyakran Ismételt Kérdések",
+      "items": [
+        {
+          "question": "Mennyi garanciát vállalnak az eszközökre?",
+          "answer": "Minden általunk gyártott és telepített eszközre 5 év teljeskörű garanciát vállalunk, rendeltetésszerű használat esetén."
+        },
+        {
+          "question": "Milyen engedélyekkel rendelkeznek az eszközök?",
+          "answer": "Termékeink rendelkeznek a TÜV által kiállított MSZ EN 1176 megfelelőségi tanúsítvánnyal, így közterületi használatra alkalmasak."
+        },
+        {
+          "question": "Vállalják más gyártó eszközeinek karbantartását is?",
+          "answer": "Igen, szakértő csapatunk vállalja meglévő játszóterek felújítását és szabványosítását, gyártótól függetlenül."
+        },
+        {
+          "question": "Mennyi időt vesz igénybe egy játszótér telepítése?",
+          "answer": "A gyártás és telepítés a projekt méretétől függően általában 4-8 hetet vesz igénybe a megrendeléstől számítva."
+        }
+      ]
+    },
+    "CTA": {
+      "title": "Van már elképzelése?",
+      "subtitle": "Vagy még csak keresi a megoldást? Lépjen kapcsolatba velünk, és segítünk!",
+      "btn": "Kérjen árajánlatot most"
+    }
   }
 }
