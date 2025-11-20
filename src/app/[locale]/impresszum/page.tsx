@@ -9,7 +9,12 @@ export default async function ImprintPage({
   const { locale } = await params;
   const lang = locale as Locale;
   const dict = await getDictionary(lang);
+
+  // Rövidítések a könnyebb olvashatóságért
   const t = dict.LegalPages.Imprint;
+  const p = t.provider;
+  const c = t.contact;
+  const h = t.hosting;
 
   return (
     <LegalLayout title={t.title} subtitle={t.subtitle}>
@@ -17,23 +22,23 @@ export default async function ImprintPage({
         {/* --- Szolgáltató Adatai --- */}
         <div>
           <h2 className="text-lg font-semibold text-gray-900 mb-2">
-            Szolgáltató Adatai
+            {p.title}
           </h2>
           <ul className="space-y-1">
             <li>
-              <strong>Cégnév:</strong> Terra Forte Bau Kft.
+              <strong>{p.company_label}</strong> {p.company_value}
             </li>
             <li>
-              <strong>Székhely:</strong> 3662, Ózd-Somsályfő Telep 1.
+              <strong>{p.address_label}</strong> {p.address_value}
             </li>
             <li>
-              <strong>Cégjegyzékszám:</strong> 05 09 024254
+              <strong>{p.reg_label}</strong> {p.reg_value}
             </li>
             <li>
-              <strong>Adószám:</strong> 23954780-2-05
+              <strong>{p.tax_label}</strong> {p.tax_value}
             </li>
             <li>
-              <strong>Képviselő:</strong> Döbör Attila Ügyvezető
+              <strong>{p.rep_label}</strong> {p.rep_value}
             </li>
           </ul>
         </div>
@@ -41,17 +46,37 @@ export default async function ImprintPage({
         {/* --- Elérhetőségek --- */}
         <div>
           <h2 className="text-lg font-semibold text-gray-900 mb-2">
-            Elérhetőségek
+            {c.title}
           </h2>
           <ul className="space-y-1">
             <li>
-              <strong>Telefon:</strong> +36 70 369-8193
+              <strong>{c.phone_label}</strong>{" "}
+              <a
+                href={`tel:${c.phone_value}`}
+                className="hover:text-indigo-600"
+              >
+                {c.phone_value}
+              </a>
             </li>
             <li>
-              <strong>E-mail:</strong> info@terrafortebau.hu
+              <strong>{c.email_label}</strong>{" "}
+              <a
+                href={`mailto:${c.email_value}`}
+                className="hover:text-indigo-600"
+              >
+                {c.email_value}
+              </a>
             </li>
             <li>
-              <strong>Web:</strong> www.terrafortebau.hu
+              <strong>{c.web_label}</strong>{" "}
+              <a
+                href={`https://${c.web_value}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-indigo-600"
+              >
+                {c.web_value}
+              </a>
             </li>
           </ul>
         </div>
@@ -59,17 +84,25 @@ export default async function ImprintPage({
         {/* --- Tárhelyszolgáltató --- */}
         <div className="md:col-span-2 border-t border-gray-100 pt-6 mt-2">
           <h2 className="text-lg font-semibold text-gray-900 mb-2">
-            Tárhelyszolgáltató
+            {h.title}
           </h2>
           <ul className="space-y-1">
             <li>
-              <strong>Név:</strong> Vercel Inc.
+              <strong>{h.name_label}</strong> {h.name_value}
             </li>
             <li>
-              <strong>Cím:</strong> 340 S Lemon Ave #4133 Walnut, CA 91789, USA
+              <strong>{h.address_label}</strong> {h.address_value}
             </li>
             <li>
-              <strong>Web:</strong> https://vercel.com
+              <strong>{h.web_label}</strong>{" "}
+              <a
+                href={h.web_value}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-indigo-600"
+              >
+                {h.web_value}
+              </a>
             </li>
           </ul>
         </div>

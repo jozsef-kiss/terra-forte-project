@@ -395,7 +395,38 @@
     },
     "Imprint": {
       "title": "Impressum",
-      "subtitle": "Unternehmensinformationen und rechtlicher Hinweis"
+      "subtitle": "Firmeninformationen und Rechtliche Hinweise",
+      "provider": {
+        "title": "Anbieterangaben",
+        "company_label": "Firmenname:",
+        "company_value": "Terra Forte Bau Kft.",
+        "address_label": "Sitz:",
+        "address_value": "3662, Ózd-Somsályfő Telep 1., Ungarn",
+        "reg_label": "Firmenbuchnummer:",
+        "reg_value": "05 09 024254",
+        "tax_label": "Steuernummer:",
+        "tax_value": "23954780-2-05",
+        "rep_label": "Vertreter:",
+        "rep_value": "Attila Döbör, Geschäftsführer"
+      },
+      "contact": {
+        "title": "Kontaktdaten",
+        "phone_label": "Telefon:",
+        "phone_value": "+36 70 369-8193",
+        "email_label": "E-Mail:",
+        "email_value": "info@terrafortebau.hu",
+        "web_label": "Web:",
+        "web_value": "www.terrafortebau.hu"
+      },
+      "hosting": {
+        "title": "Hosting-Anbieter",
+        "name_label": "Name:",
+        "name_value": "Vercel Inc.",
+        "address_label": "Adresse:",
+        "address_value": "340 S Lemon Ave #4133 Walnut, CA 91789, USA",
+        "web_label": "Web:",
+        "web_value": "https://vercel.com"
+      }
     }
   }
 }
