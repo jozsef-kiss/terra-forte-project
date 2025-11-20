@@ -78,7 +78,6 @@
         "title": "Rechtliches",
         "links": [
           { "name": "Datenschutz", "href": "/adatvedelem" },
-          { "name": "AGB", "href": "/aszf" },
           { "name": "Impressum", "href": "/impresszum" }
         ]
       }
@@ -387,6 +386,16 @@
       "title": "Nicht fündig geworden?",
       "subtitle": "Haben Sie eine spezielle Frage oder benötigen Sie fachkundige Beratung? Unsere Experten helfen Ihnen gerne!",
       "btn": "Kontakt aufnehmen"
+    }
+  },
+  "LegalPages": {
+    "Privacy": {
+      "title": "Datenschutzerklärung",
+      "lastUpdated": "Letzte Aktualisierung: 20. Februar 2025"
+    },
+    "Imprint": {
+      "title": "Impressum",
+      "subtitle": "Unternehmensinformationen und rechtlicher Hinweis"
     }
   }
 }

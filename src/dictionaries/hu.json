@@ -78,7 +78,6 @@
         "title": "Jogi",
         "links": [
           { "name": "Adatvédelem", "href": "/adatvedelem" },
-          { "name": "ÁSZF", "href": "/aszf" },
           { "name": "Impresszum", "href": "/impresszum" }
         ]
       }
@@ -387,6 +386,16 @@
       "title": "Nem találta meg a választ?",
       "subtitle": "Egyedi kérdése van, vagy szakmai tanácsra lenne szüksége? Szakértőink készen állnak!",
       "btn": "Vegye fel velünk a kapcsolatot"
+    }
+  },
+  "LegalPages": {
+    "Privacy": {
+      "title": "Adatvédelmi Tájékoztató",
+      "lastUpdated": "Utolsó frissítés: 2025. február 20."
+    },
+    "Imprint": {
+      "title": "Impresszum",
+      "subtitle": "Céginformációk és jogi nyilatkozat"
     }
   }
 }

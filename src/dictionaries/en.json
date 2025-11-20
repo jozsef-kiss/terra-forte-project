@@ -78,7 +78,6 @@
         "title": "Legal",
         "links": [
           { "name": "Privacy Policy", "href": "/adatvedelem" },
-          { "name": "Terms & Conditions", "href": "/aszf" },
           { "name": "Imprint", "href": "/impresszum" }
         ]
       }
@@ -387,6 +386,16 @@
       "title": "Didn't find the answer?",
       "subtitle": "Do you have a specific question or need professional advice? Our experts are ready to help!",
       "btn": "Contact Us"
+    }
+  },
+  "LegalPages": {
+    "Privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: February 20, 2025"
+    },
+    "Imprint": {
+      "title": "Imprint",
+      "subtitle": "Company information and legal notice"
     }
   }
 }
