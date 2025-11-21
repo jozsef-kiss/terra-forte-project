@@ -16,19 +16,20 @@ export type ContactFormData = z.infer<typeof contactFormSchema>;
 
 // ... (contactFormSchema marad)
 
+// --- 2. ÁRAJÁNLATKÉRŐ ŰRLAP SÉMA ---
 export const quoteFormSchema = z.object({
   firstName: z.string().min(2, "A keresztnév túl rövid"),
   lastName: z.string().min(2, "A vezetéknév túl rövid"),
   email: z.string().email("Érvénytelen e-mail cím formátum"),
   phone: z.string().min(6, "A telefonszám túl rövid"),
-  // Új mezők:
-  projectType: z.enum(["wooden", "metal", "fitness", "street", "other"], {
-    errorMap: () => ({ message: "Kérjük válasszon típust" }),
-  }),
-  timing: z.enum(["asap", "1_3_months", "3_6_months", "planning"], {
-    errorMap: () => ({ message: "Kérjük válasszon időzítést" }),
-  }),
-  message: z.string().optional(), // Itt opcionálissá tehetjük, vagy maradhat kötelező
+
+  // JAVÍTÁS: Kivettük a { errorMap: ... } részt, így a TypeScript nem fog hibát dobni.
+  // A validáció így is működik: ha üres, a Zod jelezni fog.
+  projectType: z.enum(["wooden", "metal", "fitness", "street", "other"]),
+
+  timing: z.enum(["asap", "1_3_months", "3_6_months", "planning"]),
+
+  message: z.string().optional(),
 });
 
 export type QuoteFormData = z.infer<typeof quoteFormSchema>;
