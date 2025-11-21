@@ -514,5 +514,38 @@
       "error_title": "Hiba történt",
       "error_desc": "Kérjük, próbálja meg később, vagy írjon közvetlenül emailt."
     }
+  },
+  "QuotePage": {
+    "title": "Kérjen Árajánlatot",
+    "description": "Töltse ki űrlapunkat, és szakértőink 24 órán belül felveszik Önnel a kapcsolatot egy személyre szabott, kötelezettségektől mentes ajánlattal.",
+    "form": {
+      "personal_title": "Személyes adatok",
+      "project_title": "Projekt részletei",
+      "first_name": "Keresztnév",
+      "last_name": "Vezetéknév",
+      "email": "E-mail cím",
+      "phone": "Telefonszám",
+      "type_label": "Érdeklődés tárgya",
+      "type_options": {
+        "wooden": "Fa játszótér",
+        "metal": "Fém játszótér",
+        "fitness": "Kültéri fitnesz",
+        "street": "Utcabútor",
+        "other": "Egyéb / Vegyes"
+      },
+      "timing_label": "Tervezett megvalósítás",
+      "timing_options": {
+        "asap": "Azonnal (Sürgős)",
+        "1_3_months": "1-3 hónapon belül",
+        "3_6_months": "3-6 hónapon belül",
+        "planning": "Csak tájékozódom / Tervezés alatt"
+      },
+      "message": "Egyéb megjegyzés / Projekt leírása",
+      "submit_btn": "Ajánlatkérés elküldése",
+      "success_title": "Ajánlatkérés elküldve!",
+      "success_desc": "Köszönjük! Kollégáink hamarosan feldolgozzák az igényeit és keresni fogják.",
+      "error_title": "Hiba történt",
+      "error_desc": "Kérjük, próbálja meg később."
+    }
   }
 }

@@ -1,17 +1,23 @@
 "use server";
 
 import { Resend } from "resend";
-import { contactFormSchema, type ContactFormData } from "@/lib/schemas";
+import {
+  contactFormSchema,
+  quoteFormSchema,
+  type ContactFormData,
+  type QuoteFormData,
+} from "@/lib/schemas";
 import ContactFormEmail from "@/emails/ContactFormEmail";
+import QuoteFormEmail from "@/emails/QuoteFormEmail";
 
-// Inicializáljuk a Resend klienst az API kulccsal
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// Ez a cím fogja kapni az értesítéseket (ideiglenesen a sajátodat írd be tesztelni, később az info@-t)
-const RECIPIENT_EMAIL = "info@terrafortebau.hu"; // VAGY a saját teszt email címed
+// FONTOS: Tesztelés alatt ideiglenesen a saját címedet használd!
+// Ha már éles a domain a Resend-en, akkor mehet az info@terrafortebau.hu
+const RECIPIENT_EMAIL = "vona.2015@gmail.com";
 
+// --- 1. KAPCSOLAT ŰRLAP (Ez már megvolt) ---
 export async function submitContactForm(data: ContactFormData) {
-  // 1. Szerver oldali validáció (Biztonsági háló)
   const result = contactFormSchema.safeParse(data);
 
   if (!result.success) {
@@ -21,13 +27,55 @@ export async function submitContactForm(data: ContactFormData) {
   const { firstName, lastName, email, phone, message } = result.data;
 
   try {
-    // 2. Email küldése a Resend segítségével
     const { data: emailData, error } = await resend.emails.send({
-      from: "Terra Forte Web <onboarding@resend.dev>", // Teszt módban csak ez működik! Élesben majd átállítjuk.
+      from: "Terra Forte Web <onboarding@resend.dev>",
       to: [RECIPIENT_EMAIL],
       subject: `Új megkeresés: ${lastName} ${firstName}`,
-      replyTo: email, // Így ha a "Válasz"-ra kattintasz, az ügyfélnek megy
+      replyTo: email,
       react: ContactFormEmail({ firstName, lastName, email, phone, message }),
+    });
+
+    if (error) {
+      console.error("Resend hiba:", error);
+      return { success: false, error: "Sikertelen küldés" };
+    }
+
+    return { success: true, data: emailData };
+  } catch (error) {
+    console.error("Szerver hiba:", error);
+    return { success: false, error: "Váratlan hiba történt" };
+  }
+}
+
+// --- 2. ÁRAJÁNLATKÉRŐ ŰRLAP (Ez az új) ---
+export async function submitQuoteForm(data: QuoteFormData) {
+  // 1. Validáció az új sémával
+  const result = quoteFormSchema.safeParse(data);
+
+  if (!result.success) {
+    return { success: false, error: "Érvénytelen adatok" };
+  }
+
+  const { firstName, lastName, email, phone, projectType, timing, message } =
+    result.data;
+
+  try {
+    // 2. Email küldése az új sablonnal
+    const { data: emailData, error } = await resend.emails.send({
+      from: "Terra Forte Web <onboarding@resend.dev>",
+      to: [RECIPIENT_EMAIL],
+      subject: `ÁRAJÁNLATKÉRÉS: ${lastName} ${firstName}`,
+      replyTo: email,
+      // Itt az új QuoteFormEmail sablont használjuk
+      react: QuoteFormEmail({
+        firstName,
+        lastName,
+        email,
+        phone,
+        projectType,
+        timing,
+        message,
+      }),
     });
 
     if (error) {

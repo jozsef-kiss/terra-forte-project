@@ -514,5 +514,38 @@
       "error_title": "Ein Fehler ist aufgetreten",
       "error_desc": "Bitte versuchen Sie es später erneut oder senden Sie uns direkt eine E-Mail."
     }
+  },
+  "QuotePage": {
+    "title": "Angebot anfordern",
+    "description": "Füllen Sie unser Formular aus und unsere Experten werden Sie innerhalb von 24 Stunden mit einem persönlichen, unverbindlichen Angebot kontaktieren.",
+    "form": {
+      "personal_title": "Persönliche Daten",
+      "project_title": "Projektdetails",
+      "first_name": "Vorname",
+      "last_name": "Nachname",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "type_label": "Betreff",
+      "type_options": {
+        "wooden": "Holzspielplatz",
+        "metal": "Metallspielplatz",
+        "fitness": "Outdoor-Fitness",
+        "street": "Stadtmöbel",
+        "other": "Sonstiges / Gemischt"
+      },
+      "timing_label": "Geplante Umsetzung",
+      "timing_options": {
+        "asap": "Sofort (Dringend)",
+        "1_3_months": "Innerhalb 1-3 Monate",
+        "3_6_months": "Innerhalb 3-6 Monate",
+        "planning": "Nur Information / Planungsphase"
+      },
+      "message": "Zusätzliche Anmerkungen / Projektbeschreibung",
+      "submit_btn": "Anfrage senden",
+      "success_title": "Anfrage gesendet!",
+      "success_desc": "Vielen Dank! Unsere Kollegen werden Ihre Anfrage in Kürze bearbeiten.",
+      "error_title": "Ein Fehler ist aufgetreten",
+      "error_desc": "Bitte versuchen Sie es später erneut."
+    }
   }
 }

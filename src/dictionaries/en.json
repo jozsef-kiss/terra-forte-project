@@ -514,5 +514,38 @@
       "error_title": "An error occurred",
       "error_desc": "Please try again later or email us directly."
     }
+  },
+  "QuotePage": {
+    "title": "Request a Quote",
+    "description": "Fill out our form, and our experts will contact you within 24 hours with a personalized, no-obligation quote.",
+    "form": {
+      "personal_title": "Personal Details",
+      "project_title": "Project Details",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email address",
+      "phone": "Phone number",
+      "type_label": "Subject of Interest",
+      "type_options": {
+        "wooden": "Wooden Playground",
+        "metal": "Metal Playground",
+        "fitness": "Outdoor Fitness",
+        "street": "Street Furniture",
+        "other": "Other / Mixed"
+      },
+      "timing_label": "Planned Implementation",
+      "timing_options": {
+        "asap": "Immediately (Urgent)",
+        "1_3_months": "Within 1-3 months",
+        "3_6_months": "Within 3-6 months",
+        "planning": "Just browsing / Planning phase"
+      },
+      "message": "Additional Notes / Project Description",
+      "submit_btn": "Submit Quote Request",
+      "success_title": "Request Sent!",
+      "success_desc": "Thank you! Our colleagues will process your request shortly.",
+      "error_title": "An error occurred",
+      "error_desc": "Please try again later."
+    }
   }
 }
