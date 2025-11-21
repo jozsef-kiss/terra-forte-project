@@ -9,6 +9,8 @@ export const contactFormSchema = z.object({
   message: z
     .string()
     .min(10, "Az üzenetnek legalább 10 karakter hosszúnak kell lennie"),
+  // ÚJ: Rejtett csapda mező (opcionális, hogy ne zavarja a validációt)
+  honeypot: z.string().optional(),
 });
 
 // Ezt a típust használjuk majd a komponensben (automatikusan generálódik a sémából)
@@ -30,6 +32,8 @@ export const quoteFormSchema = z.object({
   timing: z.enum(["asap", "1_3_months", "3_6_months", "planning"]),
 
   message: z.string().optional(),
+  // ÚJ: Rejtett csapda mező
+  honeypot: z.string().optional(),
 });
 
 export type QuoteFormData = z.infer<typeof quoteFormSchema>;

@@ -24,7 +24,15 @@ export async function submitContactForm(data: ContactFormData) {
     return { success: false, error: "Érvénytelen adatok" };
   }
 
-  const { firstName, lastName, email, phone, message } = result.data;
+  const { firstName, lastName, email, phone, message, honeypot } = result.data;
+
+  // --- SPAM VÉDELEM ---
+  // Ha a honeypot mező ki van töltve, az egy BOT.
+  if (honeypot && honeypot.length > 0) {
+    console.log("Spam kísérlet elhárítva (Honeypot)");
+    // Csendben visszatérünk sikerrel, hogy megtévesszük a botot
+    return { success: true, data: null };
+  }
 
   try {
     const { data: emailData, error } = await resend.emails.send({
@@ -56,8 +64,22 @@ export async function submitQuoteForm(data: QuoteFormData) {
     return { success: false, error: "Érvénytelen adatok" };
   }
 
-  const { firstName, lastName, email, phone, projectType, timing, message } =
-    result.data;
+  const {
+    firstName,
+    lastName,
+    email,
+    phone,
+    projectType,
+    timing,
+    message,
+    honeypot,
+  } = result.data;
+
+  // --- SPAM VÉDELEM ---
+  if (honeypot && honeypot.length > 0) {
+    console.log("Spam kísérlet elhárítva (Honeypot)");
+    return { success: true, data: null };
+  }
 
   try {
     // 2. Email küldése az új sablonnal
