@@ -489,5 +489,30 @@
     "accept": "Alle akzeptieren",
     "decline": "Nur Essenzielle",
     "privacy_link": "Datenschutzerklärung"
+  },
+  "ContactPage": {
+    "title": "Kontaktieren Sie uns",
+    "description": "Ob Sie eine konkrete Vorstellung haben oder nur Rat benötigen, unsere Experten stehen Ihnen gerne zur Verfügung. Fordern Sie noch heute eine kostenlose Vor-Ort-Bewertung an!",
+    "info": {
+      "address_label": "Adresse",
+      "address_value_1": "3662, Ózd-Somsályfő",
+      "address_value_2": "Telep 1., Ungarn",
+      "phone_label": "Telefon",
+      "phone_value": "+36 70 369-8193",
+      "email_label": "E-Mail",
+      "email_value": "info@terrafortebau.hu"
+    },
+    "form": {
+      "first_name": "Vorname",
+      "last_name": "Nachname",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "message": "Nachricht",
+      "submit_btn": "Nachricht senden",
+      "success_title": "Nachricht gesendet!",
+      "success_desc": "Vielen Dank für Ihre Anfrage. Unser Kollege wird sich in Kürze bei Ihnen melden.",
+      "error_title": "Ein Fehler ist aufgetreten",
+      "error_desc": "Bitte versuchen Sie es später erneut oder senden Sie uns direkt eine E-Mail."
+    }
   }
 }

@@ -489,5 +489,30 @@
     "accept": "Minden süti elfogadása",
     "decline": "Csak a szükségesek",
     "privacy_link": "Adatvédelmi tájékoztató"
+  },
+  "ContactPage": {
+    "title": "Lépjen velünk kapcsolatba",
+    "description": "Akár konkrét elképzelése van, akár csak tanácsot kérne, szakértőink készséggel állnak rendelkezésére. Kérjen ingyenes helyszíni felmérést még ma!",
+    "info": {
+      "address_label": "Cím",
+      "address_value_1": "3662, Ózd-Somsályfő",
+      "address_value_2": "Telep 1.",
+      "phone_label": "Telefon",
+      "phone_value": "+36 70 369-8193",
+      "email_label": "E-mail",
+      "email_value": "info@terrafortebau.hu"
+    },
+    "form": {
+      "first_name": "Keresztnév",
+      "last_name": "Vezetéknév",
+      "email": "E-mail cím",
+      "phone": "Telefonszám",
+      "message": "Üzenet",
+      "submit_btn": "Üzenet küldése",
+      "success_title": "Sikeres küldés!",
+      "success_desc": "Köszönjük megkeresését. Kollégánk hamarosan felveszi Önnel a kapcsolatot.",
+      "error_title": "Hiba történt",
+      "error_desc": "Kérjük, próbálja meg később, vagy írjon közvetlenül emailt."
+    }
   }
 }
