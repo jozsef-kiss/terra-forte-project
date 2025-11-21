@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "flagcdn.com" }, // A zászlókhoz
     ],
   },
-  // BIZTONSÁGI FEJLÉCEK
+  // BIZTONSÁGI FEJLÉCEK (Security Headers)
   async headers() {
     return [
       {
@@ -25,15 +25,15 @@ const nextConfig: NextConfig = {
           },
           {
             key: "X-Frame-Options",
-            value: "SAMEORIGIN", // Megvédi az oldalt attól, hogy mások beágyazzák (Clickjacking)
+            value: "SAMEORIGIN", // Megvédi az oldalt a "Clickjacking"-től (mások nem ágyazhatják be iframe-be)
           },
           {
             key: "X-Content-Type-Options",
-            value: "nosniff", // Megakadályozza, hogy a böngésző "kitalálja" a fájltípust (MIME-sniffing)
+            value: "nosniff", // Megakadályozza a fájltípusokkal való visszaélést
           },
           {
             key: "Referrer-Policy",
-            value: "origin-when-cross-origin", // Adatvédelmi beállítás
+            value: "origin-when-cross-origin", // Adatvédelmi beállítás a hivatkozásokhoz
           },
         ],
       },
