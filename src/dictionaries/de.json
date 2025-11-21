@@ -545,7 +545,12 @@
       "success_title": "Anfrage gesendet!",
       "success_desc": "Vielen Dank! Unsere Kollegen werden Ihre Anfrage in Kürze bearbeiten.",
       "error_title": "Ein Fehler ist aufgetreten",
-      "error_desc": "Bitte versuchen Sie es später erneut."
+      "error_desc": "Bitte versuchen Sie es später erneut.",
+      "first_name_placeholder": "z. B. Max",
+      "last_name_placeholder": "z. B. Mustermann",
+      "email_placeholder": "beispiel@email.de",
+      "phone_placeholder": "+49 123 456789",
+      "message_placeholder": "Beschreiben Sie kurz Ihre Ideen oder den Bereich, in dem Sie den Spielplatz planen..."
     }
   }
 }

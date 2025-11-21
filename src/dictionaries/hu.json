@@ -545,7 +545,12 @@
       "success_title": "Ajánlatkérés elküldve!",
       "success_desc": "Köszönjük! Kollégáink hamarosan feldolgozzák az igényeit és keresni fogják.",
       "error_title": "Hiba történt",
-      "error_desc": "Kérjük, próbálja meg később."
+      "error_desc": "Kérjük, próbálja meg később.",
+      "first_name_placeholder": "pl. István",
+      "last_name_placeholder": "pl. Kovács",
+      "email_placeholder": "pelda@email.hu",
+      "phone_placeholder": "+36 30 123 4567",
+      "message_placeholder": "Írja le röviden az elképzeléseit, vagy hogy milyen területre tervezi a játszóteret..."
     }
   }
 }

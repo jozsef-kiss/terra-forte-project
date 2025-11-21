@@ -545,7 +545,12 @@
       "success_title": "Request Sent!",
       "success_desc": "Thank you! Our colleagues will process your request shortly.",
       "error_title": "An error occurred",
-      "error_desc": "Please try again later."
+      "error_desc": "Please try again later.",
+      "first_name_placeholder": "e.g. John",
+      "last_name_placeholder": "e.g. Doe",
+      "email_placeholder": "example@email.com",
+      "phone_placeholder": "+1 555 000 0000",
+      "message_placeholder": "Briefly describe your ideas or the area where you plan the playground..."
     }
   }
 }
