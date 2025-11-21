@@ -512,7 +512,12 @@
       "success_title": "Nachricht gesendet!",
       "success_desc": "Vielen Dank für Ihre Anfrage. Unser Kollege wird sich in Kürze bei Ihnen melden.",
       "error_title": "Ein Fehler ist aufgetreten",
-      "error_desc": "Bitte versuchen Sie es später erneut oder senden Sie uns direkt eine E-Mail."
+      "error_desc": "Bitte versuchen Sie es später erneut oder senden Sie uns direkt eine E-Mail.",
+      "first_name_placeholder": "z. B. Max",
+      "last_name_placeholder": "z. B. Mustermann",
+      "email_placeholder": "beispiel@email.de",
+      "phone_placeholder": "+49 123 456789",
+      "message_placeholder": "Beschreiben Sie, wie wir helfen können..."
     }
   },
   "QuotePage": {

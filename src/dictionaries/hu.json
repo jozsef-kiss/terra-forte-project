@@ -512,7 +512,12 @@
       "success_title": "Sikeres küldés!",
       "success_desc": "Köszönjük megkeresését. Kollégánk hamarosan felveszi Önnel a kapcsolatot.",
       "error_title": "Hiba történt",
-      "error_desc": "Kérjük, próbálja meg később, vagy írjon közvetlenül emailt."
+      "error_desc": "Kérjük, próbálja meg később, vagy írjon közvetlenül emailt.",
+      "first_name_placeholder": "pl. István",
+      "last_name_placeholder": "pl. Kovács",
+      "email_placeholder": "pelda@email.hu",
+      "phone_placeholder": "+36 30 123 4567",
+      "message_placeholder": "Írja le, miben segíthetünk..."
     }
   },
   "QuotePage": {
