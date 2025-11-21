@@ -106,6 +106,22 @@ export default function ContactForm({ t }: Props) {
   return (
     <div className="bg-white shadow-xl ring-1 ring-gray-900/5 rounded-2xl p-8 sm:p-10">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+        {/* --- HONEYPOT (SPAM CSAPDA) --- */}
+        {/* Ez a mező láthatatlan a felhasználóknak, de a botok kitöltik */}
+        <div
+          className="absolute opacity-0 -z-10 select-none pointer-events-none"
+          aria-hidden="true"
+        >
+          <label htmlFor="honeypot">Leave this field empty</label>
+          <input
+            {...register("honeypot")}
+            type="text"
+            id="honeypot"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
+
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           {/* Keresztnév */}
           <div>

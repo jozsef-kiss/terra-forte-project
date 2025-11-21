@@ -125,6 +125,22 @@ export default function QuoteForm({ t }: Props) {
   return (
     <div className="bg-white shadow-xl ring-1 ring-gray-900/5 rounded-2xl p-8 sm:p-10">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+        {/* --- HONEYPOT (SPAM CSAPDA) --- */}
+        {/* Ez a mező láthatatlan a felhasználóknak, de a botok kitöltik */}
+        <div
+          className="absolute opacity-0 -z-10 select-none pointer-events-none"
+          aria-hidden="true"
+        >
+          <label htmlFor="honeypot">Leave this field empty</label>
+          <input
+            {...register("honeypot")}
+            type="text"
+            id="honeypot"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
+
         {/* 1. Személyes Adatok */}
         <div>
           <h3 className="text-base font-semibold leading-7 text-gray-900 mb-4 border-b border-gray-100 pb-2">
