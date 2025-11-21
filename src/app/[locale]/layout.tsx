@@ -60,7 +60,7 @@ export default async function RootLayout({
         {/* Csak akkor rendereljük a GTM-et, ha van érvényes ID */}
         {gtmId && <GoogleTagManager gtmId={gtmId} />}
 
-        <Header lang={lang} dict={dict} />
+        <Header lang={lang} />
         <main>{children}</main>
         <Footer lang={lang} />
 
