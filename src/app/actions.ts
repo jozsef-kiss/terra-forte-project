@@ -9,14 +9,16 @@ import {
 } from "@/lib/schemas";
 import ContactFormEmail from "@/emails/ContactFormEmail";
 import QuoteFormEmail from "@/emails/QuoteFormEmail";
+// ÚJ: Adatbázis kliens és séma importálása
+import { db } from "@/db";
+import { leads } from "@/db/schema";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// FONTOS: Tesztelés alatt ideiglenesen a saját címedet használd!
-// Ha már éles a domain a Resend-en, akkor mehet az info@terrafortebau.hu
+// Teszteléshez marad a saját címed
 const RECIPIENT_EMAIL = "vona.2015@gmail.com";
 
-// --- 1. KAPCSOLAT ŰRLAP (Ez már megvolt) ---
+// --- 1. KAPCSOLAT ŰRLAP (Adatbázis mentéssel) ---
 export async function submitContactForm(data: ContactFormData) {
   const result = contactFormSchema.safeParse(data);
 
@@ -26,15 +28,23 @@ export async function submitContactForm(data: ContactFormData) {
 
   const { firstName, lastName, email, phone, message, honeypot } = result.data;
 
-  // --- SPAM VÉDELEM ---
-  // Ha a honeypot mező ki van töltve, az egy BOT.
+  // Spam védelem
   if (honeypot && honeypot.length > 0) {
-    console.log("Spam kísérlet elhárítva (Honeypot)");
-    // Csendben visszatérünk sikerrel, hogy megtévesszük a botot
     return { success: true, data: null };
   }
 
   try {
+    // 1. MENTÉS AZ ADATBÁZISBA (Mini-CRM)
+    // Előbb mentünk, aztán küldünk emailt (hogy biztos meglegyen az adat)
+    await db.insert(leads).values({
+      name: `${lastName} ${firstName}`, // Összefűzzük a nevet egy mezőbe
+      email: email,
+      phone: phone,
+      message: message,
+      // A type és timing itt üres marad, mert ez csak sima kapcsolatfelvétel
+    });
+
+    // 2. EMAIL KÜLDÉSE
     const { data: emailData, error } = await resend.emails.send({
       from: "Terra Forte Web <onboarding@resend.dev>",
       to: [RECIPIENT_EMAIL],
@@ -55,9 +65,8 @@ export async function submitContactForm(data: ContactFormData) {
   }
 }
 
-// --- 2. ÁRAJÁNLATKÉRŐ ŰRLAP (Ez az új) ---
+// --- 2. ÁRAJÁNLATKÉRŐ ŰRLAP (Adatbázis mentéssel) ---
 export async function submitQuoteForm(data: QuoteFormData) {
-  // 1. Validáció az új sémával
   const result = quoteFormSchema.safeParse(data);
 
   if (!result.success) {
@@ -75,20 +84,27 @@ export async function submitQuoteForm(data: QuoteFormData) {
     honeypot,
   } = result.data;
 
-  // --- SPAM VÉDELEM ---
   if (honeypot && honeypot.length > 0) {
-    console.log("Spam kísérlet elhárítva (Honeypot)");
     return { success: true, data: null };
   }
 
   try {
-    // 2. Email küldése az új sablonnal
+    // 1. MENTÉS AZ ADATBÁZISBA (Minden részlettel)
+    await db.insert(leads).values({
+      name: `${lastName} ${firstName}`,
+      email: email,
+      phone: phone,
+      message: message, // Ez opcionális, lehet null
+      projectType: projectType, // Extra mező
+      timing: timing, // Extra mező
+    });
+
+    // 2. EMAIL KÜLDÉSE
     const { data: emailData, error } = await resend.emails.send({
       from: "Terra Forte Web <onboarding@resend.dev>",
       to: [RECIPIENT_EMAIL],
       subject: `ÁRAJÁNLATKÉRÉS: ${lastName} ${firstName}`,
       replyTo: email,
-      // Itt az új QuoteFormEmail sablont használjuk
       react: QuoteFormEmail({
         firstName,
         lastName,
