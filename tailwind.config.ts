@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import forms from "@tailwindcss/forms";
 import colors from "tailwindcss/colors";
+import typography from "@tailwindcss/typography"; // 1. Importáld be
 
 const config: Config = {
   content: [
@@ -50,6 +51,7 @@ const config: Config = {
   },
   plugins: [
     forms, // Itt aktiváljuk a plugint
+    typography,
   ],
 };
 
