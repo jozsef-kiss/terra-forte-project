@@ -1,24 +1,42 @@
-import clsx from 'clsx'
-import type React from 'react'
-import { Button } from './button'
+import clsx from "clsx";
+import type React from "react";
+import { Button } from "./button";
 
 export function Pagination({
-  'aria-label': ariaLabel = 'Page navigation',
+  "aria-label": ariaLabel = "Page navigation",
   className,
   ...props
-}: React.ComponentPropsWithoutRef<'nav'>) {
-  return <nav aria-label={ariaLabel} {...props} className={clsx(className, 'flex gap-x-2')} />
+}: React.ComponentPropsWithoutRef<"nav">) {
+  return (
+    <nav
+      aria-label={ariaLabel}
+      {...props}
+      className={clsx(className, "flex gap-x-2")}
+    />
+  );
 }
 
 export function PaginationPrevious({
   href = null,
   className,
-  children = 'Previous',
+  children = "Előző",
 }: React.PropsWithChildren<{ href?: string | null; className?: string }>) {
   return (
-    <span className={clsx(className, 'grow basis-0')}>
-      <Button {...(href === null ? { disabled: true } : { href })} plain aria-label="Previous page">
-        <svg className="stroke-current" data-slot="icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+    <span className={clsx(className, "grow basis-0")}>
+      <Button
+        {...(href === null ? { disabled: true } : { href })}
+        plain
+        aria-label="Previous page"
+        // JAVÍTÁS: '!' használata a kényszerítéshez (override)
+        className="!text-stone-600 hover:!text-indigo-700 hover:!bg-indigo-50 px-4 gap-x-2"
+      >
+        <svg
+          className="stroke-current"
+          data-slot="icon"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
           <path
             d="M2.75 8H13.25M2.75 8L5.25 5.5M2.75 8L5.25 10.5"
             strokeWidth={1.5}
@@ -29,19 +47,31 @@ export function PaginationPrevious({
         {children}
       </Button>
     </span>
-  )
+  );
 }
 
 export function PaginationNext({
   href = null,
   className,
-  children = 'Next',
+  children = "Következő",
 }: React.PropsWithChildren<{ href?: string | null; className?: string }>) {
   return (
-    <span className={clsx(className, 'flex grow basis-0 justify-end')}>
-      <Button {...(href === null ? { disabled: true } : { href })} plain aria-label="Next page">
+    <span className={clsx(className, "flex grow basis-0 justify-end")}>
+      <Button
+        {...(href === null ? { disabled: true } : { href })}
+        plain
+        aria-label="Next page"
+        // JAVÍTÁS: '!' használata a kényszerítéshez
+        className="!text-stone-600 hover:!text-indigo-700 hover:!bg-indigo-50 px-4 gap-x-2"
+      >
         {children}
-        <svg className="stroke-current" data-slot="icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <svg
+          className="stroke-current"
+          data-slot="icon"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
           <path
             d="M13.25 8L2.75 8M13.25 8L10.75 10.5M13.25 8L10.75 5.5"
             strokeWidth={1.5}
@@ -51,11 +81,19 @@ export function PaginationNext({
         </svg>
       </Button>
     </span>
-  )
+  );
 }
 
-export function PaginationList({ className, ...props }: React.ComponentPropsWithoutRef<'span'>) {
-  return <span {...props} className={clsx(className, 'hidden items-baseline gap-x-2 sm:flex')} />
+export function PaginationList({
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<"span">) {
+  return (
+    <span
+      {...props}
+      className={clsx(className, "hidden items-baseline gap-x-2 sm:flex")}
+    />
+  );
 }
 
 export function PaginationPage({
@@ -63,36 +101,46 @@ export function PaginationPage({
   className,
   current = false,
   children,
-}: React.PropsWithChildren<{ href: string; className?: string; current?: boolean }>) {
+}: React.PropsWithChildren<{
+  href: string;
+  className?: string;
+  current?: boolean;
+}>) {
   return (
     <Button
       href={href}
       plain
       aria-label={`Page ${children}`}
-      aria-current={current ? 'page' : undefined}
+      aria-current={current ? "page" : undefined}
       className={clsx(
         className,
-        'min-w-9 before:absolute before:-inset-px before:rounded-lg',
-        current && 'before:bg-zinc-950/5 dark:before:bg-white/10'
+        "min-w-9 rounded-lg px-3 py-2 text-sm font-semibold transition-colors",
+        // JAVÍTÁS: '!' használata minden színnél
+        current
+          ? "!bg-indigo-600 !text-white shadow-sm hover:!bg-indigo-500"
+          : "!text-stone-700 hover:!bg-stone-100 hover:!text-stone-900"
       )}
     >
       <span className="-mx-0.5">{children}</span>
     </Button>
-  )
+  );
 }
 
 export function PaginationGap({
   className,
   children = <>&hellip;</>,
   ...props
-}: React.ComponentPropsWithoutRef<'span'>) {
+}: React.ComponentPropsWithoutRef<"span">) {
   return (
     <span
       aria-hidden="true"
       {...props}
-      className={clsx(className, 'w-9 text-center text-sm/6 font-semibold text-zinc-950 select-none dark:text-white')}
+      className={clsx(
+        className,
+        "w-9 text-center text-sm/6 font-semibold !text-stone-500 select-none"
+      )}
     >
       {children}
     </span>
-  )
+  );
 }

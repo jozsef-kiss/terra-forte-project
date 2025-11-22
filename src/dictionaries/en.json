@@ -557,5 +557,44 @@
       "phone_placeholder": "+1 555 000 0000",
       "message_placeholder": "Briefly describe your ideas or the area where you plan the playground..."
     }
+  },
+  "BlogPage": {
+    "title": "Blog & News",
+    "subtitle": "Professional articles, maintenance tips, and news from the world of playground construction.",
+    "posts": [
+      {
+        "id": 1,
+        "title": "How to Choose a Safe Playground?",
+        "description": "Child safety comes first. Our expert guide helps you navigate the world of MSZ EN 1176 standards and necessary certifications.",
+        "date": "Mar 16, 2025",
+        "category": "Advice",
+        "author": {
+          "name": "József Kiss",
+          "role": "CEO"
+        }
+      },
+      {
+        "id": "2",
+        "title": "Maintenance of Wooden Playgrounds",
+        "description": "Natural materials need care. Here is how to preserve the lifespan and beauty of your wooden playground equipment for decades.",
+        "date": "Mar 10, 2025",
+        "category": "Maintenance",
+        "author": {
+          "name": "Anna Nagy",
+          "role": "Landscape Architect"
+        }
+      },
+      {
+        "id": "3",
+        "title": "Building Communities with Playgrounds",
+        "description": "How does a well-designed playground become the center of the local community? Tips for municipalities and residential communities.",
+        "date": "Feb 12, 2025",
+        "category": "Planning",
+        "author": {
+          "name": "Péter Kovács",
+          "role": "Project Manager"
+        }
+      }
+    ]
   }
 }

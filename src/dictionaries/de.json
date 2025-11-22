@@ -557,5 +557,44 @@
       "phone_placeholder": "+49 123 456789",
       "message_placeholder": "Beschreiben Sie kurz Ihre Ideen oder den Bereich, in dem Sie den Spielplatz planen..."
     }
+  },
+  "BlogPage": {
+    "title": "Blog & Neuigkeiten",
+    "subtitle": "Fachartikel, Wartungstipps und Neuigkeiten aus der Welt des Spielplatzbaus.",
+    "posts": [
+      {
+        "id": 1,
+        "title": "Wie wählt man einen sicheren Spielplatz?",
+        "description": "Die Sicherheit der Kinder steht an erster Stelle. Unser Expertenratgeber hilft Ihnen, sich in der Welt der Normen MSZ EN 1176 zurechtzufinden.",
+        "date": "16. März 2025",
+        "category": "Beratung",
+        "author": {
+          "name": "József Kiss",
+          "role": "Geschäftsführer"
+        }
+      },
+      {
+        "id": "2",
+        "title": "Wartung von Holzspielplätzen",
+        "description": "Natürliche Materialien brauchen Pflege. So erhalten Sie die Lebensdauer und Schönheit Ihrer Holzspielgeräte über Jahrzehnte.",
+        "date": "10. März 2025",
+        "category": "Wartung",
+        "author": {
+          "name": "Anna Nagy",
+          "role": "Landschaftsarchitektin"
+        }
+      },
+      {
+        "id": "3",
+        "title": "Gemeinschaftsbildung mit Spielplätzen",
+        "description": "Wie wird ein gut gestalteter Spielplatz zum Zentrum der lokalen Gemeinschaft? Tipps für Gemeinden und Wohngemeinschaften.",
+        "date": "12. Feb. 2025",
+        "category": "Planung",
+        "author": {
+          "name": "Péter Kovács",
+          "role": "Projektleiter"
+        }
+      }
+    ]
   }
 }

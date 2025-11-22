@@ -557,5 +557,44 @@
       "phone_placeholder": "+36 30 123 4567",
       "message_placeholder": "Írja le röviden az elképzeléseit, vagy hogy milyen területre tervezi a játszóteret..."
     }
+  },
+  "BlogPage": {
+    "title": "Blog és Hírek",
+    "subtitle": "Szakmai cikkek, karbantartási tippek és újdonságok a játszótér építés világából.",
+    "posts": [
+      {
+        "id": 1,
+        "title": "Hogyan válasszunk biztonságos játszóteret?",
+        "description": "A gyermekek biztonsága az első. Szakértői útmutatónk segít eligazodni az MSZ EN 1176 szabványok és a szükséges tanúsítványok világában.",
+        "date": "2025. márc. 16.",
+        "category": "Tanácsadás",
+        "author": {
+          "name": "Kiss József",
+          "role": "Ügyvezető"
+        }
+      },
+      {
+        "id": "2",
+        "title": "A fa játszóterek karbantartása",
+        "description": "A természetes anyagok törődést igényelnek. Így őrizheti meg fa játékainak élettartamát és szépségét évtizedeken át.",
+        "date": "2025. márc. 10.",
+        "category": "Karbantartás",
+        "author": {
+          "name": "Nagy Anna",
+          "role": "Tájépítész"
+        }
+      },
+      {
+        "id": "3",
+        "title": "Közösségépítés játszóterekkel",
+        "description": "Hogyan válik egy jól megtervezett játszótér a helyi közösség központjává? Tippek önkormányzatoknak és lakóközösségeknek.",
+        "date": "2025. feb. 12.",
+        "category": "Tervezés",
+        "author": {
+          "name": "Kovács Péter",
+          "role": "Projektvezető"
+        }
+      }
+    ]
   }
 }
