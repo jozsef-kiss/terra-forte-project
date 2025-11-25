@@ -1,19 +1,16 @@
 "use client";
 
-import { useChat } from "@ai-sdk/react";
+import { useChat } from "ai/react";
 import { useState, useRef, useEffect } from "react";
 import {
   ChatBubbleLeftRightIcon,
   XMarkIcon,
   PaperAirplaneIcon,
 } from "@heroicons/react/24/outline";
-import { Button } from "@/components/ui/button";
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // A Vercel AI SDK hook-ja: ez kezeli a teljes chat logikát!
-  // Automatikusan hívja majd a /api/chat végpontot (amit a következő lépésben írunk meg).
   const { messages, input, handleInputChange, handleSubmit, isLoading } =
     useChat({
       api: "/api/chat",
@@ -24,7 +21,6 @@ export default function ChatWidget() {
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Automatikus görgetés az új üzenethez
   useEffect(() => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
@@ -33,7 +29,7 @@ export default function ChatWidget() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-4 font-sans">
-      {/* Chat Ablak (csak ha nyitva van) */}
+      {/* Chat Ablak */}
       {isOpen && (
         <div className="w-[350px] h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 fade-in duration-300">
           {/* Fejléc */}
@@ -43,18 +39,18 @@ export default function ChatWidget() {
                 Terra Forte AI
               </h3>
               <p className="text-indigo-200 text-xs">
-                Azonnali válaszok a dokumentációból
+                Segítek a dokumentációban
               </p>
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-indigo-100 hover:text-white transition-colors"
+              className="text-indigo-100 hover:text-white transition-colors p-1 rounded-md hover:bg-indigo-800"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>
           </div>
 
-          {/* Üzenetek listája */}
+          {/* Üzenetek */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
             {messages.length === 0 && (
               <div className="text-center text-gray-500 text-sm mt-10 px-4">
@@ -63,8 +59,7 @@ export default function ChatWidget() {
                 </div>
                 <p className="font-medium text-gray-900">Üdvözlöm! 👋</p>
                 <p className="mt-1">
-                  Én a Terra Forte Bau AI asszisztense vagyok. Kérdezzen bátran
-                  a játszótereinkről, szabványokról vagy szolgáltatásainkról!
+                  Miben segíthetek a játszóterekkel kapcsolatban?
                 </p>
               </div>
             )}
@@ -88,11 +83,10 @@ export default function ChatWidget() {
               </div>
             ))}
 
-            {/* Töltés indikátor */}
             {isLoading && (
               <div className="flex justify-start">
                 <div className="bg-gray-100 rounded-lg p-3 text-xs text-gray-500 italic animate-pulse">
-                  A válasz generálása folyamatban...
+                  Gondolkodom...
                 </div>
               </div>
             )}
@@ -106,28 +100,28 @@ export default function ChatWidget() {
           >
             <div className="flex gap-2">
               <input
-                className="flex-1 bg-gray-50 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="flex-1 bg-gray-50 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 value={input}
                 onChange={handleInputChange}
                 placeholder="Írja ide a kérdését..."
               />
-              <Button
+              {/* Sima HTML gomb a Button komponens helyett */}
+              <button
                 type="submit"
                 disabled={isLoading || !input.trim()}
-                className="rounded-full w-10 h-10 p-0 flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white shrink-0"
+                className="rounded-full w-10 h-10 flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 <PaperAirplaneIcon className="h-5 w-5 -ml-0.5" />
-                <span className="sr-only">Küldés</span>
-              </Button>
+              </button>
             </div>
           </form>
         </div>
       )}
 
-      {/* Nyitó Gomb (Floating Action Button) */}
+      {/* Nyitó Gomb */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`h-14 w-14 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 ${
+        className={`h-14 w-14 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 transform hover:scale-105 ${
           isOpen
             ? "bg-white text-gray-600 border border-gray-200"
             : "bg-indigo-600 text-white hover:bg-indigo-700 border-4 border-white ring-1 ring-gray-200"
