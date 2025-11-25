@@ -76,11 +76,11 @@ export default async function ReferenceDetailPage({
     gallery: lang === "hu" ? "Galéria" : lang === "de" ? "Galerie" : "Gallery",
   };
 
-  // Kategória nevének "szépítése" a szótárból (pl. "wooden" -> "Fa játszóterek")
-  // @ts-ignore - Dinamikus kulcs elérés miatt
+  // Kategória nevének "szépítése" a szótárból
+  // JAVÍTÁS: 'as any' castolás a TypeScript hiba elkerülésére
+  const filters = dict.ReferencesPage.filters as any;
   const categoryLabel =
-    dict.ReferencesPage.filters[reference.category || "custom"] ||
-    reference.category;
+    filters[reference.category || "custom"] || reference.category;
 
   return (
     <div className="bg-stone-50 min-h-screen py-12 sm:py-24">
