@@ -5,6 +5,7 @@ import { Poppins, Open_Sans } from "next/font/google";
 import "../globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 import CookieBanner from "@/components/CookieBanner";
+import ChatWidget from "@/components/ChatWidget";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -63,6 +64,8 @@ export default async function RootLayout({
         <Header lang={lang} />
         <main>{children}</main>
         <Footer lang={lang} />
+
+        <ChatWidget />
 
         <CookieBanner t={dict.CookieBanner} lang={lang} />
       </body>
