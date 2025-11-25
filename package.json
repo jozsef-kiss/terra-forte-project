@@ -11,6 +11,7 @@
     "db:seed": "tsx scripts/seed.ts"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^2.0.72",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.2.2",
@@ -19,6 +20,7 @@
     "@react-email/components": "^1.0.1",
     "@tailwindcss/postcss": "^4.1.17",
     "@vercel/postgres": "^0.10.0",
+    "ai": "^5.0.101",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "drizzle-orm": "^0.44.7",
