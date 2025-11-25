@@ -1,4 +1,12 @@
-import { pgTable, serial, text, timestamp, json } from "drizzle-orm/pg-core";
+import {
+  pgTable,
+  serial,
+  text,
+  timestamp,
+  json,
+  vector,
+  index,
+} from "drizzle-orm/pg-core";
 
 // --- 1. LEADS (Beérkező űrlapok: Kapcsolat + Árajánlat) ---
 export const leads = pgTable("leads", {
@@ -36,3 +44,23 @@ export const references = pgTable("references", {
   // Képek listája JSON tömbként (pl. ["/ref-1.jpg", "/ref-2.jpg"])
   images: json("images").$type<string[]>(),
 });
+
+// --- 4. EMBEDDINGS (AI Tudásbázis) ---
+// Ez tárolja a dokumentumok feldarabolt részeit és a vektorokat
+export const embeddings = pgTable(
+  "embeddings",
+  {
+    id: serial("id").primaryKey(),
+    content: text("content").notNull(), // A szöveges tartalom (chunk)
+    embedding: vector("embedding", { dimensions: 1536 }), // OpenAI text-embedding-3-small dimenziója
+    metadata: json("metadata"), // Pl. { fileName: "aszf.pdf", page: 1 }
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+  },
+  (table) => ({
+    // Index a gyors hasonlóság-kereséshez (HNSW index koszinusz hasonlósággal)
+    embeddingIndex: index("embeddingIndex").using(
+      "hnsw",
+      table.embedding.op("vector_cosine_ops")
+    ),
+  })
+);
