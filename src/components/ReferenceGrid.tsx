@@ -101,8 +101,9 @@ export default function ReferenceGrid({ t, items, lang }: Props) {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute top-4 left-4">
+                    {/* JAVÍTÁS: color="white" eltávolítva, helyette 'zinc' vagy üres, a className úgyis felülírja */}
                     <Badge
-                      color="white"
+                      color="zinc"
                       className="shadow-sm bg-white/90 backdrop-blur-sm font-semibold text-indigo-900"
                     >
                       {/* @ts-ignore - Kategória név a szótárból */}
