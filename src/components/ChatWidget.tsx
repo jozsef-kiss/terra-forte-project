@@ -1,6 +1,5 @@
 "use client";
 
-import { useChat } from "ai/react";
 import { useState, useRef, useEffect } from "react";
 import {
   ChatBubbleLeftRightIcon,
@@ -8,124 +7,179 @@ import {
   PaperAirplaneIcon,
 } from "@heroicons/react/24/outline";
 
+// Saját típus definíció, hogy a TypeScript ne szóljon be
+type Message = {
+  id: string;
+  role: "user" | "assistant" | "system";
+  content: string;
+};
+
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { messages, input, handleInputChange, handleSubmit, isLoading } =
-    useChat({
-      api: "/api/chat",
-      onError: (error) => {
-        console.error("Chat hiba:", error);
-      },
-    });
+  // --- SAJÁT STATE KEZELÉS (Library nélkül) ---
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  // -------------------------------------------
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  // Görgetés
   useEffect(() => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [messages]);
+  }, [messages, isOpen]);
+
+  // --- SAJÁT SUBMIT FÜGGVÉNY (Ez 100% hogy létezik) ---
+  const handleManualSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim() || isLoading) return;
+
+    // 1. Felhasználó üzenetének hozzáadása
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      role: "user",
+      content: input,
+    };
+    setMessages((prev) => [...prev, userMessage]);
+    setInput(""); // Input törlése
+    setIsLoading(true);
+
+    try {
+      // 2. Kérés küldése a szervernek
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: [...messages, userMessage] }),
+      });
+
+      if (!response.ok) throw new Error("Szerver hiba");
+      if (!response.body) throw new Error("Üres válasz");
+
+      // 3. Stream olvasása (Kézi feldolgozás)
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let assistantMessage = "";
+
+      // Létrehozunk egy üres üzenetet az AI-nak
+      setMessages((prev) => [
+        ...prev,
+        { id: "ai-" + Date.now(), role: "assistant", content: "" },
+      ]);
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const chunk = decoder.decode(value, { stream: true });
+
+        // Az OpenAI stream soronként küldi az adatot "data: {...}" formátumban
+        const lines = chunk.split("\n").filter((line) => line.trim() !== "");
+
+        for (const line of lines) {
+          if (line.includes("[DONE]")) continue;
+          if (line.startsWith("data: ")) {
+            try {
+              const json = JSON.parse(line.replace("data: ", ""));
+              const content = json.choices[0]?.delta?.content || "";
+              if (content) {
+                assistantMessage += content;
+                // Frissítjük az utolsó üzenetet a state-ben
+                setMessages((prev) => {
+                  const newArr = [...prev];
+                  newArr[newArr.length - 1].content = assistantMessage;
+                  return newArr;
+                });
+              }
+            } catch (e) {
+              // Néha a chunk nem teljes JSON, ez normális streamelésnél
+            }
+          }
+        }
+      }
+    } catch (error) {
+      console.error("Hiba:", error);
+      alert("Hiba történt a kommunikációban.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-4 font-sans">
-      {/* Chat Ablak */}
       {isOpen && (
         <div className="w-[350px] h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 fade-in duration-300">
-          {/* Fejléc */}
           <div className="bg-indigo-900 p-4 flex justify-between items-center">
             <div>
               <h3 className="text-white font-semibold flex items-center gap-2">
                 Terra Forte AI
               </h3>
-              <p className="text-indigo-200 text-xs">
-                Segítek a dokumentációban
-              </p>
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-indigo-100 hover:text-white transition-colors p-1 rounded-md hover:bg-indigo-800"
+              className="text-indigo-100 hover:text-white p-1"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>
           </div>
 
-          {/* Üzenetek */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
             {messages.length === 0 && (
               <div className="text-center text-gray-500 text-sm mt-10 px-4">
-                <div className="bg-indigo-50 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                  <ChatBubbleLeftRightIcon className="h-6 w-6 text-indigo-600" />
-                </div>
-                <p className="font-medium text-gray-900">Üdvözlöm! 👋</p>
-                <p className="mt-1">
-                  Miben segíthetek a játszóterekkel kapcsolatban?
-                </p>
+                <p className="font-bold">👋 Üdvözlöm!</p>
+                <p className="text-xs mt-2">Miben segíthetek?</p>
               </div>
             )}
 
             {messages.map((m) => (
               <div
                 key={m.id}
-                className={`flex ${
-                  m.role === "user" ? "justify-end" : "justify-start"
-                }`}
+                className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
                   className={`max-w-[85%] rounded-2xl p-3 text-sm ${
                     m.role === "user"
-                      ? "bg-indigo-600 text-white rounded-br-none"
-                      : "bg-white border border-gray-200 text-gray-800 rounded-bl-none shadow-sm"
+                      ? "bg-indigo-600 text-white"
+                      : "bg-white border border-gray-200 text-gray-800"
                   }`}
                 >
                   {m.content}
                 </div>
               </div>
             ))}
-
             {isLoading && (
-              <div className="flex justify-start">
-                <div className="bg-gray-100 rounded-lg p-3 text-xs text-gray-500 italic animate-pulse">
-                  Gondolkodom...
-                </div>
-              </div>
+              <div className="text-xs text-gray-500 p-2 italic">Írok...</div>
             )}
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input mező */}
           <form
-            onSubmit={handleSubmit}
+            onSubmit={handleManualSubmit}
             className="p-3 bg-white border-t border-gray-100"
           >
             <div className="flex gap-2">
               <input
-                className="flex-1 bg-gray-50 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="flex-1 bg-gray-50 border border-gray-300 rounded-full px-4 py-2 text-sm focus:ring-2 focus:ring-indigo-500 text-black"
                 value={input}
-                onChange={handleInputChange}
-                placeholder="Írja ide a kérdését..."
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Kérdezzen..."
               />
-              {/* Sima HTML gomb a Button komponens helyett */}
               <button
                 type="submit"
-                disabled={isLoading || !input.trim()}
-                className="rounded-full w-10 h-10 flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                disabled={isLoading}
+                className="rounded-full w-10 h-10 flex items-center justify-center bg-indigo-600 text-white hover:bg-indigo-700"
               >
-                <PaperAirplaneIcon className="h-5 w-5 -ml-0.5" />
+                <PaperAirplaneIcon className="h-5 w-5" />
               </button>
             </div>
           </form>
         </div>
       )}
-
-      {/* Nyitó Gomb */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`h-14 w-14 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 transform hover:scale-105 ${
-          isOpen
-            ? "bg-white text-gray-600 border border-gray-200"
-            : "bg-indigo-600 text-white hover:bg-indigo-700 border-4 border-white ring-1 ring-gray-200"
-        }`}
+        className="h-14 w-14 rounded-full shadow-xl flex items-center justify-center bg-indigo-600 text-white hover:bg-indigo-700 transition-transform hover:scale-105"
       >
         {isOpen ? (
           <XMarkIcon className="h-6 w-6" />
