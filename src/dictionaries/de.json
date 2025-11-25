@@ -596,5 +596,50 @@
         }
       }
     ]
+  },
+  "ReferencesPage": {
+    "title": "Unsere Referenzen",
+    "subtitle": "Wir sind stolz auf unsere Arbeit. Werfen Sie einen Blick auf unsere ausgewählten Projekte.",
+    "filters": {
+      "all": "Alle",
+      "wooden": "Holzspielplätze",
+      "metal": "Metallspielplätze",
+      "fitness": "Fitnessparks",
+      "custom": "Individuelle Bauten"
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "Stadt-Abenteuerpark",
+        "location": "Budapest, 18. Bezirk",
+        "category": "metal",
+        "image": "/Referencia/ref-1.jpg",
+        "slug": "varosi-kalandpark-bp18"
+      },
+      {
+        "id": 2,
+        "title": "Kindergarten Sonnenblume",
+        "location": "Debrecen",
+        "category": "wooden",
+        "image": "/Referencia/ref-2.jpeg",
+        "slug": "napraforgo-ovoda-debrecen"
+      },
+      {
+        "id": 3,
+        "title": "Wald-Turnpfad",
+        "location": "Visegrád",
+        "category": "wooden",
+        "image": "/Referencia/ref-3.jpg",
+        "slug": "erdei-tornapalya-visegrad"
+      },
+      {
+        "id": 4,
+        "title": "Ritterburg Themenpark",
+        "location": "Székesfehérvár",
+        "category": "custom",
+        "image": "/Referencia/ref-4.webp",
+        "slug": "lovagvar-tematikus-park"
+      }
+    ]
   }
 }

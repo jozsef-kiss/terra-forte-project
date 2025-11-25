@@ -596,5 +596,50 @@
         }
       }
     ]
+  },
+  "ReferencesPage": {
+    "title": "Our References",
+    "subtitle": "We are proud of our work. Take a look at our selected projects that demonstrate our expertise.",
+    "filters": {
+      "all": "All",
+      "wooden": "Wooden Playgrounds",
+      "metal": "Metal Playgrounds",
+      "fitness": "Fitness Parks",
+      "custom": "Custom Builds"
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "City Adventure Park",
+        "location": "Budapest, District 18",
+        "category": "metal",
+        "image": "/Referencia/ref-1.jpg",
+        "slug": "varosi-kalandpark-bp18"
+      },
+      {
+        "id": 2,
+        "title": "Sunflower Kindergarten",
+        "location": "Debrecen",
+        "category": "wooden",
+        "image": "/Referencia/ref-2.jpeg",
+        "slug": "napraforgo-ovoda-debrecen"
+      },
+      {
+        "id": 3,
+        "title": "Forest Gym Track",
+        "location": "Visegrád",
+        "category": "wooden",
+        "image": "/Referencia/ref-3.jpg",
+        "slug": "erdei-tornapalya-visegrad"
+      },
+      {
+        "id": 4,
+        "title": "Knights' Castle Theme Park",
+        "location": "Székesfehérvár",
+        "category": "custom",
+        "image": "/Referencia/ref-4.webp",
+        "slug": "lovagvar-tematikus-park"
+      }
+    ]
   }
 }

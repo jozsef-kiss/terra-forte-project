@@ -596,5 +596,50 @@
         }
       }
     ]
+  },
+  "ReferencesPage": {
+    "title": "Referenciáink",
+    "subtitle": "Büszkék vagyunk munkáinkra. Tekintse meg válogatott projektjeinket, melyek bizonyítják szakértelmünket.",
+    "filters": {
+      "all": "Összes",
+      "wooden": "Fa játszóterek",
+      "metal": "Fém játszóterek",
+      "fitness": "Fitnesz parkok",
+      "custom": "Egyedi építés"
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "Városi Kalandpark",
+        "location": "Budapest, XVIII. kerület",
+        "category": "metal",
+        "image": "/Referencia/ref-1.jpg",
+        "slug": "varosi-kalandpark-bp18"
+      },
+      {
+        "id": 2,
+        "title": "Napraforgó Óvoda",
+        "location": "Debrecen",
+        "category": "wooden",
+        "image": "/Referencia/ref-2.jpeg",
+        "slug": "napraforgo-ovoda-debrecen"
+      },
+      {
+        "id": 3,
+        "title": "Erdei Tornapálya",
+        "location": "Visegrád",
+        "category": "wooden",
+        "image": "/Referencia/ref-3.jpg",
+        "slug": "erdei-tornapalya-visegrad"
+      },
+      {
+        "id": 4,
+        "title": "Lovagvár Tematikus Park",
+        "location": "Székesfehérvár",
+        "category": "custom",
+        "image": "/Referencia/ref-4.webp",
+        "slug": "lovagvar-tematikus-park"
+      }
+    ]
   }
 }
