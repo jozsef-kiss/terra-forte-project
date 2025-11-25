@@ -4,12 +4,11 @@ import { db } from "@/db";
 import { embeddings } from "@/db/schema";
 import { openai } from "@ai-sdk/openai";
 import { embed } from "ai";
-import pdf from "pdf-parse";
+// JAVÍTÁS: A pdf-parse-ot require-rel húzzuk be, mert régi típusú modul
+const pdf = require("pdf-parse");
 import mammoth from "mammoth";
 
 // Segédfüggvény: Szöveg darabolása (Chunking)
-// Ez azért kell, mert az AI modelleknek van egy limitje (context window),
-// és a keresés is pontosabb, ha kisebb darabokban tároljuk az infót.
 function chunkText(text: string, chunkSize: number = 1000): string[] {
   const chunks: string[] = [];
   let currentChunk = "";
@@ -33,6 +32,7 @@ function chunkText(text: string, chunkSize: number = 1000): string[] {
 
 // Segédfüggvény: Szöveg tisztítása
 function cleanText(text: string): string {
+  if (!text) return "";
   return text
     .replace(/\s+/g, " ") // Felesleges szóközök, sortörések törlése
     .trim();
@@ -54,6 +54,7 @@ export async function processDocument(formData: FormData) {
     let rawText = "";
 
     if (file.type === "application/pdf") {
+      // A require miatt a pdf() függvényt közvetlenül hívjuk
       const pdfData = await pdf(buffer);
       rawText = pdfData.text;
     } else if (
@@ -70,14 +71,21 @@ export async function processDocument(formData: FormData) {
 
     // 2. Tisztítás és Darabolás
     const cleanedText = cleanText(rawText);
+
+    if (cleanedText.length < 10) {
+      return {
+        success: false,
+        error: "A fájl nem tartalmaz olvasható szöveget.",
+      };
+    }
+
     const chunks = chunkText(cleanedText);
 
     console.log(`Szöveg kinyerve. Darabok száma: ${chunks.length}`);
 
     // 3. Embedding generálás és Mentés
-    // Minden darabot elküldünk az OpenAI-nak, hogy csináljon belőle vektort
     for (const chunk of chunks) {
-      // Vektor generálása (OpenAI text-embedding-3-small modell)
+      // Vektor generálása
       const { embedding } = await embed({
         model: openai.embedding("text-embedding-3-small"),
         value: chunk,
@@ -99,6 +107,6 @@ export async function processDocument(formData: FormData) {
     return { success: true };
   } catch (error: any) {
     console.error("Hiba a dokumentum feldolgozása közben:", error);
-    return { success: false, error: error.message };
+    return { success: false, error: error.message || "Ismeretlen hiba" };
   }
 }
