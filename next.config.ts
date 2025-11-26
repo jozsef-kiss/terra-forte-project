@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
     // Csak akkor használd, ha biztos vagy benne, hogy a kód fut.
     ignoreBuildErrors: true,
   },
+  // Itt engedélyezzük a nagyobb fájlok feltöltését a Server Action-ökhöz
+  experimental: {
+    serverActions: {
+      bodySizeLimit: "10mb", // Megemeltük 1 MB-ról 10 MB-ra
+    },
+  },
 
   // BIZTONSÁGI FEJLÉCEK (Security Headers)
   async headers() {
