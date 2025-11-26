@@ -21,14 +21,27 @@ export const leads = pgTable("leads", {
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
-// --- 2. POSTS (Blog bejegyzések) ---
+// --- 2. POSTS (Blog bejegyzések - Többnyelvűsítve) ---
 export const posts = pgTable("posts", {
   id: serial("id").primaryKey(),
-  slug: text("slug").unique().notNull(), // URL barát azonosító (pl. "uj-jatszoter-epult")
-  title: text("title").notNull(),
-  excerpt: text("excerpt"), // Rövid bevezető
-  content: text("content"), // A teljes szöveg (HTML vagy Markdown)
-  coverImage: text("cover_image"), // Borítókép URL-je
+  slug: text("slug").unique().notNull(),
+
+  // Magyar (Kötelező)
+  titleHu: text("title_hu").notNull(),
+  excerptHu: text("excerpt_hu"),
+  contentHu: text("content_hu"),
+
+  // Angol (Opcionális, de ajánlott)
+  titleEn: text("title_en"),
+  excerptEn: text("excerpt_en"),
+  contentEn: text("content_en"),
+
+  // Német (Opcionális, de ajánlott)
+  titleDe: text("title_de"),
+  excerptDe: text("excerpt_de"),
+  contentDe: text("content_de"),
+
+  coverImage: text("cover_image"),
   publishedAt: timestamp("published_at").defaultNow(),
 });
 

@@ -1,3 +1,4 @@
+// src/app/[locale]/blog/page.tsx
 import { getDictionary, Locale } from "@/app/[locale]/dictionaries";
 import BlogList from "@/components/BlogList";
 import { db } from "@/db";
@@ -5,11 +6,11 @@ import { posts } from "@/db/schema";
 import { desc, count } from "drizzle-orm";
 
 export const revalidate = 60;
-const PAGE_SIZE = 3; // Itt állítjuk be, hogy 3 cikk legyen oldalanként
+const PAGE_SIZE = 6;
 
 export default async function BlogPage({
   params,
-  searchParams, // Ez kell a ?page=X olvasásához
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
   searchParams: Promise<{ page?: string }>;
@@ -19,23 +20,44 @@ export default async function BlogPage({
   const lang = locale as Locale;
   const dict = await getDictionary(lang);
 
-  // 1. Aktuális oldalszám meghatározása (ha nincs, akkor 1)
   const currentPage = page ? parseInt(page) : 1;
   const offset = (currentPage - 1) * PAGE_SIZE;
 
-  // 2. Összes bejegyzés megszámolása (a lapozóhoz kell)
-  // (Visszaadja, hogy pl. összesen 12 poszt van)
   const totalResult = await db.select({ count: count() }).from(posts);
   const totalItems = totalResult[0].count;
   const totalPages = Math.ceil(totalItems / PAGE_SIZE);
 
-  // 3. Csak az adott oldalhoz tartozó posztok lekérése
   const dbPosts = await db
     .select()
     .from(posts)
     .orderBy(desc(posts.publishedAt))
-    .limit(PAGE_SIZE) // Csak 3 darab
-    .offset(offset); // A megfelelő helytől kezdve
+    .limit(PAGE_SIZE)
+    .offset(offset);
+
+  // --- NYELVI LOGIKA: Kiválasztjuk a megfelelő oszlopot ---
+  const localizedPosts = dbPosts.map((post) => {
+    // Alapértelmezés: Magyar
+    let title = post.titleHu;
+    let excerpt = post.excerptHu;
+
+    // Ha angol a nyelv és van angol fordítás
+    if (lang === "en" && post.titleEn) {
+      title = post.titleEn;
+      excerpt = post.excerptEn;
+    }
+    // Ha német a nyelv és van német fordítás
+    else if (lang === "de" && post.titleDe) {
+      title = post.titleDe;
+      excerpt = post.excerptDe;
+    }
+
+    // Visszaadjuk "title" és "excerpt" néven, hogy a komponens értse
+    return {
+      ...post,
+      title: title,
+      excerpt: excerpt,
+    };
+  });
 
   return (
     <main className="bg-white min-h-screen">
@@ -44,9 +66,8 @@ export default async function BlogPage({
           title: dict.BlogPage.title,
           subtitle: dict.BlogPage.subtitle,
         }}
-        posts={dbPosts}
+        posts={localizedPosts} // A formázott adatokat adjuk át
         lang={lang}
-        // Átadjuk a lapozási adatokat is a komponensnek
         pagination={{
           currentPage,
           totalPages,

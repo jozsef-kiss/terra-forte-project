@@ -1,3 +1,4 @@
+// src/app/[locale]/blog/[slug]/page.tsx
 import { db } from "@/db";
 import { posts } from "@/db/schema";
 import { eq } from "drizzle-orm";
@@ -9,7 +10,6 @@ import { hu, enUS, de } from "date-fns/locale";
 import { Badge } from "@/components/ui/badge";
 import { Locale } from "@/app/[locale]/dictionaries";
 
-// Frissítés: 60 másodpercenként újragenerálja az oldalt, ha változott az adat
 export const revalidate = 60;
 
 // SEO Metaadatok generálása
@@ -18,7 +18,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string; locale: string }>;
 }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  const lang = locale as Locale;
+
   const postResult = await db
     .select()
     .from(posts)
@@ -26,11 +28,24 @@ export async function generateMetadata({
     .limit(1);
   const post = postResult[0];
 
-  if (!post) return { title: "A cikk nem található" };
+  if (!post) return { title: "404" };
+
+  const title =
+    lang === "en"
+      ? post.titleEn || post.titleHu
+      : lang === "de"
+        ? post.titleDe || post.titleHu
+        : post.titleHu;
+  const description =
+    lang === "en"
+      ? post.excerptEn || post.excerptHu
+      : lang === "de"
+        ? post.excerptDe || post.excerptHu
+        : post.excerptHu;
 
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: title,
+    description: description,
   };
 }
 
@@ -42,7 +57,6 @@ export default async function BlogPostPage({
   const { locale, slug } = await params;
   const lang = locale as Locale;
 
-  // 1. Adatlekérés az adatbázisból
   const postResult = await db
     .select()
     .from(posts)
@@ -50,21 +64,32 @@ export default async function BlogPostPage({
     .limit(1);
   const post = postResult[0];
 
-  // 2. Ha nincs ilyen cikk, 404 oldalra dobjuk
   if (!post) {
     notFound();
   }
 
-  // Dátum lokalizáció beállítása
-  const dateLocale = lang === "en" ? enUS : lang === "de" ? de : hu;
+  // --- NYELVI LOGIKA ---
+  let title = post.titleHu;
+  let excerpt = post.excerptHu;
+  let content = post.contentHu;
 
-  // Vissza gomb szöveg
+  if (lang === "en" && post.titleEn) {
+    title = post.titleEn;
+    excerpt = post.excerptEn;
+    content = post.contentEn;
+  } else if (lang === "de" && post.titleDe) {
+    title = post.titleDe;
+    excerpt = post.excerptDe;
+    content = post.contentDe;
+  }
+
+  const dateLocale = lang === "en" ? enUS : lang === "de" ? de : hu;
   const backText =
     lang === "en"
       ? "Back to Blog"
       : lang === "de"
-      ? "Zurück zum Blog"
-      : "Vissza a Blogra";
+        ? "Zurück zum Blog"
+        : "Vissza a Blogra";
 
   return (
     <div className="bg-stone-50 min-h-screen py-24 sm:py-32">
@@ -92,29 +117,27 @@ export default async function BlogPostPage({
             <Badge color="zinc">Blog</Badge>
           </div>
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
-            {post.title}
+            {title}
           </h1>
-          <p className="text-lg text-gray-600 leading-8 italic">
-            {post.excerpt}
-          </p>
+          <p className="text-lg text-gray-600 leading-8 italic">{excerpt}</p>
         </div>
 
         {/* Borítókép */}
         <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-12 shadow-lg ring-1 ring-gray-900/5">
           <Image
             src={post.coverImage || "https://placehold.co/1200x600?text=Blog"}
-            alt={post.title}
+            alt={title || "Blog post"}
             fill
             className="object-cover"
             priority
           />
         </div>
 
-        {/* TARTALOM (A "prose" osztály varázsolja széppé a HTML-t) */}
+        {/* TARTALOM */}
         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm ring-1 ring-gray-900/5">
           <div
             className="prose prose-lg prose-stone prose-indigo mx-auto max-w-none"
-            dangerouslySetInnerHTML={{ __html: post.content || "" }}
+            dangerouslySetInnerHTML={{ __html: content || "" }}
           />
         </div>
       </article>
