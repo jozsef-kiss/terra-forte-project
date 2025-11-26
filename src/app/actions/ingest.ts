@@ -2,19 +2,53 @@
 
 import { db } from "@/db";
 import { embeddings } from "@/db/schema";
-import { openai } from "@ai-sdk/openai";
-import { embed } from "ai";
 
-// FONTOS: Kivettük innen a pdf-parse és mammoth importokat!
-// Csak ott töltjük be őket, ahol használjuk (Lazy Load).
+// Segédfüggvény: Embedding generálás
+async function getEmbedding(text: string) {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) throw new Error("Nincs API kulcs");
 
-// Segédfüggvény: Szöveg darabolása (Chunking)
+  const response = await fetch("https://api.openai.com/v1/embeddings", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model: "text-embedding-3-small",
+      input: text.replace(/\n/g, " "),
+    }),
+  });
+
+  if (!response.ok) throw new Error("OpenAI Embedding Hiba");
+  const data = await response.json();
+  return data.data[0].embedding;
+}
+
+// Segédfüggvény: PDF Szöveg kinyerése (pdf2json)
+async function extractPdfText(buffer: Buffer): Promise<string> {
+  const PDFParser = require("pdf2json");
+  const parser = new PDFParser(null, 1);
+
+  return new Promise((resolve, reject) => {
+    parser.on("pdfParser_dataError", (errData: any) =>
+      reject(errData.parserError)
+    );
+    parser.on("pdfParser_dataReady", (pdfData: any) => {
+      const raw = parser.getRawTextContent();
+      resolve(raw);
+    });
+    parser.parseBuffer(buffer);
+  });
+}
+
+// Segédfüggvény: Darabolás
 function chunkText(text: string, chunkSize: number = 1000): string[] {
+  if (!text) return [];
   const chunks: string[] = [];
   let currentChunk = "";
 
-  // Egyszerűsített darabolás
-  if (!text) return [];
+  // Mondatokra bontás
   const sentences = text.replace(/([.?!])\s+(?=[A-Z])/g, "$1|").split("|");
 
   for (const sentence of sentences) {
@@ -24,75 +58,76 @@ function chunkText(text: string, chunkSize: number = 1000): string[] {
     }
     currentChunk += sentence + " ";
   }
-  if (currentChunk) {
-    chunks.push(currentChunk);
-  }
-
+  if (currentChunk) chunks.push(currentChunk);
   return chunks;
 }
 
-// Segédfüggvény: Szöveg tisztítása
+// --- JAVÍTOTT TISZTÍTÓ FÜGGVÉNY ---
 function cleanText(text: string): string {
   if (!text) return "";
-  return text
-    .replace(/\s+/g, " ") // Felesleges szóközök, sortörések törlése
-    .trim();
-}
+  try {
+    text = decodeURIComponent(text);
+  } catch (e) {
+    // Ha nem sikerül dekódolni, marad az eredeti
+  }
 
-// A Fő Server Action
+  return (
+    text
+      // KRITIKUS JAVÍTÁS: Null byte-ok (\0) eltávolítása, mert ezek ölik meg a Postgres-t
+      .replace(/\u0000/g, "")
+      // Egyéb vezérlőkarakterek szűrése (biztonság kedvéért)
+      .replace(/[\u0001-\u0008\u000B-\u001F]/g, "")
+      .replace(/----------------Page \(\d+\) Break----------------/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
+}
+// -----------------------------------
+
+// --- FŐ FELDOLGOZÓ ---
 export async function processDocument(formData: FormData) {
   try {
     const file = formData.get("file") as File;
+    if (!file) return { success: false, error: "Nincs fájl" };
 
-    if (!file) {
-      return { success: false, error: "Nincs fájl feltöltve" };
-    }
-
-    console.log(`Feldolgozás indítása: ${file.name} (${file.type})`);
+    console.log(`Feldolgozás: ${file.name} (${file.type})`);
 
     const buffer = Buffer.from(await file.arrayBuffer());
     let rawText = "";
 
-    // --- DYNAMIC IMPORTS (Csak akkor töltjük be, ha kell) ---
+    // 1. TARTALOM KINYERÉSE
     if (file.type === "application/pdf") {
-      // Csak PDF esetén töltjük be a modult
-      const pdf = require("pdf-parse");
-      const pdfData = await pdf(buffer);
-      rawText = pdfData.text;
+      console.log("PDF feldolgozása (pdf2json)...");
+      rawText = await extractPdfText(buffer);
     } else if (
       file.type ===
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     ) {
-      // Csak DOCX esetén importáljuk a mammoth-ot
-      const mammoth = await import("mammoth");
+      const mammoth = require("mammoth");
       const result = await mammoth.extractRawText({ buffer });
       rawText = result.value;
     } else if (file.type === "text/plain") {
-      // TXT esetén semmilyen külső lib nem töltődik be -> Nincs DOMMatrix hiba!
       rawText = buffer.toString("utf-8");
     } else {
       return { success: false, error: "Nem támogatott fájltípus" };
     }
 
-    // 2. Tisztítás és Darabolás
+    // 2. TISZTÍTÁS
     const cleanedText = cleanText(rawText);
-
-    if (cleanedText.length < 10) {
+    if (cleanedText.length < 10)
       return {
         success: false,
-        error: "A fájl nem tartalmaz olvasható szöveget.",
+        error: "Nem sikerült olvasható szöveget kinyerni.",
       };
-    }
 
     const chunks = chunkText(cleanedText);
-    console.log(`Szöveg kinyerve. Darabok száma: ${chunks.length}`);
+    console.log(
+      `Szöveg kinyerve. Hossz: ${cleanedText.length}, Darabok: ${chunks.length}`
+    );
 
-    // 3. Embedding generálás és Mentés
+    // 3. MENTÉS
     for (const chunk of chunks) {
-      const { embedding } = await embed({
-        model: openai.embedding("text-embedding-3-small"),
-        value: chunk,
-      });
+      const embedding = await getEmbedding(chunk);
 
       await db.insert(embeddings).values({
         content: chunk,
@@ -105,13 +140,14 @@ export async function processDocument(formData: FormData) {
       });
     }
 
+    console.log("✅ Sikeres mentés!");
     return { success: true };
   } catch (error: any) {
-    console.error("Hiba a dokumentum feldolgozása közben:", error);
-    // Jobb hibaüzenet visszaadása a kliensnek
+    console.error("❌ Ingest Hiba:", error);
+    // Részletesebb hibaüzenet a kliensnek
     return {
       success: false,
-      error: error.message || "Ismeretlen szerver hiba",
+      error: "Adatbázis hiba: " + (error.message || "Ismeretlen"),
     };
   }
 }

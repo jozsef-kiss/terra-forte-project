@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  serverExternalPackages: ["pdf2json", "mammoth"],
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "tailwindcss.com" },
@@ -17,7 +18,7 @@ const nextConfig: NextConfig = {
   // Itt engedélyezzük a nagyobb fájlok feltöltését a Server Action-ökhöz
   experimental: {
     serverActions: {
-      bodySizeLimit: "10mb", // Megemeltük 1 MB-ról 10 MB-ra
+      bodySizeLimit: "10mb",
     },
   },
 
