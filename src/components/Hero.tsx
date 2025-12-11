@@ -52,10 +52,10 @@ export default async function Hero({ lang }: { lang: Locale }) {
 
             {/* Gombok */}
             <div className="mt-10 flex items-center gap-x-6">
-              <Button href={`/${lang}/termekek`} color="indigo">
-                {t.cta_products}
+              <Button href={`/${lang}/referenciak`} className="btn-contact">
+                {t.cta_references} <span aria-hidden="true">→</span>
               </Button>
-              <Button href={`/${lang}/kapcsolat`} plain>
+              <Button href={`/${lang}/kapcsolat`} className="btn-quote">
                 {t.cta_contact} <span aria-hidden="true">→</span>
               </Button>
             </div>

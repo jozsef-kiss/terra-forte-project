@@ -85,12 +85,12 @@
   },
   "HomePage": {
     "Hero": {
-      "badge_text": "European Manufacturing & Warranty",
+      "badge_text": "European Production & Warranty",
       "badge_link": "Learn more about us",
-      "title": "Building Safe and Creative Playgrounds",
-      "subtitle": "We manufacture and install premium quality, MSZ EN 1176 certified playground equipment for municipalities and institutions.",
-      "cta_products": "Discover Products",
-      "cta_contact": "Get a Quote"
+      "title": "Design & Construction of EU-Standard Playgrounds",
+      "subtitle": "Safe community spaces for municipalities and institutions. Comprehensive management from design to TÜV certification.",
+      "cta_references": "View Our References",
+      "cta_contact": "Free Site Survey"
     },
     "USP": {
       "section_title": "Why Choose Us?",
