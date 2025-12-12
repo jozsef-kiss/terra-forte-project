@@ -161,12 +161,12 @@
       "cta_services": "Szolgáltatásaink részletesebben"
     },
     "WhyChooseUs": {
-      "title": "Miért a Terra Forte?",
-      "description": "Elkötelezettek vagyunk amellett, hogy olyan játszótereket alkossunk, amelyek kiemelkednek minőségükkel, biztonságukkal és egyedi megoldásaikkal. Ezért választanak minket partnereink:",
+      "title": "Partnerei vagyunk a településfejlesztésben",
+      "description": "Tudjuk, hogy egy játszótér építése komoly felelősség. Szakértő csapatunk végigkíséri Önt a folyamaton.",
       "features": [
         {
           "title": "Hazai Szakértelem és Megbízhatóság",
-          "description": "Több mint 10 éves tapasztalattal rendelkező, magyar tulajdonú vállalkozásként ismerjük a hazai igényeket és szabványokat. Számunkra a személyes kapcsolat és a bizalom az első."
+          "description": "Több mint 30 éves tapasztalattal rendelkező, magyar tulajdonú vállalkozásként ismerjük a hazai igényeket és szabványokat. Számunkra a személyes kapcsolat és a bizalom az első."
         },
         {
           "title": "Szigorú Biztonsági Megfelelés",
@@ -177,8 +177,8 @@
           "description": "Nem csak katalógustermékeket kínálunk. Rugalmas gyártási technológiánk lehetővé teszi, hogy az adott helyszínre és költségkeretre szabjuk a játszóteret."
         },
         {
-          "title": "Tartósság és Minőség",
-          "description": "Válogatott, UV-álló és időjárásálló alapanyagokkal dolgozunk, hogy a játszóterek generációkon át szolgálják a közösséget minimális karbantartás mellett."
+          "title": "Pályázati Tapasztalat",
+          "description": "Ismerjük a Magyar pályázatok követelményrendszerét. Mindenben segítünk, a műszaki dokumentációtól a kötelező adminisztrációig."
         }
       ]
     },
