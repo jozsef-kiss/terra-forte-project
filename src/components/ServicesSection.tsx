@@ -1,5 +1,7 @@
 import { getDictionary, Locale } from "@/app/[locale]/dictionaries";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import {
   PencilSquareIcon,
   Cog6ToothIcon,
@@ -50,6 +52,12 @@ export default async function ServicesSection({ lang }: { lang: Locale }) {
                   );
                 })}
               </dl>
+              {/* Gomb */}
+              <div className="mt-10 flex items-center gap-x-6">
+                <Button href={`/${lang}/referenciak`} className="btn-contact">
+                  {t.cta_services} <span aria-hidden="true">→</span>
+                </Button>
+              </div>
             </div>
           </div>
 
