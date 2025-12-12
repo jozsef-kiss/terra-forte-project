@@ -3,52 +3,55 @@ import Image from "next/image";
 
 export default async function Partners({ lang }: { lang: Locale }) {
   const dict = await getDictionary(lang);
-  const t = dict.HomePage.Partners;
+
+  // Ellenőrizzük, hogy hol van a JSON-ben a Partners blokk.
+  // Ha a gyökérbe tetted: dict.Partners
+  // Ha a HomePage alá: dict.HomePage.Partners
+  // A biztonság kedvéért így írom:
+  const t = dict.Partners || dict.HomePage?.Partners;
+
+  if (!t) return null; // Ha nincs adat, nem jelenítünk meg semmit
 
   return (
-    <section className="bg-stone-100 py-24 sm:py-32">
+    <section className="bg-stone-50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:max-w-none">
-          <h2 className="text-lg/8 font-semibold text-gray-900 text-center lg:text-left">
+        {/* Fejléc */}
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {t.title}
           </h2>
-          <div className="mx-auto mt-10 grid grid-cols-4 items-start gap-x-8 gap-y-10 sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:grid-cols-5">
-            <Image
-              alt="Transistor"
-              src="https://tailwindcss.com/plus-assets/img/logos/transistor-logo-gray-900.svg"
-              width={158}
-              height={48}
-              className="col-span-2 max-h-12 w-full object-contain object-left lg:col-span-1"
-            />
-            <Image
-              alt="Reform"
-              src="https://tailwindcss.com/plus-assets/img/logos/reform-logo-gray-900.svg"
-              width={158}
-              height={48}
-              className="col-span-2 max-h-12 w-full object-contain object-left lg:col-span-1"
-            />
-            <Image
-              alt="Tuple"
-              src="https://tailwindcss.com/plus-assets/img/logos/tuple-logo-gray-900.svg"
-              width={158}
-              height={48}
-              className="col-span-2 max-h-12 w-full object-contain object-left lg:col-span-1"
-            />
-            <Image
-              alt="SavvyCal"
-              src="https://tailwindcss.com/plus-assets/img/logos/savvycal-logo-gray-900.svg"
-              width={158}
-              height={48}
-              className="col-span-2 max-h-12 w-full object-contain object-left lg:col-span-1"
-            />
-            <Image
-              alt="Statamic"
-              src="https://tailwindcss.com/plus-assets/img/logos/statamic-logo-gray-900.svg"
-              width={158}
-              height={48}
-              className="col-span-2 max-h-12 w-full object-contain object-left lg:col-span-1"
-            />
-          </div>
+          <p className="mt-4 text-lg leading-8 text-gray-600">{t.subtitle}</p>
+        </div>
+
+        {/* Logók Rácsa */}
+        <div className="mx-auto grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-5 items-start">
+          {/* @ts-ignore - A JSON típusát nem mindig ismeri fel, de működik */}
+          {t.items.map((partner: any, index: number) => (
+            <div
+              key={index}
+              className="group flex flex-col items-center justify-start gap-4 text-center"
+            >
+              {/* Logó tartó doboz (Fix magasság a rendezettségért) */}
+              <div className="relative h-16 w-full max-w-[140px] transition-all duration-300 filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  fill
+                  className="object-contain" // Ez torzítás nélkül méretezi a logót
+                />
+              </div>
+
+              {/* Szöveges rész */}
+              <div>
+                <h3 className="text-sm font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                  {partner.name}
+                </h3>
+                <p className="text-xs text-gray-500 mt-1">
+                  {partner.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

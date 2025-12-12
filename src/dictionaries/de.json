@@ -134,7 +134,35 @@
       "cta": "Alle Referenzen ansehen"
     },
     "Partners": {
-      "title": "Vertraut von innovativen Organisationen"
+      "title": "Zertifizierungen & Fachlicher Hintergrund",
+      "subtitle": "Unsere Qualität wird durch strengste Normen und unseren heimischen Produktionshintergrund garantiert.",
+      "items": [
+        {
+          "name": "TÜV Rheinland",
+          "logo": "/Partners/tuv.svg",
+          "description": "Zertifizierte Sicherheit"
+        },
+        {
+          "name": "Magyar Falu Program",
+          "logo": "/Partners/mfp.png",
+          "description": "Fördermittel-Experte"
+        },
+        {
+          "name": "MSZ EN 1176",
+          "logo": "/Partners/msz.png",
+          "description": "Normgerechte Fertigung"
+        },
+        {
+          "name": "MKIK",
+          "logo": "/Partners/mkik.png",
+          "description": "Registrierter Bauunternehmer"
+        },
+        {
+          "name": "Hauseigene Produktion",
+          "logo": "/Partners/hungary.png",
+          "description": "100% Ungarisches Unternehmen"
+        }
+      ]
     },
     "ServicesSection": {
       "badge": "Komplettausführung",

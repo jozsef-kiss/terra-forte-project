@@ -134,7 +134,35 @@
       "cta": "Referenciák Megtekintése"
     },
     "Partners": {
-      "title": "Akik már minket választottak"
+      "title": "Tanúsítványok és Szakmai Háttér",
+      "subtitle": "Minőségünket a legszigorúbb szabványok és hazai gyártói hátterünk garantálja.",
+      "items": [
+        {
+          "name": "TÜV Rheinland",
+          "logo": "/Partners/tuv.svg",
+          "description": "Tanúsított Biztonság"
+        },
+        {
+          "name": "Magyar Falu Program",
+          "logo": "/Partners/mfp.png",
+          "description": "Pályázati Szakértő"
+        },
+        {
+          "name": "MSZ EN 1176",
+          "logo": "/Partners/msz.png",
+          "description": "Szabványos Gyártás"
+        },
+        {
+          "name": "MKIK",
+          "logo": "/Partners/mkik.png",
+          "description": "Regisztrált Kivitelező"
+        },
+        {
+          "name": "Hazai Gyártás",
+          "logo": "/Partners/hungary.png",
+          "description": "100% Magyar Vállalkozás"
+        }
+      ]
     },
     "ServicesSection": {
       "badge": "Teljeskörű Megvalósítás",

@@ -134,7 +134,35 @@
       "cta": "View All References"
     },
     "Partners": {
-      "title": "Trusted by Innovative Organizations"
+      "title": "Certifications & Professional Background",
+      "subtitle": "Our quality is guaranteed by the strictest standards and our domestic manufacturing background.",
+      "items": [
+        {
+          "name": "TÜV Rheinland",
+          "logo": "/Partners/tuv.svg",
+          "description": "Certified Safety"
+        },
+        {
+          "name": "Magyar Falu Program",
+          "logo": "/Partners/mfp.png",
+          "description": "Grant Application Expert"
+        },
+        {
+          "name": "MSZ EN 1176",
+          "logo": "/Partners/msz.png",
+          "description": "Standard-Compliant Manufacturing"
+        },
+        {
+          "name": "MKIK",
+          "logo": "/Partners/mkik.png",
+          "description": "Registered Contractor"
+        },
+        {
+          "name": "Domestic Manufacturing",
+          "logo": "/Partners/hungary.png",
+          "description": "100% Hungarian Enterprise"
+        }
+      ]
     },
     "ServicesSection": {
       "badge": "Full-Service Implementation",
