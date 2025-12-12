@@ -55,16 +55,24 @@ cd terraforte-web
 npm install
 
 # 2. Környezeti változók (.env.local létrehozása a gyökérben)
+
 # Kérd el a kulcsokat a projektvezetőtől!
+
 # POSTGRES_URL="..."
+
 # RESEND_API_KEY="..."
+
 # NEXT_PUBLIC_SITE_URL="http://localhost:3000"
 
 # 3. Adatbázis szinkronizálása (Drizzle)
+
 npm run db:push
 
 # 4. Indítás
+
 pnpm dev
+
+```
 
 ## 📂 4. Állapot
 
@@ -87,4 +95,3 @@ pnpm dev
 ## 📄 Licenc
 
 Ez a szoftver a **Terra Forte Bau Kft.** tulajdona. Fejlesztő: **BlueNet**.
-```
