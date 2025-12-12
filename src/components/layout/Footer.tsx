@@ -72,8 +72,9 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
               />
             </Link>
             {/* Szöveg: text-gray-300 (világos szürke) */}
-            <p className="text-sm leading-6 text-white">
-              Professzionális játszóterek tervezése és kivitelezése.
+            <p className="text-sm leading-6 text-white mt-5">
+              EU-szabványos közterületi játszóterek gyártása és teljes körű
+              kivitelezése önkormányzatok és intézmények számára.
             </p>
           </div>
 
