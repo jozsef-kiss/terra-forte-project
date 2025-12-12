@@ -157,24 +157,24 @@
       "cta_services": "Unsere Leistungen im Detail"
     },
     "WhyChooseUs": {
-      "title": "Warum Terra Forte?",
-      "description": "Wir widmen uns der Schaffung von Spielplätzen, die sich durch Qualität, Sicherheit und individuelle Lösungen auszeichnen. Darum wählen uns unsere Partner:",
+      "title": "Ihr Partner für Kommunalentwicklung",
+      "description": "Wir wissen, dass der Bau eines Spielplatzes eine große Verantwortung ist. Unser Expertenteam begleitet Sie durch den gesamten Prozess.",
       "features": [
         {
-          "title": "Lokale Kompetenz und Zuverlässigkeit",
-          "description": "Als Unternehmen in ungarischem Besitz mit über 10 Jahren Erfahrung kennen wir die lokalen Bedürfnisse und Standards. Persönlicher Kontakt und Vertrauen stehen bei uns an erster Stelle."
+          "title": "Lokale Fachkompetenz & Zuverlässigkeit",
+          "description": "Als ungarisches Unternehmen mit über 30 Jahren Erfahrung kennen wir die lokalen Bedürfnisse und Normen. Persönlicher Kontakt und Vertrauen stehen für uns an erster Stelle."
         },
         {
-          "title": "Strenge Sicherheitskonformität",
-          "description": "Alle von uns hergestellten und installierten Geräte verfügen über die erforderliche MSZ EN 1176 Zertifizierung. Kindersicherheit ist für uns keine Option, sondern eine Grundvoraussetzung."
+          "title": "Strikte Sicherheitskonformität",
+          "description": "Alle von uns gefertigten und installierten Geräte verfügen über das erforderliche Zertifikat nach MSZ EN 1176. Kindersicherheit ist für uns keine Option, sondern eine Grundvoraussetzung."
         },
         {
-          "title": "Volle Anpassungsfähigkeit",
-          "description": "Wir bieten mehr als nur Katalogprodukte. Unsere flexible Fertigungstechnologie ermöglicht es uns, den Spielplatz an den spezifischen Standort und das Budget anzupassen."
+          "title": "Vollständige Anpassbarkeit",
+          "description": "Wir bieten nicht nur Katalogprodukte an. Unsere flexible Fertigungstechnologie ermöglicht es uns, den Spielplatz an den jeweiligen Standort und das Budget anzupassen."
         },
         {
-          "title": "Langlebigkeit und Qualität",
-          "description": "Wir arbeiten mit ausgewählten, UV-beständigen und wetterfesten Materialien, damit unsere Spielplätze der Gemeinschaft über Generationen hinweg mit minimalem Wartungsaufwand dienen."
+          "title": "Erfahrung mit Förderprogrammen",
+          "description": "Wir sind mit den Anforderungen ungarischer Ausschreibungssysteme vertraut. Wir helfen Ihnen bei allem, von der technischen Dokumentation bis zur obligatorischen Administration."
         }
       ]
     },

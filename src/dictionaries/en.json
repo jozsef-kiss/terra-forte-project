@@ -157,24 +157,24 @@
       "cta_services": "Our Services in Detail"
     },
     "WhyChooseUs": {
-      "title": "Why Choose Terra Forte?",
-      "description": "We are dedicated to creating playgrounds that stand out for their quality, safety, and custom solutions. Here is why our partners choose us:",
+      "title": "We Are Partners in Community Development",
+      "description": "We know that building a playground is a serious responsibility. Our expert team guides you through the entire process.",
       "features": [
         {
-          "title": "Local Expertise and Reliability",
-          "description": "As a Hungarian-owned business with over 10 years of experience, we understand local needs and standards. Personal connection and trust come first for us."
+          "title": "Domestic Expertise & Reliability",
+          "description": "As a Hungarian-owned business with over 30 years of experience, we understand local needs and standards. Personal connection and trust come first for us."
         },
         {
           "title": "Strict Safety Compliance",
-          "description": "All equipment manufactured and installed by us possesses the necessary MSZ EN 1176 certification. Child safety is not an option for us, but a fundamental requirement."
+          "description": "Every device we manufacture and install holds the necessary MSZ EN 1176 certification. For us, children's safety is not an option, but a fundamental requirement."
         },
         {
-          "title": "Full Customisation",
-          "description": "We offer more than just catalogue products. Our flexible manufacturing technology allows us to tailor the playground to the specific location and budget."
+          "title": "Full Customizability",
+          "description": "We offer more than just catalog products. Our flexible manufacturing technology allows us to tailor the playground to the specific site and budget."
         },
         {
-          "title": "Durability and Quality",
-          "description": "We work with selected, UV-resistant, and weather-proof materials to ensure our playgrounds serve the community for generations with minimal maintenance."
+          "title": "Grant Application Experience",
+          "description": "We are familiar with the requirements of Hungarian grant systems. We assist with everything from technical documentation to mandatory administration."
         }
       ]
     },
