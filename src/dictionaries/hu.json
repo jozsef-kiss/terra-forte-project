@@ -41,7 +41,7 @@
     "copyright": "© {year} Terra Forte Bau Kft. Minden jog fenntartva.",
     "newsletter": {
       "title": "Iratkozzon fel hírlevelünkre",
-      "description": "Értesüljön elsőként az új termékekről, akciókról és szakmai cikkekről. Hetente küldjük.",
+      "description": "Ne maradjon le a pályázatokról, a legfrissebb hírekről és szakmai cikkekről. Havonta küldjük.",
       "placeholder": "Adja meg az e-mail címét",
       "button": "Feliratkozás"
     },
@@ -121,7 +121,7 @@
       }
     },
     "Newsletter": {
-      "title": "Szeretne értesülni a legújabb termékekről és akciókról?",
+      "title": "Ne maradjon le a pályázatokról és a legfrissebb hírekről!",
       "placeholder": "Adja meg az e-mail címét",
       "button": "Feliratkozás",
       "privacy_text": "Az adatait bizalmasan kezeljük. Olvassa el az",

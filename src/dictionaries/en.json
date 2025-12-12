@@ -40,8 +40,8 @@
   "Footer": {
     "copyright": "© {year} Terra Forte Bau Kft. All rights reserved.",
     "newsletter": {
-      "title": "Subscribe to our Newsletter",
-      "description": "Be the first to know about new products, promotions, and professional articles. Sent weekly.",
+      "title": "Subscribe to Our Newsletter",
+      "description": "Don't miss out on grant opportunities, latest news, and professional articles. Sent monthly.",
       "placeholder": "Enter your email address",
       "button": "Subscribe"
     },
@@ -121,7 +121,7 @@
       }
     },
     "Newsletter": {
-      "title": "Would you like to be notified about our latest products and promotions?",
+      "title": "Don't miss out on grant opportunities and the latest news!",
       "placeholder": "Enter your email address",
       "button": "Subscribe",
       "privacy_text": "We handle your data confidentially. Read our",

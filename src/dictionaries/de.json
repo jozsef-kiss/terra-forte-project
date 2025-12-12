@@ -41,7 +41,7 @@
     "copyright": "© {year} Terra Forte Bau Kft. Alle Rechte vorbehalten.",
     "newsletter": {
       "title": "Abonnieren Sie unseren Newsletter",
-      "description": "Erhalten Sie als Erster Informationen über neue Produkte, Aktionen und Fachartikel. Wöchentliche Zusendung.",
+      "description": "Verpassen Sie keine Fördermöglichkeiten, aktuellen Nachrichten und Fachartikel. Wir versenden monatlich.",
       "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
       "button": "Abonnieren"
     },
@@ -121,7 +121,7 @@
       }
     },
     "Newsletter": {
-      "title": "Möchten Sie über unsere neuesten Produkte und Aktionen informiert werden?",
+      "title": "Verpassen Sie keine Fördermöglichkeiten und aktuellen Nachrichten!",
       "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
       "button": "Abonnieren",
       "privacy_text": "Wir behandeln Ihre Daten vertraulich. Lesen Sie unsere",
