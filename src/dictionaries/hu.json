@@ -138,20 +138,24 @@
     },
     "ServicesSection": {
       "badge": "Teljeskörű Megvalósítás",
-      "title": "A tervezéstől a kulcsrakész átadásig",
-      "description": "Nem csupán eszközöket gyártunk, hanem levesszük a terhet a válláról. Szakértő csapatunk a folyamat minden lépését koordinálja, hogy Önnek csak az átadáson kelljen részt vennie.",
+      "title": "Szolgáltatásaink",
+      "description": "Komplex megoldások a közterületi fejlesztésekhez.",
       "features": [
         {
-          "name": "Egyedi Tervezés.",
-          "description": "Helyszíni felmérés alapján készítünk látványterveket, figyelembe véve a biztonsági zónákat és a költségkeretet."
+          "name": "Pályázati Tanácsadás:",
+          "description": "Műszaki előkészítés és dokumentáció a pályázatokhoz."
         },
         {
-          "name": "Prémium Gyártás.",
-          "description": "Saját üzemünkben, válogatott fa és fém alapanyagokból, CNC technológiával gyártjuk a szabványos eszközöket."
+          "name": "Egyedi Tervezés:",
+          "description": "Helyszíni felmérés alapján készítünk terveket, figyelembe véve a biztonsági zónákat és a költségkeretet."
         },
         {
-          "name": "Szakszerű Telepítés.",
-          "description": "Saját telepítő csapatunk végzi a betonozást, az ütéscsillapító felületek kialakítását és az eszközök rögzítését."
+          "name": "Szakszerű Telepítés:",
+          "description": "Saját telepítő csapatunk végzi az előírásoknak megfelelő MSZ EN 1176 Szabvány szerinti játszótéri eszközök elhelyezését."
+        },
+        {
+          "name": "Karbantartás és Felülvizsgálat:",
+          "description": "Meglévő játszóterek szabványosítása, javítása és éves ellenőrzése."
         }
       ]
     },

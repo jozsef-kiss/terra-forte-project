@@ -4,6 +4,7 @@ import {
   PencilSquareIcon,
   Cog6ToothIcon,
   WrenchScrewdriverIcon,
+  ShieldCheckIcon,
 } from "@heroicons/react/24/solid";
 
 export default async function ServicesSection({ lang }: { lang: Locale }) {
@@ -11,7 +12,12 @@ export default async function ServicesSection({ lang }: { lang: Locale }) {
   const t = dict.HomePage.ServicesSection;
 
   // Ikonok hozzárendelése a listaelemekhez sorrendben
-  const icons = [PencilSquareIcon, Cog6ToothIcon, WrenchScrewdriverIcon];
+  const icons = [
+    PencilSquareIcon,
+    Cog6ToothIcon,
+    WrenchScrewdriverIcon,
+    ShieldCheckIcon,
+  ];
 
   return (
     <section className="overflow-hidden bg-stone-50 py-24 sm:py-32">
