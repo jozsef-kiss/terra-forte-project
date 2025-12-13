@@ -394,53 +394,230 @@
   "FAQPage": {
     "Hero": {
       "title": "Frequently Asked Questions",
-      "subtitle": "Everything you need to know about playground construction, standards, and maintenance."
+      "subtitle": "Everything worth knowing about playground construction, standards, and maintenance."
     },
     "categories": {
       "general": "General & Ordering",
       "safety": "Safety & Standards",
       "installation": "Construction & Installation",
-      "maintenance": "Warranty & Maintenance"
+      "maintenance": "Warranty & Maintenance",
+      "tenders": "Grants & Documentation",
+      "products": "Wood & Metal Products",
+      "private": "For Private Individuals"
     },
     "items": {
       "general": [
         {
-          "question": "How can I request a quote?",
-          "answer": "The easiest way to request a quote is by filling out our online form under the 'Contact' menu, or by emailing us directly at info@terrafortebau.hu."
+          "question": "What is the difference between Terra Forte Bau's manufacturing quality and reseller products?",
+          "answer": "As a manufacturer, we exercise full control from raw materials (wood and metal) to the final product, resulting in better quality, flexibility, and price-to-value ratio."
         },
         {
-          "question": "How long does manufacturing take?",
-          "answer": "Manufacturing time usually takes 4–8 weeks depending on project size and our production capacity, starting from order confirmation."
+          "question": "What does Terra Forte Bau's leadership-level experience since 1996 mean?",
+          "answer": "It means we know the development of the Hungarian market, the legal background, and the specifics of public procurement from the last 25+ years."
+        },
+        {
+          "question": "How long does it take to complete the playground from order to installation?",
+          "answer": "The deadline depends on the size of the project and custom manufacturing needs. Due to our manufacturing background, we can undertake faster and more precise scheduling than the market average."
+        },
+        {
+          "question": "Why should I request a quote directly from the playground manufacturer rather than a reseller?",
+          "answer": "A quote requested from the manufacturer ensures the best price-to-value ratio, comprehensive warranty, and the flexibility of custom manufacturing."
+        },
+        {
+          "question": "Why is Terra Forte Bau's long-term professional partnership beneficial for municipalities?",
+          "answer": "We provide continuous professional advice, assistance with maintenance plans, and ongoing monitoring of grant opportunities."
+        }
+      ],
+      "tenders": [
+        {
+          "question": "How does Terra Forte Bau help in writing playground grant applications?",
+          "answer": "We take the burden off you! We prepare the entire professional material for the applications (plans, technical description, budget), greatly easing municipal administration."
+        },
+        {
+          "question": "What should I do if my playground grant application failed due to professional errors?",
+          "answer": "Contact us immediately! We review the faulty application and help prepare professionally impeccable documentation for the next round of applications."
+        },
+        {
+          "question": "How long does it take to compile grant documentation with Terra Forte Bau's help?",
+          "answer": "It depends on the complexity of the project, but thanks to professional consultancy, this phase is significantly shortened; you can be ready to submit the application within weeks."
+        }
+      ],
+      "products": [
+        {
+          "question": "Why is it worth choosing metal playground elements for public spaces today?",
+          "answer": "Metal playgrounds are more economical in the long run due to extreme durability and minimal maintenance needs. They are highly resistant to vandalism and weather."
+        },
+        {
+          "question": "How can a wooden playground fit into a modern urban environment without looking outdated?",
+          "answer": "Wood's greatest strength is blending into the environment. With modern design and high-quality laminated timber, an aesthetically valuable and durable wooden playground can be created."
+        },
+        {
+          "question": "What lifespan can we expect for Terra Forte Bau metal playground equipment?",
+          "answer": "The lifespan of metal playground equipment equipped with anti-corrosion coating can exceed 20 years with proper installation, with minimal depreciation."
+        },
+        {
+          "question": "How are Terra Forte Bau wooden playground elements treated for durability?",
+          "answer": "Outdoor wooden playground equipment is made with durable pressure impregnation, which provides effective protection against fungi and insects."
+        },
+        {
+          "question": "How does the price-to-value ratio of a metal playground compare to a wooden one?",
+          "answer": "The initial investment for a metal playground may be higher, but due to low maintenance costs and longer lifespan, its long-term price-to-value ratio is much more favorable."
+        },
+        {
+          "question": "Why is it important to incorporate movement-developing metal playground elements?",
+          "answer": "Modern metal playground equipment, with its more stable structure, allows for more complex forms of movement, supporting children's motor and cognitive skills."
+        },
+        {
+          "question": "Are Terra Forte Bau playgrounds eco-friendly?",
+          "answer": "Yes. Our wooden playground products come from certified sources, and the long lifespan of metal playground elements also supports sustainability."
+        },
+        {
+          "question": "Can the design of a metal playground become outdated?",
+          "answer": "We design modern metal playground elements with timeless, clean designs that remain aesthetic even after years, avoiding the risk of obsolescence."
+        },
+        {
+          "question": "Is it possible to replace old, outdated wooden playground elements with metal ones?",
+          "answer": "Yes, Terra Forte Bau undertakes the assessment and demolition of existing, outdated wooden playground elements and their replacement with modern, durable metal playground equipment."
+        },
+        {
+          "question": "What colors are available for metal playground equipment?",
+          "answer": "Metal playground elements are available in almost any RAL color, so they can be perfectly matched to the environment or the settlement's image."
         }
       ],
       "safety": [
         {
-          "question": "Are the playground equipment compliant with the MSZ EN 1176 standard?",
-          "answer": "Yes, all equipment we manufacture and install is certified by TÜV according to the MSZ EN 1176 standard, making them suitable for public use."
+          "question": "Which standard applies to public playgrounds in Hungary?",
+          "answer": "The MSZ EN 1176 standard series applies to the design, manufacture, and operation of public playgrounds."
         },
         {
-          "question": "Is a building permit required for a playground?",
-          "answer": "In most cases, installing playground equipment does not require a building permit, but we always recommend confirming with the local municipality."
+          "question": "How does Terra Forte Bau help prevent vandalism on playgrounds?",
+          "answer": "Massive metal playground elements are the most resistant. Additionally, open design and community involvement also reduce the chance of vandalism."
+        },
+        {
+          "question": "What legal risks does operating a non-standard playground entail?",
+          "answer": "Significant fines, obligation to close, and liability for damages in case of a serious accident. Compliance with standards (MSZ EN 1176) is critical."
         }
       ],
       "installation": [
         {
-          "question": "What kind of ground preparation is required?",
-          "answer": "The area must be level and load-bearing. A detailed foundation plan and required layer structure will be provided after signing the contract."
+          "question": "What documents need to be submitted upon playground handover?",
+          "answer": "The declaration of conformity issued by the manufacturer, the installation log, the safety certificate, and the certification of the installed impact protection."
         },
         {
-          "question": "Do you also install impact-absorbing surfaces?",
-          "answer": "Yes, we provide full installation services, including rubber tiles, pea gravel, pine bark, or poured rubber surfaces."
+          "question": "What fall protection solution is recommended under a metal playground?",
+          "answer": "Due to decreasing maintenance needs, rubber tiles or poured rubber are the most popular and cleanest solutions under metal playgrounds."
+        },
+        {
+          "question": "Is it possible to design a custom, site-specific playground?",
+          "answer": "Yes, as a manufacturer, we are flexible. We create wooden and metal playground plans tailored to the site conditions and client needs."
+        },
+        {
+          "question": "How much area is needed to create a standard playground?",
+          "answer": "This largely depends on the critical fall area of the equipment. Our experts help with precise area calculation during the design phase."
+        },
+        {
+          "question": "What is the best ground cover under a wooden playground if blending into the environment is the goal?",
+          "answer": "Under a wooden playground, wood chips or bark mulch best preserve the natural appearance and blending into the environment."
         }
       ],
       "maintenance": [
         {
-          "question": "What warranty do you offer?",
-          "answer": "We provide a full 5-year warranty on all equipment when used as intended (excluding wear-and-tear parts)."
+          "question": "How necessary is the annual maintenance of wooden playgrounds for municipalities?",
+          "answer": "It is essential. If annual care of wooden playground elements is neglected, the lifespan decreases drastically, and the risk of non-compliance fines increases."
         },
         {
-          "question": "Do you offer annual inspections?",
-          "answer": "Yes, together with our accredited partners, we perform mandatory annual standard compliance inspections and documentation."
+          "question": "Do you offer a warranty on installation and products?",
+          "answer": "Yes, as a manufacturer, we guarantee the proper functioning of the wooden and metal playground equipment we install, as well as the professionalism of the installation."
+        },
+        {
+          "question": "What is the difference between an operator inspection and a compliance inspection?",
+          "answer": "A compliance inspection examines adherence to regulations (e.g., MSZ EN 1176), while an operator inspection focuses on daily, weekly, and monthly maintenance tasks."
+        },
+        {
+          "question": "How resistant are metal playground equipment to graffiti?",
+          "answer": "Due to modern coatings, cleaning metal playground elements is easier. Paint can be removed more easily with special cleaners than from untreated wood surfaces."
+        }
+      ],
+      "private": [
+        {
+          "question": "What criteria should I use to choose a garden playground?",
+          "answer": "The most important criteria: the child's age, available space, chosen material (wood aesthetics vs. metal durability), and safety ratings."
+        },
+        {
+          "question": "Do Terra Forte Bau garden playground elements meet any safety regulations?",
+          "answer": "Although private garden playgrounds are legally exempt from MSZ EN 1176, as a manufacturer, we design and produce our products according to the highest safety principles."
+        },
+        {
+          "question": "How complicated is it to assemble a Terra Forte Bau wooden playground at home?",
+          "answer": "We provide detailed assembly instructions with the products, but for stability and safety, we recommend installation by a professional."
+        },
+        {
+          "question": "When is it better to choose a durable metal swing over wood for the garden?",
+          "answer": "If long lifespan, minimal maintenance, and total resistance to weather are the main considerations, choose metal playground elements."
+        },
+        {
+          "question": "What ground cover do you recommend under a garden playground?",
+          "answer": "Sand, bark mulch, or rubber tiles. The key is that the ground should be soft under the critical fall height."
+        },
+        {
+          "question": "Where can I see Terra Forte Bau wooden and metal playground products?",
+          "answer": "Currently, you can find our latest wooden and metal playground solutions in our catalogs. Contact us for demonstration opportunities!"
+        },
+        {
+          "question": "How often should a wooden garden playground be treated?",
+          "answer": "Outdoor wooden playground elements should be treated once a year with glaze or oil to protect the wood material."
+        },
+        {
+          "question": "Is there a warranty on garden playground equipment?",
+          "answer": "Yes, as a manufacturer, we offer a warranty on material quality and manufacturing defects."
+        },
+        {
+          "question": "How flammable is a wooden playground?",
+          "answer": "The wood materials used are not non-combustible, but special treatment and outdoor placement moderate the fire risk."
+        },
+        {
+          "question": "What is the safest anchoring method for a swing set in the garden?",
+          "answer": "The most stable is concreted, in-ground metal leg anchoring, which the manufacturer provides with the product."
+        },
+        {
+          "question": "At what price is a complete garden playground available at Terra Forte Bau?",
+          "answer": "Prices depend on the number of selected devices (wood or metal), size, and type of fall protection. Request a custom quote!"
+        },
+        {
+          "question": "Is there a difference between the quality of Terra Forte Bau and import playground elements?",
+          "answer": "As a manufacturer, we optimize for Hungarian climatic conditions and strict standards during both raw material selection and processing."
+        },
+        {
+          "question": "For what age categories are playground equipment available?",
+          "answer": "Our range includes products for babies (1-3 years), toddlers (3-6 years), and older children (6-12 years)."
+        },
+        {
+          "question": "Is a permit required to set up a garden playground?",
+          "answer": "Generally not, but for large, complex structures, it may be worth consulting the local building authority."
+        },
+        {
+          "question": "Does a metal playground get too hot in the summer?",
+          "answer": "The outdoor coatings used reduce heat absorption, but in summer heat, it is advisable to use all playground elements (wood and metal) in the shade or in the morning."
+        },
+        {
+          "question": "Is it worth covering wooden playground elements for winter?",
+          "answer": "To increase durability, it is recommended to store removable elements (e.g., swing seats) for the winter."
+        },
+        {
+          "question": "What happens if a Terra Forte Bau playground element gets damaged?",
+          "answer": "As a manufacturer, we can provide spare parts, which is often an unsolvable problem with non-manufacturer products."
+        },
+        {
+          "question": "Which is more durable: a plastic slide or a metal slide for a garden playground?",
+          "answer": "A professional stainless steel slide is much more durable and resistant to UV radiation and cracking than most plastics."
+        },
+        {
+          "question": "How important is replacing playground sand for private individuals?",
+          "answer": "Due to hygiene, it is recommended to replenish lost sand with fresh, filtered sand annually."
+        },
+        {
+          "question": "What to do in case of an accident on a private playground?",
+          "answer": "Keeping a maintenance log and adhering to Terra Forte Bau safety regulations can reduce risk. In case of a serious accident, a professional should be called to inspect the equipment."
         }
       ]
     },

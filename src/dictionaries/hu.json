@@ -392,47 +392,224 @@
       "general": "Általános & Megrendelés",
       "safety": "Biztonság & Szabványok",
       "installation": "Kivitelezés & Telepítés",
-      "maintenance": "Garancia & Karbantartás"
+      "maintenance": "Garancia & Karbantartás",
+      "tenders": "Pályázatok & Dokumentáció",
+      "products": "Fa és Fém Termékek",
+      "private": "Magánszemélyeknek"
     },
     "items": {
       "general": [
         {
-          "question": "Hogyan kérhetek árajánlatot?",
-          "answer": "Árajánlatot legegyszerűbben az online űrlapunk kitöltésével kérhet a 'Kapcsolat' menüpont alatt, vagy írjon nekünk közvetlenül az info@terrafortebau.hu e-mail címre."
+          "question": "Mi a különbség a Terra Forte Bau gyártói minősége és a kereskedői termékek között?",
+          "answer": "Gyártóként teljes kontrollt gyakorolunk az alapanyagtól (fa és fém) a végtermékig, ami jobb minőséget, rugalmasságot és ár-érték arányt eredményez."
         },
         {
-          "question": "Mennyi időt vesz igénybe a gyártás?",
-          "answer": "A gyártási idő a projekt méretétől és a kapacitásunktól függően általában 4-8 hét a megrendelés visszaigazolásától számítva."
+          "question": "Mit jelent a Terra Forte Bau vezetői szintű, 1996 óta tartó tapasztalata?",
+          "answer": "Ez azt jelenti, hogy ismerjük a magyarországi piac fejlődését, a jogszabályi hátteret és a közbeszerzések sajátosságait az elmúlt 25 évből."
+        },
+        {
+          "question": "Mennyi idő alatt készül el a játszótér a megrendeléstől a telepítésig?",
+          "answer": "A határidő függ a projekt méretétől és az egyedi gyártási igénytől. A gyártói háttér miatt a piaci átlagnál gyorsabb és pontosabb ütemezést tudunk vállalni."
+        },
+        {
+          "question": "Miért kérjek árajánlatot közvetlenül a játszótér gyártótól, nem pedig egy kereskedőtől?",
+          "answer": "A gyártótól kért árajánlat biztosítja a legjobb ár-érték arányt, a teljes körű garanciát és az egyedi gyártás rugalmasságát."
+        },
+        {
+          "question": "Miért előnyös a Terra Forte Bau hosszú távú szakmai partneri kapcsolata az önkormányzatoknak?",
+          "answer": "Folyamatos szaktanácsadást, a karbantartási tervek segítését, és a pályázati lehetőségek folyamatos monitorozását biztosítjuk."
+        }
+      ],
+      "tenders": [
+        {
+          "question": "Hogyan segít a Terra Forte Bau a játszótér pályázatok megírásában?",
+          "answer": "Átvesszük a terhet! A pályázatok teljes szakmai anyagát (tervek, műszaki leírás, költségvetés) mi készítjük el, nagymértékben megkönnyítve az önkormányzati adminisztrációt."
+        },
+        {
+          "question": "Mit tegyek, ha elbukott a játszótér pályázatom a szakmai hibák miatt?",
+          "answer": "Keressen minket azonnal! Átvizsgáljuk a hibás pályázatot, és segítünk a következő pályázati körre felkészíteni a szakmailag kifogástalan dokumentációt."
+        },
+        {
+          "question": "Mennyi ideig tart a pályázati dokumentáció összeállítása a Terra Forte Bau segítségével?",
+          "answer": "A projekt komplexitásától függ, de a szakmai tanácsadásnak köszönhetően ez a fázis jelentősen lerövidül, heteken belül felkészülhet a pályázat benyújtására."
+        }
+      ],
+      "products": [
+        {
+          "question": "Miért érdemes ma már a fém játszótér elemeket választani a közterületekre?",
+          "answer": "A fém játszótér a rendkívüli tartósság és a minimális karbantartási igény miatt gazdaságosabb hosszú távon. Kiválóan ellenáll a vandalizmusnak és az időjárásnak."
+        },
+        {
+          "question": "A fa játszótér hogyan illeszkedhet a modern városi környezetbe úgy, hogy ne tűnjön elavultnak?",
+          "answer": "A fa legnagyobb erőssége a környezetbe simulás. Modern tervezéssel és magas minőségű, rétegelt faanyaggal esztétikailag értékes, tartós fa játszótér hozható létre."
+        },
+        {
+          "question": "Milyen élettartammal számolhatunk a Terra Forte Bau fém játszótéri eszközök esetén?",
+          "answer": "A korróziógátló bevonattal ellátott fém játszótéri eszközök élettartama a megfelelő telepítés esetén meghaladhatja a 20 évet, minimális amortizációval."
+        },
+        {
+          "question": "Hogyan kezelik a Terra Forte Bau fa játszótér elemeket a tartósság érdekében?",
+          "answer": "A kültéri fa játszótéri eszközök tartós, nyomás alatti impregnálással készülnek, amely hatékony védelmet nyújt a gombák és rovarok ellen."
+        },
+        {
+          "question": "Milyen a fém játszótér ár-érték aránya a fa játszótérhez képest?",
+          "answer": "A fém játszótér kezdeti beruházása lehet magasabb, de az alacsony karbantartási költségek és a hosszabb élettartam miatt hosszú távon sokkal kedvezőbb az ár-érték aránya."
+        },
+        {
+          "question": "Miért fontos a mozgásfejlesztő fém játszótéri elemek beépítése?",
+          "answer": "A modern fém játszótéri eszközök stabilabb struktúrájukkal komplexebb mozgásformákat tesznek lehetővé, támogatva a gyermekek motoros és kognitív készségeit."
+        },
+        {
+          "question": "A Terra Forte Bau játszóterek környezetbarátak?",
+          "answer": "Igen. Fa játszótéri termékeink minősített forrásból származnak, és a fém játszótéri elemek hosszú élettartama is a fenntarthatóságot támogatja."
+        },
+        {
+          "question": "Elavulhat-e a fém játszótér dizájnja?",
+          "answer": "A modern fém játszótér elemeket időtálló, letisztult dizájnnal tervezzük, ami évek múltán is esztétikus marad, elkerülve az elavulás veszélyét."
+        },
+        {
+          "question": "Van-e lehetőség a régi, elavult fa játszótéri elemek fémre cserélésére?",
+          "answer": "Igen, a Terra Forte Bau vállalja a meglévő, elavult fa játszótér elemek felmérését, elbontását, és modern, tartós fém játszótéri eszközökre történő cseréjét."
+        },
+        {
+          "question": "Milyen színekben elérhetőek a fém játszótéri eszközök?",
+          "answer": "A fém játszótér elemek szinte bármilyen RAL színben elérhetők, így a környezetbe vagy a település arculatához tökéletesen illeszthetőek."
         }
       ],
       "safety": [
         {
-          "question": "Megfelelnek az eszközök az MSZ EN 1176 szabványnak?",
-          "answer": "Igen, minden általunk gyártott és telepített eszköz rendelkezik a TÜV által kiállított MSZ EN 1176 megfelelőségi tanúsítvánnyal, így közterületi használatra alkalmasak."
+          "question": "Melyik szabvány vonatkozik a közületi játszóterekre Magyarországon?",
+          "answer": "Az MSZ EN 1176 szabványsorozat vonatkozik a közterületi játszóterek tervezésére, gyártására és üzemeltetésére."
         },
         {
-          "question": "Szükséges-e építési engedély a játszótérhez?",
-          "answer": "A legtöbb esetben a játszótéri eszközök telepítése nem építési engedély köteles, de minden esetben javasoljuk az illetékes önkormányzattal való egyeztetést."
+          "question": "Hogyan segít a Terra Forte Bau a vandalizmus megelőzésében a játszótereken?",
+          "answer": "A masszív fém játszótér elemek a legellenállóbbak. Emellett a nyitott tervezés és a közösségi bevonás is csökkenti a rongálás esélyét."
+        },
+        {
+          "question": "Milyen jogi kockázatokkal jár egy nem szabványos játszótér üzemeltetése?",
+          "answer": "Jelentős bírság, bezárási kötelezettség, és súlyos baleset esetén kártérítési felelősség. A szabványosság (MSZ EN 1176) betartása kritikus."
         }
       ],
       "installation": [
         {
-          "question": "Milyen talajelőkészítésre van szükség?",
-          "answer": "A területnek síknak és teherhordónak kell lennie. A részletes alapozási tervet és a szükséges rétegrendet a szerződéskötés után biztosítjuk."
+          "question": "Milyen dokumentumokat szükséges benyújtani a játszótér átadásakor?",
+          "answer": "A gyártó által kiállított megfelelőségi nyilatkozatot, a telepítési jegyzőkönyvet, a biztonsági tanúsítványt és a beépített esésvédelemről szóló igazolást."
         },
         {
-          "question": "Vállalják az ütéscsillapító felület kialakítását is?",
-          "answer": "Igen, teljeskörű kivitelezést vállalunk, beleértve a gumilap, gyöngykavics, fenyőkéreg vagy öntött gumi burkolat kialakítását is."
+          "question": "Milyen esésvédelmi megoldás ajánlott a fém játszótér alá?",
+          "answer": "A csökkenő karbantartási igény miatt a gumitégla vagy az öntött gumi a legnépszerűbb és legtisztább megoldás a fém játszótér alá."
+        },
+        {
+          "question": "Van-e lehetőség egyedi, helyszínre szabott játszótér tervezésre?",
+          "answer": "Igen, gyártóként rugalmasak vagyunk. A helyszín adottságaihoz és a megrendelő igényeihez igazított fa és fém játszótér terveket készítünk."
+        },
+        {
+          "question": "Mekkora terület szükséges egy szabványos játszótér kialakításához?",
+          "answer": "Ez nagyban függ az eszközök kritikus esési területétől. Szakértőink a tervezési fázisban segítenek a pontos területkalkulációban."
+        },
+        {
+          "question": "Mi a legjobb talajfedés a fa játszótér alá, ha a környezetbe simulás a cél?",
+          "answer": "A fa játszótér alá a faforgács vagy a fakéreg őrzi meg legjobban a természetes megjelenést és a környezetbe simulást."
         }
       ],
       "maintenance": [
         {
-          "question": "Mennyi garanciát vállalnak?",
-          "answer": "Minden eszközünkre 5 év teljeskörű garanciát vállalunk rendeltetésszerű használat esetén (kivéve a kopóalkatrészeket)."
+          "question": "Mennyire szükséges a fa játszótér éves karbantartása az önkormányzatoknál?",
+          "answer": "Elengedhetetlen. Ha a fa játszótér elemek éves ápolása elmarad, az élettartam drasztikusan lecsökken, és növekszik a szabványossági bírság kockázata."
         },
         {
-          "question": "Vállalnak éves felülvizsgálatot?",
-          "answer": "Igen, akkreditált partnereinkkel vállaljuk a kötelező éves szabványossági felülvizsgálatok elvégzését és a jegyzőkönyvezést."
+          "question": "Vállalnak-e garanciát a telepítésre és a termékekre?",
+          "answer": "Igen, gyártóként garanciát vállalunk az általunk telepített fa és fém játszótéri eszközök megfelelő működésére és a telepítés szakszerűségére."
+        },
+        {
+          "question": "Mi a különbség az üzemeltetői és a szabványossági felülvizsgálat között?",
+          "answer": "A szabványossági felülvizsgálat az előírásoknak való megfelelőséget vizsgálja (pl. MSZ EN 1176), míg az üzemeltetői felülvizsgálat a napi, heti, havi karbantartási teendőkre fókuszál."
+        },
+        {
+          "question": "Mennyire ellenállóak a fém játszótéri eszközök a graffitivel szemben?",
+          "answer": "A modern bevonatok miatt a fém játszótér elemek tisztítása könnyebb. Speciális tisztítószerekkel a festék könnyebben eltávolítható, mint a kezeletlen fafelületekről."
+        }
+      ],
+      "private": [
+        {
+          "question": "Milyen szempontok alapján válasszak kerti játszóteret?",
+          "answer": "A legfontosabb szempontok: a gyermek életkora, a rendelkezésre álló terület, a választott anyag (fa esztétika vs. fém tartósság) és a biztonsági minősítések."
+        },
+        {
+          "question": "A Terra Forte Bau kerti játszótéri elemei megfelelnek valamilyen biztonsági előírásnak?",
+          "answer": "Bár a magáncélú kerti játszótér jogilag mentesül az MSZ EN 1176 alól, gyártóként termékeinket a legmagasabb biztonsági elvek szerint tervezzük és gyártjuk."
+        },
+        {
+          "question": "Mennyire bonyolult a Terra Forte Bau fa játszótér összeszerelése házilag?",
+          "answer": "A termékekhez részletes összeszerelési útmutatót biztosítunk, de a stabilitás és a biztonság érdekében javasoljuk a szakember általi telepítést."
+        },
+        {
+          "question": "Mikor érdemesebb a tartós fém játszótéri hintát választani a fával szemben a kertbe?",
+          "answer": "Ha a hosszú élettartam, a minimális karbantartás és az időjárással szembeni teljes ellenállás a fő szempont, válassza a fém játszótér elemeket."
+        },
+        {
+          "question": "Milyen talajfedést ajánlanak a kerti játszótér alá?",
+          "answer": "Homok, fakéreg vagy gumitégla. A lényeg, hogy a talaj puha legyen a kritikus esési magasság alatt."
+        },
+        {
+          "question": "Hol tudom megnézni a Terra Forte Bau fa és fém játszótéri termékeit?",
+          "answer": "Jelenleg a katalógusainkban találja a legújabb fa és fém játszótér megoldásainkat. Keressen minket a bemutató lehetőségekért!"
+        },
+        {
+          "question": "Mennyi időnként kell a kerti fa játszóteret kezelni?",
+          "answer": "A kültéri fa játszótér elemeket évente egyszer érdemes lazúrral vagy olajjal átkenni a faanyag védelme érdekében."
+        },
+        {
+          "question": "Van-e garancia a kerti játszótéri eszközökre?",
+          "answer": "Igen, gyártóként garanciát vállalunk az alapanyagok minőségére és a gyártási hibákra."
+        },
+        {
+          "question": "Mennyire tűzveszélyes a fa játszótér?",
+          "answer": "A felhasznált faanyagok nem éghetetlenek, de a speciális kezelés és a kültéri elhelyezés mérsékli a tűzveszélyt."
+        },
+        {
+          "question": "Mi a legbiztonságosabb rögzítési mód a hintaállványhoz a kertben?",
+          "answer": "A legstabilabb a betonozott, földbe süllyesztett fém lábrögzítés, amit a gyártó biztosít a termékhez."
+        },
+        {
+          "question": "Milyen áron érhető el egy komplett kerti játszótér a Terra Forte Bau-nál?",
+          "answer": "Az árak a kiválasztott eszközök számától (fa vagy fém), a mérettől és az esésvédelem típusától függnek. Kérjen egyedi árajánlatot!"
+        },
+        {
+          "question": "Van-e különbség a Terra Forte Bau és az import játszótéri elemek minősége között?",
+          "answer": "Gyártóként az alapanyag kiválasztásakor és a feldolgozás során is a magyarországi klimatikus viszonyokra és a szigorú szabványokra optimalizálunk."
+        },
+        {
+          "question": "Milyen életkori kategóriákra vannak játszótéri eszközök?",
+          "answer": "Kínálatunkban szerepelnek termékek a babáknak (1-3 éves korig), a kisgyermekeknek (3-6 éves korig) és a nagyobbaknak (6-12 éves korig)."
+        },
+        {
+          "question": "Szükséges engedély a kerti játszótér felállításához?",
+          "answer": "Általában nem, de nagy méretű, komplex szerkezetek esetén érdemes lehet a helyi építésügyi hivatallal egyeztetni."
+        },
+        {
+          "question": "A fém játszótér nyáron nem melegszik fel túlságosan?",
+          "answer": "A felhasznált, kültéri bevonatok csökkentik a hőelnyelést, de nyári hőségben minden játszótéri elemet (fa és fém) árnyékban vagy délelőtt érdemes használni."
+        },
+        {
+          "question": "Érdemes-e a fa játszótéri elemeket télre letakarni?",
+          "answer": "A tartósság növelése érdekében javasolt a kivehető elemek (pl. hintaülések) télre való elpakolása."
+        },
+        {
+          "question": "Mi történik, ha egy Terra Forte Bau játszótéri elem megsérül?",
+          "answer": "Gyártóként tudunk pótalkatrészeket biztosítani, ami a nem gyártói termékek esetén gyakran megoldhatatlan probléma."
+        },
+        {
+          "question": "Melyik a tartósabb: a műanyag csúszda vagy a fém csúszda a kerti játszótéren?",
+          "answer": "A professzionális, rozsdamentes fém csúszda sokkal tartósabb, ellenállóbb az UV-sugárzással és a repedésekkel szemben, mint a legtöbb műanyag."
+        },
+        {
+          "question": "Mennyire fontos a magánszemélyeknek a játszótéri homok cseréje?",
+          "answer": "A higiénia miatt javasolt évente friss, szűrt homokkal pótolni az elveszett homokot."
+        },
+        {
+          "question": "Mi a teendő baleset esetén a magán játszótéren?",
+          "answer": "A karbantartási napló vezetésével, és a Terra Forte Bau biztonsági előírásainak betartásával csökkenthető a kockázat. Súlyos baleset esetén szakembert kell hívni az eszköz felülvizsgálatára."
         }
       ]
     },

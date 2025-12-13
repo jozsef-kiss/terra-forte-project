@@ -394,53 +394,234 @@
   "FAQPage": {
     "Hero": {
       "title": "Häufig gestellte Fragen",
-      "subtitle": "Alles, was Sie über den Bau, die Normen und die Wartung von Spielplätzen wissen sollten."
+      "subtitle": "Alles Wissenswerte über Spielplatzbau, Normen und Instandhaltung."
     },
     "categories": {
       "general": "Allgemeines & Bestellung",
       "safety": "Sicherheit & Normen",
-      "installation": "Bau & Installation",
-      "maintenance": "Garantie & Wartung"
+      "installation": "Ausführung & Installation",
+      "maintenance": "Garantie & Wartung",
+      "tenders": "Ausschreibungen & Dokumentation",
+      "products": "Holz- & Metallprodukte",
+      "private": "Für Privatpersonen"
     },
     "items": {
       "general": [
         {
-          "question": "Wie kann ich ein Angebot anfordern?",
-          "answer": "Am einfachsten können Sie ein Angebot anfordern, indem Sie unser Online-Formular im Menüpunkt 'Kontakt' ausfüllen oder uns direkt unter info@terrafortebau.hu schreiben."
+          "question": "Was ist der Unterschied zwischen der Herstellerqualität von Terra Forte Bau und Händlerprodukten?",
+          "answer": "Als Hersteller haben wir die volle Kontrolle vom Rohmaterial (Holz und Metall) bis zum Endprodukt, was zu besserer Qualität, Flexibilität und einem besseren Preis-Leistungs-Verhältnis führt."
         },
         {
-          "question": "Wie lange dauert die Herstellung?",
-          "answer": "Die Produktionszeit beträgt in der Regel 4–8 Wochen, abhängig von der Projektgröße und unserer Kapazität, gerechnet ab der Auftragsbestätigung."
+          "question": "Was bedeutet die Erfahrung auf Führungsebene von Terra Forte Bau seit 1996?",
+          "answer": "Das bedeutet, dass wir die Entwicklung des ungarischen Marktes, den rechtlichen Hintergrund und die Besonderheiten des öffentlichen Beschaffungswesens der letzten über 25 Jahre kennen."
+        },
+        {
+          "question": "Wie lange dauert es von der Bestellung bis zur Installation des Spielplatzes?",
+          "answer": "Die Frist hängt von der Projektgröße und dem individuellen Fertigungsbedarf ab. Dank unseres Herstellerhintergrunds können wir schnellere und präzisere Zeitpläne als der Marktdurchschnitt zusagen."
+        },
+        {
+          "question": "Warum sollte ich ein Angebot direkt beim Spielplatzhersteller und nicht bei einem Händler anfordern?",
+          "answer": "Ein Angebot vom Hersteller sichert das beste Preis-Leistungs-Verhältnis, eine umfassende Garantie und die Flexibilität der individuellen Fertigung."
+        },
+        {
+          "question": "Warum ist die langfristige professionelle Partnerschaft mit Terra Forte Bau für Kommunen vorteilhaft?",
+          "answer": "Wir bieten kontinuierliche Fachberatung, Unterstützung bei Wartungsplänen und die ständige Überwachung von Fördermöglichkeiten."
+        }
+      ],
+      "tenders": [
+        {
+          "question": "Wie hilft Terra Forte Bau beim Verfassen von Spielplatz-Ausschreibungen und Förderanträgen?",
+          "answer": "Wir nehmen Ihnen die Last ab! Wir erstellen das komplette fachliche Material für die Anträge (Pläne, technische Beschreibung, Budget) und entlasten so die kommunale Verwaltung erheblich."
+        },
+        {
+          "question": "Was soll ich tun, wenn mein Förderantrag für den Spielplatz wegen fachlicher Fehler abgelehnt wurde?",
+          "answer": "Kontaktieren Sie uns sofort! Wir überprüfen den fehlerhaften Antrag und helfen, eine fachlich einwandfreie Dokumentation für die nächste Antragsrunde vorzubereiten."
+        },
+        {
+          "question": "Wie lange dauert die Zusammenstellung der Förderdokumentation mit Hilfe von Terra Forte Bau?",
+          "answer": "Das hängt von der Komplexität des Projekts ab, aber dank der Fachberatung verkürzt sich diese Phase erheblich; Sie können innerhalb von Wochen bereit für die Einreichung sein."
+        },
+        {
+          "question": "Wir stellen sowohl Holz- als auch Metallspielplätze her, was das beste Preis-Leistungs-Verhältnis und flexible Lösungen garantiert, sei es für individuelle Holzspielplatz-Elemente oder robuste Metallspielgeräte.",
+          "answer": "Ja, das ist einer unserer Hauptvorteile."
+        }
+      ],
+      "products": [
+        {
+          "question": "Warum lohnt es sich heute, Metallspielgeräte für öffentliche Plätze zu wählen?",
+          "answer": "Metallspielplätze sind aufgrund ihrer extremen Haltbarkeit und des minimalen Wartungsaufwands langfristig wirtschaftlicher. Sie sind äußerst widerstandsfähig gegen Vandalismus und Witterungseinflüsse."
+        },
+        {
+          "question": "Wie kann sich ein Holzspielplatz in eine moderne städtische Umgebung einfügen, ohne veraltet zu wirken?",
+          "answer": "Die größte Stärke von Holz ist, dass es sich in die Umgebung einfügt. Mit modernem Design und hochwertigem Schichtholz kann ein ästhetisch wertvoller und langlebiger Holzspielplatz geschaffen werden."
+        },
+        {
+          "question": "Mit welcher Lebensdauer können wir bei Metallspielgeräten von Terra Forte Bau rechnen?",
+          "answer": "Die Lebensdauer von Metallspielgeräten mit Korrosionsschutzbeschichtung kann bei fachgerechter Installation 20 Jahre überschreiten, bei minimalem Wertverlust."
+        },
+        {
+          "question": "Wie werden Holzspielplatzelemente von Terra Forte Bau für Langlebigkeit behandelt?",
+          "answer": "Spielgeräte aus Holz für den Außenbereich werden mit einer dauerhaften Kesseldruckimprägnierung hergestellt, die wirksamen Schutz gegen Pilze und Insekten bietet."
+        },
+        {
+          "question": "Wie ist das Preis-Leistungs-Verhältnis eines Metallspielplatzes im Vergleich zu einem Holzspielplatz?",
+          "answer": "Die Anfangsinvestition für einen Metallspielplatz mag höher sein, aber aufgrund der geringen Wartungskosten und der längeren Lebensdauer ist das langfristige Preis-Leistungs-Verhältnis viel günstiger."
+        },
+        {
+          "question": "Warum ist der Einbau von bewegungsfördernden Metallspielgeräten wichtig?",
+          "answer": "Moderne Metallspielgeräte ermöglichen mit ihrer stabileren Struktur komplexere Bewegungsformen und fördern so die motorischen und kognitiven Fähigkeiten der Kinder."
+        },
+        {
+          "question": "Sind Spielplätze von Terra Forte Bau umweltfreundlich?",
+          "answer": "Ja. Unsere Holzspielplatzprodukte stammen aus zertifizierten Quellen, und auch die lange Lebensdauer der Metallspielplatzelemente unterstützt die Nachhaltigkeit."
+        },
+        {
+          "question": "Kann das Design eines Metallspielplatzes veralten?",
+          "answer": "Wir entwerfen moderne Metallspielplatzelemente mit zeitlosem, klarem Design, das auch nach Jahren ästhetisch bleibt und die Gefahr des Veraltens vermeidet."
+        },
+        {
+          "question": "Gibt es die Möglichkeit, alte, veraltete Holzspielplatzelemente gegen Metall auszutauschen?",
+          "answer": "Ja, Terra Forte Bau übernimmt die Begutachtung und den Abbau bestehender, veralteter Holzspielplatzelemente und deren Austausch gegen moderne, langlebige Metallspielgeräte."
+        },
+        {
+          "question": "In welchen Farben sind Metallspielgeräte erhältlich?",
+          "answer": "Metallspielplatzelemente sind in fast jeder RAL-Farbe erhältlich, sodass sie perfekt an die Umgebung oder das Erscheinungsbild der Gemeinde angepasst werden können."
         }
       ],
       "safety": [
         {
-          "question": "Entsprechen die Geräte der Norm MSZ EN 1176?",
-          "answer": "Ja, alle von uns hergestellten und installierten Geräte verfügen über ein TÜV-Zertifikat gemäß MSZ EN 1176 und sind somit für öffentliche Nutzung geeignet."
+          "question": "Welche Norm gilt für öffentliche Spielplätze in Ungarn?",
+          "answer": "Für die Planung, Herstellung und den Betrieb von öffentlichen Spielplätzen gilt die Normenreihe MSZ EN 1176."
         },
         {
-          "question": "Ist für einen Spielplatz eine Baugenehmigung erforderlich?",
-          "answer": "In den meisten Fällen ist die Installation von Spielgeräten nicht genehmigungspflichtig. Dennoch empfehlen wir immer eine Rücksprache mit der zuständigen Gemeinde."
+          "question": "Wie hilft Terra Forte Bau bei der Prävention von Vandalismus auf Spielplätzen?",
+          "answer": "Massive Metallspielplatzelemente sind am widerstandsfähigsten. Zudem verringern offenes Design und die Einbeziehung der Gemeinschaft die Wahrscheinlichkeit von Zerstörung."
+        },
+        {
+          "question": "Welche rechtlichen Risiken birgt der Betrieb eines nicht normgerechten Spielplatzes?",
+          "answer": "Erhebliche Bußgelder, Schließungspflicht und Haftung für Schadensersatz bei schweren Unfällen. Die Einhaltung der Norm (MSZ EN 1176) ist kritisch."
         }
       ],
       "installation": [
         {
-          "question": "Welche Boden­vorbereitung ist erforderlich?",
-          "answer": "Das Gelände muss eben und tragfähig sein. Den detaillierten Fundamentplan und den erforderlichen Schichtaufbau stellen wir nach Vertragsunterzeichnung bereit."
+          "question": "Welche Dokumente müssen bei der Übergabe des Spielplatzes eingereicht werden?",
+          "answer": "Die vom Hersteller ausgestellte Konformitätserklärung, das Installationsprotokoll, das Sicherheitszertifikat und der Nachweis über den eingebauten Fallschutz."
         },
         {
-          "question": "Übernehmen Sie auch die Installation von Fallschutzflächen?",
-          "answer": "Ja, wir bieten eine vollständige Ausführung an, einschließlich Gummiplatten, Kies, Rindenmulch oder gegossenem Gummi."
+          "question": "Welche Fallschutzlösung wird unter einem Metallspielplatz empfohlen?",
+          "answer": "Aufgrund des geringeren Wartungsbedarfs sind Gummifliesen oder gegossener Gummi die beliebteste und sauberste Lösung unter Metallspielplätzen."
+        },
+        {
+          "question": "Gibt es die Möglichkeit einer individuellen, standortbezogenen Spielplatzplanung?",
+          "answer": "Ja, als Hersteller sind wir flexibel. Wir erstellen Pläne für Holz- und Metallspielplätze, die an die Gegebenheiten vor Ort und die Bedürfnisse des Auftraggebers angepasst sind."
+        },
+        {
+          "question": "Wie viel Fläche wird für die Errichtung eines normgerechten Spielplatzes benötigt?",
+          "answer": "Das hängt stark vom kritischen Fallraum der Geräte ab. Unsere Experten helfen in der Planungsphase bei der genauen Flächenberechnung."
+        },
+        {
+          "question": "Was ist der beste Bodenbelag unter einem Holzspielplatz, wenn die Anpassung an die Umgebung das Ziel ist?",
+          "answer": "Unter einem Holzspielplatz bewahren Holzschnitzel oder Rindenmulch das natürliche Erscheinungsbild und die Einfügung in die Umgebung am besten."
         }
       ],
       "maintenance": [
         {
-          "question": "Welche Garantie bieten Sie?",
-          "answer": "Wir gewähren 5 Jahre vollständige Garantie auf alle Geräte bei bestimmungsgemäßer Nutzung (ausgenommen Verschleißteile)."
+          "question": "Wie notwendig ist die jährliche Wartung von Holzspielplätzen für Kommunen?",
+          "answer": "Sie ist unerlässlich. Wenn die jährliche Pflege von Holzspielplatzelementen ausbleibt, sinkt die Lebensdauer drastisch und das Risiko von Bußgeldern wegen Normverstößen steigt."
         },
         {
-          "question": "Bieten Sie jährliche Überprüfungen an?",
-          "answer": "Ja, gemeinsam mit unseren akkreditierten Partnern führen wir die vorgeschriebenen jährlichen Normprüfungen und Protokolle durch."
+          "question": "Geben Sie Garantie auf die Installation und die Produkte?",
+          "answer": "Ja, als Hersteller übernehmen wir Garantie für die ordnungsgemäße Funktion der von uns installierten Holz- und Metallspielgeräte sowie für die fachgerechte Installation."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen der Betreiberinspektion und der Normüberprüfung?",
+          "answer": "Die Normüberprüfung prüft die Einhaltung der Vorschriften (z. B. MSZ EN 1176), während sich die Betreiberinspektion auf tägliche, wöchentliche und monatliche Wartungsaufgaben konzentriert."
+        },
+        {
+          "question": "Wie widerstandsfähig sind Metallspielgeräte gegen Graffiti?",
+          "answer": "Dank moderner Beschichtungen ist die Reinigung von Metallspielplatzelementen einfacher. Mit speziellen Reinigern lässt sich Farbe leichter entfernen als von unbehandelten Holzoberflächen."
+        }
+      ],
+      "private": [
+        {
+          "question": "Nach welchen Kriterien sollte ich einen Gartenspielplatz auswählen?",
+          "answer": "Die wichtigsten Kriterien: Alter des Kindes, verfügbarer Platz, gewähltes Material (Holzästhetik vs. Metallhaltbarkeit) und Sicherheitsbewertungen."
+        },
+        {
+          "question": "Entsprechen Gartenspielplatzelemente von Terra Forte Bau Sicherheitsvorschriften?",
+          "answer": "Obwohl private Gartenspielplätze rechtlich von der MSZ EN 1176 befreit sind, entwerfen und fertigen wir unsere Produkte als Hersteller nach den höchsten Sicherheitsgrundsätzen."
+        },
+        {
+          "question": "Wie kompliziert ist die Selbstmontage eines Holzspielplatzes von Terra Forte Bau?",
+          "answer": "Wir stellen detaillierte Montageanleitungen für die Produkte zur Verfügung, empfehlen jedoch für Stabilität und Sicherheit die Installation durch einen Fachmann."
+        },
+        {
+          "question": "Wann ist es besser, eine langlebige Metallschaukel statt Holz für den Garten zu wählen?",
+          "answer": "Wenn lange Lebensdauer, minimale Wartung und völlige Wetterbeständigkeit die Hauptkriterien sind, wählen Sie Metallspielplatzelemente."
+        },
+        {
+          "question": "Welchen Bodenbelag empfehlen Sie unter einem Gartenspielplatz?",
+          "answer": "Sand, Rindenmulch oder Gummifliesen. Das Wichtigste ist, dass der Boden unterhalb der kritischen Fallhöhe weich ist."
+        },
+        {
+          "question": "Wo kann ich Holz- und Metallspielplatzprodukte von Terra Forte Bau ansehen?",
+          "answer": "Derzeit finden Sie unsere neuesten Lösungen für Holz- und Metallspielplätze in unseren Katalogen. Kontaktieren Sie uns für Vorführmöglichkeiten!"
+        },
+        {
+          "question": "Wie oft muss ein Holzspielplatz im Garten behandelt werden?",
+          "answer": "Elemente von Holzspielplätzen im Außenbereich sollten einmal jährlich mit Lasur oder Öl behandelt werden, um das Holzmaterial zu schützen."
+        },
+        {
+          "question": "Gibt es eine Garantie auf Gartenspielgeräte?",
+          "answer": "Ja, als Hersteller geben wir Garantie auf Materialqualität und Herstellungsfehler."
+        },
+        {
+          "question": "Wie feuergefährlich ist ein Holzspielplatz?",
+          "answer": "Die verwendeten Holzmaterialien sind nicht unbrennbar, aber die spezielle Behandlung und die Aufstellung im Freien mindern die Brandgefahr."
+        },
+        {
+          "question": "Was ist die sicherste Befestigungsmethode für ein Schaukelgestell im Garten?",
+          "answer": "Am stabilsten ist die einbetonierte Metallfußverankerung im Boden, die der Hersteller mit dem Produkt liefert."
+        },
+        {
+          "question": "Zu welchem Preis ist ein kompletter Gartenspielplatz bei Terra Forte Bau erhältlich?",
+          "answer": "Die Preise hängen von der Anzahl der gewählten Geräte (Holz oder Metall), der Größe und der Art des Fallschutzes ab. Fordern Sie ein individuelles Angebot an!"
+        },
+        {
+          "question": "Gibt es einen Unterschied zwischen der Qualität von Terra Forte Bau und Import-Spielplatzelementen?",
+          "answer": "Als Hersteller optimieren wir sowohl bei der Rohstoffauswahl als auch bei der Verarbeitung für die klimatischen Bedingungen in Ungarn und strenge Normen."
+        },
+        {
+          "question": "Für welche Alterskategorien gibt es Spielgeräte?",
+          "answer": "Unser Angebot umfasst Produkte für Babys (1-3 Jahre), Kleinkinder (3-6 Jahre) und ältere Kinder (6-12 Jahre)."
+        },
+        {
+          "question": "Ist eine Genehmigung für das Aufstellen eines Gartenspielplatzes erforderlich?",
+          "answer": "Im Allgemeinen nicht, aber bei großen, komplexen Strukturen kann es sich lohnen, sich mit dem örtlichen Bauamt abzustimmen."
+        },
+        {
+          "question": "Wird ein Metallspielplatz im Sommer zu heiß?",
+          "answer": "Die verwendeten Außenbeschichtungen reduzieren die Wärmeaufnahme, aber bei Sommerhitze ist es ratsam, alle Spielplatzelemente (Holz und Metall) im Schatten oder am Vormittag zu nutzen."
+        },
+        {
+          "question": "Lohnt es sich, Holzspielplatzelemente für den Winter abzudecken?",
+          "answer": "Um die Haltbarkeit zu erhöhen, wird empfohlen, abnehmbare Elemente (z. B. Schaukelsitze) für den Winter wegzuräumen."
+        },
+        {
+          "question": "Was passiert, wenn ein Spielplatzelement von Terra Forte Bau beschädigt wird?",
+          "answer": "Als Hersteller können wir Ersatzteile liefern, was bei Nicht-Herstellerprodukten oft ein unlösbares Problem darstellt."
+        },
+        {
+          "question": "Was ist langlebiger: eine Kunststoffrutsche oder eine Metallrutsche auf dem Gartenspielplatz?",
+          "answer": "Eine professionelle Edelstahlrutsche ist viel langlebiger und widerstandsfähiger gegen UV-Strahlung und Risse als die meisten Kunststoffe."
+        },
+        {
+          "question": "Wie wichtig ist der Austausch von Spielsand für Privatpersonen?",
+          "answer": "Aus Hygienegründen wird empfohlen, den verlorenen Sand jährlich durch frischen, gesiebten Sand zu ersetzen."
+        },
+        {
+          "question": "Was tun bei einem Unfall auf einem privaten Spielplatz?",
+          "answer": "Durch Führen eines Wartungsprotokolls und Einhaltung der Sicherheitsvorschriften von Terra Forte Bau kann das Risiko verringert werden. Bei schweren Unfällen sollte ein Fachmann zur Überprüfung des Geräts gerufen werden."
         }
       ]
     },

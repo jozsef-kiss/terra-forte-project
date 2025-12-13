@@ -38,7 +38,15 @@ export default async function FaqPage({
   const dict = await getDictionary(lang);
   const t = dict.FAQPage;
 
-  const categories = ["general", "safety", "installation", "maintenance"];
+  const categories = [
+    "general",
+    "safety",
+    "installation",
+    "maintenance",
+    "tenders",
+    "products",
+    "private",
+  ];
 
   return (
     <div className="bg-stone-50 min-h-screen">
