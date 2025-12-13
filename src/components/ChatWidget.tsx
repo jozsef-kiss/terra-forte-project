@@ -136,7 +136,7 @@ export default function ChatWidget() {
               <div>
                 <h3 className="text-white font-semibold text-sm">Hanna</h3>
                 <p className="text-indigo-200 text-xs">
-                  Terra Forte Asszisztens
+                  Terra Forte Bau Asszisztens
                 </p>
               </div>
             </div>
@@ -230,7 +230,7 @@ export default function ChatWidget() {
               <SparklesIcon className="h-3 w-3 absolute -top-1 -right-1 text-yellow-300 animate-pulse" />
             </div>
             <span className="font-semibold text-base whitespace-nowrap">
-              Hanna AI
+              Hanna AI Asszisztens
             </span>
           </>
         )}
