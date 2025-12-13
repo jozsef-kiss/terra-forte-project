@@ -298,41 +298,43 @@
       ]
     },
     "Details": {
-      "Design": {
-        "title": "Tervezés és Szaktanácsadás",
-        "description": "Minden jó játszótér egy jó tervvel kezdődik. Szakértőink nem csak az esztétikumra figyelnek, hanem a szigorú MSZ EN 1176 szabványok betartására is. Segítünk az optimális térelrendezésben, hogy a játék élménye biztonságos legyen.",
+      "title": "A Terra Forte Bau Komplett Játszótér Megoldásai",
+      "subtitle": "A Terra Forte Bau nem csak egy játszótér gyártó. Mi a teljes folyamat szakmai partnerei vagyunk: a tervezéstől a kivitelezésen át a pályázati tanácsadásig. Cégünk vezetősége 1996 óta garantálja a magas szakmai minőséget, így biztos lehet benne, hogy projektje a legjobb kezekben van.",
+      "Production": {
+        "title": "Játszótér Tervezés és Gyártás",
+        "description": "A legmagasabb EU-szabványoknak megfelelő, egyedi fa és fém játszótér elemek tervezése. Gyártói kapacitásunknak köszönhetően garantáljuk az alapanyagok minőségét (a fa természetességét és a fém tartósságát) és a szabványossági megfelelést. Szívesen segítünk a környezetbe simuló, esztétikus fa játszótér tervek, vagy a modern, minimális karbantartást igénylő fém játszótér koncepciójának kidolgozásában.",
         "features": [
-          "Egyedi látványtervek",
-          "Biztonsági zónák számítása",
-          "Költséghatékony megoldások"
+          "MSZ EN 1176 szabványos tervezés",
+          "Prémium fa és tartós fém kivitelezés",
+          "Egyedi koncepciók gyártói garanciával"
         ]
       },
-      "Manufacturing": {
-        "title": "Prémium Eszközgyártás",
-        "description": "Nem kereskedők, hanem gyártók vagyunk. Ez lehetővé teszi, hogy egyedi igényeket is kiszolgáljunk. CNC-vezérelt technológiánk és a válogatott, UV-stabil anyagok garantálják a tartósságot és a vandálbiztos kivitelt.",
+      "Consulting": {
+        "title": "Pályázati Tanácsadás és Dokumentáció",
+        "description": "Közületi partnereink munkájának nagymértékű megkönnyítése! Szakértőink segítenek a játszótér pályázatok komplex szakmai anyagának összeállításában, a költségvetés tervezésben és a szükséges műszaki dokumentációk elkészítésében. Maximalizálja esélyeit a sikeres forrásbevonásra a vezetői szintű, 1996 óta gyűjtött tapasztalatunkkal.",
         "features": [
-          "Saját CNC üzem",
-          "UV-álló HDPE műanyagok",
-          "Tartós fa- és fémszerkezetek"
+          "Komplex pályázati dokumentáció összeállítása",
+          "Műszaki tervek és költségvetés készítése",
+          "Szakértői támogatás a sikeres forrásbevonásért"
         ]
       },
       "Installation": {
-        "title": "Helyszíni Kivitelezés",
-        "description": "Saját telepítő csapatunk végzi a betonozást, az eszközök rögzítését és az ütéscsillapító felületek (gumilap, gyöngykavics, fenyőkéreg) kialakítását. A munkát tisztán, rendezetten adjuk át.",
+        "title": "Szállítás és Szakszerű Telepítés",
+        "description": "A legyártott elemek gyors, precíz és szabványos telepítése. Csak akkreditált, tapasztalt csapatokkal dolgozunk, garantálva az azonnali szabványossági megfelelést.",
         "features": [
-          "Betonozási munkák",
-          "Ütéscsillapító burkolatok",
-          "Hivatalos átadás"
+          "Akkreditált szakemberek általi telepítés",
+          "Gyors és szabványos kivitelezés",
+          "Garantált azonnali minősítés"
         ]
       },
-      "Maintenance": {
-        "title": "Karbantartás és Felülvizsgálat",
-        "description": "A biztonság fenntartása folyamatos feladat. Vállaljuk játszóterek eseti javítását, éves kötelező szabványossági felülvizsgálatát és karbantartását, hogy az eszközök hosszú évekig szolgálják a közösséget.",
+      "Audit": {
+        "title": "Utólagos Szabványossági Audit és Tanácsadás",
+        "description": "Cégünk segít a már meglévő vagy frissen átadott játszóterek szabványossági (MSZ EN 1176) ellenőrzésében. Pontos tanácsadás a hiányosságok pótlására és a biztonságos üzemeltetésre.",
         "badge": "Kiemelt szolgáltatás",
         "features": [
-          "Éves szabványossági vizsgálat",
-          "Eseti javítások",
-          "Felújítás és festés"
+          "MSZ EN 1176 szabványossági audit",
+          "Hiányosságok feltárása és javítása",
+          "Biztonságos üzemeltetési tanácsadás"
         ]
       }
     },

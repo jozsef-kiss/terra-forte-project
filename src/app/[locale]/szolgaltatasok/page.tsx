@@ -117,7 +117,16 @@ export default async function ServicesPage({
         {/* --- 3. RÉSZLETES SZOLGÁLTATÁSOK --- */}
         <div className="bg-white py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-24">
-            {/* Design */}
+            {/* Title */}
+            <div className="mx-auto  text-center mb-30">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                {t.Details.title}
+              </h2>
+              <p className="mt-4 text-lg leading-8 text-gray-600">
+                {t.Details.subtitle}
+              </p>
+            </div>
+            {/* Production */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-stone-200">
@@ -131,34 +140,36 @@ export default async function ServicesPage({
               </div>
               <div className="order-1 lg:order-2">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
-                  {t.Details.Design.title}
+                  {t.Details.Production.title}
                 </h2>
                 <p className="text-lg leading-8 text-gray-600">
-                  {t.Details.Design.description}
+                  {t.Details.Production.description}
                 </p>
                 {/* DINAMIKUS LISTA */}
                 <ul className="mt-8 space-y-3 text-gray-600">
-                  {t.Details.Design.features.map((item: string, i: number) => (
-                    <li key={i} className="flex gap-3">
-                      <CheckCircle className="text-indigo-600" /> {item}
-                    </li>
-                  ))}
+                  {t.Details.Production.features.map(
+                    (item: string, i: number) => (
+                      <li key={i} className="flex gap-3">
+                        <CheckCircle className="text-indigo-600" /> {item}
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             </div>
 
-            {/* Manufacturing */}
+            {/* Consulting */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="order-1">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
-                  {t.Details.Manufacturing.title}
+                  {t.Details.Consulting.title}
                 </h2>
                 <p className="text-lg leading-8 text-gray-600">
-                  {t.Details.Manufacturing.description}
+                  {t.Details.Consulting.description}
                 </p>
                 {/* DINAMIKUS LISTA */}
                 <ul className="mt-8 space-y-3 text-gray-600">
-                  {t.Details.Manufacturing.features.map(
+                  {t.Details.Consulting.features.map(
                     (item: string, i: number) => (
                       <li key={i} className="flex gap-3">
                         <CheckCircle className="text-indigo-600" /> {item}
@@ -211,28 +222,26 @@ export default async function ServicesPage({
               </div>
             </div>
 
-            {/* Maintenance */}
+            {/* Audit */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="order-1">
                 <div className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-3 py-1 text-sm font-semibold text-indigo-600 mb-6">
                   <ShieldCheckIcon className="h-4 w-4" />{" "}
-                  {t.Details.Maintenance.badge}
+                  {t.Details.Audit.badge}
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
-                  {t.Details.Maintenance.title}
+                  {t.Details.Audit.title}
                 </h2>
                 <p className="text-lg leading-8 text-gray-600">
-                  {t.Details.Maintenance.description}
+                  {t.Details.Audit.description}
                 </p>
                 {/* DINAMIKUS LISTA */}
                 <ul className="mt-8 space-y-3 text-gray-600">
-                  {t.Details.Maintenance.features.map(
-                    (item: string, i: number) => (
-                      <li key={i} className="flex gap-3">
-                        <CheckCircle className="text-indigo-600" /> {item}
-                      </li>
-                    )
-                  )}
+                  {t.Details.Audit.features.map((item: string, i: number) => (
+                    <li key={i} className="flex gap-3">
+                      <CheckCircle className="text-indigo-600" /> {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="order-2">

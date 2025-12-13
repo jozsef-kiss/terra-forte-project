@@ -294,41 +294,43 @@
       ]
     },
     "Details": {
-      "Design": {
-        "title": "Design and Consultancy",
-        "description": "Every good playground starts with a good plan. Our experts focus not only on aesthetics but also on strict compliance with MSZ EN 1176 standards. We help with optimal spatial layout for a safe play experience.",
+      "title": "Terra Forte Bau Complete Playground Solutions",
+      "subtitle": "Terra Forte Bau is more than just a playground manufacturer. We are your professional partners throughout the entire process: from design and construction to grant consultancy. Our management has been guaranteeing high professional quality since 1996, ensuring your project is in the best hands.",
+      "Production": {
+        "title": "Playground Design & Manufacturing",
+        "description": "Design of unique wooden and metal playground elements meeting the highest EU standards. Thanks to our manufacturing capacity, we guarantee the quality of raw materials (natural wood and durable metal) and compliance with standards. We assist in developing aesthetic wooden playground plans that blend into the environment or modern, low-maintenance metal playground concepts.",
         "features": [
-          "Custom visual designs",
-          "Safety zone calculations",
-          "Cost-effective solutions"
+          "MSZ EN 1176 standard compliant design",
+          "Premium wood and durable metal construction",
+          "Custom concepts with manufacturer warranty"
         ]
       },
-      "Manufacturing": {
-        "title": "Premium Manufacturing",
-        "description": "We are manufacturers, not just traders. This allows us to serve custom needs. Our CNC-controlled technology and selected UV-stable materials ensure durability and vandal-resistant construction.",
+      "Consulting": {
+        "title": "Tender Consulting & Documentation",
+        "description": "Greatly facilitating the work of our public sector partners! Our experts help compile complex professional material for playground tenders, budget planning, and preparing necessary technical documentation. Maximize your chances of successful funding with our management-level experience gathered since 1996.",
         "features": [
-          "In-house CNC facility",
-          "UV-resistant HDPE plastics",
-          "Durable wood and metal structures"
+          "Compilation of complex tender documentation",
+          "Preparation of technical plans and budgets",
+          "Expert support for successful funding"
         ]
       },
       "Installation": {
-        "title": "On-site Installation",
-        "description": "Our own installation team handles concreting, equipment fixation, and impact-absorbing surfacing (rubber tiles, pea gravel, bark mulch). We hand over the site clean and tidy.",
+        "title": "Delivery & Professional Installation",
+        "description": "Fast, precise, and standard-compliant installation of manufactured elements. We work only with accredited, experienced teams, guaranteeing immediate compliance with safety standards.",
         "features": [
-          "Concreting works",
-          "Impact-absorbing surfaces",
-          "Official handover"
+          "Installation by accredited professionals",
+          "Fast and standard-compliant execution",
+          "Guaranteed immediate certification"
         ]
       },
-      "Maintenance": {
-        "title": "Maintenance and Inspection",
-        "description": "Maintaining safety is an ongoing task. We undertake ad-hoc repairs, mandatory annual safety inspections, and maintenance of playgrounds to ensure they serve the community for years.",
+      "Audit": {
+        "title": "Post-Installation Safety Audit & Consulting",
+        "description": "Our company assists in the safety inspection (MSZ EN 1176) of existing or newly handed-over playgrounds. Precise advice on correcting deficiencies and ensuring safe operation.",
         "badge": "Featured Service",
         "features": [
-          "Annual safety inspection",
-          "Ad-hoc repairs",
-          "Renovation and painting"
+          "MSZ EN 1176 safety audit",
+          "Identification and correction of deficiencies",
+          "Safe operation consulting"
         ]
       }
     },

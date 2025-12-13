@@ -294,41 +294,43 @@
       ]
     },
     "Details": {
-      "Design": {
-        "title": "Planung und Beratung",
-        "description": "Jeder gute Spielplatz beginnt mit einem guten Plan. Unsere Experten achten nicht nur auf Ästhetik, sondern auch auf die strikte Einhaltung der Norm MSZ EN 1176.",
+      "title": "Terra Forte Bau Komplettlösungen für Spielplätze",
+      "subtitle": "Terra Forte Bau ist mehr als nur ein Spielplatzhersteller. Wir sind Ihr professioneller Partner für den gesamten Prozess: von der Planung über die Ausführung bis hin zur Fördermittelberatung. Unsere Geschäftsführung garantiert seit 1996 hohe fachliche Qualität – Ihr Projekt ist bei uns in den besten Händen.",
+      "Production": {
+        "title": "Spielplatzplanung & Fertigung",
+        "description": "Entwurf einzigartiger Spielplatzgeräte aus Holz und Metall, die den höchsten EU-Normen entsprechen. Dank unserer Fertigungskapazitäten garantieren wir die Qualität der Rohstoffe (die Natürlichkeit von Holz und die Langlebigkeit von Metall) sowie die Normkonformität. Wir helfen gerne bei der Entwicklung ästhetischer Holzspielplatzpläne, die sich in die Umgebung einfügen, oder moderner, wartungsarmer Metallspielplatzkonzepte.",
         "features": [
-          "Individuelle visuelle Pläne",
-          "Berechnung der Sicherheitszonen",
-          "Kostengünstige Lösungen"
+          "MSZ EN 1176 konforme Planung",
+          "Premium Holz- und langlebige Metallkonstruktion",
+          "Individuelle Konzepte mit Herstellergarantie"
         ]
       },
-      "Manufacturing": {
-        "title": "Premium-Fertigung",
-        "description": "Wir sind Hersteller, keine Händler. Unsere CNC-gesteuerte Technologie und ausgewählte UV-stabile Materialien garantieren Langlebigkeit und vandalismussichere Ausführung.",
+      "Consulting": {
+        "title": "Ausschreibungsberatung & Dokumentation",
+        "description": "Große Erleichterung für unsere kommunalen Partner! Unsere Experten helfen bei der Zusammenstellung komplexer Fachunterlagen für Spielplatzausschreibungen, der Budgetplanung und der Erstellung der erforderlichen technischen Dokumentation. Maximieren Sie Ihre Chancen auf erfolgreiche Fördermittel mit unserer seit 1996 gesammelten Erfahrung auf Führungsebene.",
         "features": [
-          "Eigene CNC-Anlage",
-          "UV-beständige HDPE-Kunststoffe",
-          "Langlebige Holz- und Metallstrukturen"
+          "Erstellung komplexer Ausschreibungsunterlagen",
+          "Anfertigung technischer Pläne und Budgets",
+          "Expertenunterstützung für erfolgreiche Finanzierung"
         ]
       },
       "Installation": {
-        "title": "Installation vor Ort",
-        "description": "Unser eigenes Installationsteam kümmert sich um Betonieren, Gerätebefestigung und Fallschutzböden. Wir übergeben die Baustelle sauber und ordentlich.",
+        "title": "Lieferung & Fachgerechte Montage",
+        "description": "Schnelle, präzise und normgerechte Installation der gefertigten Elemente. Wir arbeiten nur mit akkreditierten, erfahrenen Teams und garantieren sofortige Normkonformität.",
         "features": [
-          "Betonierarbeiten",
-          "Fallschutzbeläge",
-          "Offizielle Übergabe"
+          "Montage durch akkreditierte Fachleute",
+          "Schnelle und normgerechte Ausführung",
+          "Garantierte sofortige Zertifizierung"
         ]
       },
-      "Maintenance": {
-        "title": "Wartung und Inspektion",
-        "description": "Sicherheit ist eine Daueraufgabe. Wir übernehmen Reparaturen, jährliche Sicherheitsinspektionen und die Wartung von Spielplätzen.",
+      "Audit": {
+        "title": "Sicherheitsaudit & Beratung",
+        "description": "Unser Unternehmen hilft bei der sicherheitstechnischen Überprüfung (MSZ EN 1176) bestehender oder neu übergebener Spielplätze. Präzise Beratung zur Mängelbeseitigung und zum sicheren Betrieb.",
         "badge": "Hervorgehobener Service",
         "features": [
-          "Jährliche Sicherheitsüberprüfung",
-          "Ad-hoc-Reparaturen",
-          "Renovierung und Anstrich"
+          "MSZ EN 1176 Sicherheitsaudit",
+          "Mängelerkennung und -behebung",
+          "Beratung für sicheren Betrieb"
         ]
       }
     },
