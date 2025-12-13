@@ -339,23 +339,23 @@
       }
     },
     "FAQ": {
-      "title": "Gyakran Ismételt Kérdések",
+      "title": "Gyakori Kérdések a Kivitelezésről",
       "items": [
         {
-          "question": "Mennyi garanciát vállalnak az eszközökre?",
-          "answer": "Minden általunk gyártott és telepített eszközre 5 év teljeskörű garanciát vállalunk, rendeltetésszerű használat esetén."
+          "question": "Mennyi időt vesz igénybe egy kulcsrakész játszótér tervezése és kivitelezése?",
+          "answer": "A saját gyártói kapacitásunknak köszönhetően a folyamat gyors és kiszámítható. Az ingyenes igényfelméréstől a látványtervezésen át a gyártásig és a műszaki átadásig általában 4-8 hetet vesz igénybe a projekt, a terület nagyságától és a választott eszközök (fa vagy fém) típusától függően."
         },
         {
-          "question": "Milyen engedélyekkel rendelkeznek az eszközök?",
-          "answer": "Termékeink rendelkeznek a TÜV által kiállított MSZ EN 1176 megfelelőségi tanúsítvánnyal, így közterületi használatra alkalmasak."
+          "question": "Tudnak segíteni a Magyar Falu Program vagy egyéb pályázatok dokumentációjában?",
+          "answer": "Igen, ez egyik kiemelt szolgáltatásunk. Szakértőink 1996 óta szerzett tapasztalattal állítják össze a nyertes pályázatokhoz szükséges komplex műszaki dokumentációt, részletes költségvetést és látványterveket, ezzel maximalizálva az önkormányzatok és intézmények forrásnyerési esélyeit."
         },
         {
-          "question": "Vállalják más gyártó eszközeinek karbantartását is?",
-          "answer": "Igen, szakértő csapatunk vállalja meglévő játszóterek felújítását és szabványosítását, gyártótól függetlenül."
+          "question": "Miért szükséges az MSZ EN 1176 szabványossági audit, és miben segítenek?",
+          "answer": "A szabványossági audit szigorú törvényi előírás minden közterületi játszótérnél a gyermekek biztonsága érdekében. Cégünk akkreditált partnerekkel nemcsak elvégzi az utólagos ellenőrzést, hanem konkrét javítási javaslatokat tesz, és igény esetén el is hárítja a feltárt hibákat, garantálva a biztonságos üzemeltetést."
         },
         {
-          "question": "Mennyi időt vesz igénybe egy játszótér telepítése?",
-          "answer": "A gyártás és telepítés a projekt méretétől függően általában 4-8 hetet vesz igénybe a megrendeléstől számítva."
+          "question": "Milyen garanciát vállalnak a saját gyártású fa és fém játszótéri eszközökre?",
+          "answer": "Mivel eszközeinket saját hazai üzemünkben, prémium alapanyagokból gyártjuk, teljes körű gyártói garanciát és hosszú távú alkatrészellátást vállalunk rájuk. Fém eszközeink gondozásmentesek és vandálbiztosak, míg fa játékaink speciális felületkezeléssel biztosítják az időjárásállóságot és a tartósságot."
         }
       ]
     },
