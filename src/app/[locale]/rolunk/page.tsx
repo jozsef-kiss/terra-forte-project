@@ -3,6 +3,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
+// Kis segédkomponens a pipákhoz
+function CheckCircle({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      className={`w-5 h-5 flex-none ${className}`}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+      />
+    </svg>
+  );
+}
+
 export default async function AboutPage({
   params,
 }: {
@@ -100,12 +120,32 @@ export default async function AboutPage({
                 {t.Mission.subtitle}
               </p>
               <div className="mt-10 text-base leading-7 text-gray-700 space-y-4">
-                <p>{t.Mission.description_p1}</p>
-                <p>
-                  {t.Mission.description_p2_pre}{" "}
-                  <strong>{t.Mission.description_p2_bold}</strong>
-                  {t.Mission.description_p2_post}
-                </p>
+                {/* DINAMIKUS LISTA */}
+                <ul className="mt-8 space-y-3 text-gray-600">
+                  {t.Mission.description.features.map(
+                    (item: string, i: number) => {
+                      // Itt vágjuk ketté a szöveget a kettőspont mentén
+                      const separatorIndex = item.indexOf(":");
+                      const title = item.substring(0, separatorIndex + 1); // Cím + kettőspont
+                      const description = item.substring(separatorIndex + 1); // A maradék szöveg
+
+                      return (
+                        <li key={i} className="flex gap-3">
+                          {/* A "flex-none" fontos, hogy a pipa ne nyomódjon össze hosszú szövegnél */}
+                          <CheckCircle className="text-indigo-600 flex-none mt-1" />
+                          <span>
+                            {/* A Cím rész félkövéren (font-bold) */}
+                            <strong className="font-bold text-gray-900">
+                              {title}
+                            </strong>
+                            {/* A Leírás rész normál módon */}
+                            {description}
+                          </span>
+                        </li>
+                      );
+                    }
+                  )}
+                </ul>
               </div>
             </div>
             <div className="w-full lg:max-w-xl lg:flex-auto">

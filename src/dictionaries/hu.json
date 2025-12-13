@@ -235,10 +235,16 @@
       ]
     },
     "Mission": {
-      "title_part1": "Nem csak építünk.",
-      "title_highlight": "Értéket teremtünk.",
-      "subtitle": "Saját gyártói kapacitásunkkal és telepítő csapatunkkal a folyamat minden lépését kézben tartjuk.",
-      "description_p1": "A Terra Forte Bau-nál hiszünk abban, hogy a játszótér több, mint egymás mellé helyezett eszközök halmaza. Ez a gyermekkor színtere, a mozgás örömének forrása és a közösség találkozási pontja.",
+      "title_part1": "Tervezés, Tanácsadás.",
+      "title_highlight": "Pályázat.",
+      "subtitle": "A Terra Forte Bau vezetőségének 1996 óta gyűjtött mélyreható szakmai tudása elsősorban a közületi projektek sikerét szolgálja. Mi nem csak egy játszótér gyártó vagyunk, hanem a beruházás szakmai tanácsadója is:",
+      "description": {
+        "features": [
+          "Pályázati Előny: Kiemelt szolgáltatásunk az önkormányzatok és közületek támogatása a pályázatok szakmai részének elkészítésében. Szakmai terveket, költségvetéseket írunk, ezzel nagymértékben megkönnyítjük az Ön adminisztratív munkáját.",
+          "Tervezési Szakértelem: Gyártóként segítünk a helyi adottságokhoz igazított, EU-szabványos fa és fém játszótér tervek elkészítésében.",
+          "Átfogó Minőség: A gyártói háttér biztosítja a minőséget, míg a szakmai tanácsadás a beruházás jogi és pénzügyi sikerét."
+        ]
+      },
       "description_p2_pre": "Mint",
       "description_p2_bold": "magyar gyártó",
       "description_p2_post": ", különös figyelmet fordítunk arra, hogy termékeink ne csak megfeleljenek az uniós szabványoknak, hanem esztétikailag is illeszkedjenek a környezetbe, legyen szó modern lakóparkról vagy erdei iskoláról."
