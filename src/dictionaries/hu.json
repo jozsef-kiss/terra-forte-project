@@ -615,8 +615,9 @@
     },
     "CTA": {
       "title": "Nem találta meg a választ?",
-      "subtitle": "Egyedi kérdése van, vagy szakmai tanácsra lenne szüksége? Szakértőink készen állnak!",
-      "btn": "Vegye fel velünk a kapcsolatot"
+      "subtitle": "Azonnali segítségért keresse a jobb alsó sarokban Hanna AI Asszisztenst, aki a nap 24 órájában válaszol kérdéseire!",
+      "subtitle2": "Ha összetettebb projektje van, vagy szakértői egyeztetésre van szüksége, csapatunk is örömmel áll rendelkezésére.",
+      "btn": "Személyes kapcsolatfelvétel"
     }
   },
   "LegalPages": {

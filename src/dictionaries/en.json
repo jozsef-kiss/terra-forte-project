@@ -623,8 +623,9 @@
     },
     "CTA": {
       "title": "Didn't find the answer?",
-      "subtitle": "Do you have a specific question or need professional advice? Our experts are ready to help!",
-      "btn": "Contact Us"
+      "subtitle": "For immediate assistance, look for Hanna AI Assistant in the bottom right corner, answering your questions 24/7!",
+      "subtitle2": "If you have a more complex project or require expert consultation, our team is also happy to be at your disposal.",
+      "btn": "Personal Contact"
     }
   },
   "LegalPages": {

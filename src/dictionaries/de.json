@@ -626,9 +626,10 @@
       ]
     },
     "CTA": {
-      "title": "Nicht fündig geworden?",
-      "subtitle": "Haben Sie eine spezielle Frage oder benötigen Sie fachkundige Beratung? Unsere Experten helfen Ihnen gerne!",
-      "btn": "Kontakt aufnehmen"
+      "title": "Haben Sie die Antwort nicht gefunden?",
+      "subtitle": "Für sofortige Hilfe nutzen Sie unseren Hanna AI-Assistenten unten rechts, der Ihre Fragen rund um die Uhr beantwortet!",
+      "subtitle2": "Wenn Sie ein komplexeres Projekt haben oder eine Expertenberatung benötigen, steht Ihnen unser Team ebenfalls gerne zur Verfügung.",
+      "btn": "Persönliche Kontaktaufnahme"
     }
   },
   "LegalPages": {
