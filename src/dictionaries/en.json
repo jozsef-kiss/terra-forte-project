@@ -216,18 +216,30 @@
   },
   "AboutPage": {
     "Hero": {
-      "title": "Building Community Spaces for Over 10 Years.",
-      "subtitle": "The story of Terra Forte Bau Kft. is about passion, safety, and local expertise. Our goal is to create playgrounds that bring joy to children for generations.",
-      "cta": "Get in Touch With Us"
+      "title": "Leadership Expertise Since 1996: Your Reliable Playground Manufacturing Partner!",
+      "subtitle": "Terra Forte Bau is the reliable manufacturer and partner whose management has been an active player in the playground market since 1996. This professional experience of more than a quarter of a century guarantees that your community spaces meet the highest quality and safety standards. We manufacture a wide range of wooden and metal playground equipment ourselves, ensuring full control over quality from design to final construction.",
+      "cta": "Contact Us"
     },
     "Stats": {
       "title": "Reliability in Numbers",
       "subtitle": "We are proud of our achievements and the trust of our partners.",
       "items": [
-        { "label": "Years of Experience", "value": "10+" },
-        { "label": "Successfully Delivered Playgrounds", "value": "50+" },
-        { "label": "Hungarian Ownership", "value": "100%" },
-        { "label": "Product Warranty", "value": "5 Years" }
+        {
+          "label": "Years of Professional Experience",
+          "value": "30+"
+        },
+        {
+          "label": "Successfully Delivered Playgrounds",
+          "value": "500+"
+        },
+        {
+          "label": "Hungarian Ownership",
+          "value": "100%"
+        },
+        {
+          "label": "Product Warranty",
+          "value": "5 Years"
+        }
       ]
     },
     "Mission": {

@@ -220,16 +220,16 @@
   },
   "AboutPage": {
     "Hero": {
-      "title": "Több mint 10 éve építünk közösségi tereket.",
-      "subtitle": "A Terra Forte Bau Kft. története a szenvedélyről, a biztonságról és a hazai szakértelemről szól. Célunk, hogy olyan játszótereket alkossunk, amelyek generációkon át szolgálják a gyermekek örömét.",
+      "title": "Vezetői szakértelem 1996 óta: az Ön megbízható játszótér gyártó partnere!",
+      "subtitle": "A Terra Forte Bau az a megbízható gyártó és partner, melynek vezetősége 1996 óta aktív szereplője a játszóterek piacának. Ez a több mint negyed évszázados szakmai tapasztalat garantálja, hogy az Ön közösségi terei a legmagasabb minőségi és biztonsági elvárásoknak megfeleljenek. Mi magunk gyártjuk is a fa játszótér és a fém játszótér elemek széles választékát, így teljes kontrollt biztosítunk a minőség felett a tervezéstől a végső kivitelezésig.",
       "cta": "Vegye fel velünk a kapcsolatot"
     },
     "Stats": {
       "title": "Számokban a megbízhatóság",
       "subtitle": "Büszkék vagyunk az elért eredményeinkre és a partnereink bizalmára.",
       "items": [
-        { "label": "Év szakmai tapasztalat", "value": "10+" },
-        { "label": "Sikeresen átadott játszótér", "value": "50+" },
+        { "label": "Év szakmai tapasztalat", "value": "30+" },
+        { "label": "Sikeresen átadott játszótér", "value": "500+" },
         { "label": "Magyar tulajdon", "value": "100%" },
         { "label": "Garancia a termékekre", "value": "5 Év" }
       ]

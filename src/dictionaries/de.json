@@ -216,18 +216,30 @@
   },
   "AboutPage": {
     "Hero": {
-      "title": "Wir bauen Gemeinschaftsräume seit über 10 Jahren.",
-      "subtitle": "Die Geschichte von Terra Forte Bau Kft. handelt von Leidenschaft, Sicherheit und lokaler Expertise. Unser Ziel ist es, Spielplätze zu schaffen, die Kindern über Generationen hinweg Freude bereiten.",
+      "title": "Führungskompetenz seit 1996: Ihr zuverlässiger Partner für Spielplatzherstellung!",
+      "subtitle": "Terra Forte Bau ist der zuverlässige Hersteller und Partner, dessen Geschäftsführung seit 1996 auf dem Spielplatzmarkt aktiv ist. Diese mehr als ein Vierteljahrhundert umfassende Berufserfahrung garantiert, dass Ihre öffentlichen Räume den höchsten Qualitäts- und Sicherheitsstandards entsprechen. Wir stellen selbst eine breite Palette von Spielplatzgeräten aus Holz und Metall her und gewährleisten so die volle Kontrolle über die Qualität von der Planung bis zur endgültigen Ausführung.",
       "cta": "Kontaktieren Sie uns"
     },
     "Stats": {
       "title": "Zuverlässigkeit in Zahlen",
-      "subtitle": "Wir sind stolz auf unsere Ergebnisse und das Vertrauen unserer Partner.",
+      "subtitle": "Wir sind stolz auf unsere Erfolge und das Vertrauen unserer Partner.",
       "items": [
-        { "label": "Jahre Berufserfahrung", "value": "10+" },
-        { "label": "Erfolgreich übergebene Spielplätze", "value": "50+" },
-        { "label": "Ungarisches Eigentum", "value": "100%" },
-        { "label": "Produktgarantie", "value": "5 Jahre" }
+        {
+          "label": "Jahre Berufserfahrung",
+          "value": "30+"
+        },
+        {
+          "label": "Erfolgreich übergebene Spielplätze",
+          "value": "500+"
+        },
+        {
+          "label": "Ungarisches Eigentum",
+          "value": "100%"
+        },
+        {
+          "label": "Produktgarantie",
+          "value": "5 Jahre"
+        }
       ]
     },
     "Mission": {
