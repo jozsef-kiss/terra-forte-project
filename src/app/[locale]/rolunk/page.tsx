@@ -196,7 +196,74 @@ export default async function AboutPage({
           </ul>
         </div>
 
-        {/* --- 5. CTA SZEKCIÓ --- */}
+        {/* --- 5. SZEKCIÓ: ANYAGTÍPUSOK (Fa vs Fém) --- */}
+        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              {t.MaterialTypes.title}
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-gray-600">
+              {t.MaterialTypes.subtitle}
+            </p>
+          </div>
+
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            {/* Fa Szekció */}
+            <div className="flex flex-col overflow-hidden rounded-2xl bg-stone-50 shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+              <div className="relative h-64 w-full sm:h-80">
+                <Image
+                  src="/Kategoria/fa-jatszoter.png"
+                  alt="Fa játszótér"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-8">
+                <h3 className="text-2xl font-bold tracking-tight text-gray-900">
+                  {t.MaterialTypes.wood.title}
+                </h3>
+                <p className="mt-4 text-base leading-7 text-gray-600 italic">
+                  {t.MaterialTypes.wood.features}
+                </p>
+                <p className="mt-4 flex-auto text-base leading-7 text-gray-600">
+                  {t.MaterialTypes.wood.description}
+                </p>
+              </div>
+            </div>
+
+            {/* Fém Szekció */}
+            <div className="flex flex-col overflow-hidden rounded-2xl bg-stone-50 shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+              <div className="relative h-64 w-full sm:h-80">
+                <Image
+                  src="/Kategoria/fem-jatszoter.png"
+                  alt="Fém játszótér"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-8">
+                <h3 className="text-2xl font-bold tracking-tight text-gray-900">
+                  {t.MaterialTypes.metal.title}
+                </h3>
+                <p className="mt-4 text-base leading-7 text-gray-600 italic">
+                  {t.MaterialTypes.metal.features}
+                </p>
+                <p className="mt-4 flex-auto text-base leading-7 text-gray-600">
+                  {t.MaterialTypes.metal.description}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Összefoglaló doboz */}
+          <div className="mt-16 mb-16 rounded-2xl bg-indigo-50 p-8 sm:p-10 text-center border border-indigo-100">
+            <p className="text-lg font-semibold leading-8 text-indigo-900">
+              {t.MaterialTypes.conclusion}
+            </p>
+          </div>
+        </div>
+
+        {/* --- 6. CTA SZEKCIÓ --- */}
         <div className="relative isolate px-6 py-24 sm:py-32 lg:px-8 bg-stone-50 border-t border-stone-200">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

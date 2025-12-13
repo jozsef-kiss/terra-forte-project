@@ -243,19 +243,16 @@
       ]
     },
     "Mission": {
-      "title_part1": "Tervezés, Tanácsadás.",
-      "title_highlight": "Pályázat.",
-      "subtitle": "A Terra Forte Bau vezetőségének 1996 óta gyűjtött mélyreható szakmai tudása elsősorban a közületi projektek sikerét szolgálja. Mi nem csak egy játszótér gyártó vagyunk, hanem a beruházás szakmai tanácsadója is:",
+      "title_part1": "Design, Consultancy.",
+      "title_highlight": "Grants.",
+      "subtitle": "The in-depth professional knowledge of Terra Forte Bau's management, accumulated since 1996, primarily serves the success of public projects. We are not just a playground manufacturer, but also the professional consultant for your investment:",
       "description": {
         "features": [
-          "Pályázati Előny: Kiemelt szolgáltatásunk az önkormányzatok és közületek támogatása a pályázatok szakmai részének elkészítésében. Szakmai terveket, költségvetéseket írunk, ezzel nagymértékben megkönnyítjük az Ön adminisztratív munkáját.",
-          "Tervezési Szakértelem: Gyártóként segítünk a helyi adottságokhoz igazított, EU-szabványos fa és fém játszótér tervek elkészítésében.",
-          "Átfogó Minőség: A gyártói háttér biztosítja a minőséget, míg a szakmai tanácsadás a beruházás jogi és pénzügyi sikerét."
+          "Grant Advantage: Our priority service is supporting municipalities and public institutions in preparing the technical part of grant applications. We write professional plans and budgets, greatly easing your administrative workload.",
+          "Design Expertise: As a manufacturer, we assist in preparing EU-standard wooden and metal playground plans tailored to local conditions.",
+          "Comprehensive Quality: Our manufacturing background ensures quality, while professional consultancy ensures the legal and financial success of the investment."
         ]
-      },
-      "description_p2_pre": "Mint",
-      "description_p2_bold": "magyar gyártó",
-      "description_p2_post": ", különös figyelmet fordítunk arra, hogy termékeink ne csak megfeleljenek az uniós szabványoknak, hanem esztétikailag is illeszkedjenek a környezetbe, legyen szó modern lakóparkról vagy erdei iskoláról."
+      }
     },
     "Values": {
       "title": "Our Core Values",
@@ -274,6 +271,21 @@
           "description": "Our goal is not just to install equipment, but to create spaces where families and communities can meet."
         }
       ]
+    },
+    "MaterialTypes": {
+      "title": "Wood and Metal Playgrounds",
+      "subtitle": "Terra Forte Bau's strength lies in its dual production line, satisfying both traditional and modern needs.",
+      "wood": {
+        "title": "Wooden Playground Range",
+        "features": "Classic, Aesthetic: Natural-looking, safe products fitting for community spaces.",
+        "description": "Our wooden playground range is ideal for natural environments."
+      },
+      "metal": {
+        "title": "Metal Playground Range",
+        "features": "Modern, Robust: Long-lasting, weather-resistant elements with minimal maintenance.",
+        "description": "Our metal playground range represents innovation and durability."
+      },
+      "conclusion": "We manufacture both types, guaranteeing the best price-to-value ratio and flexible solutions, whether for custom wooden playground elements or robust metal playground equipment."
     },
     "CTA": {
       "title_part1": "Ready to Plan?",

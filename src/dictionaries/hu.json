@@ -244,10 +244,7 @@
           "Tervezési Szakértelem: Gyártóként segítünk a helyi adottságokhoz igazított, EU-szabványos fa és fém játszótér tervek elkészítésében.",
           "Átfogó Minőség: A gyártói háttér biztosítja a minőséget, míg a szakmai tanácsadás a beruházás jogi és pénzügyi sikerét."
         ]
-      },
-      "description_p2_pre": "Mint",
-      "description_p2_bold": "magyar gyártó",
-      "description_p2_post": ", különös figyelmet fordítunk arra, hogy termékeink ne csak megfeleljenek az uniós szabványoknak, hanem esztétikailag is illeszkedjenek a környezetbe, legyen szó modern lakóparkról vagy erdei iskoláról."
+      }
     },
     "Values": {
       "title": "Alapelveink",
@@ -266,6 +263,21 @@
           "description": "Célunk nem csak eszközök telepítése, hanem olyan terek létrehozása, ahol a családok és közösségek találkozhatnak."
         }
       ]
+    },
+    "MaterialTypes": {
+      "title": "Fa és Fém Játszóterek",
+      "subtitle": "A Terra Forte Bau ereje a kettős gyártási vonalban rejlik, amellyel a hagyományos és a modern igényeket is kielégítjük.",
+      "wood": {
+        "title": "Fa Játszótér Kínálat",
+        "features": "Klasszikus, Esztétikus: Természetes megjelenésű, biztonságos, közösségi terekbe illő termékek.",
+        "description": "Fa játszótér kínálatunk ideális a természetes környezetbe."
+      },
+      "metal": {
+        "title": "Fém Játszótér Kínálat",
+        "features": "Modern, Robusztus: Hosszú élettartamú, időjárásálló elemek, minimális karbantartással.",
+        "description": "Fém játszótér kínálatunk az innovációt és a tartósságot képviseli."
+      },
+      "conclusion": "Mi gyártjuk mindkét típust, ami garantálja a legjobb ár-érték arányt és a rugalmas megoldásokat, legyen szó egyedi fa játszótér elemekről vagy robusztus fém játszótéri eszközökről."
     },
     "CTA": {
       "title_part1": "Készen áll a tervezésre?",

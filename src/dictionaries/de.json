@@ -243,19 +243,16 @@
       ]
     },
     "Mission": {
-      "title_part1": "Tervezés, Tanácsadás.",
-      "title_highlight": "Pályázat.",
-      "subtitle": "A Terra Forte Bau vezetőségének 1996 óta gyűjtött mélyreható szakmai tudása elsősorban a közületi projektek sikerét szolgálja. Mi nem csak egy játszótér gyártó vagyunk, hanem a beruházás szakmai tanácsadója is:",
+      "title_part1": "Planung, Beratung.",
+      "title_highlight": "Förderung.",
+      "subtitle": "Das seit 1996 gesammelte fundierte Fachwissen der Geschäftsführung von Terra Forte Bau dient primär dem Erfolg öffentlicher Projekte. Wir sind nicht nur ein Spielplatzhersteller, sondern auch der fachliche Berater für Ihre Investition:",
       "description": {
         "features": [
-          "Pályázati Előny: Kiemelt szolgáltatásunk az önkormányzatok és közületek támogatása a pályázatok szakmai részének elkészítésében. Szakmai terveket, költségvetéseket írunk, ezzel nagymértékben megkönnyítjük az Ön adminisztratív munkáját.",
-          "Tervezési Szakértelem: Gyártóként segítünk a helyi adottságokhoz igazított, EU-szabványos fa és fém játszótér tervek elkészítésében.",
-          "Átfogó Minőség: A gyártói háttér biztosítja a minőséget, míg a szakmai tanácsadás a beruházás jogi és pénzügyi sikerét."
+          "Fördermittel-Vorteil: Unsere Hauptdienstleistung ist die Unterstützung von Kommunen und öffentlichen Einrichtungen bei der fachlichen Ausarbeitung von Förderanträgen. Wir erstellen professionelle Pläne und Budgets und entlasten Sie so erheblich bei der Verwaltungsarbeit.",
+          "Planungskompetenz: Als Hersteller helfen wir bei der Erstellung von EU-normgerechten Plänen für Holz- und Metallspielplätze, angepasst an die örtlichen Gegebenheiten.",
+          "Umfassende Qualität: Der Herstellerhintergrund sichert die Qualität, während die fachliche Beratung den rechtlichen und finanziellen Erfolg der Investition gewährleistet."
         ]
-      },
-      "description_p2_pre": "Mint",
-      "description_p2_bold": "magyar gyártó",
-      "description_p2_post": ", különös figyelmet fordítunk arra, hogy termékeink ne csak megfeleljenek az uniós szabványoknak, hanem esztétikailag is illeszkedjenek a környezetbe, legyen szó modern lakóparkról vagy erdei iskoláról."
+      }
     },
     "Values": {
       "title": "Unsere Grundwerte",
@@ -274,6 +271,21 @@
           "description": "Unser Ziel ist nicht nur die Installation von Geräten, sondern die Schaffung von Räumen, in denen sich Familien und Gemeinschaften treffen können."
         }
       ]
+    },
+    "MaterialTypes": {
+      "title": "Holz- und Metallspielplätze",
+      "subtitle": "Die Stärke von Terra Forte Bau liegt in der doppelten Produktionslinie, mit der wir sowohl traditionelle als auch moderne Anforderungen erfüllen.",
+      "wood": {
+        "title": "Angebot an Holzspielplätzen",
+        "features": "Klassisch, Ästhetisch: Produkte mit natürlicher Optik, sicher und passend für Gemeinschaftsräume.",
+        "description": "Unser Angebot an Holzspielplätzen ist ideal für natürliche Umgebungen."
+      },
+      "metal": {
+        "title": "Angebot an Metallspielplätzen",
+        "features": "Modern, Robust: Langlebige, wetterfeste Elemente mit minimalem Wartungsaufwand.",
+        "description": "Unser Angebot an Metallspielplätzen steht für Innovation und Langlebigkeit."
+      },
+      "conclusion": "Wir stellen beide Typen her, was das beste Preis-Leistungs-Verhältnis und flexible Lösungen garantiert, sei es für individuelle Holzspielplatz-Elemente oder robuste Metallspielgeräte."
     },
     "CTA": {
       "title_part1": "Bereit für die Planung?",
