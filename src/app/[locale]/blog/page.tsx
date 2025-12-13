@@ -6,7 +6,7 @@ import { posts } from "@/db/schema";
 import { desc, count } from "drizzle-orm";
 
 export const revalidate = 60;
-const PAGE_SIZE = 6;
+const PAGE_SIZE = 3;
 
 export default async function BlogPage({
   params,
