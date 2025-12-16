@@ -1,6 +1,6 @@
 import { getDictionary, Locale } from "@/app/[locale]/dictionaries";
 import Link from "next/link";
-import { Button } from "@/components/ui/button"; // Catalyst Button, ha van, vagy sima HTML
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default async function FeaturedReferences({ lang }: { lang: Locale }) {
@@ -32,41 +32,58 @@ export default async function FeaturedReferences({ lang }: { lang: Locale }) {
 
           {/* Képes kollázs (Referencia fotók helye) */}
           <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
+            {/* 1. KÉP (Nagy, bal oldalon) */}
             <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
               <Image
-                alt="Telepített játszótér referenciakép 1"
-                src="/Referencia/ref-1.jpg"
+                // Javasolt név: varosi-kalandpark-fem-jatszoter.jpg
+                src="/images/FeaturedReferences/ovoda-udvar-fa-harom-tornyu-var-maszoka-csuszda.jpg"
+                alt="Nagy alapterületű városi játszótér és kalandpark fém eszközökkel"
                 width={1152}
                 height={842}
-                className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
+                priority // Ez a legnagyobb kép, érdemes előre betölteni
+                sizes="(max-width: 768px) 100vw, 37rem"
+                className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover shadow-lg"
               />
             </div>
+
             <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
+              {/* 2. KÉP (Kicsi, középen fent) */}
               <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                 <Image
-                  alt="Telepített játszótér referenciakép 2"
-                  src="/Referencia/ref-2.jpeg"
+                  // Javasolt név: ovoda-udvar-fa-maszoka-es-hinta.jpg
+                  src="/images/FeaturedReferences/varosi-kalandpark-fem-jatszoter.jpg"
+                  alt="Óvodai udvarra telepített biztonságos fa mászóka és hinta"
                   width={768}
                   height={604}
-                  className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                  sizes="(max-width: 768px) 50vw, 24rem"
+                  className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover shadow-lg"
                 />
               </div>
+
+              {/* 3. KÉP (Nagy, jobb oldalon) */}
               <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                 <Image
-                  alt="Telepített játszótér referenciakép 3"
-                  src="/Referencia/ref-3.jpg"
+                  // Javasolt név: erdei-tornapalya-felnott-fitnesz-park.jpg
+                  src="/images/FeaturedReferences/tornapalya-felnott-fitnesz-park.jpg"
+                  alt="Erdei környezetbe illeszkedő felnőtt fitnesz park és tornapálya"
                   width={1152}
                   height={842}
-                  className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                  sizes="(max-width: 768px) 100vw, 37rem"
+                  className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover shadow-lg"
                 />
               </div>
+
+              {/* 4. KÉP (Kicsi, rejtett/alul) - EZ VOLT A CSERÉS? */}
               <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                 <Image
-                  alt="Telepített játszótér referenciakép 4"
-                  src="/Referencia/ref-4.webp"
+                  // Javasolt név: egyedi-tervezesu-tematikus-jatszoter-var.jpg
+                  // Ha ezt cserélted le, itt írd át a nevet és az ALT szöveget!
+                  src="/images/FeaturedReferences/mu-fuves-palya.jpg"
+                  alt="Egyedi tervezésű tematikus játszótér vár toronnyal"
                   width={768}
                   height={604}
-                  className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
+                  sizes="24rem"
+                  className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover shadow-lg"
                 />
               </div>
             </div>
