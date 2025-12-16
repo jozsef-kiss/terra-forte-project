@@ -1,7 +1,6 @@
 import { getDictionary, Locale } from "@/app/[locale]/dictionaries";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import {
   PencilSquareIcon,
   Cog6ToothIcon,
@@ -15,10 +14,10 @@ export default async function ServicesSection({ lang }: { lang: Locale }) {
 
   // Ikonok hozzárendelése a listaelemekhez sorrendben
   const icons = [
-    PencilSquareIcon,
-    Cog6ToothIcon,
-    WrenchScrewdriverIcon,
-    ShieldCheckIcon,
+    PencilSquareIcon, // Tervezés / Tanácsadás
+    Cog6ToothIcon, // Gyártás / Egyedi
+    WrenchScrewdriverIcon, // Telepítés
+    ShieldCheckIcon, // Karbantartás / Audit
   ];
 
   return (
@@ -54,7 +53,10 @@ export default async function ServicesSection({ lang }: { lang: Locale }) {
               </dl>
               {/* Gomb */}
               <div className="mt-10 flex items-center gap-x-6">
-                <Button href={`/${lang}/referenciak`} className="btn-contact">
+                <Button
+                  href={`/${lang}/szolgaltatasok`}
+                  className="btn-contact"
+                >
                   {t.cta_services} <span aria-hidden="true">→</span>
                 </Button>
               </div>
@@ -64,13 +66,12 @@ export default async function ServicesSection({ lang }: { lang: Locale }) {
           {/* Kép (Bal oldalon nagy képernyőn az 'lg:order-first' miatt) */}
           <div className="flex items-start justify-end lg:order-first">
             <Image
-              alt="Játszótér tervezés és kivitelezés folyamata"
-              // FONTOS: Ezt a képet majd fel kell töltened a public/Szolgaltatas mappába!
-              // Ha még nincs meg, ideiglenesen a hero képet használom, de cseréld le!
-              src="/Hero/hero.png"
+              alt="Fa játszótér tervezése és kivitelezése parkos környezetben"
+              src="/images/services/fa-jatszoter-tervezes-es-kivitelezes-szolgaltatas.jpg"
               width={2432}
               height={1442}
-              className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+              sizes="(max-width: 1024px) 100vw, 50vw" // Mobilon teljes, desktopon fél szélesség
+              className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] object-cover"
             />
           </div>
         </div>
