@@ -12,28 +12,33 @@ export default async function CategoryPreview({ lang }: { lang: Locale }) {
       name: t.items.wooden.title,
       cta: t.items.wooden.cta,
       href: `/${lang}/termekek/fa-jatszoterek`,
-      // Fa játszótér kép
-      imageSrc: "/Kategoria/fa-jatszoter.png",
-      imageAlt: "Fa mászóka és csúszda parkos környezetben",
-      className: "sm:row-span-2 sm:aspect-square", // A "nagy" kártya (bal oldal)
+      // 1. FA JÁTSZÓTÉR (A nagy kártya)
+      imageSrc:
+        "/images/categories/hagyomanyos-fa-jatszoter-maszoka-es-csuszda.jpg",
+      imageAlt:
+        "Hagyományos fa játszótér mászókával és csúszdával természetes környezetben",
+      className: "sm:row-span-2 sm:aspect-square",
     },
     {
       name: t.items.metal.title,
       cta: t.items.metal.cta,
       href: `/${lang}/termekek/fem-jatszoterek`,
-      // Fém játszótér kép
-      imageSrc: "/Kategoria/fem-jatszoter.png",
-      imageAlt: "Modern fém mászóka",
-      className: "sm:aspect-auto", // A "kicsi" kártya (jobb felső)
+      // 2. FÉM JÁTSZÓTÉR
+      imageSrc:
+        "/images/categories/modern-fem-jatszoter-vandalbiztos-kozteruleti-jatek.jpg",
+      imageAlt: "Modern, vandálbiztos fém játszótér eszközök közterületre",
+      className: "sm:aspect-auto",
     },
     {
       name: t.items.fitness.title,
       cta: t.items.fitness.cta,
       href: `/${lang}/termekek/kulteri-fitnesz`,
-      // Fitnesz kép
-      imageSrc: "/Kategoria/fitnesz.png",
-      imageAlt: "Kültéri fitnesz eszközök",
-      className: "sm:aspect-auto", // A "kicsi" kártya (jobb alsó)
+      // 3. FITNESZ
+      imageSrc:
+        "/images/categories/kulteri-fitnesz-park-felnott-jatszoter-eszkozok.jpg",
+      imageAlt:
+        "Kültéri fitnesz park és felnőtt játszótér eszközök sportoláshoz",
+      className: "sm:aspect-auto",
     },
   ];
 
@@ -65,24 +70,28 @@ export default async function CategoryPreview({ lang }: { lang: Locale }) {
                 src={category.imageSrc}
                 alt={category.imageAlt}
                 fill
-                className="object-cover object-center group-hover:opacity-75 transition-opacity"
+                // OPTIMALIZÁLÁS:
+                // Mobilon (max-width: 640px) 100vw (teljes szélesség)
+                // Azon felül 50vw (a képernyő fele, mivel 2 oszlopos a grid)
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-in-out" // Tettem rá egy kis zoom effektet hoverre :)
               />
               {/* Sötét átmenet a szöveg olvashatóságáért */}
               <div
                 aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"
+                className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-80"
               />
 
               {/* Szöveg és Link */}
               <div className="absolute inset-0 flex items-end p-6">
                 <div>
-                  <h3 className="font-semibold text-white">
+                  <h3 className="font-semibold text-white text-xl">
                     <Link href={category.href}>
                       <span className="absolute inset-0" />
                       {category.name}
                     </Link>
                   </h3>
-                  <p aria-hidden="true" className="mt-1 text-sm text-white">
+                  <p aria-hidden="true" className="mt-1 text-sm text-gray-300">
                     {category.cta}
                   </p>
                 </div>
