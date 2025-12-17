@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+// Link import törölve
 import { Badge } from "@/components/ui/badge";
 import { motion, AnimatePresence } from "motion/react";
 import { MapPinIcon } from "@heroicons/react/24/outline";
@@ -25,7 +25,6 @@ type Props = {
       wooden: string;
       metal: string;
       fitness: string;
-      custom: string;
     };
   };
   items: Reference[];
@@ -36,7 +35,7 @@ export default function ReferenceGrid({ t, items, lang }: Props) {
   const [filter, setFilter] = useState("all");
 
   // Kategóriák listája (egyezik az adatbázisban lévő kulcsokkal)
-  const categories = ["all", "wooden", "metal", "fitness", "custom"];
+  const categories = ["all", "wooden", "metal", "fitness"];
 
   // Szűrés logika
   const filteredItems = items.filter(
@@ -104,7 +103,7 @@ export default function ReferenceGrid({ t, items, lang }: Props) {
                     {/* JAVÍTÁS: color="white" eltávolítva, helyette 'zinc' vagy üres, a className úgyis felülírja */}
                     <Badge
                       color="zinc"
-                      className="shadow-sm bg-white/90 backdrop-blur-sm font-semibold text-indigo-900"
+                      className="shadow-sm bg-white/90 backdrop-blur-sm font-semibold !text-indigo-200"
                     >
                       {/* @ts-ignore - Kategória név a szótárból */}
                       {t.filters[item.category || "custom"]}
@@ -114,27 +113,10 @@ export default function ReferenceGrid({ t, items, lang }: Props) {
 
                 {/* Tartalom */}
                 <div className="p-6 flex flex-1 flex-col">
+                  {/* Link eltávolítva, csak a cím maradt */}
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
-                    <Link href={`/${lang}/referenciak/${item.slug}`}>
-                      <span className="absolute inset-0" />
-                      {item.title}
-                    </Link>
+                    {item.title}
                   </h3>
-
-                  <div className="flex items-center text-sm text-gray-500 mb-4">
-                    <MapPinIcon className="h-4 w-4 mr-1.5 text-gray-400" />
-                    {item.location}
-                  </div>
-
-                  <div className="mt-auto flex items-center text-sm font-medium text-indigo-600">
-                    Részletek megtekintése{" "}
-                    <span
-                      aria-hidden="true"
-                      className="ml-1 transition-transform group-hover:translate-x-1"
-                    >
-                      &rarr;
-                    </span>
-                  </div>
                 </div>
               </motion.div>
             ))}

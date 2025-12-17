@@ -212,8 +212,8 @@ export default async function AboutPage({
             <div className="flex flex-col overflow-hidden rounded-2xl bg-stone-50 shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
               <div className="relative h-64 w-full sm:h-80">
                 <Image
-                  src="/Kategoria/fa-jatszoter.png"
-                  alt="Fa játszótér"
+                  src="/images/categories/hagyomanyos-fa-jatszoter-maszoka-es-csuszda.jpg"
+                  alt="Hagyományos fa játszótér mászókával és csúszdával természetes környezetben"
                   fill
                   className="object-cover"
                 />
@@ -235,8 +235,8 @@ export default async function AboutPage({
             <div className="flex flex-col overflow-hidden rounded-2xl bg-stone-50 shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
               <div className="relative h-64 w-full sm:h-80">
                 <Image
-                  src="/Kategoria/fem-jatszoter.png"
-                  alt="Fém játszótér"
+                  src="/images/hero/modern-fem-jatszoter-komplexum-csuszdas-torony-hintaallvany.jpg"
+                  alt="Modern Terra Forte Bau fém játszótér komplexum csúszdás toronnyal"
                   fill
                   className="object-cover"
                 />

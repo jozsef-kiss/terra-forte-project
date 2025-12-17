@@ -64,15 +64,15 @@ export default async function ReferenceDetailPage({
       lang === "hu"
         ? "Vissza a referenciákhoz"
         : lang === "de"
-        ? "Zurück zu den Referenzen"
-        : "Back to References",
+          ? "Zurück zu den Referenzen"
+          : "Back to References",
     location: lang === "hu" ? "Helyszín" : lang === "de" ? "Ort" : "Location",
     client:
       lang === "hu"
         ? "Ügyfél típusa"
         : lang === "de"
-        ? "Kundentyp"
-        : "Client Type",
+          ? "Kundentyp"
+          : "Client Type",
     gallery: lang === "hu" ? "Galéria" : lang === "de" ? "Galerie" : "Gallery",
   };
 
