@@ -53,7 +53,7 @@ export const references = pgTable("references", {
   location: text("location"), // Pl. "Budapest, XVIII. kerület"
   clientType: text("client_type"), // Pl. "Önkormányzat", "Óvoda", "Lakópark"
   description: text("description"), // Leírás a projektről
-  category: text("category"), // Pl. "wooden", "metal" (szűréshez)
+  categories: json("categories").$type<string[]>(), // Kategóriák listája JSON tömbként (pl. ["wooden", "fitness"])
   // Képek listája JSON tömbként (pl. ["/ref-1.jpg", "/ref-2.jpg"])
   images: json("images").$type<string[]>(),
 });

@@ -836,32 +836,115 @@
       "all": "Összes",
       "wooden": "Fa játszóterek",
       "metal": "Fém játszóterek",
-      "fitness": "Fitnesz parkok"
+      "fitness": "Fitnesz parkok",
+      "grass": "Műfüves pályák",
+      "rubber": "Gumi ütéscsillapítás",
+      "sand": "Homok ütéscsillapítás"
     },
     "items": [
       {
         "id": 1,
-        "title": "Városi Kalandpark",
-        "location": "Budapest, XVIII. kerület",
-        "category": "metal",
-        "image": "/Referencia/ref-1.jpg",
-        "slug": "varosi-kalandpark-bp18"
+        "title": "Játszóvár Komplexum",
+        "categories": ["wooden", "rubber"],
+        "images": [
+          "/Referencia/Fa/Gumi/terra-forte-msz-en-1176-fa-jatszoter-maszovar-ontott-gumi-burkolattal.jpg"
+        ]
       },
       {
         "id": 2,
-        "title": "Napraforgó Óvoda",
-        "location": "Debrecen",
-        "category": "wooden",
-        "image": "/Referencia/ref-2.jpeg",
-        "slug": "napraforgo-ovoda-debrecen"
+        "title": "Színes Játszóvár",
+        "categories": ["wooden", "rubber"],
+        "images": [
+          "/Referencia/Fa/Gumi/terra-forte-szines-jatszovar-csuszdaval.JPG"
+        ]
       },
       {
         "id": 3,
-        "title": "Erdei Tornapálya",
-        "location": "Visegrád",
-        "category": "wooden",
-        "image": "/Referencia/ref-3.jpg",
-        "slug": "erdei-tornapalya-visegrad"
+        "title": "Kéttornyú Vár",
+        "categories": ["wooden", "sand"],
+        "images": [
+          "/Referencia/Fa/Homok/terra-forte-kettornyu-fa-jatszovar-alaguttal.jpg"
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Óriás Vár",
+        "categories": ["wooden", "sand"],
+        "images": [
+          "/Referencia/Fa/Homok/terra-forte-orias-fa-jatszovar-homokos-talajon.jpg"
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Mászófalas Vár",
+        "categories": ["wooden", "sand"],
+        "images": [
+          "/Referencia/Fa/Homok/terra-forte-fa-jatszovar-maszofallal-homokos-talaj.jpg"
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Fém Játszótér",
+        "categories": ["metal", "rubber"],
+        "images": [
+          "/Referencia/Fém/gumi/terra-forte-modern-fem-jatszoter-gumi-burkolattal.jpg"
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Fém Mászóháló",
+        "categories": ["metal", "rubber"],
+        "images": [
+          "/Referencia/Fém/gumi/terra-forte-fem-maszohalo-gumi-talaj.jpg"
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Fém Vár",
+        "categories": ["metal", "sand"],
+        "images": [
+          "/Referencia/Fém/Homok/terra-forte-fem-jatszovar-csuszdaval-homokos-talajon.jpg"
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Alagutas Fém Vár",
+        "categories": ["metal", "sand"],
+        "images": [
+          "/Referencia/Fém/Homok/terra-forte-fem-jatszovar-alaguttal-homokos-talaj.jpg"
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Kondipark",
+        "categories": ["fitness", "rubber"],
+        "images": [
+          "/Referencia/Fitnesz/terra-forte-kulteri-fitnesz-park-gumi-talaj.jpg"
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Komplex Kondipark",
+        "categories": ["fitness", "rubber"],
+        "images": [
+          "/Referencia/Fitnesz/terra-forte-komplex-fitnesz-park-gumi-talaj.jpg"
+        ]
+      },
+      {
+        "id": 12,
+        "title": "Műfüves Pálya",
+        "categories": ["grass"],
+        "images": [
+          "/Referencia/Műfüves pályák/terra-forte-mufuves-sportpalya.jpg"
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Nagy Műfüves Pálya",
+        "categories": ["grass"],
+        "images": [
+          "/Referencia/Műfüves pályák/terra-forte-nagy-mufuves-sportpalya.jpg"
+        ]
       }
     ]
   }

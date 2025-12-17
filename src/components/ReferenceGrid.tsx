@@ -12,7 +12,7 @@ type Reference = {
   slug: string;
   title: string;
   location: string | null;
-  category: string | null;
+  categories: string[] | null;
   images: string[] | null;
 };
 
@@ -20,11 +20,11 @@ type Props = {
   t: {
     title: string;
     subtitle: string;
+    // Itt jön a javítás:
+    // Ahelyett, hogy felsorolnánk mereven (ami hibát dob, ha valami nem stimmel),
+    // azt mondjuk, hogy a filters egy "tárgy", amiben szöveges kulcsok vannak.
     filters: {
-      all: string;
-      wooden: string;
-      metal: string;
-      fitness: string;
+      [key: string]: string;
     };
   };
   items: Reference[];
@@ -35,12 +35,25 @@ export default function ReferenceGrid({ t, items, lang }: Props) {
   const [filter, setFilter] = useState("all");
 
   // Kategóriák listája (egyezik az adatbázisban lévő kulcsokkal)
-  const categories = ["all", "wooden", "metal", "fitness"];
+  const categories = [
+    "all",
+    "wooden",
+    "metal",
+    "fitness",
+    "grass",
+    "rubber",
+    "sand",
+  ];
 
-  // Szűrés logika
-  const filteredItems = items.filter(
-    (item) => filter === "all" || item.category === filter
-  );
+  // JAVÍTOTT Szűrés logika:
+  const filteredItems = items.filter((item) => {
+    // Ha "all", akkor mindent mutatunk
+    if (filter === "all") return true;
+
+    // Egyébként megnézzük, hogy a referencia kategória-listájában szerepel-e a kiválasztott szűrő
+    // A ?. ellenőrzi, hogy létezik-e a tömb, az includes pedig keres benne
+    return item.categories?.includes(filter);
+  });
 
   return (
     <div className="bg-white py-24 sm:py-32">
@@ -90,9 +103,12 @@ export default function ReferenceGrid({ t, items, lang }: Props) {
                 {/* Kép */}
                 <div className="relative h-64 w-full overflow-hidden bg-gray-200">
                   <Image
-                    // Az első képet vesszük a tömbből, vagy placeholdert
+                    // JAVÍTOTT LOGIKA:
+                    // Ha tömb, vegye az elsőt. Ha string, használja közvetlenül. Ha nincs semmi, akkor placeholder.
                     src={
-                      item.images?.[0] ||
+                      (Array.isArray(item.images)
+                        ? item.images[0]
+                        : item.images) ||
                       "https://placehold.co/800x600?text=Nincs+kép"
                     }
                     alt={item.title}
@@ -106,7 +122,7 @@ export default function ReferenceGrid({ t, items, lang }: Props) {
                       className="shadow-sm bg-white/90 backdrop-blur-sm font-semibold !text-indigo-200"
                     >
                       {/* @ts-ignore - Kategória név a szótárból */}
-                      {t.filters[item.category || "custom"]}
+                      {t.filters[item.categories?.[0] || "wooden"]}
                     </Badge>
                   </div>
                 </div>

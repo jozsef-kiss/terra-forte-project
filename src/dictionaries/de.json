@@ -843,46 +843,120 @@
   },
   "ReferencesPage": {
     "title": "Unsere Referenzen",
-    "subtitle": "Wir sind stolz auf unsere Arbeit. Werfen Sie einen Blick auf unsere ausgewählten Projekte.",
+    "subtitle": "Wir sind stolz auf unsere Arbeit. Sehen Sie sich unsere ausgewählten Projekte an, die unsere Kompetenz beweisen.",
     "filters": {
       "all": "Alle",
       "wooden": "Holzspielplätze",
       "metal": "Metallspielplätze",
       "fitness": "Fitnessparks",
-      "custom": "Individuelle Bauten"
+      "grass": "Kunstrasenplätze",
+      "rubber": "Fallschutz aus Gummi",
+      "sand": "Fallschutz aus Sand"
     },
     "items": [
       {
         "id": 1,
-        "title": "Stadt-Abenteuerpark",
-        "location": "Budapest, 18. Bezirk",
-        "category": "metal",
-        "image": "/Referencia/ref-1.jpg",
-        "slug": "varosi-kalandpark-bp18"
+        "title": "Spielburg-Komplex",
+        "categories": ["wooden", "rubber"],
+        "images": [
+          "/Referencia/Fa/Gumi/terra-forte-msz-en-1176-fa-jatszoter-maszovar-ontott-gumi-burkolattal.jpg"
+        ]
       },
       {
         "id": 2,
-        "title": "Kindergarten Sonnenblume",
-        "location": "Debrecen",
-        "category": "wooden",
-        "image": "/Referencia/ref-2.jpeg",
-        "slug": "napraforgo-ovoda-debrecen"
+        "title": "Bunte Spielburg",
+        "categories": ["wooden", "rubber"],
+        "images": [
+          "/Referencia/Fa/Gumi/terra-forte-szines-jatszovar-csuszdaval.JPG"
+        ]
       },
       {
         "id": 3,
-        "title": "Wald-Turnpfad",
-        "location": "Visegrád",
-        "category": "wooden",
-        "image": "/Referencia/ref-3.jpg",
-        "slug": "erdei-tornapalya-visegrad"
+        "title": "Zweiturm-Burg",
+        "categories": ["wooden", "sand"],
+        "images": [
+          "/Referencia/Fa/Homok/terra-forte-kettornyu-fa-jatszovar-alaguttal.jpg"
+        ]
       },
       {
         "id": 4,
-        "title": "Ritterburg Themenpark",
-        "location": "Székesfehérvár",
-        "category": "custom",
-        "image": "/Referencia/ref-4.webp",
-        "slug": "lovagvar-tematikus-park"
+        "title": "Riesenburg",
+        "categories": ["wooden", "sand"],
+        "images": [
+          "/Referencia/Fa/Homok/terra-forte-orias-fa-jatszovar-homokos-talajon.jpg"
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Burg mit Kletterwand",
+        "categories": ["wooden", "sand"],
+        "images": [
+          "/Referencia/Fa/Homok/terra-forte-fa-jatszovar-maszofallal-homokos-talaj.jpg"
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Metallspielplatz",
+        "categories": ["metal", "rubber"],
+        "images": [
+          "/Referencia/Fém/gumi/terra-forte-modern-fem-jatszoter-gumi-burkolattal.jpg"
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Metall-Kletternetz",
+        "categories": ["metal", "rubber"],
+        "images": [
+          "/Referencia/Fém/gumi/terra-forte-fem-maszohalo-gumi-talaj.jpg"
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Metallburg",
+        "categories": ["metal", "sand"],
+        "images": [
+          "/Referencia/Fém/Homok/terra-forte-fem-jatszovar-csuszdaval-homokos-talajon.jpg"
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Metallburg mit Tunnel",
+        "categories": ["metal", "sand"],
+        "images": [
+          "/Referencia/Fém/Homok/terra-forte-fem-jatszovar-alaguttal-homokos-talaj.jpg"
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Fitnesspark",
+        "categories": ["fitness", "rubber"],
+        "images": [
+          "/Referencia/Fitnesz/terra-forte-kulteri-fitnesz-park-gumi-talaj.jpg"
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Komplexer Fitnesspark",
+        "categories": ["fitness", "rubber"],
+        "images": [
+          "/Referencia/Fitnesz/terra-forte-komplex-fitnesz-park-gumi-talaj.jpg"
+        ]
+      },
+      {
+        "id": 12,
+        "title": "Kunstrasenplatz",
+        "categories": ["grass"],
+        "images": [
+          "/Referencia/Műfüves pályák/terra-forte-mufuves-sportpalya.jpg"
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Großer Kunstrasenplatz",
+        "categories": ["grass"],
+        "images": [
+          "/Referencia/Műfüves pályák/terra-forte-nagy-mufuves-sportpalya.jpg"
+        ]
       }
     ]
   }

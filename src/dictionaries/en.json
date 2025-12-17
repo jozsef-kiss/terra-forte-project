@@ -839,46 +839,120 @@
   },
   "ReferencesPage": {
     "title": "Our References",
-    "subtitle": "We are proud of our work. Take a look at our selected projects that demonstrate our expertise.",
+    "subtitle": "We take pride in our work. Browse our selected projects that demonstrate our expertise.",
     "filters": {
       "all": "All",
       "wooden": "Wooden Playgrounds",
       "metal": "Metal Playgrounds",
       "fitness": "Fitness Parks",
-      "custom": "Custom Builds"
+      "grass": "Artificial Grass Courts",
+      "rubber": "Rubber Surfacing",
+      "sand": "Sand Surfacing"
     },
     "items": [
       {
         "id": 1,
-        "title": "City Adventure Park",
-        "location": "Budapest, District 18",
-        "category": "metal",
-        "image": "/Referencia/ref-1.jpg",
-        "slug": "varosi-kalandpark-bp18"
+        "title": "Play Castle Complex",
+        "categories": ["wooden", "rubber"],
+        "images": [
+          "/Referencia/Fa/Gumi/terra-forte-msz-en-1176-fa-jatszoter-maszovar-ontott-gumi-burkolattal.jpg"
+        ]
       },
       {
         "id": 2,
-        "title": "Sunflower Kindergarten",
-        "location": "Debrecen",
-        "category": "wooden",
-        "image": "/Referencia/ref-2.jpeg",
-        "slug": "napraforgo-ovoda-debrecen"
+        "title": "Colorful Play Castle",
+        "categories": ["wooden", "rubber"],
+        "images": [
+          "/Referencia/Fa/Gumi/terra-forte-szines-jatszovar-csuszdaval.JPG"
+        ]
       },
       {
         "id": 3,
-        "title": "Forest Gym Track",
-        "location": "Visegrád",
-        "category": "wooden",
-        "image": "/Referencia/ref-3.jpg",
-        "slug": "erdei-tornapalya-visegrad"
+        "title": "Two-Tower Castle",
+        "categories": ["wooden", "sand"],
+        "images": [
+          "/Referencia/Fa/Homok/terra-forte-kettornyu-fa-jatszovar-alaguttal.jpg"
+        ]
       },
       {
         "id": 4,
-        "title": "Knights' Castle Theme Park",
-        "location": "Székesfehérvár",
-        "category": "custom",
-        "image": "/Referencia/ref-4.webp",
-        "slug": "lovagvar-tematikus-park"
+        "title": "Giant Castle",
+        "categories": ["wooden", "sand"],
+        "images": [
+          "/Referencia/Fa/Homok/terra-forte-orias-fa-jatszovar-homokos-talajon.jpg"
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Castle with Climbing Wall",
+        "categories": ["wooden", "sand"],
+        "images": [
+          "/Referencia/Fa/Homok/terra-forte-fa-jatszovar-maszofallal-homokos-talaj.jpg"
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Metal Playground",
+        "categories": ["metal", "rubber"],
+        "images": [
+          "/Referencia/Fém/gumi/terra-forte-modern-fem-jatszoter-gumi-burkolattal.jpg"
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Metal Climbing Net",
+        "categories": ["metal", "rubber"],
+        "images": [
+          "/Referencia/Fém/gumi/terra-forte-fem-maszohalo-gumi-talaj.jpg"
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Metal Castle",
+        "categories": ["metal", "sand"],
+        "images": [
+          "/Referencia/Fém/Homok/terra-forte-fem-jatszovar-csuszdaval-homokos-talajon.jpg"
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Metal Castle with Tunnel",
+        "categories": ["metal", "sand"],
+        "images": [
+          "/Referencia/Fém/Homok/terra-forte-fem-jatszovar-alaguttal-homokos-talaj.jpg"
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Fitness Park",
+        "categories": ["fitness", "rubber"],
+        "images": [
+          "/Referencia/Fitnesz/terra-forte-kulteri-fitnesz-park-gumi-talaj.jpg"
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Complex Fitness Park",
+        "categories": ["fitness", "rubber"],
+        "images": [
+          "/Referencia/Fitnesz/terra-forte-komplex-fitnesz-park-gumi-talaj.jpg"
+        ]
+      },
+      {
+        "id": 12,
+        "title": "Artificial Grass Court",
+        "categories": ["grass"],
+        "images": [
+          "/Referencia/Műfüves pályák/terra-forte-mufuves-sportpalya.jpg"
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Large Artificial Grass Court",
+        "categories": ["grass"],
+        "images": [
+          "/Referencia/Műfüves pályák/terra-forte-nagy-mufuves-sportpalya.jpg"
+        ]
       }
     ]
   }
