@@ -1,7 +1,6 @@
 import { getDictionary, Locale } from "@/app/[locale]/dictionaries";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import Image from "next/image"; // Importáltuk a next/image-t
+import Link from "next/link"; // Csak a Link kell, a Button-t kivettük
+import Image from "next/image";
 
 export default async function Hero({ lang }: { lang: Locale }) {
   const dict = await getDictionary(lang);
@@ -44,23 +43,29 @@ export default async function Hero({ lang }: { lang: Locale }) {
             {/* Szöveg */}
             <p className="mt-6 text-lg leading-8 text-gray-600">{t.subtitle}</p>
 
-            {/* Gombok */}
+            {/* GOMBOK JAVÍTVA: Közvetlen Tailwind osztályok a Button komponens helyett */}
             <div className="mt-10 flex items-center gap-x-6">
-              <Button href={`/${lang}/referenciak`} className="btn-contact">
-                {t.cta_references} <span aria-hidden="true">→</span>
-              </Button>
-              <Button href={`/${lang}/kapcsolat`} className="btn-quote">
-                {t.cta_contact} <span aria-hidden="true">→</span>
-              </Button>
+              {/* Elsődleges gomb (Kék háttér) */}
+              <Link
+                href={`/${lang}/referenciak`}
+                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors"
+              >
+                {t.cta_references} <span aria-hidden="true">&rarr;</span>
+              </Link>
+
+              {/* Másodlagos gomb (Szürke keret) */}
+              <Link
+                href={`/${lang}/kapcsolat`}
+                className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-100 transition-colors"
+              >
+                {t.cta_contact} <span aria-hidden="true">&rarr;</span>
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* A KÉP KONTÉNER:
-         - Alapból (mobil): relative, h-64 (fix magasság), w-full. Így a szöveg ALATT lesz.
-         - XL-től: absolute, inset-y-0, right-0, w-1/2, h-auto. Így beúszik JOBBRA.
-      */}
+      {/* A KÉP KONTÉNER */}
       <div className="relative h-64 w-full bg-gray-50 xl:absolute xl:inset-y-0 xl:right-0 xl:h-auto xl:w-1/2">
         <Image
           alt="Modern Terra Forte Bau fém játszótér komplexum csúszdás toronnyal"

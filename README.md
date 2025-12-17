@@ -91,6 +91,10 @@ pnpm dev
 1.  **Tailwind v4:** A `globals.css` tartalmazza a konfigurációt (`@import "tailwindcss";`).
 2.  **Jiggle Fix:** A `html, body { overflow-x: hidden; }` beállítás kritikus a Catalyst menü miatt.
 3.  **Adatbázis:** Sémamódosítás után mindig futtasd: `npm run db:push`.
+4.  **Catalyst UI Színek (Invisible Button Fix):** A projekt modern UI komponenseket (pl. `<Button>`) használ, amelyek CSS változókra építenek (pl. `var(--color-indigo-600)`).
+    - Ezeket a változókat manuálisan definiáltuk a **`globals.css` `@theme` blokkjában**.
+    - ⚠️ **Ne töröld ki ezt a részt!** Ha ezek a definíciók hiányoznak, a gombok háttérszíne eltűnik (átlátszó lesz) bizonyos eszközökön/böngészőkben.
+    - **Brand Mapping:** Itt térítettük el a gyári `indigo` színeket a saját **brand zöld** színünkre (`#28804d`), így a `<Button color="indigo">` használata is a céges arculatot tükrözi.
 
 ## 📄 Licenc
 

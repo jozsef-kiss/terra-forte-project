@@ -1,12 +1,47 @@
-﻿/* 1. A Tailwind V4 Alapjai (JAVƛTVA) */
+﻿/* 1. A Tailwind V4 Alapjai */
 @config "../../tailwind.config.ts";
-@import "tailwindcss"; /* Ez t�'lti be a preflight + utilities r�tegeket */
+@import "tailwindcss";
+
+/* --- 2. TÉMA FELÜLÍRÁSA (A TE SZÍNEIDDEL) --- */
+@theme {
+  /* Itt cselzünk: A rendszer "indigo" nevű színeit lecseréljük 
+     a TE ZÖLD színeidre. Így mindenhol, ahol a <Button color="indigo"> 
+     van, ott a te zöld gombod fog megjelenni.
+  */
+
+  /* Alap zöld (#28804d) - Ezt használja a gomb háttere (indigo-600 helyett) */
+  --color-indigo-600: #28804d;
+
+  /* Sötétebb zöld hoverkor (#22663f) - Ezt használja a gomb hover állapota (indigo-500 helyett) */
+  --color-indigo-500: #22663f;
+
+  /* Világosabb árnyalatok (ha máshol kellene, pl. focus ring) */
+  --color-indigo-400: #429e6b;
+  --color-indigo-300: #86efac;
+  --color-indigo-200: #bbf7d0;
+
+  /* Szürke skála (marad a gyári, de definiálni kell) */
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+  --color-zinc-950: #09090b;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
 
 :root {
-  /* Meleg, törtfehér háttér (Stone-50) */
-  --background: #fafaf9;
-  /* Sötét, de természetes szöveg (Stone-900) */
-  --foreground: #1c1917;
+  --background: #fafaf9; /* stone-50 */
+  --foreground: #1c1917; /* stone-900 */
+
+  /* Globális változó a top-bar szövegszínhez, ha CSS-ben hivatkoznál rá */
+  --brand-green: #28804d;
 }
 
 html,
@@ -15,10 +50,8 @@ body {
   scroll-behavior: smooth;
   color: var(--foreground);
   background: var(--background);
-  scroll-behavior: smooth;
 }
 
-/* Címsorok stílusa (h1-h6) -> Poppins */
 h1,
 h2,
 h3,
@@ -26,65 +59,76 @@ h4,
 h5,
 h6 {
   font-family: var(--font-poppins), sans-serif;
-  /* A Poppins-nak jól áll a kicsit feszesebb betűköz */
   letter-spacing: -0.02em;
 }
 
-/* --- EGYEDI GOMB STÍLUSOK (Override) --- */
+/* --- 3. MANUÁLIS OSZTÁLYOK (A biztonság kedvéért) --- */
 
-/* Kapcsolat gomb (Outline) */
+/* Top Bar szöveg szín (ha van .top-bar osztályod, vagy használd a text-brand-green-t) */
+.text-brand-green {
+  color: #28804d !important;
+}
+
+/* Kapcsolat gomb (Outline) - Ha a class-t használod */
 .btn-contact {
   background-color: transparent !important;
-  border: 1px solid #28804d !important; /* Zöld keret */
-  color: #28804d !important; /* Zöld szöveg */
+  border: 1px solid #28804d !important;
+  color: #28804d !important;
 }
 .btn-contact:hover {
-  background-color: #f2fbf5 !important; /* Halvány zöld háttér hoverkor */
+  background-color: #f2fbf5 !important;
 }
 
-/* Árajánlatkérés gomb (Solid) */
+/* Árajánlatkérés gomb (Solid) - Ha a class-t használod */
 .btn-quote {
-  background-color: #28804d !important; /* Teli zöld háttér */
+  background-color: #28804d !important;
   border: 1px solid #28804d !important;
-  color: #ffffff !important; /* Fehér szöveg */
+  color: #ffffff !important;
 }
 .btn-quote:hover {
-  background-color: #22663f !important; /* Sötétebb zöld hoverkor */
+  background-color: #22663f !important;
 }
 
-/* --- GLOBÁLIS GOMB HOVER EFFEKT (Kivéve Header/Menü) --- */
-/* Cél: Minden gomb és gomb-szerű link a main tartalomban és a footerben 
-   kapjon egy finom emelkedést és árnyékot. A header/nav elemeket kizárjuk 
-   azzal, hogy csak a 'main' és 'footer' gyerekekre célzunk.
-*/
+/* --- 4. GOMB HOVER JAVÍTÁS (Kiemelten a Catalyst gombokhoz) --- */
+
+/* Ez felülírja a Catalyst gombok alapértelmezett hover viselkedését, 
+   hogy biztosan a te sötétzölded (#22663f) jelenjen meg, ne csak egy árnyék */
+[data-slot="button"][class*="bg-indigo-"]:hover {
+  background-color: #22663f !important;
+  border-color: #22663f !important;
+}
+/* Alapállapotban legyen a te zölded */
+[data-slot="button"][class*="bg-indigo-"] {
+  background-color: #28804d !important;
+  border-color: #28804d !important;
+}
+
+/* --- GLOBÁLIS EFFEKTEK --- */
 
 main button,
 footer button,
-main a[class*="bg-indigo-"], /* Elsődleges gombok (solid) */
-main a[class*="ring-"],      /* Outline gombok (gyakran ring-el készülnek) */
-main a[class*="rounded-md"], /* Egyéb gomb-szerű linkek */
+main a[class*="bg-indigo-"],
+main a[class*="ring-"],
+main a[class*="rounded-md"],
 footer a[class*="bg-indigo-"] {
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  /* Alapállapotban biztosítjuk, hogy a transform működjön */
   will-change: transform;
 }
 
-/* Hover állapot */
 main button:hover,
 footer button:hover,
 main a[class*="bg-indigo-"]:hover,
 main a[class*="ring-"]:hover,
-main a[class*="rounded-md"]:hover:not(:has(img)), /* Képes kártyák kizárása, ha azok linkek */
+main a[class*="rounded-md"]:hover:not(:has(img)),
 footer a[class*="bg-indigo-"]:hover {
-  /* Finom emelkedés */
   transform: translateY(-2px);
-  /* Enyhe árnyék növelés a mélységért */
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Active (kattintás) állapot - visszaugrik kicsit */
 main button:active,
 footer button:active,
 main a[class*="bg-indigo-"]:active,
@@ -94,8 +138,7 @@ footer a[class*="bg-indigo-"]:active {
   box-shadow: none;
 }
 
-/* --- GLOBÁLIS INPUT HÁTTÉR MÓDOSÍTÁS (#fafafa) --- */
-/* Felülírjuk a komponensek (pl. Newsletter) alapértelmezett fehér hátterét */
+/* Input mezők javítása */
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not(
     [type="button"]
   ):not([type="range"]),
@@ -103,16 +146,12 @@ textarea,
 select {
   background-color: #fafafa !important;
 }
-
-/* --- PLACEHOLDER SZÍN GLOBÁLISAN --- */
-/* Stone-500 (#78716c) - Olvasható, de nem tolakodó */
 input::placeholder,
 textarea::placeholder {
   color: #78716c !important;
-  opacity: 1; /* Firefox miatt kell, hogy ne legyen áttetsző */
+  opacity: 1;
 }
 
-/* --- EGYEDI DROPDOWN ANIMÁCIÓ --- */
 @keyframes dropdownOpen {
   from {
     opacity: 0;
@@ -123,9 +162,7 @@ textarea::placeholder {
     transform: translateY(0) scale(1);
   }
 }
-
 .animate-dropdown-open {
-  /* Finom, rugalmas érkezés (cubic-bezier) */
   animation: dropdownOpen 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  transform-origin: top right; /* A jobb felső sarokból nyílik */
+  transform-origin: top right;
 }
