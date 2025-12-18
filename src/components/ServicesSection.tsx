@@ -67,7 +67,7 @@ export default async function ServicesSection({ lang }: { lang: Locale }) {
           <div className="flex items-start justify-end lg:order-first">
             <Image
               alt="Fa játszótér tervezése és kivitelezése parkos környezetben"
-              src="/Services/fa-jatszoter-tervezes-es-kivitelezes-szolgaltatas.JPG"
+              src="/images/Services/fa-jatszoter-tervezes-es-kivitelezes-szolgaltatas.JPG"
               width={2432}
               height={1442}
               sizes="(max-width: 1024px) 100vw, 50vw" // Mobilon teljes, desktopon fél szélesség
