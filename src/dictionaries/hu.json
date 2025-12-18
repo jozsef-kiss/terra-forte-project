@@ -61,9 +61,7 @@
         "title": "Segítség",
         "links": [
           { "name": "Kapcsolat", "href": "/kapcsolat" },
-          { "name": "GYIK", "href": "/gyik" },
-          { "name": "Telepítési útmutatók", "href": "/telepites" },
-          { "name": "Dokumentumtár", "href": "/letoltesek" }
+          { "name": "GYIK", "href": "/gyik" }
         ]
       },
       "company": {
@@ -71,8 +69,7 @@
         "links": [
           { "name": "Rólunk", "href": "/rolunk" },
           { "name": "Referenciák", "href": "/referenciak" },
-          { "name": "Blog", "href": "/blog" },
-          { "name": "Karrier", "href": "/karrier" }
+          { "name": "Blog", "href": "/blog" }
         ]
       },
       "legal": {
