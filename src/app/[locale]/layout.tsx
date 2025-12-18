@@ -6,6 +6,7 @@ import "../globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 import CookieBanner from "@/components/CookieBanner";
 import ChatWidget from "@/components/ChatWidget";
+import ImageProtector from "@/components/ImageProtector";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -63,6 +64,7 @@ export default async function RootLayout({
 
         <Header lang={lang} />
         <main>{children}</main>
+        <ImageProtector />
         <Footer lang={lang} />
 
         <ChatWidget />
