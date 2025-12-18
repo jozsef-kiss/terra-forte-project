@@ -131,8 +131,8 @@ export default async function ServicesPage({
               <div className="order-2 lg:order-1">
                 <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-stone-200">
                   <Image
-                    src="/Szolgaltatasok/service-1.png"
-                    alt="Játszótér tervezés"
+                    src="/Szolgaltatasok/jatszoter-tervezes-gyartas.jpg"
+                    alt="Játszótér Tervezés és Gyártás"
                     fill
                     className="object-cover"
                   />
@@ -181,8 +181,8 @@ export default async function ServicesPage({
               <div className="order-2">
                 <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-stone-200">
                   <Image
-                    src="/Szolgaltatasok/service-2.png"
-                    alt="Játszótér gyártás"
+                    src="/Szolgaltatasok/palyazat-tanacsadas-dokumentacio.jpg"
+                    alt="Pályázati Tanácsadás és Dokumentáció"
                     fill
                     className="object-cover"
                   />
@@ -195,8 +195,8 @@ export default async function ServicesPage({
               <div className="order-2 lg:order-1">
                 <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-stone-200">
                   <Image
-                    src="/Szolgaltatasok/service-3.png"
-                    alt="Játszótér kivitelezés"
+                    src="/Szolgaltatasok/szakszeru-telepites.jpg"
+                    alt="Szállítás és Szakszerű Telepítés"
                     fill
                     className="object-cover"
                   />
@@ -247,8 +247,8 @@ export default async function ServicesPage({
               <div className="order-2">
                 <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-stone-200">
                   <Image
-                    src="/Szolgaltatasok/service-4.png"
-                    alt="Játszótér karbantartás"
+                    src="/Szolgaltatasok/utolagos-szabvanyossagi-audit.png"
+                    alt="Utólagos Szabványossági Audit és Tanácsadás"
                     fill
                     className="object-cover"
                   />
