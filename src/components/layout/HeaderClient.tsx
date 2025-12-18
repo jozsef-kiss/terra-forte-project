@@ -78,16 +78,20 @@ export default function HeaderClient({ lang, dict }: Props) {
   // --- ÚJ: useEffect a görgetés figyelésére ---
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        // Ha 20 pixelnél lejjebb görget
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+      const currentScroll = window.scrollY;
+
+      // A Top Bar kb 40-50px magas. Ezért a határértéket
+      // nagyobbra vesszük (60), hogy biztosan eltűnjön, mire váltunk.
+      // Külön 'if'-eket használunk, hogy legyen egy "semleges zóna" 40 és 60 között.
+
+      if (currentScroll > 100) {
+        setIsScrolled(true); // Összenyomás
+      } else if (currentScroll < 40) {
+        setIsScrolled(false); // Visszanövelés
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    // Tisztítás, ha elhagyjuk az oldalt
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
