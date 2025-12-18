@@ -158,7 +158,6 @@ export default function ReferenceGrid({ t, items, lang }: Props) {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 sm:p-8 backdrop-blur-sm select-none"
             onClick={() => setSelectedImage(null)}
-            // --- ITT A VÉDELEM (A háttérre kattintva se jöjjön elő a menü) ---
             onContextMenu={(e) => e.preventDefault()}
           >
             <button
@@ -173,7 +172,7 @@ export default function ReferenceGrid({ t, items, lang }: Props) {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full h-full max-w-5xl max-h-[85vh] flex items-center justify-center"
+              className="relative w-full h-full max-w-5xl max-h-[85vh] flex items-center justify-center overflow-hidden" // overflow-hidden fontos a vízjel miatt
               onClick={(e) => e.stopPropagation()}
             >
               <Image
@@ -183,10 +182,25 @@ export default function ReferenceGrid({ t, items, lang }: Props) {
                 className="object-contain rounded-lg shadow-2xl"
                 sizes="100vw"
                 priority
-                draggable={false} // Ne lehessen "kihúzni" a képet
-                // --- ITT A VÉDELEM (Nagy kép) ---
+                draggable={false}
                 onContextMenu={(e) => e.preventDefault()}
               />
+
+              {/* --- ELEGÁNS VÍZJEL RÉTEG (Csak a kódban létezik, a fájl tiszta marad) --- */}
+
+              {/* 1. Opció: Középső, elforgatott, halvány vízjel */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 opacity-15">
+                <p className="text-white text-5xl md:text-7xl font-bold -rotate-12 whitespace-nowrap select-none">
+                  Terra Forte Bau
+                </p>
+              </div>
+
+              {/* 2. Opció: Alsó Copyright sáv (ez is maradhat pluszban) */}
+              <div className="absolute bottom-4 right-4 z-20 pointer-events-none opacity-60">
+                <span className="bg-black/40 text-white px-3 py-1 rounded text-sm backdrop-blur-md">
+                  © Terra Forte Bau - Minden jog fenntartva
+                </span>
+              </div>
             </motion.div>
           </motion.div>
         )}
