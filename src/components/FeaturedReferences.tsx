@@ -51,7 +51,7 @@ export default async function FeaturedReferences({ lang }: { lang: Locale }) {
               <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                 <Image
                   // Javasolt név: ovoda-udvar-fa-maszoka-es-hinta.jpg
-                  src="/images/FeaturedReferences/varosi-kalandpark-fem-jatszoter.jpg"
+                  src="/images/FeaturedReferences/varosi-kalandpark-fem-jatszoter.JPG"
                   alt="Óvodai udvarra telepített biztonságos fa mászóka és hinta"
                   width={768}
                   height={604}
@@ -78,7 +78,7 @@ export default async function FeaturedReferences({ lang }: { lang: Locale }) {
                 <Image
                   // Javasolt név: egyedi-tervezesu-tematikus-jatszoter-var.jpg
                   // Ha ezt cserélted le, itt írd át a nevet és az ALT szöveget!
-                  src="/images/FeaturedReferences/mu-fuves-palya.jpg"
+                  src="/images/FeaturedReferences/mu-fuves-palya.JPG"
                   alt="Egyedi tervezésű tematikus játszótér vár toronnyal"
                   width={768}
                   height={604}
