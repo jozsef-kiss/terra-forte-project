@@ -25,7 +25,7 @@ export default async function CategoryPreview({ lang }: { lang: Locale }) {
       href: `/${lang}/termekek/fem-jatszoterek`,
       // 2. FÉM JÁTSZÓTÉR
       imageSrc:
-        "/images/categories/modern-fem-jatszoter-vandalbiztos-kozteruleti-jatek.jpg",
+        "/images/categories/modern-fem-jatszoter-vandalbiztos-kozteruleti-jatek.JPG",
       imageAlt: "Modern, vandálbiztos fém játszótér eszközök közterületre",
       className: "sm:aspect-auto",
     },
