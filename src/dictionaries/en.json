@@ -61,9 +61,7 @@
         "title": "Support",
         "links": [
           { "name": "Contact", "href": "/kapcsolat" },
-          { "name": "FAQ", "href": "/gyik" },
-          { "name": "Installation Guides", "href": "/telepites" },
-          { "name": "Document Library", "href": "/letoltesek" }
+          { "name": "FAQ", "href": "/gyik" }
         ]
       },
       "company": {
@@ -71,8 +69,7 @@
         "links": [
           { "name": "About Us", "href": "/rolunk" },
           { "name": "References", "href": "/referenciak" },
-          { "name": "Blog", "href": "/blog" },
-          { "name": "Career", "href": "/karrier" }
+          { "name": "Blog", "href": "/blog" }
         ]
       },
       "legal": {
