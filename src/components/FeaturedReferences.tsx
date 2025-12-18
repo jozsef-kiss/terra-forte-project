@@ -64,7 +64,7 @@ export default async function FeaturedReferences({ lang }: { lang: Locale }) {
               <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                 <Image
                   // Javasolt név: erdei-tornapalya-felnott-fitnesz-park.jpg
-                  src="/images/FeaturedReferences/tornapalya-felnott-fitnesz-park.jpg"
+                  src="/images/FeaturedReferences/tornapalya-felnott-fitnesz-park.JPG"
                   alt="Erdei környezetbe illeszkedő felnőtt fitnesz park és tornapálya"
                   width={1152}
                   height={842}
