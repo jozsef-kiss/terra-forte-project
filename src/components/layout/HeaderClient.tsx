@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react"; // ÚJ: useEffect importálva
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button"; // Catalyst gomb
+import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Image from "next/image";
 
@@ -17,10 +17,6 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItems,
-  MenuItem,
 } from "@headlessui/react";
 
 // Heroicons
@@ -28,14 +24,12 @@ import {
   Bars3Icon,
   XMarkIcon,
   ChevronDownIcon,
-  CheckIcon,
   PhoneIcon,
   MapPinIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 
 import {
-  GlobeAltIcon,
   CubeIcon,
   TrophyIcon,
   HeartIcon,
@@ -67,15 +61,35 @@ const languages = [
 
 export default function HeaderClient({ lang, dict }: Props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // --- ÚJ: Görgetés figyelése állapottal ---
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const pathname = usePathname();
   const router = useRouter();
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const nav = dict?.navbar || {};
-  const topBar = nav?.top_bar || {}; // ÚJ ADATOK
+  const topBar = nav?.top_bar || {};
   const megaMenu = nav?.mega_menu || {};
   const categoryLinks = megaMenu?.categories?.links || [];
   const featuredLinks = megaMenu?.featured?.links || [];
+
+  // --- ÚJ: useEffect a görgetés figyelésére ---
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        // Ha 20 pixelnél lejjebb görget
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Tisztítás, ha elhagyjuk az oldalt
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const isActive = (path: string) => {
     return (
@@ -99,27 +113,29 @@ export default function HeaderClient({ lang, dict }: Props) {
 
   return (
     // A sticky 'top-0' miatt a Top Bar + Navbar együtt tapad a tetejére
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50 isolate">
-      {/* --- ÚJ: TOP BAR (BANNER) --- */}
-      {/* Sötét háttér, fehér szöveg, mobilon elrejtjük a kevésbé fontos infókat */}
-      <div className="bg-indigo-950 text-white text-xs sm:text-sm py-2">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50 isolate transition-all duration-300">
+      {/* --- TOP BAR (BANNER) --- */}
+      {/* ÚJ: Ha görgetünk (isScrolled), a magasságot 0-ra vesszük és elrejtjük (overflow-hidden), 
+          így teljesen eltűnik görgetéskor, még több helyet hagyva. 
+          HA azt akarod, hogy maradjon, csak töröld a `transition-all` és `h-0` részeket. */}
+      <div
+        className={`bg-indigo-950 text-white overflow-hidden transition-all duration-300 ${
+          isScrolled ? "h-0 py-0 opacity-0" : "h-auto py-2 opacity-100"
+        }`}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8 text-xs sm:text-sm">
           {/* Bal oldal: Kapcsolat */}
           <div className="flex items-center gap-x-4 sm:gap-x-6">
-            {/* Telefon */}
             <a
               href={`tel:${topBar.phone}`}
               className="flex items-center gap-x-2 hover:text-indigo-300 transition"
             >
               <PhoneIcon className="h-4 w-4" aria-hidden="true" />
-              {/* JAVÍTVA: Most már a szótárból olvassa a szöveget */}
               <span className="hidden sm:inline">
                 {topBar.call_us || "Hívjon minket:"}
               </span>
               <span className="font-semibold">{topBar.phone}</span>
             </a>
-
-            {/* ÚJ: Email cím (közvetlenül a telefon mellett) */}
             <a
               href={`mailto:${topBar.email}`}
               className="hidden sm:flex items-center gap-x-2 hover:text-indigo-300 transition"
@@ -127,32 +143,23 @@ export default function HeaderClient({ lang, dict }: Props) {
               <EnvelopeIcon className="h-4 w-4" aria-hidden="true" />
               <span>{topBar.email}</span>
             </a>
-
-            {/* Cím */}
             <div className="hidden xl:flex items-center gap-x-2 text-slate-300">
               <MapPinIcon className="h-4 w-4" aria-hidden="true" />
               <span>{topBar.address}</span>
             </div>
           </div>
-
-          {/* Közép (csak nagy képernyőn): Marketing szöveg */}
+          {/* Közép: Marketing */}
           <div className="hidden lg:block font-medium text-indigo-300">
             {topBar.marketing_text}
           </div>
-
-          {/* Jobb oldal: Social Média Ikonok (SVG Path-ok) */}
+          {/* Jobb oldal: Social */}
           <div className="flex items-center gap-x-4">
             <a
               href="#"
               className="hover:text-indigo-300 transition"
               aria-label="Facebook"
             >
-              <svg
-                className="h-4 w-4"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
+              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   fillRule="evenodd"
                   d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
@@ -165,12 +172,7 @@ export default function HeaderClient({ lang, dict }: Props) {
               className="hover:text-indigo-300 transition"
               aria-label="Instagram"
             >
-              <svg
-                className="h-4 w-4"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
+              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   fillRule="evenodd"
                   d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.027 2 12.315 2zm-1.094 4.677a7.786 7.786 0 00-2.655.505c-.703.27-1.293.624-1.818 1.15-.526.525-.88 1.115-1.15 1.817a7.785 7.785 0 00-.506 2.656v.002c0 2.127.004 2.493.112 2.918.108.418.33.899.72 1.294.416.415.868.658 1.295.766.425.108.791.112 2.917.112 2.126 0 2.493-.004 2.918-.112.427-.108.899-.33 1.294-.72.395-.39.632-.846.74-1.274.108-.425.112-.791.112-2.917 0-2.126-.004-2.493-.112-2.918-.108-.427-.33-.899-.72-1.294a3.732 3.732 0 00-1.295-.766c-.425-.108-.791-.112-2.917-.112h-.002zm0 1.835a5.967 5.967 0 011.53.206c.285.075.51.2.72.41.21.21.335.435.41.72.137.542.145 1.05.145 3.21s-.008 2.668-.145 3.21c-.075.285-.2.51-.41.72-.21.21-.435.335-.72.41-.542.137-1.05.145-3.21.145s-2.668-.008-3.21-.145c-.285-.075-.51-.2-.72-.41-.21-.21-.335-.435-.41-.72-.137-.542-.145-1.05-.145-3.21s.008-2.668.145-3.21c.075-.285.2-.51.41-.72.21-.21.435-.335.72-.41.543-.137 1.051-.145 3.211-.145H11.22zm5.348-1.675a1.376 1.376 0 100 2.752 1.376 1.376 0 000-2.752z"
@@ -182,22 +184,28 @@ export default function HeaderClient({ lang, dict }: Props) {
         </div>
       </div>
 
-      {/* --- FŐ NAVBAR  */}
+      {/* --- FŐ NAVBAR  --- */}
+      {/* ÚJ: Dinamikus padding (p-6 helyett py-X) és transition */}
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className={`mx-auto flex max-w-7xl items-center justify-between transition-all duration-300 px-6 lg:px-8 ${
+          isScrolled ? "py-2" : "py-6"
+        }`}
       >
         {/* LOGO */}
         <div className="flex lg:flex-1">
           <Link href={`/${lang}`} className="-m-1.5 p-1.5">
             <span className="sr-only">Terra Forte Bau</span>
+            {/* ÚJ: Dinamikus logó méret */}
             <Image
-              src="/terra-forte-bau-logo.svg" // Ha SVG-d van, írd át .svg-re!
+              src="/terra-forte-bau-logo.svg"
               alt="Terra Forte Bau Logo"
-              width={180} // Ez az alap szélesség (arányos legyen a képpel)
-              height={60} // Ez az alap magasság
-              className="h-12 w-auto md:h-16" // Mobilon 40px magas (h-10), gépen 48px (h-12)
-              priority // Fontos: ez biztosítja, hogy azonnal, villanás nélkül betöltődjön
+              width={180}
+              height={60}
+              className={`w-auto transition-all duration-300 ${
+                isScrolled ? "h-10 md:h-12" : "h-12 md:h-16"
+              }`}
+              priority
             />
           </Link>
         </div>
@@ -400,12 +408,12 @@ export default function HeaderClient({ lang, dict }: Props) {
           <div className="flex items-center justify-between">
             <Link href={`/${lang}`} className="-m-1.5 p-1.5">
               <Image
-                src="/terra-forte-bau-logo.svg" // Ha SVG-d van, írd át .svg-re!
+                src="/terra-forte-bau-logo.svg"
                 alt="Terra Forte Bau Logo"
-                width={180} // Ez az alap szélesség (arányos legyen a képpel)
-                height={60} // Ez az alap magasság
-                className="h-12 w-auto md:h-16" // Mobilon 40px magas (h-10), gépen 48px (h-12)
-                priority // Fontos: ez biztosítja, hogy azonnal, villanás nélkül betöltődjön
+                width={180}
+                height={60}
+                className="h-12 w-auto"
+                priority
               />
             </Link>
             <button
