@@ -64,8 +64,8 @@ export default async function AboutPage({
                 </div>
               </div>
               <Image
-                src="/Hero/hero.png"
-                alt="Terra Forte Csapat munka közben"
+                src="/images/About/gyarto-partner.jpg"
+                alt="Terra Forte Bau játszótér gyártó csarnok"
                 width={1280}
                 height={800}
                 priority
@@ -151,7 +151,7 @@ export default async function AboutPage({
             <div className="w-full lg:max-w-xl lg:flex-auto">
               <div className="aspect-[7/5] w-full rounded-2xl bg-stone-50 object-cover shadow-lg overflow-hidden relative">
                 <Image
-                  src="/Referencia/ref-3.jpg"
+                  src="/images/About/tervezes-tanacsadas-palyazat.jpg"
                   alt="Minőségi kivitelezés"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
