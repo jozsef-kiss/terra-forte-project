@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getDictionary, Locale } from "@/app/[locale]/dictionaries";
+import Image from "next/image";
 
 // Social ikonok definiálása (SVG)
 const socialLinks = [
@@ -65,10 +66,13 @@ export const Footer = async ({ lang }: { lang: Locale }) => {
           {/* LOGO és LEÍRÁS vagy HELYKITÖLTŐ */}
           <div className="space-y-8">
             <Link href={`/${lang}`}>
-              <img
-                alt="Terra Forte Bau"
-                src="https://placehold.co/200x50/indigo/white?text=Terra+Forte"
-                className="h-9"
+              <Image
+                src="/terra-forte-bau-logo.svg" // Ha SVG-d van, írd át .svg-re!
+                alt="Terra Forte Bau Logo"
+                width={180} // Ez az alap szélesség (arányos legyen a képpel)
+                height={60} // Ez az alap magasság
+                className="h-12 w-auto md:h-16 brightness-0 invert" // Mobilon 40px magas (h-10), gépen 48px (h-12)
+                priority // Fontos: ez biztosítja, hogy azonnal, villanás nélkül betöltődjön
               />
             </Link>
             {/* Szöveg: text-gray-300 (világos szürke) */}

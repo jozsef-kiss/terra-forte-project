@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button"; // Catalyst gomb
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Image from "next/image";
 
 // --- Headless UI Importok ---
 import {
@@ -181,7 +182,7 @@ export default function HeaderClient({ lang, dict }: Props) {
         </div>
       </div>
 
-      {/* --- FŐ NAVBAR (Ez maradt a régi, csak beillesztettem alá) --- */}
+      {/* --- FŐ NAVBAR  */}
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -190,10 +191,13 @@ export default function HeaderClient({ lang, dict }: Props) {
         <div className="flex lg:flex-1">
           <Link href={`/${lang}`} className="-m-1.5 p-1.5">
             <span className="sr-only">Terra Forte Bau</span>
-            <img
+            <Image
+              src="/terra-forte-bau-logo.svg" // Ha SVG-d van, írd át .svg-re!
               alt="Terra Forte Bau Logo"
-              src="https://placehold.co/200x50/indigo/white?text=Terra+Forte"
-              className="h-8 w-auto"
+              width={180} // Ez az alap szélesség (arányos legyen a képpel)
+              height={60} // Ez az alap magasság
+              className="h-12 w-auto md:h-16" // Mobilon 40px magas (h-10), gépen 48px (h-12)
+              priority // Fontos: ez biztosítja, hogy azonnal, villanás nélkül betöltődjön
             />
           </Link>
         </div>
@@ -395,10 +399,13 @@ export default function HeaderClient({ lang, dict }: Props) {
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 slide-in-from-right duration-300">
           <div className="flex items-center justify-between">
             <Link href={`/${lang}`} className="-m-1.5 p-1.5">
-              <img
-                alt="Logo"
-                src="https://placehold.co/200x50/indigo/white?text=Terra+Forte"
-                className="h-8 w-auto"
+              <Image
+                src="/terra-forte-bau-logo.svg" // Ha SVG-d van, írd át .svg-re!
+                alt="Terra Forte Bau Logo"
+                width={180} // Ez az alap szélesség (arányos legyen a képpel)
+                height={60} // Ez az alap magasság
+                className="h-12 w-auto md:h-16" // Mobilon 40px magas (h-10), gépen 48px (h-12)
+                priority // Fontos: ez biztosítja, hogy azonnal, villanás nélkül betöltődjön
               />
             </Link>
             <button
